@@ -2,7 +2,7 @@
 [INCLUDE=presentation]
 Title         : Jcalc: A curry howard View of Basic Justification Logic
 Sub Title     : A curry howard View of Basic Justification Logic
-Author        : Daan Leijen
+Author        : Konstantinos Pouliasis
 Affiliation   : Microsoft Research
 Email         : daan@microsoft.com
 Reveal Theme  : sky
