@@ -1,6 +1,6 @@
 
 [INCLUDE=presentation]
-Title         : Jcalc: A curry howard View of Basic Justification Logic
+Title         : Jcalc
 Sub Title     : A curry howard View of Basic Justification Logic
 Author        : Konstantinos Pouliasis
 Affiliation   : Microsoft Research
@@ -16,11 +16,18 @@ Package     : mathpartir.sty
 [TOC]
 
 # Madoko Presentation
-~ Equation
-\begin{mathpar} 
-  A Formula
-\end{mathpar}
+
+$ 
+\inferrule*[]{
+\inferrule*[]{
+  \inferrule*[]{\inferrule*[]{ A}{\llbracket \Gamma'\rrbracket:\llbracket  A_1\rrbracket,\ldots \llbracket  A_i\rrbracket}}{ }
+    }{B}\\C} {\inferrule*[]{A}{B}}$       	         				
+	         	         				
+
+~ Math
+e = mc^2
 ~
+
 Using [Madoko] it is easy to create beautiful presentations.
 
 * [Html][slide]:
