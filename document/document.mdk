@@ -3,8 +3,8 @@
 Title         : Jcalc
 Sub Title     : A curry howard View of Basic Justification Logic
 Author        : Konstantinos Pouliasis
-Affiliation   : Microsoft Research
-Email         : daan@microsoft.com
+Affiliation   : The Graduate Center, CUNY
+Email         : konstantinos.pouliasis@gmail.com
 Reveal Theme  : sky
 Beamer Theme  : singapore
 Package     : mathpartir.sty
