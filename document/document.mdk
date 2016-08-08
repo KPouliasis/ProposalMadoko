@@ -14,16 +14,18 @@ Package     : mathpartir.sty
 # Content
 
 [TOC]
+~ Begin Vertical
 
 # The Problem
 
 Many logics have been studied under  Curry -- Howard interpretation
 
 * Intuitionistic : STLC
-* Linear : Various resource sensitive typed calculi - session types
+* Linear : Various resource sensitive typed calculi -- e.g. session types, concurrent programming
+* Modal logics: Focus on $S4$ -- calculi for staged computation, modal type theories etc.
 
-
-
+ [Calculus for Justification Logic Modality?]{ :larger} 
+~ End Vertical
 #INFERENCES
 
 $ 
