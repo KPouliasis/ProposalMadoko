@@ -15,7 +15,16 @@ Package     : mathpartir.sty
 
 [TOC]
 
-# Madoko Presentation
+# The Problem
+
+Many logics have been studied under  Curry -- Howard interpretation
+
+* Intuitionistic : STLC
+* Linear : Various resource sensitive typed calculi - session types
+
+
+
+#INFERENCES
 
 $ 
 \inferrule*[]{
