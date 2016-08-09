@@ -11,12 +11,16 @@ Package     : mathpartir.sty
 
 [TITLE]
 
-# Content
-
+~ Slide
 [TOC]
+~
+
+
+
+#Introduction
 ~ Begin Vertical
 
-# The Problem
+## Our question
 
 Many logics have been studied under  Curry -- Howard interpretation
 
@@ -24,225 +28,53 @@ Many logics have been studied under  Curry -- Howard interpretation
 * Linear : Various resource sensitive typed calculi -- e.g. session types, concurrent programming
 * Modal logics: Focus on $S4$ -- calculi for staged computation, modal type theories etc.
 
-<!-- begin merge (remove this line to resolve the conflict) -->
+What is a sensible Curry Howard reading/ calculus of justificaton logic based on first principles?
 
-~ Slide
-[Calculus for Justification Logic Modality?]{ :larger} 
 
-  * Justification logic is a multifacet system of necessity
-  * Can be configured to emulate $K$, $T$, $S4$, $S5$ style necessity.
-  * Can appear in intuitionistic and classical versions with respect to the underlying logic. 
+
+## which Justification Logic?
+
+  * Justification logic is a multifaceted system of necessity
+  * Can be configured to emulate $K$, $T$, $S4$, $S5$ modality
+  * Can appear in intuitionistic and classical versions with respect to the underlying logic 
   * We focus on a minimal system based on $K$ modal logic and intuitionistic implication
   * Strengthening of the modality can be done in a way  that is respecting the computational reading we propose 
-~
- 
-<!-- end merge -->
-~ End Vertical
-#INFERENCES
-
-$ 
-\inferrule*[]{
-\inferrule*[]{
-  \inferrule*[]{\inferrule*[]{ A}{\llbracket \Gamma'\rrbracket:\llbracket  A_1\rrbracket,\ldots \llbracket  A_i\rrbracket}}{ }
-    }{B}\\C} {\inferrule*[]{A}{B}}$       	         				
-	         	         				
-
-~ Math
-e = mc^2
-~
-
-Using [Madoko] it is easy to create beautiful presentations.
-
-* [Html][slide]:
-  Uses the `Reveal.js` library by [Hakim El Hattab](http://hakim.se).\
-  This slide demo in Madoko is an adaption of his online demo.
-* [Pdf][slide-pdf]:
-  Uses the `Beamer` package for LaTeX
-* [Source][slide-mdk]:
-  Click to see the source of this presentation.
-
-
-[madoko]: http://madoko.codeplex.com
-
-## Reveal.js
-
-`reveal.js` is a framework for easily creating beautiful presentations using
-HTML. You'll need a browser with support for CSS 3D transforms to see it in
-its full glory. 
-
-And any Madoko features just work. Here is some math:
-
-~ Begin Framed { padding:1ex; margin-top:1ex }
-A famous equation is $e = mc^2$, but this one is 
-famous too:
-
-~ Equation  {#eq-gaussian}
-\int_{-\infty}^\infty e^{-a x^2} d x = \sqrt{\frac{\pi}{a}} 
-~
-~ End Framed
-
-~~ Notes
-Oh hey, these are some notes. They'll be hidden in your presentation, but you
-can see them if you open the speaker notes window (hit 's' on your keyboard).
-~~
-
-## Code
-
-Here is code, highlighted by Madoko 
-
-``` javascript
-function sqr( x ) {
-  var \(&pi;\) = 3.141593;
-  return x*x;  /* the square */
-}
-```
-We used `\(` and `\)` to escape into markdown to write &pi;.
-
-<!-- Example of nested vertical slides -->
-~ Begin Vertical { data-background:Gainsboro }
-
-## Vertical Slides {#vertical}
-Slides can be nested inside of other slides,
-try pressing [down].
-
-[![arrowdown]][down]
-
-
-[down]: # { .navigate-down }
-[arrowdown]: images/arrow.png "Down arrow" { width:178px; height:238px }
-
-## Basement Level 1
-Press down or up to navigate.
-
-## Basement Level 2
-
-Use `columns` to put blocks next to each other:
-
-~ Begin Columns
-~ Column { width:50% }
-A monarch butterfly (shown to the right)
-spends the winter in Mexico.
-~
-~ Column
-![butterfly]
-~
-~ End Columns
-
-[butterfly]: images/butterfly.png "A Monarch butterfly" { width:280px; vertical-align:middle }
-
-
-<!-- 
-For local background images, we need to have a reference to the image
-such that it's data gets embedded into the HTML page. We define
-it using "display=none" so it is hidden in the presentation. 
-We can then refer to the image in "data-background-image". 
--->
-
-![bfly]
-[bfly]: images/butterfly.png "Butterfly" { display:none }
-
-## Basement Level 3 { data-background-image:images/butterfly.png }
-That's it, time to go back up.
-
-[![arrowup]][back2]
-
-[arrowup]:  images/arrow.png "Up arrow" { width:178px; height:238px; transform:rotate(180deg) }
-[back2]:    #vertical { .image }
 
 ~ End Vertical
 
-
-## Themes {#themes}
-
-Reveal.js comes with a few themes built in:
-
-* [Default](?#/themes)
-* [Sky](?theme=sky#/themes)
-* [Beige](?theme=beige#/themes)
-* [Serif](?theme=serif#/themes)
-* [Simple](?theme=simple#/themes)
-* [Night](?theme=night#/themes)
-* [Moon](?theme=moon#/themes)
-* [Solarized](?theme=solarized#/themes)
-
-Theme demos are loaded after the presentation which leads to flicker. In
-production you should load your theme in the `<head>` using a
-`<link>`.
-
-## Transitions { #transitions }
-
-You can select from different transitions, like:\
-[Cube](?transition=cube#/transitions) -
-[Page](?transition=page#/transitions) -
-[Concave](?transition=concave#/transitions) -
-[Zoom](?transition=zoom#/transitions) -
-[Linear](?transition=linear#/transitions) -
-[Fade](?transition=fade#/transitions) -
-[None](?transition=none#/transitions) -
-[Default](?#/transitions)
+~ Begin Vertical
+  
+## Main Motivation
 
 
-
-## Pauses?
-
-Some pauses.
-
-* {.fragment} One
-* {.fragment} Two
-* {.fragment} Three
-
-And more:
-
-- Test 1
-- Test 2
-- Test 3
-{.fragmented}
-
-Cool!.
+  * Justification logic stemmed from Artemov's solution to providing an explicit proof theoretic semantics classical
+  to intuionistic logic.
+  * We treat justifications as __validations__. I.e. second level proof constructs 
+  in a trusted system that are to be related with proof constructs of another weaker system in the first level (take classical/ intuitionistic constructs as an exemplary case)
+  * We, effectively, treat __proof theoretically__ a pretty basic __semantical__ idea.    
 
 ~ Slide
-A slide with no header
-~
+  * This concept is definitely not new: it appears in the categorical setting in the work of Lawvere with
+  concepts such as ``semantics as functors" or  "adjunctions between syntax and semantics".
+  * We build a logic closer to the former but the latter approach is open for furture  work
+  * Other adjunction or monadic based logics have been developed based on this insights (e.g. Moggi's lax calculus)
+  * Our novel  contribution is the relation to justification logic which is an existing well studied
+  logic in itself.
+  
+~ 
+~ End Vertical
+## Main motivation 
+
+Assume two deductive systems $I$ 
+(with propositional universe $U_I$, 
+a possibly non-empty signature of axioms $\Sigma_I$ and an entailment relation $\Sigma_I;\Gamma\vdash_{I}A$) and $J$ 
+(resp. with  $U_J$, $\Sigma_J$ and $\Sigma_J;\Delta\vdash_J \phi$). We will be using Latin letters for the formulae of $I$ and Greek letters for the formulae of $J$.
+We will be omitting the $\Sigma$
 
 
-## Point of View
-
-In Reveal.js Press **ESC** to enter the slide overview.
-
-Hold down alt and click on any element to zoom in on it using 
- [zoom.js]. Alt + click anywhere to zoom back out.
 
 
-[zoom.js]: http://lab.hakim.se/zoom-js
 
-
-## Works in Mobile Safari
-
-Try it out! You can swipe through the slides and pinch your way to the
-overview.
-
-
-## Printing
-
-You can print a `revealjs` presentation nicely from the browser.
-
-First give the `?print-pdf` or `?print-paper` query on your final
-presentation (in the browser address bar) and then print from the Chrome
-browser selecting `Save to PDF`.
-
-Read more about it at the [revealjs documentation](https://github.com/hakimel/reveal.js#pdf-export)
-
-## RevealJS library
-
-Normally, the `revealjs` library is loaded from a CDN but you can specify your
-own url using metadata:
-
-    Reveal Url: <my url>
-
-This can be useful when using a [server to run revealjs](https://github.com/hakimel/reveal.js#full-setup)
-where you may use something like:
-
-    @nopreview Reveal Url: http://localhost:8000/reveal.js
 
 
 ## Thanks for looking :-)
