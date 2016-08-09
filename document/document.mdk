@@ -32,7 +32,7 @@ What is a sensible Curry Howard reading/ calculus of justificaton logic based on
 
 
 
-## which Justification Logic?
+## Which Justification Logic?
 
   * Justification logic is a multifaceted system of necessity
   * Can be configured to emulate $K$, $T$, $S4$, $S5$ modality
@@ -44,7 +44,7 @@ What is a sensible Curry Howard reading/ calculus of justificaton logic based on
 
 ~ Begin Vertical
   
-## Main Motivation
+## Motivation
 
 
   * Justification logic stemmed from Artemov's solution to providing an explicit proof theoretic semantics classical
@@ -63,14 +63,34 @@ What is a sensible Curry Howard reading/ calculus of justificaton logic based on
   
 ~ 
 ~ End Vertical
-## Main motivation 
+~ Begin Vertical
 
-Assume two deductive systems $I$ 
-(with propositional universe $U_I$, 
-a possibly non-empty signature of axioms $\Sigma_I$ and an entailment relation $\Sigma_I;\Gamma\vdash_{I}A$) and $J$ 
-(resp. with  $U_J$, $\Sigma_J$ and $\Sigma_J;\Delta\vdash_J \phi$). We will be using Latin letters for the formulae of $I$ and Greek letters for the formulae of $J$.
-We will be omitting the $\Sigma$
+## motivation (formally) 
 
+Assume a deductive systems $I$:
+
+  * with propositions in $U_I$
+  * a possibly non-empty signature of axioms $\Sigma_I$    
+  * an entailment relation   $\Sigma_I;\Gamma\vdash_{I}A$
+   
+
+and  $J$ with: $U_J$, $\Sigma_J$, and $\Sigma_J;\Delta\vdash_J \phi$ respectively.  
+
+## motivation(formally)
+Minimal requirements:
+
+* __Reflexivity__ :
+    
+    * $A \in \Gamma \Longrightarrow \Gamma\vdash_{I}A$
+    * $\phi \in \Delta \Longrightarrow \Delta\vdash_{J}\phi$
+* __Compositionality__:  
+        $\Gamma\vdash_I A$ __and__ $\Gamma^{'},A\vdash_{I} B \Longrightarrow \Gamma,\Gamma^{'}\vdash_I B $  
+        $\Delta\vdash_J\phi$ __and__ $\Delta^{'},\phi\vdash_{J} \psi \Longrightarrow \Delta,\Delta^{'}\vdash_J \psi$$ 
+*  __Top __:
+ $\Gamma\vdash_{I}\top_I \text{\ and \ }
+	\Delta \vdash_J\top_J$$
+
+~ End Vertical
 
 
 
