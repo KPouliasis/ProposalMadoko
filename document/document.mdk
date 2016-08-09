@@ -24,19 +24,21 @@ Many logics have been studied under  Curry -- Howard interpretation
 * Linear : Various resource sensitive typed calculi -- e.g. session types, concurrent programming
 * Modal logics: Focus on $S4$ -- calculi for staged computation, modal type theories etc.
 
+<!-- begin merge (remove this line to resolve the conflict) -->
+
 ~ Slide
 [Calculus for Justification Logic Modality?]{ :larger} 
 
   * Justification logic is a multifacet system of necessity
-  * Can be configured to emulate $K$, $T$, $S4$, $S5$ system.
-  * Can appear in intuitionistic and classical versions for the underlying logic. 
+  * Can be configured to emulate $K$, $T$, $S4$, $S5$ style necessity.
+  * Can appear in intuitionistic and classical versions with respect to the underlying logic. 
   * We focus on a minimal system based on $K$ modal logic and intuitionistic implication
-  * Strengthening of the modality can happen respecting the computational 
+  * Strengthening of the modality can be done in a way  that is respecting the computational reading we propose 
 ~
  
+<!-- end merge -->
 ~ End Vertical
-
-#
+#INFERENCES
 
 $ 
 \inferrule*[]{
