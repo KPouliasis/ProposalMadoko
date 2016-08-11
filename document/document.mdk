@@ -65,7 +65,7 @@ What is a sensible Curry Howard reading/ calculus of justificaton logic based on
 ~ End Vertical
 ~ Begin Vertical
 
-## motivation (formally) 
+## Motivation (formally) 
 
 Assume a deductive systems $I$:
 
@@ -76,7 +76,7 @@ Assume a deductive systems $I$:
 
 and  $J$ with: $U_J$, $\Sigma_J$, and $\Sigma_J;\Delta\vdash_J \phi$ respectively.  
 
-## motivation(formally)
+## Motivation(formally)
 Minimal requirements:
 
 * __Reflexivity__ :
@@ -84,11 +84,22 @@ Minimal requirements:
     * $A \in \Gamma \Longrightarrow \Gamma\vdash_{I}A$
     * $\phi \in \Delta \Longrightarrow \Delta\vdash_{J}\phi$
 * __Compositionality__:  
-        $\Gamma\vdash_I A$ __and__ $\Gamma^{'},A\vdash_{I} B \Longrightarrow \Gamma,\Gamma^{'}\vdash_I B $  
-        $\Delta\vdash_J\phi$ __and__ $\Delta^{'},\phi\vdash_{J} \psi \Longrightarrow \Delta,\Delta^{'}\vdash_J \psi$$ 
+    * $\Gamma\vdash_I A$ __and__ $\Gamma^{\prime},A\vdash_{I} B \Longrightarrow \Gamma,\Gamma^{\prime}\vdash_I B $  
+    * $\Delta\vdash_J\phi$ __and__ $\Delta^{\prime},\phi\vdash_{J} \psi \Longrightarrow \Delta,\Delta^{\prime}\vdash_J \psi$ 
 *  __Top __:
  $\Gamma\vdash_{I}\top_I \text{\ and \ }
-	\Delta \vdash_J\top_J$$
+	\Delta \vdash_J\top_J$
+* __Structural interpretation of contexts__: 
+  For $\Gamma$ of  the form $A_1,\ldots, A_n$:
+  
+  $\llbracket\Gamma \rrbracket=\llbracket A_1  \rrbracket,\ldots,  \llbracket A_n\rrbracket$
+  
+~ Slide
+Given a deductive system $I$  and an  interpretation $\llbracket\bullet\rrbracket_J$ for $I$ we define:
+a _corresponding validation_ of a deduction $\Sigma_I;\Gamma\vdash_I A$  
+as a deduction $\Sigma_J;\Delta\vdash_{J} \phi$ in $J$ such that $\llbracket A \rrbracket=\phi$ and $\Delta=\llbracket \Gamma \rrbracket $ . We will be writing
+$ \llbracket \Sigma_I;\Gamma\vdash_I A\rrbracket_J$ to denote such a validation.
+~
 
 ~ End Vertical
 
