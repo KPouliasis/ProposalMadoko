@@ -129,10 +129,20 @@ all purely logical deductions $\mathcal{D}$ in $I$
 ## Judgments
 Idea: Create a system with two kinds of judgments $A \ {\sf true}$ and $A\  {\sf valid}:=\  \llbracket A \rrbracket {\sf true}$ and treat necessity
 as ``double theoremhood" and obtain a system of basic constructive modality. Use justification logic to 
-axiomatize for validity $\llbracket judgments\rrbracket$. 
+axiomatize validity $\llbracket \sf {judgments}\rrbracket$. 
 
 One modal rule:
-$\inferrule* []{{\Box  A}\\ B}{}$
+$\inferrule* {{\Box A} \\  {\inferrule* {}{{\begin{tabular}[b]{c}
+A  \\
+\vdots \\
+B 
+  \end{tabular} } \\ {\begin{tabular}[b]{c}
+A  \\
+\vdots \\
+B 
+  \end{tabular}}  }}}
+   {ee}
+$
 	
 
 ## Thanks for looking :-)
