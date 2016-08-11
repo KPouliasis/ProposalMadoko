@@ -114,7 +114,7 @@ $ \llbracket \Sigma_I;\Gamma\vdash_I A\rrbracket_J$
 Given a deductive system $I$, we say that  $J$ is __logically complete__ under 
 $\llbracket\bullet \rrbracket_J$  when  for
 all purely logical deductions $\mathcal{D}$ in $I$ 
- there exists a (purely logical) validation $\llbracket\mathcal{E}\rrbracket$ in $J$.
+ there exists a (purely logical) validation $\mathcal{E}$ in $J$.
  i.e:
  
  
