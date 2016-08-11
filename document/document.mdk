@@ -89,18 +89,38 @@ Minimal requirements:
 *  __Top __:
  $\Gamma\vdash_{I}\top_I \text{\ and \ }
 	\Delta \vdash_J\top_J$
-* __Structural interpretation of contexts__: 
+
   For $\Gamma$ of  the form $A_1,\ldots, A_n$:
   
   $\llbracket\Gamma \rrbracket=\llbracket A_1  \rrbracket,\ldots,  \llbracket A_n\rrbracket$
-  
-~ Slide
-Given a deductive system $I$  and an  interpretation $\llbracket\bullet\rrbracket_J$ for $I$ we define:
-a _corresponding validation_ of a deduction $\Sigma_I;\Gamma\vdash_I A$  
-as a deduction $\Sigma_J;\Delta\vdash_{J} \phi$ in $J$ such that $\llbracket A \rrbracket=\phi$ and $\Delta=\llbracket \Gamma \rrbracket $ . We will be writing
-$ \llbracket \Sigma_I;\Gamma\vdash_I A\rrbracket_J$ to denote such a validation.
-~
 
+
+## Interpetations and Validations
+An  _interpretation for $I$_, ($\llbracket\bullet \rrbracket_J$) is a pair
+$(J,\llbracket\bullet\rrbracket)$ of a deductive  system $J$ together
+with a (functional) mapping $\llbracket \bullet \rrbracket: U_I\rightarrow U_J$ on propositions of $I$ into propositions of $J$ extended to multisets of 
+formulae of $U_I$  s.t. 
+
+* $\llbracket\top_I \rrbracket = \top_J$ 
+*  For $\Gamma$ of  the form $A_1,\ldots, A_n$: $\llbracket\Gamma \rrbracket=\llbracket A_1  \rrbracket,\ldots,  \llbracket A_n\rrbracket$
+Given a deductive system $I$  and an  interpretation  function $\llbracket\bullet\rrbracket_J:U_I\rightarrow U_J$
+ of $I$ into $J$ we define:
+
+A _validation_ of a deduction $\Sigma_I;\Gamma\vdash_I A$ to be a deduction $\Sigma_J;\Delta\vdash_{J} \phi$ in $J$ 
+such that $\llbracket A \rrbracket=\phi$ and $\Delta=\llbracket \Gamma \rrbracket $ . We will be writing
+$ \llbracket \Sigma_I;\Gamma\vdash_I A\rrbracket_J$ 
+
+## Logical Completeness
+Given a deductive system $I$, we say that  $J$ is __logically complete__ under $\llbracket\bullet \rrbracket_J$  is when  for
+all purely logical deductions $\mathcal{D}$ in $I$ 
+ there exists a (purely logical) validation $\llbracket\mathcal{E}\rrbracket$ in $J$.
+ i.e:
+ 
+ 
+  
+ 
+ $\forall \mathcal{D}. \ \mathcal{D}:\Gamma\vdash_I A \Longrightarrow 
+ \exists \llbracket\mathcal{D}\rrbracket: \llbracket \Gamma\vdash A\rrbracket_J$
 ~ End Vertical
 
 
