@@ -131,7 +131,9 @@ Idea: Create a system with two kinds of judgments $A \ {\sf true}$ and $A\  {\sf
 as ``double theoremhood" and obtain a system of basic constructive modality. Use justification logic to 
 axiomatize validity $\llbracket \sf {judgments}\rrbracket$. 
 
-One modal rule:
+One modal rule: 
+
+* 
 $\inferrule* {{\Box A} \\  {\inferrule* {}{{\begin{array}{c}
 A  \\
 \vdots \\
