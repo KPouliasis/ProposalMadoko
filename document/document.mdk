@@ -121,12 +121,19 @@ all purely logical deductions $\mathcal{D}$ in $I$
   
  
  $\forall \mathcal{D}. \ \mathcal{D}:\Gamma\vdash_I A \Longrightarrow 
- \exists \llbracket\mathcal{D}\rrbracket: \llbracket \Gamma\vdash A\rrbracket_J$
+ \exists\mathcal{E}: \llbracket \Gamma\vdash A\rrbracket_J$
 ~ End Vertical
 
 
 
+## Judgments
+Idea: Create a system with two kinds of judgments $A \ {\sf true}$ and $A\  {\sf valid}:=\  \llbracket A \rrbracket {\sf true}$ and treat necessity
+as ``double theoremhood" and obtain a system of basic constructive modality. Use justification logic to 
+axiomatize for validity $\llbracket judgments\rrbracket$. 
 
+One modal rule:
+$\inferrule* []{{\Box  A}\\ B}{}$
+	
 
 ## Thanks for looking :-)
 
