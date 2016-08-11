@@ -192,18 +192,54 @@ $J$\end{mdInlineSnippet}%mdk
 %mdk-data-line={123}
 \begin{mdInlineSnippet}[8ee221b554f334322dd70423103cfd8b]%mdk
 $\forall \mathcal{D}. \ \mathcal{D}:\Gamma\vdash_I A \Longrightarrow \exists\mathcal{E}: \llbracket \Gamma\vdash A\rrbracket_J$\end{mdInlineSnippet}%mdk
-%mdk-data-line={130}
+%mdk-data-line={132}
 \begin{mdInlineSnippet}[ecc0507e1fec0352ecf812aba52cf7e4]%mdk
 $A \ {\sf true}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={130}
+%mdk-data-line={132}
 \begin{mdInlineSnippet}[9f791c2d98cbbb2d22338197dd5d3ca4]%mdk
 $A\  {\sf valid}:=\  \llbracket A \rrbracket {\sf true}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={132}
+%mdk-data-line={137}
 \begin{mdInlineSnippet}[00d64984ca4e4a5efe2b48cbf793a7fb]%mdk
 $\llbracket \sf {judgments}\rrbracket$\end{mdInlineSnippet}%mdk
-%mdk-data-line={135}
-\begin{mdInlineSnippet}[47a834de8492a814a6f54f9239a29da7]%mdk
-$\inferrule* {{\Box A} \\  {\inferrule* {}{{\begin{array}{c}A  \\\vdots \\B \end{array} } \\ {\begin{array}{c}\llbracket A  \rrbracket \\\vdots \\\llbracket B \rrbracket  \end{array}}  }}}{\Box B}$\end{mdInlineSnippet}%mdk
+%mdk-data-line={141}
+\begin{mdInlineSnippet}[baff498e308264335f092f18afa7db81]%mdk
+$A\  {\sf valid}$\end{mdInlineSnippet}%mdk
+%mdk-data-line={141}
+\begin{mdInlineSnippet}[74410d2102c7e4d1addb996fb9281284]%mdk
+$ A\ {\sf true}$\end{mdInlineSnippet}%mdk
+%mdk-data-line={141}
+\begin{mdInlineSnippet}[2c8cf22ebf917cd1033d6c2a4e929d76]%mdk
+$ \Box A {\sf true}$\end{mdInlineSnippet}%mdk
+%mdk-data-line={141}
+\begin{mdDisplaySnippet}[febd5962eabcbf6bc3cb65033dec99c9]%mdk
+\[%mdk-data-line={144}
+  \inferrule* {{\Box A} \\  {\inferrule* {}{{\begin{array}{c}
+  \overline{x:A}  \\
+  \vdots \\
+  {B} 
+  \end{array} } \\ {\begin{array}{c}
+  \overline{s:\llbracket A  \rrbracket} \\
+  \vdots \\
+  \llbracket B \rrbracket  
+    \end{array}}  }}}
+    {\Box B}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={158}
+\begin{mdDisplaySnippet}[dd2b657f73aff9f23721003cc45a9d41]%mdk
+\[%mdk-data-line={160}
+  \inferrule* {{\Box A_1 \ldots \Box A_i} \\  {\inferrule* {}{{\begin{array}{c}
+  \overline{x:A}  \\
+  \vdots \\
+  {B} 
+  \end{array} } \\ {\begin{array}{c}
+  \overline{s:\llbracket A  \rrbracket} \\
+  \vdots \\
+  \llbracket B \rrbracket  
+    \end{array}}  }}}
+    {\Box B}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
 
 \end{mdSnippets}
 

@@ -125,29 +125,51 @@ all purely logical deductions $\mathcal{D}$ in $I$
 ~ End Vertical
 
 
-~ Begin Vertical
+
 ## Judgments
-Idea: Create a system with two kinds of judgments $A \ {\sf true}$ and $A\  {\sf valid}:=\  \llbracket A \rrbracket {\sf true}$ and treat necessity
-as ``double theoremhood" and obtain a system of basic constructive modality. Use justification logic to 
+Roadmap:
+
+* Create a system with two kinds of judgments $A \ {\sf true}$ and $A\  {\sf valid}:=\  \llbracket A \rrbracket {\sf true}$ and treat necessity
+as "double theoremhood"  
+* obtain a system of basic constructive modality investigating the minimal relation
+between these two systems 
+* Use justification logic to 
 axiomatize validity $\llbracket \sf {judgments}\rrbracket$. 
 
-One modal rule: 
+## Modal Rule
 
-* 
-$\inferrule* {{\Box A} \\  {\inferrule* {}{{\begin{array}{c}
-A  \\
-\vdots \\
-B 
+One modal rule for elimination and introduction to relate judgments $A\  {\sf valid}$, $ A\ {\sf true}$, $ \Box A {\sf true}$: 
+
+~ Math
+  
+  \inferrule* {{\Box A} \\  {\inferrule* {}{{\begin{array}{c}
+  \overline{x:A}  \\
+  \vdots \\
+  {B} 
   \end{array} } \\ {\begin{array}{c}
-\llbracket A  \rrbracket \\
-\vdots \\
-\llbracket B \rrbracket  
-  \end{array}}  }}}
-   {\Box B}
-$
-~ End Vertical
+  \overline{s:\llbracket A  \rrbracket} \\
+  \vdots \\
+  \llbracket B \rrbracket  
+    \end{array}}  }}}
+    {\Box B}
+ ~ 
+  
+More generally: 
 
-## Thanks for looking :-)
+~ Math
+  
+  \inferrule* {{\Box A_1 \ldots \Box A_i} \\  {\inferrule* {}{{\begin{array}{c}
+  \overline{x:A}  \\
+  \vdots \\
+  {B} 
+  \end{array} } \\ {\begin{array}{c}
+  \overline{s:\llbracket A  \rrbracket} \\
+  \vdots \\
+  \llbracket B \rrbracket  
+    \end{array}}  }}}
+    {\Box B}
+ ~ 
+ ## Thanks for looking :-)
 
 [slide]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.html
 [slide-mdk]: https://www.madoko.net/editor.html?#url=http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/slidedemo.mdk&options={"delayedUpdate":"true"}
