@@ -126,8 +126,9 @@ all purely logical deductions $\mathcal{D}$ in $I$
 
 
 
-## Judgments
-Roadmap:
+# Judgments
+
+## Roadmap:
 
 * Create a system with two kinds of judgments $A \ {\sf true}$ and $A\  {\sf valid}:=\  \llbracket A \rrbracket {\sf true}$ and treat necessity
 as "double theoremhood"  
@@ -155,7 +156,9 @@ One modal rule for elimination and introduction to relate judgments $A\  {\sf va
     {\Box B}
  ~ 
   
-Or, generalizing for assumptions $\Gamma:=x_1:A_1, \ldots, x_i: A_i\  \text{and } \Delta:= s_1:\llbracket A_i \rrbracket, \ldots 
+  
+Or, generalizing for assumptions 
+$\Gamma:=x_1:A_1, \ldots, x_i: A_i\  \text{and } \Delta:= s_1:\llbracket A_i \rrbracket, \ldots 
 s_i:A_i$ : 
 
 
@@ -188,14 +191,68 @@ and derivations $\mathcal{D,E}$ closed for substitutions.
     \end{array}}  }}}
     {\Box B}
  ~ 
-## Modal Rule (Local Soundness)
+## Local Soundness: elim rule is not too strong
 
+For $\mathcal{\overline{D},\overline{E}}$ closed for substitutions, the first proof tree is reducible to the second:
+~ Math
+\begin{array}{l r}
+ \inferrule*{ 
+  \inferrule* {{\inferrule* {}{{\begin{array}{c}
+  \mathcal{\overline{D}}  \\
+  {A} 
+  \end{array} } \\ {\begin{array}{c}
+\mathcal{\overline{E}} \\
+  \llbracket A \rrbracket  
+    \end{array}}  }}}
+    {\Box A}\\{{\inferrule* {}{{\begin{array}{c}
+  \overline{x:A}  \\
+  \vdots \\
+  {B} 
+  \end{array} } \\ {\begin{array}{c}
+  \overline{s:\llbracket A  \rrbracket} \\
+  \vdots \\
+  \llbracket B \rrbracket  
+    \end{array}}  }}}}{\Box B} & \Longrightarrow 
+    \end{array}
+~
+~Math
+  \inferrule*  {{\inferrule* {}{{\begin{array}{c}
+  \mathcal{\overline{D}}\\
+  \overline{A}  \\
+  \vdots \\
+  {B} 
+  \end{array} } \\ {\begin{array}{c}
+  \mathcal{\overline{E}}\\
+  \overline{\llbracket A  \rrbracket} \\
+  \vdots \\
+  \llbracket B \rrbracket  
+    \end{array}}  }}}{\Box B}
 
+ ~ 
 
-## Modal Rule (Local Completeness) 
+## Local Completeness: Intro Rule  is not too weak
+Any deduction $\mathcal{D}: \Box A$ can be expanded as follows:
+
+~ Math
+\inferrule* {{\begin{array}{c}
+  \mathcal{D}\\
+   \Box A 
+  \end{array} } \\ {\begin{array}{c}
+                      \\
+                      \overline{x:A}
+                      \end{array}}
+                      }
+                      {\Box A}
+~
+
  ~ End Vertical
+ # The system
  ## Thanks for looking :-)
 
 [slide]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.html
 [slide-mdk]: https://www.madoko.net/editor.html?#url=http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/slidedemo.mdk&options={"delayedUpdate":"true"}
 [slide-pdf]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.pdf
+
+
+
+
