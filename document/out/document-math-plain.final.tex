@@ -226,14 +226,17 @@ $ \Box A {\sf true}$\end{mdInlineSnippet}%mdk
 \]%mdk
 \end{mdDisplaySnippet}%mdk
 %mdk-data-line={158}
-\begin{mdDisplaySnippet}[dd2b657f73aff9f23721003cc45a9d41]%mdk
-\[%mdk-data-line={160}
-  \inferrule* {{\Box A_1 \ldots \Box A_i} \\  {\inferrule* {}{{\begin{array}{c}
-  \overline{x:A}  \\
+\begin{mdInlineSnippet}[51805e821c19e02ec14f2b531ea15bf4]%mdk
+$\Gamma:=x_1:A_1, \ldots, x_i: A_i\  \text{and } \Delta:= s_1:\llbracket A_i \rrbracket, \ldots s_i:A_i$\end{mdInlineSnippet}%mdk
+%mdk-data-line={159}
+\begin{mdDisplaySnippet}[f6c94a83781ed81ed4213d8bfe6b2530]%mdk
+\[%mdk-data-line={161}
+  \inferrule* {{\Box A_1, \ldots,  \Box A_i} \\  {\inferrule* {}{{\begin{array}{c}
+  \overline{\Gamma}  \\
   \vdots \\
   {B} 
   \end{array} } \\ {\begin{array}{c}
-  \overline{s:\llbracket A  \rrbracket} \\
+  \overline{\Delta} \\
   \vdots \\
   \llbracket B \rrbracket  
     \end{array}}  }}}

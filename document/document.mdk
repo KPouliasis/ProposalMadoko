@@ -136,6 +136,7 @@ between these two systems
 * Use justification logic to 
 axiomatize validity $\llbracket \sf {judgments}\rrbracket$. 
 
+~ Begin Vertical
 ## Modal Rule
 
 One modal rule for elimination and introduction to relate judgments $A\  {\sf valid}$, $ A\ {\sf true}$, $ \Box A {\sf true}$: 
@@ -154,21 +155,26 @@ One modal rule for elimination and introduction to relate judgments $A\  {\sf va
     {\Box B}
  ~ 
   
-More generally: 
+Or, generalizing for assumptions $\Gamma:=x_1:A_1, \ldots, x_i: A_i\  \text{and } \Delta:= s_1:\llbracket A_i \rrbracket, \ldots 
+s_i:A_i$ : 
+
+
 
 ~ Math
   
-  \inferrule* {{\Box A_1 \ldots \Box A_i} \\  {\inferrule* {}{{\begin{array}{c}
-  \overline{x:A}  \\
+  \inferrule* {{\Box A_1, \ldots,  \Box A_i} \\  {\inferrule* {}{{\begin{array}{c}
+  \overline{\Gamma}  \\
   \vdots \\
   {B} 
   \end{array} } \\ {\begin{array}{c}
-  \overline{s:\llbracket A  \rrbracket} \\
+  \overline{\Delta} \\
   \vdots \\
   \llbracket B \rrbracket  
     \end{array}}  }}}
     {\Box B}
  ~ 
+ ## Moda Ryk
+ ~ End Vertical
  ## Thanks for looking :-)
 
 [slide]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.html
