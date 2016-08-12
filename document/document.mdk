@@ -173,7 +173,26 @@ s_i:A_i$ :
     \end{array}}  }}}
     {\Box B}
  ~ 
- ## Moda Ryk
+
+## Modal Rule ($\Box$ Introduction)
+We defined the connective negatively but we obtain  $\Box$ constuctors by the very same rule for $\Gamma,\Delta$ empty
+and derivations $\mathcal{D,E}$ closed for substitutions.
+~ Math
+  
+  \inferrule* {{\inferrule* {}{{\begin{array}{c}
+  \mathcal{D}  \\
+  {B} 
+  \end{array} } \\ {\begin{array}{c}
+\mathcal{E} \\
+  \llbracket B \rrbracket  
+    \end{array}}  }}}
+    {\Box B}
+ ~ 
+## Modal Rule (Local Soundness)
+
+
+
+## Modal Rule (Local Completeness) 
  ~ End Vertical
  ## Thanks for looking :-)
 
