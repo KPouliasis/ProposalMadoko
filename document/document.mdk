@@ -360,8 +360,9 @@ We can show that:
 
 * or every  $\Gamma,   A \in {\sf Prop_0}$:  $\Gamma\vdash A \Longrightarrow \llbracket \Gamma\rrbracket\vdash\llbracket A\rrbracket $ and, hence, $\Box\Gamma \vdash \Box   A$.
 * this is essentially the "functional completeness" proof of Curry for combinatory logic
-* In our setting translates to admissibility of Rule of Necessitation since:  
-
+* In our setting translates to admissibility of Rule of Necessitation since:
+$\vdash A \Longrightarrow \vdash \Box A$.
+* with this we get a completeness result w.r.t to intuitionistic $K$ modality
 
  ## Thanks for looking :-)
 
