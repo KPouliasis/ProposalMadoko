@@ -315,16 +315,18 @@ For the image  of the interpretation  $\llbracket{\sf Prop_0}\rrbracket$ we dema
 
  * Following justification logic, we use the axiomatic characterization from combinatory logic.
 ##  Natural Deduction ( $\llbracket{\sf Prop_0}\rrbracket$ )
-
+~ Math
 \begin{array}{l r}
 \inferrule* {s:\llbracket  A\rrbracket \in \Delta}{{\Delta}\vdash {\llbracket  A\rrbracket}}
 & \inferrule* { } {\Turn {\Delta} {\llbracket  \top \rrbracket}}
 \\
 \inferrule*{  A, B \in {\sf Prop_0} }   {\Delta\vdash \llbracket   A \supset (B \supset   A)\rrbracket }
+\\
 \inferrule* { {  A,B, C \in {\sf Prop_0}}}{\Delta\vdash\llbracket   A\supset (B \supset C) \supset ((  A\supset B) \supset (  A \supset C))\rrbracket}
 \\
 \inferrule* {{ {\Delta}\vdash { \llbracket  A \supset  B \rrbracket}}\\ {{\Delta}\vdash {\llbracket  A \rrbracket}}}{ {\Delta}\vdash {\llbracket  B\rrbracket}}
-
+\end{array}
+~
 ##  Natural Deduction ( $\llbracket{\sf Prop_0}\rrbracket$ )
 ~ Math
 \begin{array}{l r}
@@ -358,8 +360,8 @@ For the image  of the interpretation  $\llbracket{\sf Prop_0}\rrbracket$ we dema
 \inferrule*{  A, B \in {\sf Prop_0} }   {\Delta\vdash \llbracket   A \supset (B \supset   A)\rrbracket } &
 \inferrule*{ {  A,B, C \in {\sf Prop_0}}}{\Delta\vdash\llbracket   A\supset (B \supset C) \supset ((  A\supset B) \supset (  A \supset C))\rrbracket}
 \\
+<!-- end merge -->
 \inferrule*[right=MP] {{\Turn {\Delta} { \llbracket  A \supset  B \rrbracket}}\\ {\Turn{\Delta} {\llbracket  A \rrbracket}}}{\Turn {\Delta} {\llbracket  B\rrbracket}}
-
 ##  Natural Deduction ( $\llbracket{\sf Prop_0}\rrbracket$ )
 ~ Math
 \begin{array}{l r}
