@@ -397,17 +397,27 @@ $\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
 %mdk-data-line={311}
 \begin{mdInlineSnippet}[3cfce4e2eacd4d1ba46b969327e744be]%mdk
 $\llbracket {\sf Prop_0}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={317}
+%mdk-data-line={316}
 \begin{mdInlineSnippet}[6abfdac12c5881728b0774166e4c6328]%mdk
 $\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
-%mdk-data-line={324}
-\begin{mdInlineSnippet}[f806252045a28179caaf0ec8f0b5f298]%mdk
-$_3$\end{mdInlineSnippet}%mdk
-%mdk-data-line={326}
+\begin{mdDisplaySnippet}[f46b87f04e3d0f88fd8801da54f13bf1]%mdk
+\[%mdk-data-line={320}
+\begin{array}{l r}
+\inferrule* {s:\llbracket  A\rrbracket \in \Delta}{{\Delta}\vdash {\llbracket  A\rrbracket}} & \inferrule* { } { {\Delta} \vdash{\llbracket  \top \rrbracket}}
+\\
+\\
+\inferrule*{  A, B \in {\sf Prop_0} }  {\Delta\vdash \llbracket   A \supset (B \supset   A)\rrbracket }
+\\
+\inferrule* { {  A,B, C \in {\sf Prop_0}}}{\Delta\vdash\llbracket   A\supset (B \supset C) \supset ((  A\supset B) \supset (  A \supset C))\rrbracket}
+\\
+\inferrule* {{ {\Delta}\vdash { \llbracket  A \supset  B \rrbracket}}\\ {{\Delta}\vdash {\llbracket  A \rrbracket}}}{ {\Delta}\vdash {\llbracket  B\rrbracket}}
+\end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
 \begin{mdInlineSnippet}[6abfdac12c5881728b0774166e4c6328]%mdk
 $\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
 \begin{mdDisplaySnippet}[3fd21d2690ac26a8bbe5e669e60e15ba]%mdk
-\[%mdk-data-line={329}
+\[%mdk-data-line={334}
 \begin{array}{l r}
 \inferrule*{x^{\prime}: \Box A \in \Gamma}{ {\Gamma}\vdash {\Box A}} & 
 \inferrule*{{(\forall  A_i \in \Gamma^{\prime}. \  {\Gamma}\vdash{\Box  A_i})}\\{{\Gamma^{\prime}}\vdash { B}}\\
@@ -421,20 +431,20 @@ $\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdInlineSnippet}[6abfdac12c5881728b0774166e4c6328]%mdk
 $\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
-%mdk-data-line={341}
+%mdk-data-line={346}
 \begin{mdInlineSnippet}[6abfdac12c5881728b0774166e4c6328]%mdk
 $\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
-%mdk-data-line={345}
+%mdk-data-line={350}
 \begin{mdInlineSnippet}[3cfce4e2eacd4d1ba46b969327e744be]%mdk
 $\llbracket {\sf Prop_0}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={351}
+%mdk-data-line={356}
 \begin{mdInlineSnippet}[6abfdac12c5881728b0774166e4c6328]%mdk
 $\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
-%mdk-data-line={360}
+%mdk-data-line={366}
 \begin{mdInlineSnippet}[6abfdac12c5881728b0774166e4c6328]%mdk
 $\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
 \begin{mdDisplaySnippet}[3fd21d2690ac26a8bbe5e669e60e15ba]%mdk
-\[%mdk-data-line={364}
+\[%mdk-data-line={369}
 \begin{array}{l r}
 \inferrule*{x^{\prime}: \Box A \in \Gamma}{ {\Gamma}\vdash {\Box A}} & 
 \inferrule*{{(\forall  A_i \in \Gamma^{\prime}. \  {\Gamma}\vdash{\Box  A_i})}\\{{\Gamma^{\prime}}\vdash { B}}\\
@@ -446,7 +456,7 @@ $\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={374}
+%mdk-data-line={379}
 
 \end{mdSnippets}
 
