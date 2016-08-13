@@ -278,7 +278,7 @@ Any deduction $\mathcal{D}: \Box A$ can be expanded as follows:
 
 
 ~ Math 
-\begin{array}{c c}
+\begin{array}{l r}
  \\
 \inferrule* { } {P_k \in {\sf Prop_0}} & \inferrule* { } {\top \in {\sf Prop_0}}
 \\
