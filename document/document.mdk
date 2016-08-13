@@ -1,6 +1,4 @@
-
 [INCLUDE=presentation]
-
 Title         : Jcalc
 Sub Title     : A curry howard View of Basic Justification Logic
 Author        : Konstantinos Pouliasis
@@ -294,17 +292,12 @@ Any deduction $\mathcal{D}: \Box A$ can be expanded as follows:
 \inferrule* { A \in{\sf Prop_{0} }} {\Box  A\in{\sf Prop_{1}} } & \inferrule*  {{ A \in {\sf Prop_1 }}\\ { B \in {\sf Prop_1}}} { A\supset  B\in {\sf Prop_{1}}}
 
 \end{array}
-
-~
-##  Natural Deduction (${\sf Prop_0}$)
-  
-~ Math
-\begin{array}{c c}
-\inferrule* {x: A \in \Gamma}{ {\Gamma}\vdash { A}} & \inferrule* { }{{\Gamma}\vdash { \top}}
-\end{array}
 ~
 
- 
+##  Natural Deduction 
+Rules for PropZero :)
+What???
+
  ## Thanks for looking :-)
 
 [slide]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.html
