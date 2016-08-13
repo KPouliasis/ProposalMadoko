@@ -449,7 +449,24 @@ $\vdash A \Longrightarrow \vdash \Box A$\end{mdInlineSnippet}%mdk
 %mdk-data-line={365}
 \begin{mdInlineSnippet}[a5f3c6a11b03839d46af9fb43c97c188]%mdk
 $K$\end{mdInlineSnippet}%mdk
-%mdk-data-line={367}
+%mdk-data-line={365}
+\begin{mdDisplaySnippet}[cade4d62a5e1f49b8e0a70a52ac07484]%mdk
+\[%mdk-data-line={369}
+\begin{array}{l r}
+\inferrule*[right=$Id$] { }{\Gamma, A  \Rightarrow A }\\
+\\
+\inferrule*[right=$\supset_L$] {{\Gamma, A\supset B, B \Rightarrow  C }\\ {\Gamma, A\supset B \Rightarrow A}} {\Gamma, A\supset B \Rightarrow  C}
+
+\inferrule*[right=$\supset_R$] {\Gamma, A \Rightarrow  B} {\Gamma \Rightarrow A\supset B}
+\\
+\\
+\inferrule*[right=$\bot_L$] { } {\Gamma, \bot \Rightarrow A}
+\\
+\\
+\inferrule*[right=$\Box_{LR}$] {{\Box\Gamma,\Gamma\Rightarrow A}\\{\llbracket\Gamma\rrbracket\Rightarrow \llbracket A \rrbracket }}{\Box\Gamma\Rightarrow \Box A}
+\end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
 
 \end{mdSnippets}
 

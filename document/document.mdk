@@ -354,7 +354,7 @@ For the image  of the interpretation  $\llbracket{\sf Prop_0}\rrbracket$ we dema
 ~ 
 ~ End Vertical
 
-## Logical Completeness and Admissibility of Rule Necessitation
+## Logical Completeness and Admissibility of  Necessitation
 
 We can show that:
 
@@ -364,7 +364,23 @@ We can show that:
 $\vdash A \Longrightarrow \vdash \Box A$.
 * we get a completeness result w.r.t to intuitionistic $K$ modality
 
-## Proof term assignment 
+## Sequent Calculus Formulation
+~ Math
+\begin{array}{l r}
+\inferrule*[right=$Id$] { }{\Gamma, A  \Rightarrow A }\\
+\\
+\inferrule*[right=$\supset_L$] {{\Gamma, A\supset B, B \Rightarrow  C }\\ {\Gamma, A\supset B \Rightarrow A}} {\Gamma, A\supset B \Rightarrow  C}
+& 
+\inferrule*[right=$\supset_R$] {\Gamma, A \Rightarrow  B} {\Gamma \Rightarrow A\supset B}
+\\
+\\
+\inferrule*[right=$\bot_L$] { } {\Gamma, \bot \Rightarrow A}
+\\
+\\
+\inferrule*[right=$\Box_{LR}$] {{\Box\Gamma,\Gamma\Rightarrow A}\\{\llbracket\Gamma\rrbracket\Rightarrow \llbracket A \rrbracket }}{\Box\Gamma\Rightarrow \Box A}
+\end{array}
+~ 
+
  ## Thanks for looking :-)
 
 [slide]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.html
