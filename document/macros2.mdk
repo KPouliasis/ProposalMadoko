@@ -1,0 +1,31 @@
+\usepackage[acronym, shortcuts]{glossaries}
+\usepackage{tikz-cd}
+\usetikzlibrary{shapes.geometric}
+\newacronym{HoTT}{HoTT}{homotopy type theory}
+\newacronym{IPL}{\sf{IPL}}{_Intuitionistic Propositional Logic_\/}
+\newacronym{LP}{\sf{LP}}{_The Logic of Proofs_\/}
+\newacronym{JL}{\sf{JL}}{_Justification Logic_\/}
+\newacronym{TT}{TT}{intuitionistic type theory}
+\newacronym{LEM}{\sf{LEM}}{law of the excluded middle}
+\newacronym{ITT}{ITT}{intensional type theory}
+\newacronym{ETT}{ETT}{extensional type theory}
+\newacronym{NNO}{NNO}{natural numbers object}
+\newacronym{BHK}{_Brouwer-Heyting-Kolmogorov_\/}{_Brouwer-Heyting-Kolmogorov_\/}
+
+\tikzset{
+   buffer/.style={
+   draw,
+   shape border rotate=180,
+   regular polygon,
+   regular polygon sides=3,
+   fill=gray,
+   node distance=2cm,
+   minimum height=4em
+   }
+}
+\newcommand{\Turn}[2]
+   { {#1}\vdash {#2}}
+
+\newcommand*{\PrTri}[1]{\begin{tikzpicture}
+      \node[buffer]{#1};
+      \end{tikzpicture}}

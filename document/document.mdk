@@ -8,6 +8,7 @@ Email         : konstantinos.pouliasis@gmail.com
 Reveal Theme  : sky
 Beamer Theme  : singapore
 Package     : mathpartir.sty
+Package: macros2.tex
 
 [TITLE]
 
@@ -257,6 +258,7 @@ Any deduction $\mathcal{D}: \Box A$ can be expanded as follows:
 
 ## Type Universe 
 
+[INCLUDE="macros2.mdk"]
 ~ Math 
 \begin{array}{c c}
  \\
