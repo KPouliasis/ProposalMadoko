@@ -1,5 +1,6 @@
 
 [INCLUDE=presentation]
+[INCLUDE=macros2]
 Title         : Jcalc
 Sub Title     : A curry howard View of Basic Justification Logic
 Author        : Konstantinos Pouliasis
@@ -258,7 +259,7 @@ Any deduction $\mathcal{D}: \Box A$ can be expanded as follows:
 
 ## Type Universe 
 
-[INCLUDE="macros2.mdk"]
+
 ~ Math 
 \begin{array}{c c}
  \\
@@ -274,11 +275,7 @@ Any deduction $\mathcal{D}: \Box A$ can be expanded as follows:
 
 ##  Natural Deduction (${\sf Prop_0}$)
   
-~ Math
-\begin{array}{c c}
-\inferrule* {x: A \in \Gamma}{\Turn {\Gamma} { A}} &
-\inferrule* { }{\Turn {\Gamma} { \top}}\\
-~ 
+
 
  
 
