@@ -9,6 +9,7 @@ Email         : konstantinos.pouliasis@gmail.com
 Reveal Theme  : sky
 Beamer Theme  : singapore
 Package     : mathpartir.sty
+Package       : mathtools
 
 
 [TITLE]
@@ -334,22 +335,33 @@ For the image  of the interpretation  $\llbracket{\sf Prop_0}\rrbracket$ we dema
 \end{array}
 ~
 
-##  Natural Deduction ( $\llbracket{\sf Prop_1}\rrbracket$ )
+##  Natural Deduction ( ${\sf Prop_1}$ )
 ~ Math
-\begin{array}{c c}
-\inferrule*{x^{\prime}: \Box A \in \Gamma}{ {\Gamma}\vdash {\Box A}} & 
+\begin{array}{c}
+\inferrule*{x^{\prime}: \Box A \in \Gamma}{ {\Gamma}\vdash {\Box A}} 
+\\ 
+\\
 \inferrule*{{(\forall  A_i \in \Gamma^{\prime}. \  {\Gamma}\vdash{\Box  A_i})}\\{{\Gamma^{\prime}}\vdash { B}}\\
   { {\llbracket \Gamma^{\prime} \rrbracket}\vdash {\llbracket  B\rrbracket} }} { {\Gamma}\vdash\Box  B}
 \\
-\inferrule* {{ {\Gamma, x^{\prime}: \Box A} \vdash { \Box B}}} { {\Gamma}\vdash {   \Box A\supset  \Box B}} &
+\\
+\inferrule* {{ {\Gamma, x^{\prime}: \Box A} \vdash { \Box B}}} { {\Gamma}\vdash {   \Box A\supset  \Box B}} 
+\\
+\\
 \inferrule* {{ {\Gamma} \vdash { \Box A\supset  \Box B}}\\{ {\Gamma} \vdash { 
 \Box A}}} { {\Gamma}\vdash {  \Box B}}
 \end{array}
 ~ 
 ~ End Vertical
 
+## Logical Completeness and Admissibility of Rule Necessitation
 
-~ End Vertical
+We can show that:
+
+* or every  $\Gamma,   A \in {\sf Prop_0}$:  $\Gamma\vdash A \Longrightarrow \llbracket \Gamma\rrbracket\vdash\llbracket A\rrbracket $ and, hence, $\Box\Gamma \vdash \Box   A$.
+* this is essentially the "functional completeness" proof of Curry for combinatory logic
+* In our setting translates to admissibility of Rule of Necessitation since:  
+
 
  ## Thanks for looking :-)
 
