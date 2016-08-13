@@ -39,8 +39,8 @@ ${\sf Prop_0}$\end{mdInlineSnippet}%mdk
 $\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
 \begin{mdInlineSnippet}[6abfdac12c5881728b0774166e4c6328]%mdk
 $\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
-\begin{mdInlineSnippet}[6abfdac12c5881728b0774166e4c6328]%mdk
-$\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
+\begin{mdInlineSnippet}[902767867fde4e8c38654f2013cde36b]%mdk
+$\llbracket{\sf Prop_1}\rrbracket$\end{mdInlineSnippet}%mdk
 \begin{mdInlineSnippet}[6abfdac12c5881728b0774166e4c6328]%mdk
 $\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
 \begin{mdInlineSnippet}[6abfdac12c5881728b0774166e4c6328]%mdk
@@ -400,25 +400,30 @@ $\llbracket {\sf Prop_0}$\end{mdInlineSnippet}%mdk
 %mdk-data-line={316}
 \begin{mdInlineSnippet}[6abfdac12c5881728b0774166e4c6328]%mdk
 $\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
-\begin{mdDisplaySnippet}[f46b87f04e3d0f88fd8801da54f13bf1]%mdk
-\[%mdk-data-line={320}
-\begin{array}{l r}
-\inferrule* {s:\llbracket  A\rrbracket \in \Delta}{{\Delta}\vdash {\llbracket  A\rrbracket}} & \inferrule* { } { {\Delta} \vdash{\llbracket  \top \rrbracket}}
-\\
-\\
-\inferrule*{  A, B \in {\sf Prop_0} }  {\Delta\vdash \llbracket   A \supset (B \supset   A)\rrbracket }
-\\
+\begin{mdDisplaySnippet}[c6d389585c0a886bd309f9a6fe2284b2]%mdk
+\[%mdk-data-line={321}
+\begin{array}{c c}
+\inferrule* {s:\llbracket  A\rrbracket \in \Delta}{{\Delta}\vdash {\llbracket  A\rrbracket}} &
+\inferrule* { } { {\Delta} \vdash{\llbracket  \top \rrbracket}}
+\end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+\begin{mdDisplaySnippet}[b7db522e1f19816170e647a925a67e9d]%mdk
+\[%mdk-data-line={328}
+\begin{array}{c}
+\inferrule*{  A, B \in {\sf Prop_0} }  {\Delta\vdash \llbracket   A \supset (B \supset   A)\rrbracket } \\
 \inferrule* { {  A,B, C \in {\sf Prop_0}}}{\Delta\vdash\llbracket   A\supset (B \supset C) \supset ((  A\supset B) \supset (  A \supset C))\rrbracket}
+\\
 \\
 \inferrule* {{ {\Delta}\vdash { \llbracket  A \supset  B \rrbracket}}\\ {{\Delta}\vdash {\llbracket  A \rrbracket}}}{ {\Delta}\vdash {\llbracket  B\rrbracket}}
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-\begin{mdInlineSnippet}[6abfdac12c5881728b0774166e4c6328]%mdk
-$\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
-\begin{mdDisplaySnippet}[3fd21d2690ac26a8bbe5e669e60e15ba]%mdk
-\[%mdk-data-line={334}
-\begin{array}{l r}
+\begin{mdInlineSnippet}[902767867fde4e8c38654f2013cde36b]%mdk
+$\llbracket{\sf Prop_1}\rrbracket$\end{mdInlineSnippet}%mdk
+\begin{mdDisplaySnippet}[ba0ec93c79491d2358ddb06c404081de]%mdk
+\[%mdk-data-line={339}
+\begin{array}{c c}
 \inferrule*{x^{\prime}: \Box A \in \Gamma}{ {\Gamma}\vdash {\Box A}} & 
 \inferrule*{{(\forall  A_i \in \Gamma^{\prime}. \  {\Gamma}\vdash{\Box  A_i})}\\{{\Gamma^{\prime}}\vdash { B}}\\
   { {\llbracket \Gamma^{\prime} \rrbracket}\vdash {\llbracket  B\rrbracket} }} { {\Gamma}\vdash\Box  B}
@@ -431,20 +436,20 @@ $\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdInlineSnippet}[6abfdac12c5881728b0774166e4c6328]%mdk
 $\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
-%mdk-data-line={346}
+%mdk-data-line={352}
 \begin{mdInlineSnippet}[6abfdac12c5881728b0774166e4c6328]%mdk
 $\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
-%mdk-data-line={350}
+%mdk-data-line={356}
 \begin{mdInlineSnippet}[3cfce4e2eacd4d1ba46b969327e744be]%mdk
 $\llbracket {\sf Prop_0}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={356}
+%mdk-data-line={362}
 \begin{mdInlineSnippet}[6abfdac12c5881728b0774166e4c6328]%mdk
 $\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
-%mdk-data-line={366}
+%mdk-data-line={372}
 \begin{mdInlineSnippet}[6abfdac12c5881728b0774166e4c6328]%mdk
 $\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
 \begin{mdDisplaySnippet}[3fd21d2690ac26a8bbe5e669e60e15ba]%mdk
-\[%mdk-data-line={369}
+\[%mdk-data-line={375}
 \begin{array}{l r}
 \inferrule*{x^{\prime}: \Box A \in \Gamma}{ {\Gamma}\vdash {\Box A}} & 
 \inferrule*{{(\forall  A_i \in \Gamma^{\prime}. \  {\Gamma}\vdash{\Box  A_i})}\\{{\Gamma^{\prime}}\vdash { B}}\\
@@ -456,7 +461,7 @@ $\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={379}
+%mdk-data-line={385}
 
 \end{mdSnippets}
 

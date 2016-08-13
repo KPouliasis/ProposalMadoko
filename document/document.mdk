@@ -316,21 +316,27 @@ For the image  of the interpretation  $\llbracket{\sf Prop_0}\rrbracket$ we dema
  * Following justification logic, we use the axiomatic characterization from combinatory logic.
 
 ##  Natural Deduction ( $\llbracket{\sf Prop_0}\rrbracket$ )
+
 ~ Math
-\begin{array}{l r}
-\inferrule* {s:\llbracket  A\rrbracket \in \Delta}{{\Delta}\vdash {\llbracket  A\rrbracket}} & \inferrule* { } { {\Delta} \vdash{\llbracket  \top \rrbracket}}
-\\
-\\
-\inferrule*{  A, B \in {\sf Prop_0} }  {\Delta\vdash \llbracket   A \supset (B \supset   A)\rrbracket } &
+\begin{array}{c c}
+\inferrule* {s:\llbracket  A\rrbracket \in \Delta}{{\Delta}\vdash {\llbracket  A\rrbracket}} &
+\inferrule* { } { {\Delta} \vdash{\llbracket  \top \rrbracket}}
+\end{array}
+~
+
+~ Math
+\begin{array}{c}
+\inferrule*{  A, B \in {\sf Prop_0} }  {\Delta\vdash \llbracket   A \supset (B \supset   A)\rrbracket } \\
 \inferrule* { {  A,B, C \in {\sf Prop_0}}}{\Delta\vdash\llbracket   A\supset (B \supset C) \supset ((  A\supset B) \supset (  A \supset C))\rrbracket}
+\\
 \\
 \inferrule* {{ {\Delta}\vdash { \llbracket  A \supset  B \rrbracket}}\\ {{\Delta}\vdash {\llbracket  A \rrbracket}}}{ {\Delta}\vdash {\llbracket  B\rrbracket}}
 \end{array}
 ~
 
-##  Natural Deduction ( $\llbracket{\sf Prop_0}\rrbracket$ )
+##  Natural Deduction ( $\llbracket{\sf Prop_1}\rrbracket$ )
 ~ Math
-\begin{array}{l r}
+\begin{array}{c c}
 \inferrule*{x^{\prime}: \Box A \in \Gamma}{ {\Gamma}\vdash {\Box A}} & 
 \inferrule*{{(\forall  A_i \in \Gamma^{\prime}. \  {\Gamma}\vdash{\Box  A_i})}\\{{\Gamma^{\prime}}\vdash { B}}\\
   { {\llbracket \Gamma^{\prime} \rrbracket}\vdash {\llbracket  B\rrbracket} }} { {\Gamma}\vdash\Box  B}
@@ -341,40 +347,8 @@ For the image  of the interpretation  $\llbracket{\sf Prop_0}\rrbracket$ we dema
 \end{array}
 ~ 
 ~ End Vertical
-##  Natural Deduction ( $\llbracket{\sf Prop_0}\rrbracket$  )
-For the image  of the interpretation  $\llbracket{\sf Prop_0}\rrbracket$ we demand:
 
- * context reflexivity, compositionality and logical completeness w.r.t   intuitionistic implication.
- 
- * the host theory (calculus of validations) is "black boxed". We axiomatize the basic properties of the image $\llbracket {\sf Prop_0}$
- abstractly in terms of provability (and not in terms of proof trees of specific shape).
 
- * different calculi could realize such specifications (e.g. extensions of lambda calculus with classical logic, calculi for linear logic, or a lambda calculus itself) 
-
- * Following justification logic, we use the axiomatic characterization from combinatory logic.
-##  Natural Deduction ( $\llbracket{\sf Prop_0}\rrbracket$ )
-
-\begin{array}{l r}
-\inferrule* {s:\llbracket  A\rrbracket \in \Delta}{{\Delta}\vdash {\llbracket  A\rrbracket}}
-& \inferrule* { } {\Turn {\Delta} {\llbracket  \top \rrbracket}}
-\\
-\inferrule*{  A, B \in {\sf Prop_0} }   {\Delta\vdash \llbracket   A \supset (B \supset   A)\rrbracket } &
-\inferrule*{ {  A,B, C \in {\sf Prop_0}}}{\Delta\vdash\llbracket   A\supset (B \supset C) \supset ((  A\supset B) \supset (  A \supset C))\rrbracket}
-\\
-<!-- end merge -->
-\inferrule*[right=MP] {{\Turn {\Delta} { \llbracket  A \supset  B \rrbracket}}\\ {\Turn{\Delta} {\llbracket  A \rrbracket}}}{\Turn {\Delta} {\llbracket  B\rrbracket}}
-##  Natural Deduction ( $\llbracket{\sf Prop_0}\rrbracket$ )
-~ Math
-\begin{array}{l r}
-\inferrule*{x^{\prime}: \Box A \in \Gamma}{ {\Gamma}\vdash {\Box A}} & 
-\inferrule*{{(\forall  A_i \in \Gamma^{\prime}. \  {\Gamma}\vdash{\Box  A_i})}\\{{\Gamma^{\prime}}\vdash { B}}\\
-  { {\llbracket \Gamma^{\prime} \rrbracket}\vdash {\llbracket  B\rrbracket} }} { {\Gamma}\vdash\Box  B}
-\\
-\inferrule* {{ {\Gamma, x^{\prime}: \Box A} \vdash { \Box B}}} { {\Gamma}\vdash {   \Box A\supset  \Box B}} &
-\inferrule* {{ {\Gamma} \vdash { \Box A\supset  \Box B}}\\{ {\Gamma} \vdash { 
-\Box A}}} { {\Gamma}\vdash {  \Box B}}
-\end{array}
-~ 
 ~ End Vertical
 
  ## Thanks for looking :-)
