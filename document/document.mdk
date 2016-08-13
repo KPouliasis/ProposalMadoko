@@ -128,8 +128,8 @@ all purely logical deductions $\mathcal{D}$ in $I$
 
 # Judgments
 
-## Roadmap WHY ??
->>>
+## Roadmap
+
 * Create a system with two kinds of judgments $A \ {\sf true}$ and $A\  {\sf valid}:=\  \llbracket A \rrbracket {\sf true}$ and treat necessity
 as "double theoremhood"  
 * obtain a system of basic constructive modality investigating the minimal relation
@@ -239,7 +239,8 @@ Any deduction $\mathcal{D}: \Box A$ can be expanded as follows:
 \begin{array}{c}
   \mathcal{D}\\ 
    \Box A
-\end{array} 
+\end{array} & \Longrightarrow \\
+\\
 \inferrule* {{\begin{array}{c}
   \mathcal{D}\\
    \Box A 
@@ -247,12 +248,43 @@ Any deduction $\mathcal{D}: \Box A$ can be expanded as follows:
                       \\
                       \overline{x:A}
                       \end{array}}
-                      }
-                      {\Box A} & 
+                      }{\Box A}
+\end{array}
 ~
 
  ~ End Vertical
  # The system
+
+## Type Universe 
+
+
+~ Math 
+\begin{array}{c c}
+ \\
+\inferrule* { } {P_k \in {\sf Prop_0}} & \inferrule* { } {\top \in {\sf Prop_0}}
+\\
+\\
+\inferrule* {{ A \in {\sf Prop_0 }}\\ { B \in {\sf Prop_0}}} { A\supset  B\in {\sf Prop_{0}}} & \inferrule* { A \in {\sf Prop_0 }} {\llbracket  A\rrbracket \in {\sf \llbracket Prop_{0}\rrbracket}}
+\\
+\\
+\inferrule* { A \in{\sf Prop_{0} }} {\Box  A\in{\sf Prop_{1}} } & \inferrule*  {{ A \in {\sf Prop_1 }}\\ { B \in {\sf Prop_1}}} { A\supset  B\in {\sf Prop_{1}}}
+
+\end{array}
+
+~
+##  Natural Deduction (${\sf Prop_0}$)
+~ Math
+\begin{array}{c c}
+\inferrule* {x: A \in \Gamma}{\Turn {\Gamma} { A}} &
+\inferrule* { }{\Turn {\Gamma} { \top}}\\
+~
+\\
+\inferrule*[right=$\supset_0$I] {{\Turn {\Gamma, x: A} { B}}} {\Turn {\Gamma} {   A\supset  B}}&
+\inferrule*[right=$\supset_0$E] {{\Turn {\Gamma} { A\supset  B}}\\{\Turn {\Gamma} { A}}} {\Turn {\Gamma} {   B}}
+\end{array}
+~ 
+
+ 
  ## Thanks for looking :-)
 
 [slide]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.html
