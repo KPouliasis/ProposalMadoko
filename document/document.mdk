@@ -291,13 +291,52 @@ Any deduction $\mathcal{D}: \Box A$ can be expanded as follows:
 \end{array}
 
 ~
-##  Natural Deduction (${\sf Prop_0}$)
-  
+~ Begin Vertical
+##  Natural Deduction ( ${\sf Prop_0}$ )
+
+
+
 ~ Math
-\begin{array}{c c}
-\inferrule* {x: A \in \Gamma}{ {\Gamma}\vdash { A}} & \inferrule* { }{{\Gamma}\vdash { \top}}
+\begin{array}{l r}
+\inferrule* {x: A \in \Gamma}{ {\Gamma}\vdash { A}} & \inferrule* { }{{\Gamma}\vdash { \top}} \\
+\\
+\inferrule* {{{\Gamma, x: A} \vdash { B}}} {{\Gamma}\vdash {   A\supset  B}} & \inferrule* {{ {\Gamma}\vdash{ A\supset  B}}\\{{\Gamma}\vdash { A}}} { {\Gamma} \vdash {   B}}
 \end{array}
 ~
+##  Natural Deduction ( $\llbracket{\sf Prop_0}\rrbracket$  )
+For the image  of the interpretation  $\llbracket{\sf Prop_0}\rrbracket$ we demand:
+
+ * context reflexivity, compositionality and logical completeness w.r.t   intuitionistic implication.
+ 
+ * the host theory (calculus of validations) is "black boxed". We axiomatize the basic properties of the image $\llbracket {\sf Prop_0}$
+ abstractly in terms of provability (and not in terms of proof trees of specific shape).
+
+ * different calculi could realize such specifications (e.g. extensions of lambda calculus with classical logic, calculi for linear logic, or a lambda calculus itself) 
+
+ * Following justification logic, we use the axiomatic characterization from combinatory logic.
+##  Natural Deduction ( $\llbracket{\sf Prop_0}\rrbracket$ )
+
+\begin{array}{l r}
+\inferrule* {s:\llbracket  A\rrbracket \in \Delta}{{\Delta}\vdash {\llbracket  A\rrbracket}}
+& \inferrule* { } {\Turn {\Delta} {\llbracket  \top \rrbracket}}
+\\
+\inferrule*{  A, B \in {\sf Prop_0} }   {\Delta\vdash \llbracket   A \supset (B \supset   A)\rrbracket }
+\inferrule*[right=  Ax$_3$]{ {  A,B, C \in {\sf Prop_0}}}{\Delta\vdash\llbracket   A\supset (B \supset C) \supset ((  A\supset B) \supset (  A \supset C))\rrbracket}
+\and
+\inferrule*[right=MP] {{\Turn {\Delta} { \llbracket  A \supset  B \rrbracket}}\\ {\Turn{\Delta} {\llbracket  A \rrbracket}}}{\Turn {\Delta} {\llbracket  B\rrbracket}}
+##  Natural Deduction ( $\llbracket{\sf Prop_0}\rrbracket$ )
+~ Math
+\begin{array}{l r}
+\inferrule*{x^{\prime}: \Box A \in \Gamma}{ {\Gamma}\vdash {\Box A}} & 
+\inferrule*{{(\forall  A_i \in \Gamma^{\prime}. \  {\Gamma}\vdash{\Box  A_i})}\\{{\Gamma^{\prime}}\vdash { B}}\\
+  { {\llbracket \Gamma^{\prime} \rrbracket}\vdash {\llbracket  B\rrbracket} }} { {\Gamma}\vdash\Box  B}
+\\
+\inferrule* {{ {\Gamma, x^{\prime}: \Box A} \vdash { \Box B}}} { {\Gamma}\vdash {   \Box A\supset  \Box B}} &
+\inferrule* {{ {\Gamma} \vdash { \Box A\supset  \Box B}}\\{ {\Gamma} \vdash { 
+\Box A}}} { {\Gamma}\vdash {  \Box B}}
+\end{array}
+~ 
+~ End Vertical
 
  ## Thanks for looking :-)
 

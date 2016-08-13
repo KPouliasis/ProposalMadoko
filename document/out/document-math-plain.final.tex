@@ -35,6 +35,12 @@
 $\Box$\end{mdInlineSnippet}%mdk
 \begin{mdInlineSnippet}[c09859c00da566980873081e8d77a317]%mdk
 ${\sf Prop_0}$\end{mdInlineSnippet}%mdk
+\begin{mdInlineSnippet}[6abfdac12c5881728b0774166e4c6328]%mdk
+$\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
+\begin{mdInlineSnippet}[6abfdac12c5881728b0774166e4c6328]%mdk
+$\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
+\begin{mdInlineSnippet}[6abfdac12c5881728b0774166e4c6328]%mdk
+$\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
 %mdk-data-line={31}
 \begin{mdInlineSnippet}[d59a89abb4af5bc4dd85243d5f75bcac]%mdk
 $S4$\end{mdInlineSnippet}%mdk
@@ -368,11 +374,45 @@ $\mathcal{D}: \Box A$\end{mdInlineSnippet}%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdInlineSnippet}[c09859c00da566980873081e8d77a317]%mdk
 ${\sf Prop_0}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={296}
-\begin{mdDisplaySnippet}[d2e15fae18102dee3ff8a34366a2f8ce]%mdk
-\[%mdk-data-line={297}
-\begin{array}{c c}
-\inferrule* {x: A \in \Gamma}{ {\Gamma}\vdash { A}} & \inferrule* { }{{\Gamma}\vdash { \top}}
+\begin{mdDisplaySnippet}[d10c0f6e040cd2eac4d8c28b0c0a71eb]%mdk
+\[%mdk-data-line={300}
+\begin{array}{l r}
+\inferrule* {x: A \in \Gamma}{ {\Gamma}\vdash { A}} & \inferrule* { }{{\Gamma}\vdash { \top}} \\
+\\
+\inferrule* {{{\Gamma, x: A} \vdash { B}}} {{\Gamma}\vdash {   A\supset  B}} & \inferrule* {{ {\Gamma}\vdash{ A\supset  B}}\\{{\Gamma}\vdash { A}}} { {\Gamma} \vdash {   B}}
+\end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+\begin{mdInlineSnippet}[6abfdac12c5881728b0774166e4c6328]%mdk
+$\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
+%mdk-data-line={307}
+\begin{mdInlineSnippet}[6abfdac12c5881728b0774166e4c6328]%mdk
+$\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
+%mdk-data-line={311}
+\begin{mdInlineSnippet}[3cfce4e2eacd4d1ba46b969327e744be]%mdk
+$\llbracket {\sf Prop_0}$\end{mdInlineSnippet}%mdk
+%mdk-data-line={317}
+\begin{mdInlineSnippet}[6abfdac12c5881728b0774166e4c6328]%mdk
+$\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
+%mdk-data-line={323}
+\begin{mdInlineSnippet}[26e3d8bac39f9313d584a6025bd7544d]%mdk
+$_2$\end{mdInlineSnippet}%mdk
+%mdk-data-line={325}
+\begin{mdInlineSnippet}[f806252045a28179caaf0ec8f0b5f298]%mdk
+$_3$\end{mdInlineSnippet}%mdk
+%mdk-data-line={327}
+\begin{mdInlineSnippet}[6abfdac12c5881728b0774166e4c6328]%mdk
+$\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
+\begin{mdDisplaySnippet}[3fd21d2690ac26a8bbe5e669e60e15ba]%mdk
+\[%mdk-data-line={330}
+\begin{array}{l r}
+\inferrule*{x^{\prime}: \Box A \in \Gamma}{ {\Gamma}\vdash {\Box A}} & 
+\inferrule*{{(\forall  A_i \in \Gamma^{\prime}. \  {\Gamma}\vdash{\Box  A_i})}\\{{\Gamma^{\prime}}\vdash { B}}\\
+  { {\llbracket \Gamma^{\prime} \rrbracket}\vdash {\llbracket  B\rrbracket} }} { {\Gamma}\vdash\Box  B}
+\\
+\inferrule* {{ {\Gamma, x^{\prime}: \Box A} \vdash { \Box B}}} { {\Gamma}\vdash {   \Box A\supset  \Box B}} &
+\inferrule* {{ {\Gamma} \vdash { \Box A\supset  \Box B}}\\{ {\Gamma} \vdash { 
+\Box A}}} { {\Gamma}\vdash {  \Box B}}
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
