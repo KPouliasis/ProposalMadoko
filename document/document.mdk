@@ -364,6 +364,7 @@ We can show that:
 $\vdash A \Longrightarrow \vdash \Box A$.
 * we get a completeness result w.r.t to intuitionistic $K$ modality
 
+# Sequent Calculus
 ## Sequent Calculus Formulation
 ~ Math
 \begin{array}{l r}
@@ -382,12 +383,37 @@ $\vdash A \Longrightarrow \vdash \Box A$.
 ~ 
 ## Cut elimination
 We show:
- $\Gamma\vdash A \ \Longrightarrow \Gamma\Rightarrow^{+Cut} A$ 
- wchi admissibility of Cut to obtain a consistency. 
-proof.
+~ Math
+ {\text If }\  \Gamma\vdash A \  {\text then}\  \Gamma\Rightarrow^{+Cut} A 
+ ~
+ which together with admissibility of Cut results in a consistency result. 
 
+# The Calculus
+~ Begin Vertical
 ## Proof Term Assignment
+* For the ${\sf Prop_0}$: the relevant fragment of the STLC with appropriate $\beta,\eta$ equalities 
 
+* For the ${\sf \llbracket Prop_0\rrbracket}$, the relevant fragment of justification logic (typed combinatory logic):
+
+* For the ${\sf Prop1}$ fragment we transliterate the natural deduction $\Box$ rule and its corresponding Gentzen principles 
+to equalities using ${\sf let}$ bindings.
+~ End Vertical
+## Proof term Assignment
+~ Math
+\begin{mathpar}
+\inferrule* {x: A \in \Gamma}{ {\Gamma}\vdash { x:A}}
+\and
+\inferrule* { }{ {\Gamma}\vdash { <>:\top}}
+\and
+\inferrule*[right=$\supset_0$I] {{{\Gamma, x: A}\vdash { M:B}}} { {\Gamma}\vdash { \lambda x:A.\  M:  A\supset  B}}
+\and
+\inferrule*[right=$\supset_0$E] {{\Turn {\Gamma} { M:A\supset  B}}\\{\Turn {\Gamma} {M^{\prime}: A}}} {\Turn {\Gamma} { (MM^{'}):  B}}
+\and
+\inferrule*[right=]{}{+\  \beta\eta \text{\ equalities for \ } \top,\supset}
+%\and
+%\inferrule*[right=$\bot$E] {{\Turn {\Gamma} {\bot}}}{\Turn {\Gamma} {   A}}
+\end{mathpar}}
+~ 
 
  ## Thanks for looking :-)
 
