@@ -491,22 +491,26 @@ $\Box$\end{mdInlineSnippet}%mdk
 %mdk-data-line={399}
 \begin{mdInlineSnippet}[0dd9ba8209181a52091dcd102fc1c48d]%mdk
 ${\sf let}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={403}
-\begin{mdInlineSnippet}[8996584981f888698b87d0e765b95852]%mdk
-$\Gamma_0$\end{mdInlineSnippet}%mdk
-%mdk-data-line={405}
-\begin{mdInlineSnippet}[b6a31cf4df899bbcc3b5031ab428ec8b]%mdk
-$\top_0$\end{mdInlineSnippet}%mdk
-%mdk-data-line={407}
-\begin{mdInlineSnippet}[a3282e31a0e094b5ff593b52ab943d86]%mdk
-$\supset_0$\end{mdInlineSnippet}%mdk
-%mdk-data-line={409}
-\begin{mdInlineSnippet}[a3282e31a0e094b5ff593b52ab943d86]%mdk
-$\supset_0$\end{mdInlineSnippet}%mdk
-%mdk-data-line={413}
-\begin{mdInlineSnippet}[7814a0e7fffecda9cebb60d2bc160257]%mdk
-$\bot$\end{mdInlineSnippet}%mdk
-%mdk-data-line={415}
+%mdk-data-line={399}
+\begin{mdDisplaySnippet}[d402b9869ac609fbf2c6dd26a7c0b547]%mdk
+\[%mdk-data-line={403}
+\begin{array}{l r}
+\inferrule* {x: A \in \Gamma}{ {\Gamma}\vdash { x:A}}
+&
+\\
+\inferrule* { }{ {\Gamma}\vdash { <>:\top}}
+& 
+\inferrule* {{{\Gamma, x: A}\vdash { M:B}}} { {\Gamma}\vdash { \lambda x:A.\  M:  A\supset  B}}
+\\
+\\
+\inferrule* {{{\Gamma}\vdash { M:A\supset  B}}\\{ {\Gamma}\vdash {M^{\prime}: A}}} { {\Gamma} { (MM^{'}):  B}}
+& 
+\inferrule* {}{+\  \beta\eta \text{\ equalities for \ } \top,\supset}
+%\and
+%\inferrule*[right=$\bot$E] {{\Turn {\Gamma} {\bot}}}{\Turn {\Gamma} {   A}}
+\end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
 
 \end{mdSnippets}
 
