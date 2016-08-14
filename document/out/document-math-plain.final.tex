@@ -42,6 +42,10 @@ $\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
 $\llbracket{\sf Prop_0}\rrbracket$\end{mdInlineSnippet}%mdk
 \begin{mdInlineSnippet}[1adbe235087fa8958bc806a79b07b5cf]%mdk
 ${\sf Prop_1}$\end{mdInlineSnippet}%mdk
+\begin{mdInlineSnippet}[c09859c00da566980873081e8d77a317]%mdk
+${\sf Prop_0}$\end{mdInlineSnippet}%mdk
+\begin{mdInlineSnippet}[c09859c00da566980873081e8d77a317]%mdk
+${\sf Prop_0}$\end{mdInlineSnippet}%mdk
 %mdk-data-line={32}
 \begin{mdInlineSnippet}[d59a89abb4af5bc4dd85243d5f75bcac]%mdk
 $S4$\end{mdInlineSnippet}%mdk
@@ -473,38 +477,70 @@ $K$\end{mdInlineSnippet}%mdk
  {\text If }\  \Gamma\vdash A \  {\text then}\  \Gamma\Rightarrow^{+Cut} A 
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={394}
+%mdk-data-line={393}
 \begin{mdInlineSnippet}[c09859c00da566980873081e8d77a317]%mdk
 ${\sf Prop_0}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={394}
+%mdk-data-line={393}
 \begin{mdInlineSnippet}[172ffe76f75cdc854b41b1a12d72cd39]%mdk
 $\beta,\eta$\end{mdInlineSnippet}%mdk
-%mdk-data-line={396}
+%mdk-data-line={395}
 \begin{mdInlineSnippet}[96953b1e4089e6945414a5d52957fe8a]%mdk
 ${\sf \llbracket Prop_0\rrbracket}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={398}
+%mdk-data-line={397}
 \begin{mdInlineSnippet}[92fc7a7bc9a5f9b149ae7544361b0ab2]%mdk
 ${\sf Prop1}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={398}
+%mdk-data-line={397}
 \begin{mdInlineSnippet}[c3880bc63c2b0fd10cdc024cf76a1924]%mdk
 $\Box$\end{mdInlineSnippet}%mdk
-%mdk-data-line={399}
+%mdk-data-line={398}
 \begin{mdInlineSnippet}[0dd9ba8209181a52091dcd102fc1c48d]%mdk
 ${\sf let}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={399}
-\begin{mdDisplaySnippet}[0d39e4b42c472fb5f08ab59b7a17d25b]%mdk
-\[%mdk-data-line={403}
-\begin{array} {l r}
-\inferrule* {{{\Gamma, x: A}\vdash { M:B}}} 
-{ {\Gamma}\vdash { \lambda x:A.\  M:  A\supset  B}}
-& \inferrule* {{{\Gamma}\vdash { M:A\supset  B}}\\{ {\Gamma}\vdash {M^{\prime}: A}}} { {\Gamma}\vdash { (MM^{'}):  B}}
+%mdk-data-line={400}
+\begin{mdInlineSnippet}[c09859c00da566980873081e8d77a317]%mdk
+${\sf Prop_0}$\end{mdInlineSnippet}%mdk
+%mdk-data-line={400}
+\begin{mdDisplaySnippet}[d402b9869ac609fbf2c6dd26a7c0b547]%mdk
+\[%mdk-data-line={402}
+\begin{array}{l r}
+\inferrule* {x: A \in \Gamma}{ {\Gamma}\vdash { x:A}}
+&
 \\
+\inferrule* { }{ {\Gamma}\vdash { <>:\top}}
+& 
+\inferrule* {{{\Gamma, x: A}\vdash { M:B}}} { {\Gamma}\vdash { \lambda x:A.\  M:  A\supset  B}}
+\\
+\\
+\inferrule* {{{\Gamma}\vdash { M:A\supset  B}}\\{ {\Gamma}\vdash {M^{\prime}: A}}} { {\Gamma} { (MM^{'}):  B}}
+& 
 \inferrule* {}{+\  \beta\eta \text{\ equalities for \ } \top,\supset}
 %\and
 %\inferrule*[right=$\bot$E] {{\Turn {\Gamma} {\bot}}}{\Turn {\Gamma} {   A}}
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
+%mdk-data-line={418}
+\begin{mdInlineSnippet}[c09859c00da566980873081e8d77a317]%mdk
+${\sf Prop_0}$\end{mdInlineSnippet}%mdk
+%mdk-data-line={418}
+\begin{mdDisplaySnippet}[3806af391c231bff2ca9878cab0b7042]%mdk
+\[%mdk-data-line={420}
+\begin{array}{l r}
+\inferrule* {x: A \in \Gamma}{ {\Gamma}\vdash { x:A}}
+&
+\\
+\inferrule* { }{ {\Gamma}\vdash { <>:\top}}
+& 
+\inferrule* {{{\Gamma, x: A}\vdash { M:B}}} { {\Gamma}\vdash { \lambda x:A.\  M:  A\supset  B}}
+\\
+\inferrule* {{{\Gamma}\vdash { M:A\supset  B}}\\{ {\Gamma}\vdash {M^{\prime}: A}}} { {\Gamma} { (MM^{'}):  B}}
+& 
+\inferrule* {}{+\  \beta\eta \text{\ equalities for \ } \top,\supset}
+%\and
+%\inferrule*[right=$\bot$E] {{\Turn {\Gamma} {\bot}}}{\Turn {\Gamma} {   A}}
+\end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={435}
 
 \end{mdSnippets}
 

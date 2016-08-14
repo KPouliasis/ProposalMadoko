@@ -396,7 +396,8 @@ We show:
 
 * For the ${\sf Prop1}$ fragment we transliterate the natural deduction $\Box$ rule and its corresponding Gentzen principles 
 to equalities using ${\sf let}$ bindings.
-~ End Vertical
+
+
 ## Proof term Assignment( ${\sf Prop_0}$) 
 ~ Math
 \begin{array}{l r}
@@ -415,6 +416,7 @@ to equalities using ${\sf let}$ bindings.
 %\inferrule*[right=$\bot$E] {{\Turn {\Gamma} {\bot}}}{\Turn {\Gamma} {   A}}
 \end{array}
 ~ 
+
 ## Proof term Assignment( ${\sf Prop_0}$) 
 ~ Math
 \begin{array}{l r}
