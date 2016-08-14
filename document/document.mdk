@@ -374,12 +374,14 @@ $\vdash A \Longrightarrow \vdash \Box A$.
 \inferrule*[right=$\supset_R$] {\Gamma, A \Rightarrow  B} {\Gamma \Rightarrow A\supset B}
 \\
 \\
-\inferrule*[right=$\bot_L$] { } {\Gamma, \bot \Rightarrow A}
-\\
-\\
 \inferrule*[right=$\Box_{LR}$] {{\Box\Gamma,\Gamma\Rightarrow A}\\{\llbracket\Gamma\rrbracket\Rightarrow \llbracket A \rrbracket }}{\Box\Gamma\Rightarrow \Box A}
+\\
+\\
+\inferrule*[right=$\bot_L$] { } {\Gamma, \bot \Rightarrow A}
 \end{array}
 ~ 
+## Cut elimination
+We show that $$
 
  ## Thanks for looking :-)
 
