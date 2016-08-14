@@ -381,8 +381,6 @@ $\vdash A \Longrightarrow \vdash \Box A$.
 \end{array}
 ~ 
 ## Cut elimination
-We show that $$
-## Cut elimination
 We show that $\Gamma\vdash A$ 
 
  ## Thanks for looking :-)
