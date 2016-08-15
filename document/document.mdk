@@ -421,13 +421,61 @@ to equalities using ${\sf let}$ bindings.
 ~ Math
 
 
-\begin{array}{l r}
-\inferrule*{  {s:\llbracket  A\rrbracket \in \Delta}}{ {\Delta}\vdash {s:\llbracket  A\rrbracket}}&
-\inferrule*{ } {\Delta\vdash C_{\top}: \llbracket  \top\rrbracket
+\begin{array}{l }
+\inferrule*{  {s:\llbracket  A\rrbracket \in \Delta}}{ {\Delta}\vdash {s:\llbracket  A\rrbracket}}\\
+\\
+\inferrule* { } {\Delta\vdash C_{\top}: \llbracket  \top\rrbracket}\\
+\\
+\inferrule*{{  A, B \in {\sf Prop_0} }}   {\Delta\vdash {K^{A,B}}: \llbracket   A \supset (B \supset   A)\rrbracket }
+\\
+\\
+ \inferrule*{ {  A,B, C \in {\sf Prop_0}}}{\Delta\vdash {S^{A,B,C}}:\llbracket   A\supset (B \supset C) \supset ((  A\supset B) \supset (  A \supset C))\rrbracket}
+\\
+\\
+\inferrule* {{{\Delta}\vdash { {\sf J}: \llbracket  A \supset  B \rrbracket}}\\ {{\Delta}\vdash {{\sf J'}:\llbracket  A \rrbracket}}}{{\Delta}\vdash { {\sf J*J^\prime}:\llbracket  B\rrbracket}}
 \end{array}
-
 ~
+## Proof term Assignment( ${\sf  Prop_1 }$)
+${\sf let}$ bindings in functional programming compute by combining unification and substitution. 
+For example  given the function:
 
+``` Haskell
+def shift (p:Point) = 
+     let  <x,y> be p
+     in
+     <x+1,y+1>
+```
+calling this function with argument the point $\langle 3,5\rangle$  will return $\langle 4,6 \rangle$ by pattern matching 
+$\langle 3,5\rangle$ against $\langle x,y \rangle$.
+
+## Proof term Assignment( ${\sf  Prop_1 }$)
+Instances of the rule with empty (eliminating zero boxes), and singleton (eliminating one box) contexts.
+~ Math
+\begin{array}{c}
+\inferrule*[]{ {\Gamma\in{\sf Prop_1}}\\{\vdash { M:B}}\\{  \vdash {{\sf J}:\llbracket  B\rrbracket} }} { {\Gamma}\vdash {  M\& {\sf J}:\Box  B}}
+\\
+\inferrule*[]{{  {\Gamma}\vdash {N:\Box  A}}\\{ {x:A}\vdash { M:B}}\\{{s:\llbracket A \rrbracket}\vdash {{\sf J}:\llbracket  B\rrbracket} }} { {\Gamma}\vdash {{\sf let} \ (x\& s \ \ {\sf be\ } N) \ {\sf in}\  (M\& {\sf J}):\Box  B}}
+\end{array}
+~ 
+## Proof term Assignment( ${\sf  Prop_1 }$)
+Or, generically, for arbitrary number of boxes:
+~ Math
+\begin{array}{l}
+	\inferrule*
+	{{\forall A_k \in \Gamma^\prime . \   \Gamma \vdash N_k:\Box A_k}\\
+	{ {\Gamma^\prime}\vdash {M:B}}\\{ {\llbracket\Gamma^\prime\rrbracket}\vdash {{\sf J}:\llbracket B \rrbracket} }} 
+	{ {\Gamma} \vdash {{\sf let^{*}}\ (\Gamma^\prime, \llbracket\Gamma^\prime\rrbracket, Ns) \ {\sf in}  \ ( M\& {\sf J}):\Box B}}
+\end{array}
+~
+With : 
+~ Math
+\begin{array}{ll}
+\nonumber {\sf let}^{*}\ (\circ;\ \circ;\  [\ ]) {\ \sf in\ }  M:= M \  &\\
+\nonumber {\sf let}^{*}\ (x_1:A_1,\ldots, x_i:A_i\ ;\  s_1: \phi_1, \ldots, s_i:\phi_i;\  N_1,\ldots,  N_i) {\ \sf in\ } M:= \  & \\
+{\sf let} \ \{(x_1 \& s_1)\  {\sf be}\  N_1,\ldots,  (x_i \& s_i)\  {\sf be}\  N_i\}\ {\sf in}\  M &\\
+\end{array}
+~
+And the reduction rule coming straight from the Gentzen principle:
 
 ## Thanks for looking :-)
 

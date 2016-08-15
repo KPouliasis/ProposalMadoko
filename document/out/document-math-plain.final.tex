@@ -46,6 +46,12 @@ ${\sf Prop_1}$\end{mdInlineSnippet}%mdk
 ${\sf Prop_0}$\end{mdInlineSnippet}%mdk
 \begin{mdInlineSnippet}[56411dab26c385df0e07a31c05a57b4e]%mdk
 ${\sf \llbracket Prop_0 \rrbracket}$\end{mdInlineSnippet}%mdk
+\begin{mdInlineSnippet}[e7fb9f45aab1dd5eafe4eacb98e8e93d]%mdk
+${\sf  Prop_1 }$\end{mdInlineSnippet}%mdk
+\begin{mdInlineSnippet}[e7fb9f45aab1dd5eafe4eacb98e8e93d]%mdk
+${\sf  Prop_1 }$\end{mdInlineSnippet}%mdk
+\begin{mdInlineSnippet}[e7fb9f45aab1dd5eafe4eacb98e8e93d]%mdk
+${\sf  Prop_1 }$\end{mdInlineSnippet}%mdk
 %mdk-data-line={32}
 \begin{mdInlineSnippet}[d59a89abb4af5bc4dd85243d5f75bcac]%mdk
 $S4$\end{mdInlineSnippet}%mdk
@@ -519,21 +525,73 @@ ${\sf Prop_0}$\end{mdInlineSnippet}%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdInlineSnippet}[56411dab26c385df0e07a31c05a57b4e]%mdk
 ${\sf \llbracket Prop_0 \rrbracket}$\end{mdInlineSnippet}%mdk
-\begin{mdDisplaySnippet}[3806af391c231bff2ca9878cab0b7042]%mdk
+\begin{mdDisplaySnippet}[95b3a3a54fa22a096ceb8de14297f9bc]%mdk
 \[%mdk-data-line={422}
-\begin{array}{l r}
-\inferrule* {x: A \in \Gamma}{ {\Gamma}\vdash { x:A}}
-&
+\begin{array}{l }
+\inferrule*{  {s:\llbracket  A\rrbracket \in \Delta}}{ {\Delta}\vdash {s:\llbracket  A\rrbracket}}\\
 \\
-\inferrule* { }{ {\Gamma}\vdash { <>:\top}}
-& 
-\inferrule* {{{\Gamma, x: A}\vdash { M:B}}} { {\Gamma}\vdash { \lambda x:A.\  M:  A\supset  B}}
+\inferrule* { } {\Delta\vdash C_{\top}: \llbracket  \top\rrbracket}\\
 \\
-\inferrule* {{{\Gamma}\vdash { M:A\supset  B}}\\{ {\Gamma}\vdash {M^{\prime}: A}}} { {\Gamma} { (MM^{'}):  B}}
-& 
-\inferrule* {}{+\  \beta\eta \text{\ equalities for \ } \top,\supset}
-%\and
-%\inferrule*[right=$\bot$E] {{\Turn {\Gamma} {\bot}}}{\Turn {\Gamma} {   A}}
+\inferrule*{{  A, B \in {\sf Prop_0} }}   {\Delta\vdash {K^{A,B}}: \llbracket   A \supset (B \supset   A)\rrbracket }
+\\
+\\
+ \inferrule*{ {  A,B, C \in {\sf Prop_0}}}{\Delta\vdash {S^{A,B,C}}:\llbracket   A\supset (B \supset C) \supset ((  A\supset B) \supset (  A \supset C))\rrbracket}
+\\
+\\
+\inferrule* {{{\Delta}\vdash { {\sf J}: \llbracket  A \supset  B \rrbracket}}\\ {{\Delta}\vdash {{\sf J'}:\llbracket  A \rrbracket}}}{{\Delta}\vdash { {\sf J*J^\prime}:\llbracket  B\rrbracket}}
+\end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+\begin{mdInlineSnippet}[e7fb9f45aab1dd5eafe4eacb98e8e93d]%mdk
+${\sf  Prop_1 }$\end{mdInlineSnippet}%mdk
+%mdk-data-line={439}
+\begin{mdInlineSnippet}[0dd9ba8209181a52091dcd102fc1c48d]%mdk
+${\sf let}$\end{mdInlineSnippet}%mdk
+%mdk-data-line={448}
+\begin{mdInlineSnippet}[66d1a90bce6d0a1742229e16e5ea5d6b]%mdk
+$\langle 3,5\rangle$\end{mdInlineSnippet}%mdk
+%mdk-data-line={448}
+\begin{mdInlineSnippet}[4fee5c8f173d3be16e05f2c862a2b1ee]%mdk
+$\langle 4,6 \rangle$\end{mdInlineSnippet}%mdk
+%mdk-data-line={449}
+\begin{mdInlineSnippet}[66d1a90bce6d0a1742229e16e5ea5d6b]%mdk
+$\langle 3,5\rangle$\end{mdInlineSnippet}%mdk
+%mdk-data-line={449}
+\begin{mdInlineSnippet}[eda91bf97280cd507892b5acd745cd17]%mdk
+$\langle x,y \rangle$\end{mdInlineSnippet}%mdk
+%mdk-data-line={449}
+\begin{mdInlineSnippet}[e7fb9f45aab1dd5eafe4eacb98e8e93d]%mdk
+${\sf  Prop_1 }$\end{mdInlineSnippet}%mdk
+%mdk-data-line={452}
+\begin{mdDisplaySnippet}[ae45c1a15b5e4f23857d5545a8afdae3]%mdk
+\[%mdk-data-line={454}
+\begin{array}{c}
+\inferrule*[]{ {\Gamma\in{\sf Prop_1}}\\{\vdash { M:B}}\\{  \vdash {{\sf J}:\llbracket  B\rrbracket} }} { {\Gamma}\vdash {  M\& {\sf J}:\Box  B}}
+\\
+\inferrule*[]{{  {\Gamma}\vdash {N:\Box  A}}\\{ {x:A}\vdash { M:B}}\\{{s:\llbracket A \rrbracket}\vdash {{\sf J}:\llbracket  B\rrbracket} }} { {\Gamma}\vdash {{\sf let} \ (x\& s \ \ {\sf be\ } N) \ {\sf in}\  (M\& {\sf J}):\Box  B}}
+\end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+\begin{mdInlineSnippet}[e7fb9f45aab1dd5eafe4eacb98e8e93d]%mdk
+${\sf  Prop_1 }$\end{mdInlineSnippet}%mdk
+%mdk-data-line={461}
+\begin{mdDisplaySnippet}[7c302f6c29f9a9444df8f7c06b0c5f24]%mdk
+\[%mdk-data-line={463}
+\begin{array}{l}
+    \inferrule*
+    {{\forall A_k \in \Gamma^\prime . \   \Gamma \vdash N_k:\Box A_k}\\
+    { {\Gamma^\prime}\vdash {M:B}}\\{ {\llbracket\Gamma^\prime\rrbracket}\vdash {{\sf J}:\llbracket B \rrbracket} }} 
+    { {\Gamma} \vdash {{\sf let^{*}}\ (\Gamma^\prime, \llbracket\Gamma^\prime\rrbracket, Ns) \ {\sf in}  \ ( M\& {\sf J}):\Box B}}
+\end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={470}
+\begin{mdDisplaySnippet}[4ca4942a1c0873001ec27c63ef3a44ef]%mdk
+\[%mdk-data-line={472}
+\begin{array}{ll}
+\nonumber {\sf let}^{*}\ (\circ;\ \circ;\  [\ ]) {\ \sf in\ }  M:= M \  &\\
+\nonumber {\sf let}^{*}\ (x_1:A_1,\ldots, x_i:A_i\ ;\  s_1: \phi_1, \ldots, s_i:\phi_i;\  N_1,\ldots,  N_i) {\ \sf in\ } M:= \  & \\
+{\sf let} \ \{(x_1 \& s_1)\  {\sf be}\  N_1,\ldots,  (x_i \& s_i)\  {\sf be}\  N_i\}\ {\sf in}\  M &\\
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
