@@ -498,11 +498,20 @@ With :
 ## Proof term Assignment( ${\sf  Prop_1 }$)
 With the reduction rule coming straight from the Gentzen reduction  principles principle:
 ~ Math
-\begin{array}{ll}
+\begin{array}{ll} 
 	{\sf let} \{(x_1 \& s_1) {\ \sf be\ } (M_1\& {\sf J_1}),\ldots,  (x_i \& s_i) {\ {\sf be}\ } (M_i\& {\sf J_i})\}\ {\sf in}\  (M \&  {\sf J})& \\
-	=_{\beta} & {  M[M_1/x_1, \ldots,  M_i/x_i] \& {\sf J}[{\sf J_1}/s_1,\ldots, {\sf J_i}/s_i]}
+	=_{\beta} & \\
+  {  M[M_1/x_1, \ldots,  M_i/x_i] \& {\sf J}[{\sf J_1}/s_1,\ldots, {\sf J_i}/s_i]}
 	\end{array}
 ~
+~ Math
+M:\Box A =_{\eta}\ \ {\sf let} \ \ (x \& s\  {\sf be} \ M)\ \ {\sf in}\ \  { (x \& s)}:\Box A
+~
+
+With these equalities we can move on and show  strong normalization  and confluence results.
+
+## An application: dynamic linking
+
 
 
 
