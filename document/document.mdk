@@ -493,7 +493,20 @@ M:\Box A =_{\eta}\ \ {\sf let} \ \ (x \& s\  {\sf be} \ M)\ \ {\sf in}\ \  { (x 
 
 With these equalities we can move on and show  strong normalization  and confluence results.
 
-## An application: dynamic linking
+## An application: dynamic linking with foreign function implementation
+We consider a language $I$ (_source_) interfacing a lower level language (_target_) via  declared in a signature. 
+E.g. a typical __stack__ interface will be declared as follows:
+
+``` Haskell
+    using type intstack
+      empty: intstack
+      push: int -> intstack -> intstack
+      pop: intstack -> int * intstack
+```
+
+* Source expressions in such a setting have a dynamic meaning depending on the target implementations
+E.g.
+the example 
 $\llbracket A\supset B\rrbracket_J$=
 $\llbracket A\rrbracket_J \llbracket\supset\rrbracket_J \llbracket B\rrbracket_J$ where  $\llbracket\supset\rrbracket_J$ is the implication type constructor in $J$.
 The specifics of the host  $J$ and the concrete implementations are unknown to $I$ but during the linker construction we assume that both languages share  some  basic types
@@ -506,7 +519,7 @@ is  interfacing   a simple data structure, say an  integer stack,  with the foll
     using type intstack
       empty: intstack, push: int -> intstack -> intstack,
       pop: intstack -> int
-'''
+```
 
 
 
