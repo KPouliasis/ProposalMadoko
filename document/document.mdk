@@ -79,18 +79,33 @@ Assume a deductive systems $I$:
 
 and  $J$ with: $U_J$, $\Sigma_J$, and $\Sigma_J;\Delta\vdash_J \phi$ respectively.  
 
+<!-- begin merge (remove this line to resolve the conflict) -->
+~ Begin Remote
 ## Motivation(formally)
 Minimal requirements:
+~ End Remote
+## Minimal Requirements
+<!-- end merge -->
+
 
 * __Reflexivity__ :
     
     * $A \in \Gamma \Longrightarrow \Gamma\vdash_{I}A$
     * $\phi \in \Delta \Longrightarrow \Delta\vdash_{J}\phi$
 * __Compositionality__:  
+<!-- begin merge (remove this line to resolve the conflict) -->
+~ Begin Remote
     * $\Gamma\vdash_I A$ __and__ $\Gamma^{\prime},A\vdash_{I} B \Longrightarrow \Gamma,\Gamma^{\prime}\vdash_I B $  
     * $\Delta\vdash_J\phi$ __and__ $\Delta^{\prime},\phi\vdash_{J} \psi \Longrightarrow \Delta,\Delta^{\prime}\vdash_J \psi$ 
 *  __Top __:
+~ End Remote
+     *  $\Gamma\vdash_I A$ __and__ $\Gamma^{\prime},A\vdash_{I} B \Longrightarrow \Gamma,\Gamma^{'}\vdash_I B $  
+        $\Delta\vdash_J\phi$ __and__ $\Delta^{\prime},\phi\vdash_{J} \psi \Longrightarrow \Delta,\Delta^{'}\vdash_J \psi$ 
+*  __Top elements __:
+<!-- end merge -->
  $\Gamma\vdash_{I}\top_I \text{\ and \ }
+<!-- begin merge (remove this line to resolve the conflict) -->
+~ Begin Remote
 	\Delta \vdash_J\top_J$
 
   For $\Gamma$ of  the form $A_1,\ldots, A_n$:
@@ -334,6 +349,9 @@ For the image  of the interpretation  $\llbracket{\sf Prop_0}\rrbracket$ we dema
 \inferrule* {{ {\Delta}\vdash { \llbracket  A \supset  B \rrbracket}}\\ {{\Delta}\vdash {\llbracket  A \rrbracket}}}{ {\Delta}\vdash {\llbracket  B\rrbracket}}
 \end{array}
 ~
+~ End Remote
+	\Delta \vdash_J\top_J$
+<!-- end merge -->
 
 ##  Natural Deduction ( ${\sf Prop_1}$ )
 ~ Math
@@ -475,8 +493,20 @@ With :
 {\sf let} \ \{(x_1 \& s_1)\  {\sf be}\  N_1,\ldots,  (x_i \& s_i)\  {\sf be}\  N_i\}\ {\sf in}\  M &\\
 \end{array}
 ~
-And the reduction rule coming straight from the Gentzen principle:
 
+
+## Proof term Assignment( ${\sf  Prop_1 }$)
+With the reduction rule coming straight from the Gentzen reduction  principles principle:
+~ Math
+\begin{array}{ll}
+	{\sf let} \{(x_1 \& s_1) {\ \sf be\ } (M_1\& {\sf J_1}),\ldots,  (x_i \& s_i) {\ {\sf be}\ } (M_i\& {\sf J_i})\}\ {\sf in}\  (M \&  {\sf J})& \\
+	=_{\beta} & {  M[M_1/x_1, \ldots,  M_i/x_i] \& {\sf J}[{\sf J_1}/s_1,\ldots, {\sf J_i}/s_i]}
+	\end{array}
+~
+
+
+
+  
 ## Thanks for looking :-)
 
 [slide]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.html
