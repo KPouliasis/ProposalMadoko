@@ -79,13 +79,6 @@ Assume a deductive systems $I$:
 
 and  $J$ with: $U_J$, $\Sigma_J$, and $\Sigma_J;\Delta\vdash_J \phi$ respectively.  
 
-<!-- begin merge (remove this line to resolve the conflict) -->
-~ Begin Remote
-## Motivation(formally)
-Minimal requirements:
-~ End Remote
-## Minimal Requirements
-<!-- end merge -->
 
 
 * __Reflexivity__ :
@@ -93,22 +86,13 @@ Minimal requirements:
     * $A \in \Gamma \Longrightarrow \Gamma\vdash_{I}A$
     * $\phi \in \Delta \Longrightarrow \Delta\vdash_{J}\phi$
 * __Compositionality__:  
-<!-- begin merge (remove this line to resolve the conflict) -->
-~ Begin Remote
-    * $\Gamma\vdash_I A$ __and__ $\Gamma^{\prime},A\vdash_{I} B \Longrightarrow \Gamma,\Gamma^{\prime}\vdash_I B $  
-    * $\Delta\vdash_J\phi$ __and__ $\Delta^{\prime},\phi\vdash_{J} \psi \Longrightarrow \Delta,\Delta^{\prime}\vdash_J \psi$ 
-*  __Top __:
-~ End Remote
+
      *  $\Gamma\vdash_I A$ __and__ $\Gamma^{\prime},A\vdash_{I} B \Longrightarrow \Gamma,\Gamma^{'}\vdash_I B $  
         $\Delta\vdash_J\phi$ __and__ $\Delta^{\prime},\phi\vdash_{J} \psi \Longrightarrow \Delta,\Delta^{'}\vdash_J \psi$ 
 *  __Top elements __:
-<!-- end merge -->
- $\Gamma\vdash_{I}\top_I \text{\ and \ }
-<!-- begin merge (remove this line to resolve the conflict) -->
-~ Begin Remote
-	\Delta \vdash_J\top_J$
 
-  For $\Gamma$ of  the form $A_1,\ldots, A_n$:
+ $\Gamma\vdash_{I}\top_I \text{\ and \ }$
+For $\Gamma$ of  the form $A_1,\ldots, A_n$:
   
   $\llbracket\Gamma \rrbracket=\llbracket A_1  \rrbracket,\ldots,  \llbracket A_n\rrbracket$
 
@@ -349,8 +333,7 @@ For the image  of the interpretation  $\llbracket{\sf Prop_0}\rrbracket$ we dema
 \inferrule* {{ {\Delta}\vdash { \llbracket  A \supset  B \rrbracket}}\\ {{\Delta}\vdash {\llbracket  A \rrbracket}}}{ {\Delta}\vdash {\llbracket  B\rrbracket}}
 \end{array}
 ~
-~ End Remote
-	\Delta \vdash_J\top_J$
+
 <!-- end merge -->
 
 ##  Natural Deduction ( ${\sf Prop_1}$ )
@@ -511,6 +494,19 @@ M:\Box A =_{\eta}\ \ {\sf let} \ \ (x \& s\  {\sf be} \ M)\ \ {\sf in}\ \  { (x 
 With these equalities we can move on and show  strong normalization  and confluence results.
 
 ## An application: dynamic linking
+$\llbracket A\supset B\rrbracket_J$=
+$\llbracket A\rrbracket_J \llbracket\supset\rrbracket_J \llbracket B\rrbracket_J$ where  $\llbracket\supset\rrbracket_J$ is the implication type constructor in $J$.
+The specifics of the host  $J$ and the concrete implementations are unknown to $I$ but during the linker construction we assume that both languages share  some  basic types
+ for otherwise  typed ``communication'' of the two languages would be impossible. 
+Simplifying,  we consider that the only  shared type is  (${\sf int}$), i.e. the linker construction assumes  
+$\bar{n}:\llbracket \sf int \rrbracket$ for every integer $n:{\sf int}$. 
+Let us now assume source code in $I$ that
+is  interfacing   a simple data structure, say an  integer stack,  with the following signature ${\sf \Sigma}$:
+``` Haskell
+    using type intstack
+      empty: intstack, push: int -> intstack -> intstack,
+      pop: intstack -> int
+'''
 
 
 
