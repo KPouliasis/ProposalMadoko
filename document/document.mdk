@@ -21,7 +21,7 @@ Package       : mathtools
 
 
 #Introduction
-~ Begin Vertical
+
 
 ## Our question
 
@@ -43,9 +43,9 @@ What is a sensible Curry Howard reading/ calculus of justificaton logic based on
   * We focus on a minimal system based on $K$ modal logic and intuitionistic implication
   * Strengthening of the modality can be done in a way  that is respecting the computational reading we propose 
 
-~ End Vertical
 
-~ Begin Vertical
+
+
   
 ## Motivation
 
@@ -65,8 +65,8 @@ What is a sensible Curry Howard reading/ calculus of justificaton logic based on
   logic in itself.
   
 ~ 
-~ End Vertical
-~ Begin Vertical
+
+
 
 ## Motivation (formally) 
 
@@ -139,7 +139,7 @@ between these two systems
 * Use justification logic to 
 axiomatize validity $\llbracket \sf {judgments}\rrbracket$. 
 
-~ Begin Vertical
+
 ## Modal Rule
 
 One modal rule for elimination and introduction to relate judgments $A\  {\sf valid}$, $ A\ {\sf true}$, $ \Box A {\sf true}$: 
@@ -254,7 +254,7 @@ Any deduction $\mathcal{D}: \Box A$ can be expanded as follows:
 \end{array}
 ~
 
- ~ End Vertical
+
  # The system
 
 ## Type Universe 
@@ -291,7 +291,7 @@ Any deduction $\mathcal{D}: \Box A$ can be expanded as follows:
 \end{array}
 
 ~
-~ Begin Vertical
+
 ##  Natural Deduction ( ${\sf Prop_0}$ )
 
 
@@ -334,7 +334,7 @@ For the image  of the interpretation  $\llbracket{\sf Prop_0}\rrbracket$ we dema
 \end{array}
 ~
 
-<!-- end merge -->
+
 
 ##  Natural Deduction ( ${\sf Prop_1}$ )
 ~ Math
@@ -353,7 +353,7 @@ For the image  of the interpretation  $\llbracket{\sf Prop_0}\rrbracket$ we dema
 \Box A}}} { {\Gamma}\vdash {  \Box B}}
 \end{array}
 ~ 
-~ End Vertical
+
 
 ## Logical Completeness and Admissibility of  Necessitation
 
@@ -493,9 +493,16 @@ M:\Box A =_{\eta}\ \ {\sf let} \ \ (x \& s\  {\sf be} \ M)\ \ {\sf in}\ \  { (x 
 
 With these equalities we can move on and show  strong normalization  and confluence results.
 
-## An application: dynamic linking with foreign function implementation
-We consider a language $I$ (_source_) interfacing a lower level language $J$ (_target_) via  declared in a signature. 
-E.g. a typical __stack__ interface will be declared as follows:
+
+## Dynamic linking with foreign function implementation
+* Consider a language $I$ (_source_) interfacing a lower level language $J$ (_target_) via  declared in a signature.
+*  We assume that the two languages share
+some basic types e.g. ${\sf int}$ (e.g $\llbracket int_I\rrbracket = int_J $) 
+and for simplicity, $J$  is based on  lambda calculus so it is functionally complete with  under the interpretation  $\llbracket A\rightarrow_I B\rrbracket =\llbracket A \rrbracket \rightarrow_J \llbracket B \rrbracket $ 
+
+
+## 
+a typical  interface for a __stack__  will be declared as follows:
 
 ``` Haskell
     using type intstack
@@ -504,9 +511,12 @@ E.g. a typical __stack__ interface will be declared as follows:
       pop: intstack -> int * intstack
 ```
 
-* Source expressions in such a setting have a dynamic meaning depending on the target implementations
-E.g.
-the example  
+* Source expressions in such a setting have a dynamic meaning depending on the target implementations. Take  the expression: 
+```Haskell
+push (1+1) empty
+```
+
+    
 $\llbracket A\supset B\rrbracket_J$=
 $\llbracket A\rrbracket_J \llbracket\supset\rrbracket_J \llbracket B\rrbracket_J$ where  $\llbracket\supset\rrbracket_J$ is the implication type constructor in $J$.
 The specifics of the host  $J$ and the concrete implementations are unknown to $I$ but during the linker construction we assume that both languages share  some  basic types
