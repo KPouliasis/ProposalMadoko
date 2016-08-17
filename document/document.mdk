@@ -1,8 +1,8 @@
 
 [INCLUDE=presentation]
 
-Title         : Jcalc
-Sub Title     : A curry howard View of Basic Justification Logic
+Title         : Basic Justification Logic
+Sub Title     : A Curry - Howard  view
 Author        : Konstantinos Pouliasis
 Affiliation   : The Graduate Center, CUNY
 Email         : konstantinos.pouliasis@gmail.com
@@ -13,10 +13,6 @@ Package       : mathtools
 
 
 [TITLE]
-
-~ Slide
-[TOC]
-~
 
 
 
@@ -513,26 +509,11 @@ a typical  interface for a __stack__  will be declared as follows:
 
 * Source expressions in such a setting have a dynamic meaning depending on the target implementations. Take  the expression: 
 ```Haskell
-push (1+1) empty
+pop (push (1+1) empty)
 ```
 
-    
-$\llbracket A\supset B\rrbracket_J$=
-$\llbracket A\rrbracket_J \llbracket\supset\rrbracket_J \llbracket B\rrbracket_J$ where  $\llbracket\supset\rrbracket_J$ is the implication type constructor in $J$.
-The specifics of the host  $J$ and the concrete implementations are unknown to $I$ but during the linker construction we assume that both languages share  some  basic types
- for otherwise  typed ``communication'' of the two languages would be impossible. 
-Simplifying,  we consider that the only  shared type is  (${\sf int}$), i.e. the linker construction assumes  
-$\bar{n}:\llbracket \sf int \rrbracket$ for every integer $n:{\sf int}$. 
-Let us now assume source code in $I$ that
-is  interfacing   a simple data structure, say an  integer stack,  with the following signature ${\sf \Sigma}$:
-``` Haskell
-    using type intstack
-      empty: intstack, push: int -> intstack -> intstack,
-      pop: intstack -> int
-```
-
-
-
+This program involves two kinds of computations: a redex $(1+1)$ that can be reduced using the internal semantics 
+of the language $1+1\rightsquigarrow_{I} 2$ and the signature calls  ${\sf push$
 
   
 ## Thanks for looking :-)
