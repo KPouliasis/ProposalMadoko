@@ -524,14 +524,32 @@ Our calculus, is a calculus of such constructions.
 * In the following we consider ${\sf \Sigma}$ to be the signature of the interface. 
 Here are the steps towards the dynamic linker construction for the expression .
 
+## Dynamic linkers
 * Reduce the source code based on the operational semantics of $I$ until it doesn't have a redex:
 
-* {${\sf \Sigma}; \bullet {\vdash pop (push \ (1+1) \ Empty)\rightsquigarrow pop (push \ 2 \ Empty) :int}$}
-			
-~
-<!-- end merge -->
 
-  
+${\sf \Sigma}; {\sf \circ {\vdash pop (push \ (1+1) \ Empty)\rightsquigarrow pop (push \ 2 \ Empty) :int}}$
+
+* Contextualize the use of the signature at the final term in step $1$:
+~ Math 
+ \begin{array}{c c}
+{\sf \Sigma;}&  {\sf x_1:intstack,  x_2:int\rightarrow intstack\rightarrow intstack,}\\
+&  {\sf x_3:intstack\rightarrow int \vdash   x_3 (x_2 \ 2\  x_1):int} 
+\end{array}
+~
+* Rewrite the previous judgment assuming (foreign) implementations for the corresponding 
+missing elements using the  specification for the shared types.
+
+~ Math 
+\begin{array}{c}
+{\sf s_1:\llbracket intstack\rrbracket,  s_2:\llbracket int\rightarrow intstack\rightarrow intstack\rrbracket,}\\
+{\sf s_3:\llbracket intstack\rightarrow int \rrbracket \vdash   s_3 * (s_2 * \ \bar{2}\ * s_1):\llbracket int\rrbracket} 
+\end{array}
+~
+
+## Dynamic linkers 
+
+
 ## Thanks for looking :-)
 
 [slide]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.html

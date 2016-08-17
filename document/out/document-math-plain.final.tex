@@ -618,7 +618,36 @@ $1+1\rightsquigarrow_{I} 2$\end{mdInlineSnippet}%mdk
 %mdk-data-line={517}
 \begin{mdInlineSnippet}[bee726186f70bdfd6133a05822048192]%mdk
 ${\sf push, pop}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={526}
+%mdk-data-line={524}
+\begin{mdInlineSnippet}[9f6bbd0c7159ab8b927e4ebdc5d053cd]%mdk
+${\sf \Sigma}$\end{mdInlineSnippet}%mdk
+%mdk-data-line={528}
+\begin{mdInlineSnippet}[dd7536794b63bf90eccfd37f9b147d7f]%mdk
+$I$\end{mdInlineSnippet}%mdk
+%mdk-data-line={531}
+\begin{mdInlineSnippet}[7b6f56cb9f8ad56e908b92d5cc3a7c1f]%mdk
+${\sf \Sigma}; {\sf \circ {\vdash pop (push \ (1+1) \ Empty)\rightsquigarrow pop (push \ 2 \ Empty) :int}}$\end{mdInlineSnippet}%mdk
+%mdk-data-line={533}
+\begin{mdInlineSnippet}[c4ca4238a0b923820dcc509a6f75849b]%mdk
+$1$\end{mdInlineSnippet}%mdk
+%mdk-data-line={533}
+\begin{mdDisplaySnippet}[755ee2f1c61ac8644c13fb9e310eebf4]%mdk
+\[%mdk-data-line={535}
+\begin{array}{c c}
+{\sf \Sigma;}&  {\sf x_1:intstack,  x_2:int\rightarrow intstack\rightarrow intstack,}\\
+&  {\sf x_3:intstack\rightarrow int \vdash   x_3 (x_2 \ 2\  x_1):int} 
+\end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={540}
+\begin{mdDisplaySnippet}[71d6472decdbb4197355d62b1ff7a853]%mdk
+\[%mdk-data-line={544}
+\begin{array}{c}
+{\sf s_1:\llbracket intstack\rrbracket,  s_2:\llbracket int\rightarrow intstack\rightarrow intstack\rrbracket,}\\
+{\sf s_3:\llbracket intstack\rightarrow int \rrbracket \vdash   s_3 * (s_2 * \ \bar{2}\ * s_1):\llbracket int\rrbracket} 
+\end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
 
 \end{mdSnippets}
 
