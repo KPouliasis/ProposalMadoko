@@ -640,14 +640,83 @@ $1$\end{mdInlineSnippet}%mdk
 \]%mdk
 \end{mdDisplaySnippet}%mdk
 %mdk-data-line={540}
-\begin{mdDisplaySnippet}[71d6472decdbb4197355d62b1ff7a853]%mdk
+\begin{mdDisplaySnippet}[5e2b02c192e0dfdfb1defa9972aa61f2]%mdk
 \[%mdk-data-line={544}
 \begin{array}{c}
-{\sf s_1:\llbracket intstack\rrbracket,  s_2:\llbracket int\rightarrow intstack\rightarrow intstack\rrbracket,}\\
-{\sf s_3:\llbracket intstack\rightarrow int \rrbracket \vdash   s_3 * (s_2 * \ \bar{2}\ * s_1):\llbracket int\rrbracket} 
+{\sf s_1:\llbracket intstack\rrbracket,  s_2:\llbracket int\rightarrow intstack\rightarrow intstack\rrbracket},\\
+{\sf s_3:\llbracket intstack\rightarrow int \rrbracket \vdash   s_3 \times (s_2 \times \ \bar{2}\ * s_1):\llbracket int\rrbracket} 
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
+%mdk-data-line={555}
+\begin{mdInlineSnippet}[c3880bc63c2b0fd10cdc024cf76a1924]%mdk
+$\Box$\end{mdInlineSnippet}%mdk
+%mdk-data-line={555}
+\begin{mdDisplaySnippet}[ad876f09899194c52ba4252a80fbe94e]%mdk
+\[%mdk-data-line={558}
+\begin{array}{l}
+{\sf \Sigma}; {\sf {x_1^{\prime}:\Box intstack ,x_2^{\prime}:\Box(int\rightarrow intstack\rightarrow intstack)}},\\
+   {\sf x_3^{\prime}: \Box  (intstack\rightarrow int)}\vdash \\
+        {\sf  let\{ x_1\& s_1 {\ \sf be \ } x_1^{\prime},
+         \ x_2\& s_2 {\ \sf be \ } x_2^{\prime}, \  x_3\& s_3 
+         {\ \sf be \ } x_3^{\prime} \}\  in}\ \\   
+         \mathtt{(x_3 (x_2\ 2 \ x_1)\ \& \ s_3*(s_2* \bar{2}*s_1)):\Box int} 
+\end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={569}
+\begin{mdInlineSnippet}[c6a6eb61fd9c6c913da73b3642ca147d]%mdk
+$\lambda$\end{mdInlineSnippet}%mdk
+%mdk-data-line={569}
+\begin{mdDisplaySnippet}[7a9876cc038542e0a4c2b6670b27bd40]%mdk
+\[%mdk-data-line={571}
+\begin{array}{l l}
+\mathtt{\lambda x_1^{\prime}.\  \lambda x_2^{\prime}. \lambda x_3^{\prime}}. \\
+                 {\sf  let\{ x_1\& s_1 {\ \sf be \ } x_1^{\prime},
+       \ x_2\& s_2 {\ \sf be \ } x_2^{\prime}, \  x_3\& s_3 
+       {\ \sf be \ } x_3^{\prime} \}\  in}\ \\   
+       \mathtt{(x_3 (x_2\ 2 \ x_1)\ \& \ s_3*(s_2* \bar{2}*s_1)):}\\
+           {\sf \Box(intstack)\rightarrow 
+            \Box(int\rightarrow intstack\rightarrow intstack)} \\
+           {\sf \rightarrow \Box (intstack\rightarrow int) \rightarrow \Box int}
+\end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={587}
+\begin{mdInlineSnippet}[87dbde95784fbfd6c592968da32cb6ee]%mdk
+$\llbracket {\sf intstack} \rrbracket:= {\sf intarray}$\end{mdInlineSnippet}%mdk
+%mdk-data-line={588}
+\begin{mdInlineSnippet}[ef0c45c9c67c6a16854d4764a68d412c]%mdk
+${\sf create\_array(): intarray}$\end{mdInlineSnippet}%mdk
+%mdk-data-line={588}
+\begin{mdInlineSnippet}[563479402af5428d856f3c9fae2989de]%mdk
+${\sf empty}$\end{mdInlineSnippet}%mdk
+%mdk-data-line={588}
+\begin{mdInlineSnippet}[e99de042117f08e4416986e25d4fe898]%mdk
+${\sf add\_array: int \rightarrow intarray}$\end{mdInlineSnippet}%mdk
+%mdk-data-line={588}
+\begin{mdInlineSnippet}[e9d570a10fa3dd072a824cfff34f1786]%mdk
+$\sf push$\end{mdInlineSnippet}%mdk
+%mdk-data-line={589}
+\begin{mdInlineSnippet}[309a7840c963d8e1f4e7a313b2b6a05c]%mdk
+${\sf remove_last: intarray\rightarrow intarray\times int }$\end{mdInlineSnippet}%mdk
+%mdk-data-line={589}
+\begin{mdInlineSnippet}[1365bfc66fbefef4d7c1130c8425ed25]%mdk
+${\sf pop}$\end{mdInlineSnippet}%mdk
+%mdk-data-line={590}
+\begin{mdInlineSnippet}[c3880bc63c2b0fd10cdc024cf76a1924]%mdk
+$\Box$\end{mdInlineSnippet}%mdk
+%mdk-data-line={590}
+\begin{mdDisplaySnippet}[4c4fa696d187808e2051755913bbe2de]%mdk
+\[%mdk-data-line={592}
+\begin{array}{l l l}
+{\sf (empty, create_arr()):\Box intstack} \\
+{\sf (push, add\_array): \Box (int \rightarrow  intstack)  } \\
+\mathtt{pop: intarray \rightarrow int } &
+\end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={598}
 
 \end{mdSnippets}
 

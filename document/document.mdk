@@ -542,14 +542,61 @@ missing elements using the  specification for the shared types.
 
 ~ Math 
 \begin{array}{c}
-{\sf s_1:\llbracket intstack\rrbracket,  s_2:\llbracket int\rightarrow intstack\rightarrow intstack\rrbracket,}\\
-{\sf s_3:\llbracket intstack\rightarrow int \rrbracket \vdash   s_3 * (s_2 * \ \bar{2}\ * s_1):\llbracket int\rrbracket} 
+{\sf s_1:\llbracket intstack\rrbracket,  s_2:\llbracket int\rightarrow intstack\rightarrow intstack\rrbracket},\\
+{\sf s_3:\llbracket intstack\rightarrow int \rrbracket \vdash   s_3 \times (s_2 \times \ \bar{2}\ * s_1):\llbracket int\rrbracket} 
 \end{array}
 ~
 
-## Dynamic linkers 
 
 
+## Dynamic Linkers
+
+* Merge the two judgments to construct a dynamic linker that consumes  
+pairs of names with their implementation ($\Box$ types)
+
+~ Math
+\begin{array}{l}
+{\sf \Sigma}; {\sf {x_1^{\prime}:\Box intstack ,x_2^{\prime}:\Box(int\rightarrow intstack\rightarrow intstack)}},\\
+   {\sf x_3^{\prime}: \Box  (intstack\rightarrow int)}\vdash \\
+		{\sf  let\{ x_1\& s_1 {\ \sf be \ } x_1^{\prime},
+         \ x_2\& s_2 {\ \sf be \ } x_2^{\prime}, \  x_3\& s_3 
+         {\ \sf be \ } x_3^{\prime} \}\  in}\ \\   
+         \mathtt{(x_3 (x_2\ 2 \ x_1)\ \& \ s_3*(s_2* \bar{2}*s_1)):\Box int} 
+\end{array}
+~
+
+## Dynamic Linkers
+* Which gives by $\lambda$ abstractions:
+~Math 
+\begin{array}{l l}
+\mathtt{\lambda x_1^{\prime}.\  \lambda x_2^{\prime}. \lambda x_3^{\prime}}. \\
+           		{\sf  let\{ x_1\& s_1 {\ \sf be \ } x_1^{\prime},
+         \ x_2\& s_2 {\ \sf be \ } x_2^{\prime}, \  x_3\& s_3 
+         {\ \sf be \ } x_3^{\prime} \}\  in}\ \\   
+         \mathtt{(x_3 (x_2\ 2 \ x_1)\ \& \ s_3*(s_2* \bar{2}*s_1)):}\\
+             {\sf \Box(intstack)\rightarrow 
+              \Box(int\rightarrow intstack\rightarrow intstack)} \\
+             {\sf \rightarrow \Box (intstack\rightarrow int) \rightarrow \Box int}
+\end{array}
+~
+
+## Dynamic Linkers
+Now this program behaves correctly for different implementations of the interface.
+E.g. with an array implementation:
+
+* 
+\Math
+$\llbracket {\sf intstack} \rrbracket:= {\sf intarray}$ \\
+ ${\sf create\_array(): intarray}$ for (${\sf empty}$), ${\sf add\_array: int \rightarrow intarray}$ for $\sf push$
+and ${\sf remove_last: intarray\rightarrow intarray\times int }$ for ${\sf pop}$
+we obtain the $\Box$ values
+~ Math
+ \begin{array}{l l l}
+ {\sf (empty, create_arr()):\Box intstack} \\
+ {\sf (push, add\_array): \Box (int \rightarrow  intstack)  } \\
+\mathtt{pop: intarray \rightarrow int } &
+\end{array}
+~ 
 ## Thanks for looking :-)
 
 [slide]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.html
