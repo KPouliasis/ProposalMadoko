@@ -513,7 +513,10 @@ pop (push (1+1) empty)
 ```
 
 This program involves two kinds of computations: a redex $(1+1)$ that can be reduced using the internal semantics 
-of the language $1+1\rightsquigarrow_{I} 2$ and the signature calls  ${\sf push$
+of the language ($1+1\rightsquigarrow_{I} 2$) and the signature calls  ${\sf push, pop}$
+
+A dynamic linker is a function that consumes type correct 
+implementations of the signature and produces the residual program. Our calculus, is a calculus of such constructions. 
 
   
 ## Thanks for looking :-)
