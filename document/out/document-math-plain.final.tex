@@ -682,26 +682,33 @@ $\lambda$\end{mdInlineSnippet}%mdk
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={584}
-\begin{mdDisplaySnippet}[5696476788373d8ac253a9652925063a]%mdk
-\[%mdk-data-line={587}
+%mdk-data-line={588}
+\begin{mdDisplaySnippet}[97210db0216d148c80d2a671ff4f1a84]%mdk
+\[%mdk-data-line={591}
+  \begin{array}{l}
+  \llbracket {\sf intstack} \rrbracket:= {\sf intarray} \\  
+  \llbracket {\sf int \rightarrow intstack\rightarrow instack } \rrbracket:= {\sf int \rightarrow intarray\rightarrow intarray} \\
+  \llbracket {\sf intstack \rightarrow (int \times intstack)} \rrbracket:= {\sf int\rightarrow (int\times intarray)}\\
+  \end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={597}
+\begin{mdDisplaySnippet}[0e8f9bfe4d65c71c645a8b474e5916bc]%mdk
+\[%mdk-data-line={599}
 \begin{array}{l}
-\llbracket {\sf intstack} \rrbracket:= {\sf intarray} \\
- {\sf create\_array(): intarray} \ \  \text{for}\ \ {\sf empty}\\
+{ \sf create\_array(): intarray} \ \  \text{for}\ \ {\sf empty}\\
   {\sf add\_array: int \rightarrow intarray\rightarrow intarray}\ \  \text{for} \ \ {\sf push}\\
- {\sf remove\_last: intarray\rightarrow intarray\times int }\  \text{for}\  {\sf pop}
+{\sf remove\_last: intarray\rightarrow intarray\times int }\  \text{for}\  {\sf pop}
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-\begin{mdDisplaySnippet}[4293af8dc4b81d34f889bdc0202e1261]%mdk
-\[%mdk-data-line={596}
- \begin{array}{l}
- {\sf (empty, create_arr()):\Box intstack} \\
- {\sf (push, add\_array): \Box (int \rightarrow  intstack\rightarrow intstack)  } \\
-\mathtt{pop: intarray \rightarrow int } 
-\end{array}
-\]%mdk
-\end{mdDisplaySnippet}%mdk
+%mdk-data-line={607}
+\begin{mdInlineSnippet}[c3880bc63c2b0fd10cdc024cf76a1924]%mdk
+$\Box$\end{mdInlineSnippet}%mdk
+%mdk-data-line={609}
+\begin{mdInlineSnippet}[43d60810635f865856db6953ef0c53c4]%mdk
+${\sf }$\end{mdInlineSnippet}%mdk
+%mdk-data-line={610}
 
 \end{mdSnippets}
 

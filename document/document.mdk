@@ -581,27 +581,33 @@ pairs of names with their implementation ($\Box$ types)
 ~
 
 ## Dynamic Linkers
-Such a program behaves correctly consuming  implementations of the interface
+
+* Such a program behaves correctly consuming  implementations of the interface
 and calculating the program's different "futures" with respect to different implementations.
 
-* E.g. with an array implementation:
+* E.g. with an array implementation we get the type assignments:
 
-  ~ Math 
+~ Math 
   \begin{array}{l}
-  \llbracket {\sf intstack} \rrbracket:= {\sf intarray} \\
+  \llbracket {\sf intstack} \rrbracket:= {\sf intarray} \\  
+  \llbracket {\sf int \rightarrow intstack\rightarrow instack } \rrbracket:= {\sf int \rightarrow intarray\rightarrow intarray} \\
+  \llbracket {\sf intstack \rightarrow (int \times intstack)} \rrbracket:= {\sf int\rightarrow (int\times intarray)}\\
+  \end{array}
+~
+* Suppose implementations conforming with such assignment:
+~ Math  
+  \begin{array}{l}
   { \sf create\_array(): intarray} \ \  \text{for}\ \ {\sf empty}\\
     {\sf add\_array: int \rightarrow intarray\rightarrow intarray}\ \  \text{for} \ \ {\sf push}\\
   {\sf remove\_last: intarray\rightarrow intarray\times int }\  \text{for}\  {\sf pop}
   \end{array}
-  ~
+~
 
-~ Math
- \begin{array}{l}
- {\sf (empty, create\_arr()):\Box intstack} \\
- {\sf (push, add\_array): \Box (int \rightarrow  intstack\rightarrow intstack)  } \\
-\mathtt{pop: intarray \rightarrow int } 
+## Dynamic Linkers
+We obtain  $\Box$ values:
+\begin{array}
+${\sf }$
 \end{array}
-~ 
 ## Thanks for looking :-)
 
 [slide]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.html
