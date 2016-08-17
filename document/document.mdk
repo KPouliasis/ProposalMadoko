@@ -516,10 +516,19 @@ This program involves two kinds of computations: a redex $(1+1)$ that can be red
 <!-- begin merge (remove this line to resolve the conflict) -->
 of the language ($1+1\rightsquigarrow_{I} 2$) and the signature calls  ${\sf push, pop}$
 
-A dynamic linker is a function that consumes type correct 
+## Dynamic linkers
+* A dynamic linker is a function that consumes type correct 
 implementations of the signature and produces the residual program. 
 Our calculus, is a calculus of such constructions. 
 
+* In the following we consider ${\sf \Sigma}$ to be the signature of the interface. 
+Here are the steps towards the dynamic linker construction for the expression .
+
+* Reduce the source code based on the operational semantics of $I$ until it doesn't have a redex:
+
+* {${\sf \Sigma}; \bullet {\vdash pop (push \ (1+1) \ Empty)\rightsquigarrow pop (push \ 2 \ Empty) :int}$}
+			
+~
 <!-- end merge -->
 
   
