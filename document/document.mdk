@@ -581,20 +581,25 @@ pairs of names with their implementation ($\Box$ types)
 ~
 
 ## Dynamic Linkers
-Now this program behaves correctly for different implementations of the interface.
-E.g. with an array implementation:
+Such a program behaves correctly consuming  implementations of the interface
+and calculating the program's different "futures" with respect to different implementations.
 
-* 
-\Math
-$\llbracket {\sf intstack} \rrbracket:= {\sf intarray}$ \\
- ${\sf create\_array(): intarray}$ for (${\sf empty}$), ${\sf add\_array: int \rightarrow intarray}$ for $\sf push$
-and ${\sf remove_last: intarray\rightarrow intarray\times int }$ for ${\sf pop}$
-we obtain the $\Box$ values
+* E.g. with an array implementation:
+
+  ~ Math 
+  \begin{array}{l}
+  \llbracket {\sf intstack} \rrbracket:= {\sf intarray} \\
+  { \sf create\_array(): intarray} \ \  \text{for}\ \ {\sf empty}\\
+    {\sf add\_array: int \rightarrow intarray\rightarrow intarray}\ \  \text{for} \ \ {\sf push}\\
+  {\sf remove\_last: intarray\rightarrow intarray\times int }\  \text{for}\  {\sf pop}
+  \end{array}
+  ~
+
 ~ Math
- \begin{array}{l l l}
- {\sf (empty, create_arr()):\Box intstack} \\
- {\sf (push, add\_array): \Box (int \rightarrow  intstack)  } \\
-\mathtt{pop: intarray \rightarrow int } &
+ \begin{array}{l}
+ {\sf (empty, create\_arr()):\Box intstack} \\
+ {\sf (push, add\_array): \Box (int \rightarrow  intstack\rightarrow intstack)  } \\
+\mathtt{pop: intarray \rightarrow int } 
 \end{array}
 ~ 
 ## Thanks for looking :-)

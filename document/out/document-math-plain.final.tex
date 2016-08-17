@@ -682,41 +682,26 @@ $\lambda$\end{mdInlineSnippet}%mdk
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={587}
-\begin{mdInlineSnippet}[87dbde95784fbfd6c592968da32cb6ee]%mdk
-$\llbracket {\sf intstack} \rrbracket:= {\sf intarray}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={588}
-\begin{mdInlineSnippet}[ef0c45c9c67c6a16854d4764a68d412c]%mdk
-${\sf create\_array(): intarray}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={588}
-\begin{mdInlineSnippet}[563479402af5428d856f3c9fae2989de]%mdk
-${\sf empty}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={588}
-\begin{mdInlineSnippet}[e99de042117f08e4416986e25d4fe898]%mdk
-${\sf add\_array: int \rightarrow intarray}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={588}
-\begin{mdInlineSnippet}[e9d570a10fa3dd072a824cfff34f1786]%mdk
-$\sf push$\end{mdInlineSnippet}%mdk
-%mdk-data-line={589}
-\begin{mdInlineSnippet}[309a7840c963d8e1f4e7a313b2b6a05c]%mdk
-${\sf remove_last: intarray\rightarrow intarray\times int }$\end{mdInlineSnippet}%mdk
-%mdk-data-line={589}
-\begin{mdInlineSnippet}[1365bfc66fbefef4d7c1130c8425ed25]%mdk
-${\sf pop}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={590}
-\begin{mdInlineSnippet}[c3880bc63c2b0fd10cdc024cf76a1924]%mdk
-$\Box$\end{mdInlineSnippet}%mdk
-%mdk-data-line={590}
-\begin{mdDisplaySnippet}[4c4fa696d187808e2051755913bbe2de]%mdk
-\[%mdk-data-line={592}
-\begin{array}{l l l}
-{\sf (empty, create_arr()):\Box intstack} \\
-{\sf (push, add\_array): \Box (int \rightarrow  intstack)  } \\
-\mathtt{pop: intarray \rightarrow int } &
+%mdk-data-line={584}
+\begin{mdDisplaySnippet}[5696476788373d8ac253a9652925063a]%mdk
+\[%mdk-data-line={587}
+\begin{array}{l}
+\llbracket {\sf intstack} \rrbracket:= {\sf intarray} \\
+ {\sf create\_array(): intarray} \ \  \text{for}\ \ {\sf empty}\\
+  {\sf add\_array: int \rightarrow intarray\rightarrow intarray}\ \  \text{for} \ \ {\sf push}\\
+ {\sf remove\_last: intarray\rightarrow intarray\times int }\  \text{for}\  {\sf pop}
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={598}
+\begin{mdDisplaySnippet}[4293af8dc4b81d34f889bdc0202e1261]%mdk
+\[%mdk-data-line={596}
+ \begin{array}{l}
+ {\sf (empty, create_arr()):\Box intstack} \\
+ {\sf (push, add\_array): \Box (int \rightarrow  intstack\rightarrow intstack)  } \\
+\mathtt{pop: intarray \rightarrow int } 
+\end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
 
 \end{mdSnippets}
 
