@@ -25,7 +25,7 @@ Many logics have been studied under  Curry -- Howard interpretation
 
 * Intuitionistic : STLC
 * Linear : Various resource sensitive typed calculi -- e.g. session types, concurrent programming
-* Modal logics: Focus on $S4$ -- calculi for staged computation, modal type theories etc.
+* Modal logics: Focus on $S4$ -- calculi for staged computation, calculi for monadic computation, etc
 
 What is a sensible Curry Howard reading/ calculus of justificaton logic based on first principles?
 
@@ -46,17 +46,18 @@ What is a sensible Curry Howard reading/ calculus of justificaton logic based on
 ## Motivation
 
 
-  * Justification logic stemmed from Artemov's solution to providing an explicit proof theoretic semantics classical
+  * Justification logic stemmed from Artemov's solution to providing an explicit classical provability semantics 
   to intuionistic logic.
   * We treat justifications as __validations__. I.e. second level proof constructs 
-  in a trusted system that are to be related with proof constructs of another weaker system in the first level (take classical/ intuitionistic constructs as an exemplary case)
+  in a trusted system that are to be related with proof constructs of another weaker system in the first level 
+  (take  intuitionistic/ classical constructs as an exemplary case)
   * We, effectively, treat __proof theoretically__ a pretty basic __semantical__ idea.    
 
 ~ Slide
   * This concept is definitely not new: it appears in the categorical setting in the work of Lawvere with
-  concepts such as ``semantics as functors" or  "adjunctions between syntax and semantics".
-  * We build a logic closer to the former but the latter approach is open for furture  work
-  * Other adjunction or monadic based logics have been developed based on this insights (e.g. Moggi's lax calculus)
+  concepts such as "semantics as functors" or  "adjunctions between syntax and semantics".
+  * We build a logic closer to the former but the latter approach is open for future  work
+  * Other adjunction or monadic based logics have been developed based on such insights (e.g. Moggi's lax calculus)
   * Our novel  contribution is the relation to justification logic which is an existing well studied
   logic in itself.
   
@@ -75,7 +76,7 @@ Assume a deductive systems $I$:
 
 and  $J$ with: $U_J$, $\Sigma_J$, and $\Sigma_J;\Delta\vdash_J \phi$ respectively.  
 
-
+## Deductive System Requirements
 
 * __Reflexivity__ :
     
@@ -87,10 +88,9 @@ and  $J$ with: $U_J$, $\Sigma_J$, and $\Sigma_J;\Delta\vdash_J \phi$ respectivel
         $\Delta\vdash_J\phi$ __and__ $\Delta^{\prime},\phi\vdash_{J} \psi \Longrightarrow \Delta,\Delta^{'}\vdash_J \psi$ 
 *  __Top elements __:
 
- $\Gamma\vdash_{I}\top_I \text{\ and \ }$
-For $\Gamma$ of  the form $A_1,\ldots, A_n$:
-  
-  $\llbracket\Gamma \rrbracket=\llbracket A_1  \rrbracket,\ldots,  \llbracket A_n\rrbracket$
+ $\Gamma\vdash_{I}\top_I $ __ and__  $\Delta\vdash_{J}\top_J $
+ 
+ 
 
 
 ## Interpetations and Validations
@@ -101,7 +101,8 @@ formulae of $U_I$  s.t.
 
 * $\llbracket\top_I \rrbracket = \top_J$ 
 *  For $\Gamma$ of  the form $A_1,\ldots, A_n$: $\llbracket\Gamma \rrbracket=\llbracket A_1  \rrbracket,\ldots,  \llbracket A_n\rrbracket$
-Given a deductive system $I$  and an  interpretation  function $\llbracket\bullet\rrbracket_J:U_I\rightarrow U_J$
+
+* Given a deductive system $I$  and an  interpretation  function $\llbracket\bullet\rrbracket_J:U_I\rightarrow U_J$
  of $I$ into $J$ we define:
 
 A _validation_ of a deduction $\Sigma_I;\Gamma\vdash_I A$ to be a deduction $\Sigma_J;\Delta\vdash_{J} \phi$ in $J$ 
@@ -120,7 +121,7 @@ all purely logical deductions $\mathcal{D}$ in $I$
  
  $\forall \mathcal{D}. \ \mathcal{D}:\Gamma\vdash_I A \Longrightarrow 
  \exists\mathcal{E}: \llbracket \Gamma\vdash A\rrbracket_J$
-~ End Vertical
+
 
 
 
@@ -153,11 +154,12 @@ One modal rule for elimination and introduction to relate judgments $A\  {\sf va
     \end{array}}  }}}
     {\Box B}
  ~ 
-  
-  
+## Modal Rule (Generically)
+
 Or, generalizing for assumptions 
+
 $\Gamma:=x_1:A_1, \ldots, x_i: A_i\  \text{and } \Delta:= s_1:\llbracket A_i \rrbracket, \ldots 
-s_i:A_i$ : 
+s_i:\llbracket A_i\rrbracket$: 
 
 
 
@@ -177,14 +179,14 @@ s_i:A_i$ :
 
 ## Modal Rule ($\Box$ Introduction)
 We defined the connective negatively but we obtain  $\Box$ constuctors by the very same rule for $\Gamma,\Delta$ empty
-and derivations $\mathcal{D,E}$ closed for substitutions.
+and derivations $\mathcal{\overline{D},\overline{E}}$ closed for substitutions.
 ~ Math
   
   \inferrule* {{\inferrule* {}{{\begin{array}{c}
-  \mathcal{D}  \\
+  \mathcal{\overline{D}}  \\
   {B} 
   \end{array} } \\ {\begin{array}{c}
-\mathcal{E} \\
+\mathcal{\overline{E}} \\
   \llbracket B \rrbracket  
     \end{array}}  }}}
     {\Box B}
@@ -245,7 +247,10 @@ Any deduction $\mathcal{D}: \Box A$ can be expanded as follows:
   \end{array} } \\ {\begin{array}{c}
                       \\
                       \overline{x:A}
-                      \end{array}}
+                      \end{array}} \\ {{\begin{array}{c}
+                      \\
+                      \overline{s:A}
+                      \end{array}}}
                       }{\Box A}
 \end{array}
 ~
@@ -269,24 +274,6 @@ Any deduction $\mathcal{D}: \Box A$ can be expanded as follows:
 \end{array}
 ~
 
-
-## Type Universe 
-
-
-~ Math 
-\begin{array}{l r}
- \\
-\inferrule* { } {P_k \in {\sf Prop_0}} & \inferrule* { } {\top \in {\sf Prop_0}}
-\\
-\\
-\inferrule* {{ A \in {\sf Prop_0 }}\\ { B \in {\sf Prop_0}}} { A\supset  B\in {\sf Prop_{0}}} & \inferrule* { A \in {\sf Prop_0 }} {\llbracket  A\rrbracket \in {\sf \llbracket Prop_{0}\rrbracket}}
-\\
-\\
-\inferrule* { A \in{\sf Prop_{0} }} {\Box  A\in{\sf Prop_{1}} } & \inferrule*  {{ A \in {\sf Prop_1 }}\\ { B \in {\sf Prop_1}}} { A\supset  B\in {\sf Prop_{1}}}
-
-\end{array}
-
-~
 
 ##  Natural Deduction ( ${\sf Prop_0}$ )
 
