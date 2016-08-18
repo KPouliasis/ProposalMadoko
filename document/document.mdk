@@ -492,10 +492,11 @@ With these equalities we can move on and show  strong normalization  and conflue
 
 ## Dynamic linking with foreign function implementation
 * Consider a language $I$ (_source_) interfacing a lower level language $J$ (_target_) via  declared in a signature.
+
 *  We assume that the two languages share
 some basic types e.g. ${\sf int}$ (e.g $\llbracket int_I\rrbracket = int_J $) 
 and for simplicity, $J$  is based on  lambda calculus so it is functionally complete 
- under the interpretation  $\llbracket A\rightarrow_I B\rrbracket =\llbracket A \rrbracket \rightarrow_J \llbracket B \rrbracket $ 
+ under the obvious interpretation  $\llbracket A\rightarrow_I B\rrbracket =\llbracket A \rrbracket \rightarrow_J \llbracket B \rrbracket $ 
 
 
 ## 
@@ -508,7 +509,7 @@ a typical  interface for a __stack__  will be declared as follows:
       pop: intstack -> int * intstack
 ```
 
-* Source expressions in such a setting have a dynamic meaning depending on the target implementations. Take  the expression: 
+Source expressions in such a setting have a dynamic meaning depending on the target implementations. Take  the expression: 
 ```Haskell
 pop (push (1+1) empty)
 ```
