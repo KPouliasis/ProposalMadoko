@@ -587,7 +587,7 @@ dynamically.
 
 ## Dynamic Linkers
 
-* Such a program behaves correctly consuming   implementations of the interface
+* Such a program behaves correctly consuming __only__ conforming  implementations of the interface
 and calculating the program's different "futures" with respect to different implementations.
 
 * E.g. with an array implementation we get :
@@ -630,7 +630,7 @@ after reducing all redexes ($\lambda$ and ${\sf let}$):
 ~
 
 * As required in systems with separate compilation, the same process does the job with a different
-set of  conforming implementations, yet without having to typecheck the whole residual expression again
+set of  conforming implementations ${\sf intstack :=intlist}$, yet without having to typecheck the whole residual expression again
  say when ${\sf intstack :=intlist}$. 
 
 ## Thanks for looking :-)
