@@ -291,25 +291,29 @@ For the image  of the interpretation  $\llbracket{\sf Prop_0}\rrbracket$ we dema
 
  * context reflexivity, compositionality and logical completeness w.r.t   intuitionistic implication.
  
- * the host theory (calculus of validations) is "black boxed". We axiomatize the basic properties of the image $\llbracket {\sf Prop_0}$
+ * the host theory (calculus of validations) is "black boxed". We axiomatize the basic properties of the image $\llbracket {\sf Prop_0}\rrbracket$
  abstractly in terms of provability (and not in terms of proof trees of specific shape).
 
- * different calculi could realize such specifications (e.g. extensions of lambda calculus with classical logic, calculi for linear logic, or a lambda calculus itself) 
+ * different calculi could realize such specifications (e.g. extensions of lambda calculus with classical logic ($\llbracket A\supset B\rrbracket := \not A \vee B$), 
+ calculi for linear logic, or a lambda calculus itself) 
 
  * Following justification logic, we use the axiomatic characterization from combinatory logic.
 
 ##  Natural Deduction ( $\llbracket{\sf Prop_0}\rrbracket$ )
+With $\Delta$ of the form $\llbracket \Gamma \rrbracket$ __and__ $A, B, C \in {\sf Prop_0}$
+}$
 
 ~ Math
-\begin{array}{c c}
+\begin{array}{l c}
 \inferrule* {s:\llbracket  A\rrbracket \in \Delta}{{\Delta}\vdash {\llbracket  A\rrbracket}} &
 \inferrule* { } { {\Delta} \vdash{\llbracket  \top \rrbracket}}
 \end{array}
 ~
 
 ~ Math
-\begin{array}{c}
+\begin{array}{l}
 \inferrule*{  A, B \in {\sf Prop_0} }  {\Delta\vdash \llbracket   A \supset (B \supset   A)\rrbracket } \\
+\\
 \inferrule* { {  A,B, C \in {\sf Prop_0}}}{\Delta\vdash\llbracket   A\supset (B \supset C) \supset ((  A\supset B) \supset (  A \supset C))\rrbracket}
 \\
 \\
