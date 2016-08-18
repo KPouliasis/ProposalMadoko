@@ -67,7 +67,7 @@ What is a sensible Curry Howard reading/ calculus of justificaton logic based on
 
 ## Motivation (formally) 
 
-Assume a deductive systems $I$:
+Assume deductive systems $I$:
 
   * with propositions in $U_I$
   * a possibly non-empty signature of axioms $\Sigma_I$    
