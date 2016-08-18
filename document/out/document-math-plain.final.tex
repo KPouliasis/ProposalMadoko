@@ -708,12 +708,12 @@ $\lambda$\end{mdInlineSnippet}%mdk
 \begin{mdInlineSnippet}[c3880bc63c2b0fd10cdc024cf76a1924]%mdk
 $\Box$\end{mdInlineSnippet}%mdk
 %mdk-data-line={614}
-\begin{mdDisplaySnippet}[0a23bac3ad8a86603f79982fff108ae4]%mdk
+\begin{mdDisplaySnippet}[412a58d8f7e4f7924cc15a8c07c67c1d]%mdk
 \[%mdk-data-line={616}
   \begin{array}{l}
-  { \sf create\_array() \& \  empty:\Box intstack} \\
-    {\sf add\_array \& push :\Box (int \rightarrow intstack\rightarrow intstack)}\\
-  {\sf remove\_last \& pop: \Box (intarray\rightarrow intarray\times int)}
+  { \sf empty \& \  create\_array():\Box intstack} \\
+    {\sf  push \&\  add\_array  :\Box (int \rightarrow intstack\rightarrow intstack)}\\
+  {\sf remove\_last \&\  pop: \Box (intarray\rightarrow intarray\times int)}
   \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
@@ -723,13 +723,19 @@ $\lambda$\end{mdInlineSnippet}%mdk
 %mdk-data-line={624}
 \begin{mdInlineSnippet}[0dd9ba8209181a52091dcd102fc1c48d]%mdk
 ${\sf let}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={626}
-\begin{mdInlineSnippet}[a0af3b459e500e02110f2a02e7da27ba]%mdk
-${\sf (pop (push\ 2 \ empty)\ \& \ remove\_last*(add\_array*\ 2 * create\_array()))}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={629}
+%mdk-data-line={624}
+\begin{mdDisplaySnippet}[84b279b47e5dcb164ff5a309a7a32799]%mdk
+\[%mdk-data-line={626}
+\begin{array}{l l}
+{\sf pop (push\ 2 \ empty)} \&  \\
+{\sf remove\_last*(add\_array*\ 2 * create\_array())}
+\end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={634}
 \begin{mdInlineSnippet}[425f25e3b4108397f2686669fdca3d4b]%mdk
 ${\sf intstack :=intlist}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={630}
+%mdk-data-line={634}
 
 \end{mdSnippets}
 

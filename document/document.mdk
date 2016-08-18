@@ -587,7 +587,7 @@ dynamically.
 
 ## Dynamic Linkers
 
-* Such a program behaves correctly consuming  implementations of the interface
+* Such a program behaves correctly consuming   implementations of the interface
 and calculating the program's different "futures" with respect to different implementations.
 
 * E.g. with an array implementation we get :
@@ -614,9 +614,9 @@ Which are conforming with the signature under the interpretation:
 Hence we obtain values of $\Box$ types (assignments):
 ~ Math  
   \begin{array}{l}
-  { \sf create\_array() \& \  empty:\Box intstack} \\
-    {\sf add\_array \& push :\Box (int \rightarrow intstack\rightarrow intstack)}\\
-  {\sf remove\_last \& pop: \Box (intarray\rightarrow intarray\times int)}
+  { \sf empty \& \  create\_array():\Box intstack} \\
+    {\sf  push \&\  add\_array  :\Box (int \rightarrow intstack\rightarrow intstack)}\\
+  {\sf remove\_last \&\  pop: \Box (intarray\rightarrow intarray\times int)}
   \end{array}
 ~
 ## Dynamic Linkers
@@ -624,12 +624,13 @@ Hence we obtain values of $\Box$ types (assignments):
 after reducing all redexes ($\lambda$ and ${\sf let}$):
 ~ Math
 \begin{array}{l l}
-{\sf (pop (push\ 2 \ empty)} \& \ \\
-  {\sf remove\_last*(add\_array*\ 2 * create\_array()))}$
+{\sf pop (push\ 2 \ empty)} \&  \\
+  {\sf remove\_last*(add\_array*\ 2 * create\_array())}
 \end{array}
 ~
+
 * As required in systems with separate compilation, the same process does the job with a different
-set of  conforming implementations, yet without haveing to typecheck the residual expression again
+set of  conforming implementations, yet without having to typecheck the whole residual expression again
  say when ${\sf intstack :=intlist}$. 
 
 ## Thanks for looking :-)
