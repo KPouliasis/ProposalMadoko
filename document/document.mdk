@@ -300,8 +300,7 @@ For the image  of the interpretation  $\llbracket{\sf Prop_0}\rrbracket$ we dema
  * Following justification logic, we use the axiomatic characterization from combinatory logic.
 
 ##  Natural Deduction ( $\llbracket{\sf Prop_0}\rrbracket$ )
-With $\Delta$ of the form $\llbracket \Gamma \rrbracket$ __and__ $A, B, C \in {\sf Prop_0}$
-}$
+With $\Delta$ of the form $\llbracket \Gamma \rrbracket$ __and__ $ A, B, C \in {\sf Prop_0} $
 
 ~ Math
 \begin{array}{l c}
@@ -311,13 +310,20 @@ With $\Delta$ of the form $\llbracket \Gamma \rrbracket$ __and__ $A, B, C \in {\
 ~
 
 ~ Math
-\begin{array}{l}
-\inferrule*{  A, B \in {\sf Prop_0} }  {\Delta\vdash \llbracket   A \supset (B \supset   A)\rrbracket } \\
+\begin{array}{l l}
+\inferrule*{ }  {\Delta\vdash \llbracket   A \supset (B \supset   A)\rrbracket } \\
 \\
-\inferrule* { {  A,B, C \in {\sf Prop_0}}}{\Delta\vdash\llbracket   A\supset (B \supset C) \supset ((  A\supset B) \supset (  A \supset C))\rrbracket}
+\inferrule* { }{\Delta\vdash\llbracket   A\supset (B \supset C) \supset ((  A\supset B) \supset (  A \supset C))\rrbracket}
 \\
 \\
-\inferrule* {{ {\Delta}\vdash { \llbracket  A \supset  B \rrbracket}}\\ {{\Delta}\vdash {\llbracket  A \rrbracket}}}{ {\Delta}\vdash {\llbracket  B\rrbracket}}
+{\inferrule* {{ {\Delta}\vdash 
+  { \llbracket  A \supset  B \rrbracket}}\\ {{\Delta}\vdash {\llbracket  A \rrbracket}}}
+  { {\Delta}\vdash {\llbracket  B\rrbracket}}} 
+\\
+\\
+{\inferrule* {{ {\Delta}\vdash 
+  { \llbracket    A \rrbracket}}\\ {{\Delta},{\llbracket A \rrbracket}\vdash {\llbracket  B \rrbracket}}}
+  { {\Delta}\vdash {\llbracket  B\rrbracket}}}
 \end{array}
 ~
 
@@ -371,12 +377,13 @@ $\vdash A \Longrightarrow \vdash \Box A$.
 ~ 
 ## Cut elimination
 We show:
-~ Math
- {\text If }\  \Gamma\vdash A \  {\text then}\  \Gamma\Rightarrow^{+Cut} A 
- ~
- which together with admissibility of Cut results in a consistency result. 
 
-# The Calculus
+  If   $\Gamma\vdash A$, then $\Gamma\Rightarrow^{+{\sf Cut}} A$ 
+
+ which together with admissibility of Cut gives a consistency result. 
+
+# The term Calculus
+
 ## Proof Term Assignment
 * For the ${\sf Prop_0}$: the relevant fragment of the STLC with appropriate $\beta,\eta$ equalities 
 
@@ -397,7 +404,7 @@ to equalities using ${\sf let}$ bindings.
 \inferrule* {{{\Gamma, x: A}\vdash { M:B}}} { {\Gamma}\vdash { \lambda x:A.\  M:  A\supset  B}}
 \\
 \\
-\inferrule* {{{\Gamma}\vdash { M:A\supset  B}}\\{ {\Gamma}\vdash {M^{\prime}: A}}} { {\Gamma} { (MM^{'}):  B}}
+\inferrule* {{{\Gamma}\vdash { M:A\supset  B}}\\{ {\Gamma}\vdash {M^{\prime}: A}}} { {\Gamma}\vdash { (MM^{'}):  B}}
 & 
 \inferrule* {}{+\  \beta\eta \text{\ equalities for \ } \top,\supset}
 %\and
@@ -457,10 +464,11 @@ Or, generically, for arbitrary number of boxes:
 ~
 With : 
 ~ Math
-\begin{array}{ll}
-\nonumber {\sf let}^{*}\ (\circ;\ \circ;\  [\ ]) {\ \sf in\ }  M:= M \  &\\
-\nonumber {\sf let}^{*}\ (x_1:A_1,\ldots, x_i:A_i\ ;\  s_1: \phi_1, \ldots, s_i:\phi_i;\  N_1,\ldots,  N_i) {\ \sf in\ } M:= \  & \\
-{\sf let} \ \{(x_1 \& s_1)\  {\sf be}\  N_1,\ldots,  (x_i \& s_i)\  {\sf be}\  N_i\}\ {\sf in}\  M &\\
+\begin{array}{l}
+\nonumber {\sf let}^{*}\ (\circ;\ \circ;\  [\ ]) {\ \sf in\ }  M:= M \ \\
+\nonumber {\sf let}^{*}\ (x_1:A_1,\ldots, x_i:A_i\ ;\  s_1: \llbracket A_1\rrbracket, \ldots, s_i:\llbracket A_i\rrbracket;\  N_1,\ldots,  N_i)  \\
+{\ \sf in\ } M \\:= \\
+\ {\sf let} \ \{(x_1 \& s_1)\  {\sf be}\  N_1,\ldots,  (x_i \& s_i)\  {\sf be}\  N_i\}\ {\sf in}\  M \\
 \end{array}
 ~
 
@@ -480,12 +488,14 @@ M:\Box A =_{\eta}\ \ {\sf let} \ \ (x \& s\  {\sf be} \ M)\ \ {\sf in}\ \  { (x 
 
 With these equalities we can move on and show  strong normalization  and confluence results.
 
+# An Application
 
 ## Dynamic linking with foreign function implementation
 * Consider a language $I$ (_source_) interfacing a lower level language $J$ (_target_) via  declared in a signature.
 *  We assume that the two languages share
 some basic types e.g. ${\sf int}$ (e.g $\llbracket int_I\rrbracket = int_J $) 
-and for simplicity, $J$  is based on  lambda calculus so it is functionally complete with  under the interpretation  $\llbracket A\rightarrow_I B\rrbracket =\llbracket A \rrbracket \rightarrow_J \llbracket B \rrbracket $ 
+and for simplicity, $J$  is based on  lambda calculus so it is functionally complete 
+ under the interpretation  $\llbracket A\rightarrow_I B\rrbracket =\llbracket A \rrbracket \rightarrow_J \llbracket B \rrbracket $ 
 
 
 ## 
