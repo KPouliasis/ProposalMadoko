@@ -230,7 +230,7 @@ For $\mathcal{\overline{D},\overline{E}}$ closed for substitutions, the first pr
 
  ~ 
 
-## Local Completeness: Elim Rule  is not too weak
+## Local Completeness
 Any deduction $\mathcal{D}: \Box A$ can be expanded as follows:
 
 ~ Math
@@ -249,7 +249,7 @@ Any deduction $\mathcal{D}: \Box A$ can be expanded as follows:
                       \overline{x:A}
                       \end{array}} \\ {{\begin{array}{c}
                       \\
-                      \overline{s:A}
+                      \overline{s:\llbracket A\rrbracket}
                       \end{array}}}
                       }{\Box A}
 \end{array}
@@ -361,6 +361,7 @@ $\vdash A \Longrightarrow \vdash \Box A$.
 
 # Sequent Calculus
 ## Sequent Calculus Formulation
+
 ~ Math
 \begin{array}{l r}
 \inferrule*[right=$Id$] { }{\Gamma, A  \Rightarrow A }\\

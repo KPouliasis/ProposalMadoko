@@ -308,7 +308,7 @@ $\mathcal{\overline{D},\overline{E}}$\end{mdInlineSnippet}%mdk
 \begin{mdInlineSnippet}[49020da4002655915e68e52dd12d5a83]%mdk
 $\mathcal{D}: \Box A$\end{mdInlineSnippet}%mdk
 %mdk-data-line={234}
-\begin{mdDisplaySnippet}[5403b9a511abf5dcbb379e481961c372]%mdk
+\begin{mdDisplaySnippet}[f08b1eb494c9ac1da1fcfd6aadbcc7f2]%mdk
 \[%mdk-data-line={237}
 \begin{array} {c r}
 \begin{array}{c}
@@ -324,7 +324,7 @@ $\mathcal{D}: \Box A$\end{mdInlineSnippet}%mdk
                       \overline{x:A}
                       \end{array}} \\ {{\begin{array}{c}
                       \\
-                      \overline{s:A}
+                      \overline{s:\llbracket A\rrbracket}
                       \end{array}}}
                       }{\Box A}
 \end{array}
@@ -444,9 +444,18 @@ $\vdash A \Longrightarrow \vdash \Box A$\end{mdInlineSnippet}%mdk
 %mdk-data-line={360}
 \begin{mdInlineSnippet}[a5f3c6a11b03839d46af9fb43c97c188]%mdk
 $K$\end{mdInlineSnippet}%mdk
-%mdk-data-line={360}
+%mdk-data-line={365}
+\begin{mdInlineSnippet}[21f571052c9a3f76d855ba6cb2291b24]%mdk
+$\llbracket \Gamma \Rightarrow\sf \llbracket   A \rrbracket$\end{mdInlineSnippet}%mdk
+%mdk-data-line={366}
+\begin{mdInlineSnippet}[6b0bc086fa129bd398c7d4487ad384cf]%mdk
+$\pi(\llbracket \Gamma \Rightarrow)\sf \llbracket   A \rrbracket$\end{mdInlineSnippet}%mdk
+%mdk-data-line={366}
+\begin{mdInlineSnippet}[537f92ee44cbf619357cf60481108e14]%mdk
+$(\llbracket \sf judgments \rrbracket$\end{mdInlineSnippet}%mdk
+%mdk-data-line={366}
 \begin{mdDisplaySnippet}[4e51403aa3e2ab89afda0b3c15f3a5ca]%mdk
-\[%mdk-data-line={365}
+\[%mdk-data-line={370}
 \begin{array}{l r}
 \inferrule*[right=$Id$] { }{\Gamma, A  \Rightarrow A }\\
 \\
@@ -462,35 +471,35 @@ $K$\end{mdInlineSnippet}%mdk
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={382}
+%mdk-data-line={387}
 \begin{mdInlineSnippet}[82d9cab2bb0144e666b55fffe8723851]%mdk
 $\Gamma\vdash A$\end{mdInlineSnippet}%mdk
-%mdk-data-line={382}
+%mdk-data-line={387}
 \begin{mdInlineSnippet}[18212d50d012ce0f80200c7bfceff167]%mdk
 $\Gamma\Rightarrow^{+{\sf Cut}} A$\end{mdInlineSnippet}%mdk
-%mdk-data-line={389}
+%mdk-data-line={394}
 \begin{mdInlineSnippet}[c09859c00da566980873081e8d77a317]%mdk
 ${\sf Prop_0}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={389}
+%mdk-data-line={394}
 \begin{mdInlineSnippet}[172ffe76f75cdc854b41b1a12d72cd39]%mdk
 $\beta,\eta$\end{mdInlineSnippet}%mdk
-%mdk-data-line={391}
+%mdk-data-line={396}
 \begin{mdInlineSnippet}[96953b1e4089e6945414a5d52957fe8a]%mdk
 ${\sf \llbracket Prop_0\rrbracket}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={393}
+%mdk-data-line={398}
 \begin{mdInlineSnippet}[92fc7a7bc9a5f9b149ae7544361b0ab2]%mdk
 ${\sf Prop1}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={393}
+%mdk-data-line={398}
 \begin{mdInlineSnippet}[c3880bc63c2b0fd10cdc024cf76a1924]%mdk
 $\Box$\end{mdInlineSnippet}%mdk
-%mdk-data-line={394}
+%mdk-data-line={399}
 \begin{mdInlineSnippet}[0dd9ba8209181a52091dcd102fc1c48d]%mdk
 ${\sf let}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={394}
+%mdk-data-line={399}
 \begin{mdInlineSnippet}[c09859c00da566980873081e8d77a317]%mdk
 ${\sf Prop_0}$\end{mdInlineSnippet}%mdk
 \begin{mdDisplaySnippet}[602fcf5ab2dd09c5ed4e0ca4dc348aaf]%mdk
-\[%mdk-data-line={399}
+\[%mdk-data-line={404}
 \begin{array}{l r}
 \inferrule* {x: A \in \Gamma}{ {\Gamma}\vdash { x:A}}
 &
@@ -511,7 +520,7 @@ ${\sf Prop_0}$\end{mdInlineSnippet}%mdk
 \begin{mdInlineSnippet}[56411dab26c385df0e07a31c05a57b4e]%mdk
 ${\sf \llbracket Prop_0 \rrbracket}$\end{mdInlineSnippet}%mdk
 \begin{mdDisplaySnippet}[c1ec82d3c311173c00168dda895f935d]%mdk
-\[%mdk-data-line={418}
+\[%mdk-data-line={423}
 \begin{array}{l l}
 \inferrule*{  {s:\llbracket  A\rrbracket \in \Delta}}{ {\Delta}\vdash {s:\llbracket  A\rrbracket}}\\
 \\ 
@@ -527,27 +536,27 @@ ${\sf \llbracket Prop_0 \rrbracket}$\end{mdInlineSnippet}%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdInlineSnippet}[e7fb9f45aab1dd5eafe4eacb98e8e93d]%mdk
 ${\sf  Prop_1 }$\end{mdInlineSnippet}%mdk
-%mdk-data-line={433}
+%mdk-data-line={438}
 \begin{mdInlineSnippet}[0dd9ba8209181a52091dcd102fc1c48d]%mdk
 ${\sf let}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={442}
+%mdk-data-line={447}
 \begin{mdInlineSnippet}[66d1a90bce6d0a1742229e16e5ea5d6b]%mdk
 $\langle 3,5\rangle$\end{mdInlineSnippet}%mdk
-%mdk-data-line={442}
+%mdk-data-line={447}
 \begin{mdInlineSnippet}[4fee5c8f173d3be16e05f2c862a2b1ee]%mdk
 $\langle 4,6 \rangle$\end{mdInlineSnippet}%mdk
-%mdk-data-line={443}
+%mdk-data-line={448}
 \begin{mdInlineSnippet}[66d1a90bce6d0a1742229e16e5ea5d6b]%mdk
 $\langle 3,5\rangle$\end{mdInlineSnippet}%mdk
-%mdk-data-line={443}
+%mdk-data-line={448}
 \begin{mdInlineSnippet}[eda91bf97280cd507892b5acd745cd17]%mdk
 $\langle x,y \rangle$\end{mdInlineSnippet}%mdk
-%mdk-data-line={443}
+%mdk-data-line={448}
 \begin{mdInlineSnippet}[e7fb9f45aab1dd5eafe4eacb98e8e93d]%mdk
 ${\sf  Prop_1 }$\end{mdInlineSnippet}%mdk
-%mdk-data-line={446}
+%mdk-data-line={451}
 \begin{mdDisplaySnippet}[ae45c1a15b5e4f23857d5545a8afdae3]%mdk
-\[%mdk-data-line={448}
+\[%mdk-data-line={453}
 \begin{array}{c}
 \inferrule*[]{ {\Gamma\in{\sf Prop_1}}\\{\vdash { M:B}}\\{  \vdash {{\sf J}:\llbracket  B\rrbracket} }} { {\Gamma}\vdash {  M\& {\sf J}:\Box  B}}
 \\
@@ -557,9 +566,9 @@ ${\sf  Prop_1 }$\end{mdInlineSnippet}%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdInlineSnippet}[e7fb9f45aab1dd5eafe4eacb98e8e93d]%mdk
 ${\sf  Prop_1 }$\end{mdInlineSnippet}%mdk
-%mdk-data-line={455}
+%mdk-data-line={460}
 \begin{mdDisplaySnippet}[7c302f6c29f9a9444df8f7c06b0c5f24]%mdk
-\[%mdk-data-line={457}
+\[%mdk-data-line={462}
 \begin{array}{l}
     \inferrule*
     {{\forall A_k \in \Gamma^\prime . \   \Gamma \vdash N_k:\Box A_k}\\
@@ -568,9 +577,9 @@ ${\sf  Prop_1 }$\end{mdInlineSnippet}%mdk
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={464}
+%mdk-data-line={469}
 \begin{mdDisplaySnippet}[da02a185ef154ce7afe5b2a8366cc885]%mdk
-\[%mdk-data-line={466}
+\[%mdk-data-line={471}
 \begin{array}{l}
 \nonumber {\sf let}^{*}\ (\circ;\ \circ;\  [\ ]) {\ \sf in\ }  M:= M \ \\
 \nonumber {\sf let}^{*}\ (x_1:A_1,\ldots, x_i:A_i\ ;\  s_1: \llbracket A_1\rrbracket, \ldots, s_i:\llbracket A_i\rrbracket;\  N_1,\ldots,  N_i)  \\
@@ -581,9 +590,9 @@ ${\sf  Prop_1 }$\end{mdInlineSnippet}%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdInlineSnippet}[e7fb9f45aab1dd5eafe4eacb98e8e93d]%mdk
 ${\sf  Prop_1 }$\end{mdInlineSnippet}%mdk
-%mdk-data-line={476}
+%mdk-data-line={481}
 \begin{mdDisplaySnippet}[0e5a81dfbdfd8fd79ba785af4bc46b87]%mdk
-\[%mdk-data-line={480}
+\[%mdk-data-line={485}
 \begin{array}{ll} 
   {\sf let} \{(x_1 \& s_1) {\ \sf be\ } (M_1\& {\sf J_1}),\ldots,  (x_i \& s_i) {\ {\sf be}\ } (M_i\& {\sf J_i})\}\ {\sf in}\  (M \&  {\sf J})& \\
   =_{\beta} & \\
@@ -591,69 +600,69 @@ ${\sf  Prop_1 }$\end{mdInlineSnippet}%mdk
   \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={487}
+%mdk-data-line={492}
 \begin{mdInlineSnippet}[fcb57eefbdd71ad043e5a83d1cd93651]%mdk
 $M:\Box A =_{\eta}\ \ {\sf let} \ \ (x \& s\  {\sf be} \ M)\ \ {\sf in}\ \  { (x \& s)}:\Box A$\end{mdInlineSnippet}%mdk
-%mdk-data-line={494}
+%mdk-data-line={499}
 \begin{mdInlineSnippet}[dd7536794b63bf90eccfd37f9b147d7f]%mdk
 $I$\end{mdInlineSnippet}%mdk
-%mdk-data-line={494}
+%mdk-data-line={499}
 \begin{mdInlineSnippet}[ff44570aca8241914870afbc310cdb85]%mdk
 $J$\end{mdInlineSnippet}%mdk
-%mdk-data-line={497}
+%mdk-data-line={502}
 \begin{mdInlineSnippet}[5816dd164bf4957e60b9dc378faadd4a]%mdk
 ${\sf int}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={497}
+%mdk-data-line={502}
 \begin{mdInlineSnippet}[168da4daa211ad39e7e2f103d4697538]%mdk
 $\llbracket int_I\rrbracket = int_J $\end{mdInlineSnippet}%mdk
-%mdk-data-line={498}
+%mdk-data-line={503}
 \begin{mdInlineSnippet}[ff44570aca8241914870afbc310cdb85]%mdk
 $J$\end{mdInlineSnippet}%mdk
-%mdk-data-line={499}
+%mdk-data-line={504}
 \begin{mdInlineSnippet}[3770b5b04be251b0fdf3f4fc0a74d5fe]%mdk
 $\llbracket A\rightarrow_I B\rrbracket =\llbracket A \rrbracket \rightarrow_J \llbracket B \rrbracket $\end{mdInlineSnippet}%mdk
-%mdk-data-line={517}
+%mdk-data-line={522}
 \begin{mdInlineSnippet}[084d81b8c5dc70186c48137b0f155453]%mdk
 $(1+1)$\end{mdInlineSnippet}%mdk
-%mdk-data-line={519}
+%mdk-data-line={524}
 \begin{mdInlineSnippet}[4fd47922d2b9f5b8fc0bc97eeb6394fb]%mdk
 $1+1\rightsquigarrow_{I} 2$\end{mdInlineSnippet}%mdk
-%mdk-data-line={519}
+%mdk-data-line={524}
 \begin{mdInlineSnippet}[bee726186f70bdfd6133a05822048192]%mdk
 ${\sf push, pop}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={526}
+%mdk-data-line={531}
 \begin{mdInlineSnippet}[9f6bbd0c7159ab8b927e4ebdc5d053cd]%mdk
 ${\sf \Sigma}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={530}
+%mdk-data-line={535}
 \begin{mdInlineSnippet}[dd7536794b63bf90eccfd37f9b147d7f]%mdk
 $I$\end{mdInlineSnippet}%mdk
-%mdk-data-line={533}
+%mdk-data-line={538}
 \begin{mdInlineSnippet}[7b6f56cb9f8ad56e908b92d5cc3a7c1f]%mdk
 ${\sf \Sigma}; {\sf \circ {\vdash pop (push \ (1+1) \ Empty)\rightsquigarrow pop (push \ 2 \ Empty) :int}}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={535}
+%mdk-data-line={540}
 \begin{mdInlineSnippet}[c4ca4238a0b923820dcc509a6f75849b]%mdk
 $1$\end{mdInlineSnippet}%mdk
-%mdk-data-line={535}
+%mdk-data-line={540}
 \begin{mdDisplaySnippet}[211622c84a0cb355ffcb872b4ec84b2d]%mdk
-\[%mdk-data-line={537}
+\[%mdk-data-line={542}
 \begin{array}{c c}
 {\sf \Sigma;}&  {\sf x_1:intstack,  x_2:int\rightarrow intstack\rightarrow int\times intstack,}\\
 &  {\sf x_3:intstack\rightarrow int \vdash   x_3 (x_2 \ 2\  x_1):int} 
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={542}
+%mdk-data-line={547}
 \begin{mdDisplaySnippet}[d8dec7e13be5bfa5b2a713dd54525a38]%mdk
-\[%mdk-data-line={546}
+\[%mdk-data-line={551}
 \begin{array}{c}
 {\sf s_1:\llbracket intstack\rrbracket,  s_2:\llbracket int\rightarrow intstack\rightarrow intstack\rrbracket},\\
 {\sf s_3:\llbracket intstack\rightarrow int\times intstack \rrbracket \vdash   s_3 * (s_2 * \ \bar{2}\ * s_1):\llbracket int\rrbracket} 
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={556}
+%mdk-data-line={561}
 \begin{mdDisplaySnippet}[b93d6314eb77d05be08e548d9f9974c3]%mdk
-\[%mdk-data-line={561}
+\[%mdk-data-line={566}
 \begin{array}{l}
 {\sf \Sigma}; {\sf {x_1^{\prime}:\Box intstack ,x_2^{\prime}:\Box(int\rightarrow intstack\rightarrow intstack)}},\\
    {\sf x_3^{\prime}: \Box  (intstack\rightarrow int\times instack)}\vdash \\
@@ -664,12 +673,12 @@ $1$\end{mdInlineSnippet}%mdk
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={572}
+%mdk-data-line={577}
 \begin{mdInlineSnippet}[c6a6eb61fd9c6c913da73b3642ca147d]%mdk
 $\lambda$\end{mdInlineSnippet}%mdk
-%mdk-data-line={572}
+%mdk-data-line={577}
 \begin{mdDisplaySnippet}[e4d1dddbe5ab012dce78d0aa99a0a862]%mdk
-\[%mdk-data-line={574}
+\[%mdk-data-line={579}
 \begin{array}{l l}
 \mathtt{\lambda x_1^{\prime}.\  \lambda x_2^{\prime}. \lambda x_3^{\prime}}. \\
                  {\sf  let\{ x_1\& s_1 {\ \sf be \ } x_1^{\prime},
@@ -682,9 +691,9 @@ $\lambda$\end{mdInlineSnippet}%mdk
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={591}
+%mdk-data-line={596}
 \begin{mdDisplaySnippet}[0e8f9bfe4d65c71c645a8b474e5916bc]%mdk
-\[%mdk-data-line={593}
+\[%mdk-data-line={598}
 \begin{array}{l}
 { \sf create\_array(): intarray} \ \  \text{for}\ \ {\sf empty}\\
   {\sf add\_array: int \rightarrow intarray\rightarrow intarray}\ \  \text{for} \ \ {\sf push}\\
@@ -692,9 +701,9 @@ $\lambda$\end{mdInlineSnippet}%mdk
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={604}
+%mdk-data-line={609}
 \begin{mdDisplaySnippet}[97210db0216d148c80d2a671ff4f1a84]%mdk
-\[%mdk-data-line={606}
+\[%mdk-data-line={611}
   \begin{array}{l}
   \llbracket {\sf intstack} \rrbracket:= {\sf intarray} \\  
   \llbracket {\sf int \rightarrow intstack\rightarrow instack } \rrbracket:= {\sf int \rightarrow intarray\rightarrow intarray} \\
@@ -702,12 +711,12 @@ $\lambda$\end{mdInlineSnippet}%mdk
   \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={612}
+%mdk-data-line={617}
 \begin{mdInlineSnippet}[c3880bc63c2b0fd10cdc024cf76a1924]%mdk
 $\Box$\end{mdInlineSnippet}%mdk
-%mdk-data-line={612}
+%mdk-data-line={617}
 \begin{mdDisplaySnippet}[412a58d8f7e4f7924cc15a8c07c67c1d]%mdk
-\[%mdk-data-line={614}
+\[%mdk-data-line={619}
   \begin{array}{l}
   { \sf empty \& \  create\_array():\Box intstack} \\
     {\sf  push \&\  add\_array  :\Box (int \rightarrow intstack\rightarrow intstack)}\\
@@ -715,27 +724,27 @@ $\Box$\end{mdInlineSnippet}%mdk
   \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={622}
+%mdk-data-line={627}
 \begin{mdInlineSnippet}[c6a6eb61fd9c6c913da73b3642ca147d]%mdk
 $\lambda$\end{mdInlineSnippet}%mdk
-%mdk-data-line={622}
+%mdk-data-line={627}
 \begin{mdInlineSnippet}[0dd9ba8209181a52091dcd102fc1c48d]%mdk
 ${\sf let}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={622}
+%mdk-data-line={627}
 \begin{mdDisplaySnippet}[84b279b47e5dcb164ff5a309a7a32799]%mdk
-\[%mdk-data-line={624}
+\[%mdk-data-line={629}
 \begin{array}{l l}
 {\sf pop (push\ 2 \ empty)} \&  \\
 {\sf remove\_last*(add\_array*\ 2 * create\_array())}
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={635}
+%mdk-data-line={640}
 \begin{mdInlineSnippet}[263f6cde9cf189e21199080a34d52250]%mdk
 ${\sf \llbracket intstack\rrbracket := intlist}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={635}
+%mdk-data-line={640}
 \begin{mdDisplaySnippet}[cc58b2c7d12911175f7fb796802cbc38]%mdk
-\[%mdk-data-line={638}
+\[%mdk-data-line={643}
 \begin{array}{l}
 { \sf [ \ ]: intlist} \ \  \text{for}\ \ {\sf empty}\\
   {\sf Cons: int \rightarrow intlist\rightarrow intlist}\ \  \text{for} \ \ {\sf push}\\
@@ -743,19 +752,19 @@ ${\sf \llbracket intstack\rrbracket := intlist}$\end{mdInlineSnippet}%mdk
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={644}
+%mdk-data-line={649}
 \begin{mdDisplaySnippet}[74574fa0f96861ef77af86c05361f99b]%mdk
-\[%mdk-data-line={646}
+\[%mdk-data-line={651}
 \begin {array}{l}
 {\sf pop (push\ 2 \ empty)} \&  \\
 {\sf pop\_list*(Cons*\ 2 * [\ ])}
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={655}
+%mdk-data-line={660}
 \begin{mdInlineSnippet}[b9ece18c950afbfa6b0fdbfa4ff731d3]%mdk
 $T$\end{mdInlineSnippet}%mdk
-%mdk-data-line={657}
+%mdk-data-line={662}
 
 \end{mdSnippets}
 
