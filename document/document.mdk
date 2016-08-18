@@ -294,8 +294,9 @@ For the image  of the interpretation  $\llbracket{\sf Prop_0}\rrbracket$ we dema
  * the host theory (calculus of validations) is "black boxed". We axiomatize the basic properties of the image $\llbracket {\sf Prop_0}\rrbracket$
  abstractly in terms of provability (and not in terms of proof trees of specific shape).
 
- * different calculi could realize such specifications (e.g. extensions of lambda calculus with classical logic ($\llbracket A\supset B\rrbracket := \not A \vee B$), 
- calculi for linear logic, or a lambda calculus itself) 
+ * different calculi could realize such specifications (e.g. extensions of lambda calculus with classical logic 
+ ($\llbracket A\supset B\rrbracket := \neg A \vee B$), 
+ calculi for linear logic  ($\llbracket A\supset B\rrbracket :=  ! A \multimap B$), or a lambda calculus itself) 
 
  * Following justification logic, we use the axiomatic characterization from combinatory logic.
 
@@ -475,18 +476,19 @@ With :
 
 ## Proof term Assignment( ${\sf  Prop_1 }$)
 With the reduction rule coming straight from the Gentzen reduction  principles principle:
-~ Math
+
+
+* ~ Math
 \begin{array}{ll} 
 	{\sf let} \{(x_1 \& s_1) {\ \sf be\ } (M_1\& {\sf J_1}),\ldots,  (x_i \& s_i) {\ {\sf be}\ } (M_i\& {\sf J_i})\}\ {\sf in}\  (M \&  {\sf J})& \\
 	=_{\beta} & \\
   {  M[M_1/x_1, \ldots,  M_i/x_i] \& {\sf J}[{\sf J_1}/s_1,\ldots, {\sf J_i}/s_i]}
 	\end{array}
 ~
-~ Math
-M:\Box A =_{\eta}\ \ {\sf let} \ \ (x \& s\  {\sf be} \ M)\ \ {\sf in}\ \  { (x \& s)}:\Box A
-~
 
-With these equalities we can move on and show  strong normalization  and confluence results.
+* $M:\Box A =_{\eta}\ \ {\sf let} \ \ (x \& s\  {\sf be} \ M)\ \ {\sf in}\ \  { (x \& s)}:\Box A$
+
+* With these equalities we can move on and show  strong normalization  and confluence results.
 
 # An Application
 
@@ -495,7 +497,7 @@ With these equalities we can move on and show  strong normalization  and conflue
 
 *  We assume that the two languages share
 some basic types e.g. ${\sf int}$ (e.g $\llbracket int_I\rrbracket = int_J $) 
-and for simplicity, $J$  is based on  lambda calculus so it is functionally complete 
+and for simplicity, that $J$  is based on  lambda calculus so it is functionally complete 
  under the obvious interpretation  $\llbracket A\rightarrow_I B\rrbracket =\llbracket A \rrbracket \rightarrow_J \llbracket B \rrbracket $ 
 
 
@@ -506,7 +508,7 @@ A typical  interface for a __stack__  will be declared as follows:
     using type intstack
       empty: intstack
       push: int -> intstack -> intstack
-      pop: intstack -> int * intstack
+      pop: intstack -> int x intstack
 ```
 
 Source expressions in such a setting have a dynamic meaning depending on the target implementations. Take  the expression: 
@@ -519,8 +521,8 @@ This program involves two kinds of computations: a redex $(1+1)$ that can be red
 of the language ($1+1\rightsquigarrow_{I} 2$) and the signature calls  ${\sf push, pop}$
 
 ## Dynamic linkers
-* A __dynamic linker__ is a metaprogramming construct  that a type correct 
-implementations of a signature and produces a type correct residual program sensitive to
+* A __dynamic linker__ is a metaprogramming construct  that consumes a type correct 
+implementation of the signature and produces a type correct residual program sensitive to
 the implementation. Our calculus, is a calculus of such constructions. 
 
 * In the following we consider ${\sf \Sigma}$ to be the signature of the interface. 
@@ -535,7 +537,7 @@ ${\sf \Sigma}; {\sf \circ {\vdash pop (push \ (1+1) \ Empty)\rightsquigarrow pop
 * Contextualize the use of the signature at the final term in step $1$:
 ~ Math 
  \begin{array}{c c}
-{\sf \Sigma;}&  {\sf x_1:intstack,  x_2:int\rightarrow intstack\rightarrow intstack,}\\
+{\sf \Sigma;}&  {\sf x_1:intstack,  x_2:int\rightarrow intstack\rightarrow int\times intstack,}\\
 &  {\sf x_3:intstack\rightarrow int \vdash   x_3 (x_2 \ 2\  x_1):int} 
 \end{array}
 ~
@@ -545,7 +547,7 @@ missing elements.
 ~ Math 
 \begin{array}{c}
 {\sf s_1:\llbracket intstack\rrbracket,  s_2:\llbracket int\rightarrow intstack\rightarrow intstack\rrbracket},\\
-{\sf s_3:\llbracket intstack\rightarrow int \rrbracket \vdash   s_3 * (s_2 * \ \bar{2}\ * s_1):\llbracket int\rrbracket} 
+{\sf s_3:\llbracket intstack\rightarrow int\times intstack \rrbracket \vdash   s_3 * (s_2 * \ \bar{2}\ * s_1):\llbracket int\rrbracket} 
 \end{array}
 ~
 
@@ -553,14 +555,14 @@ missing elements.
 
 ## Dynamic Linkers
 
-* Merge the two judgments to construct a dynamic linker that consumes  
-assignments of the signature element  and outputs the assignment of the whole expression
+* Merge the two judgments to construct a dynamic linker that consumes
+assignments of the signature elements  and outputs the assignment of the whole expression
 dynamically.
 
 ~ Math
 \begin{array}{l}
 {\sf \Sigma}; {\sf {x_1^{\prime}:\Box intstack ,x_2^{\prime}:\Box(int\rightarrow intstack\rightarrow intstack)}},\\
-   {\sf x_3^{\prime}: \Box  (intstack\rightarrow int)}\vdash \\
+   {\sf x_3^{\prime}: \Box  (intstack\rightarrow int\times instack)}\vdash \\
 		{\sf  let\{ x_1\& s_1 {\ \sf be \ } x_1^{\prime},
          \ x_2\& s_2 {\ \sf be \ } x_2^{\prime}, \  x_3\& s_3 
          {\ \sf be \ } x_3^{\prime} \}\  in}\ \\   
@@ -579,7 +581,7 @@ dynamically.
          \mathtt{(x_3 (x_2\ 2 \ x_1)\ \& \ s_3*(s_2* \bar{2}*s_1)):}\\
              {\sf \Box(intstack)\rightarrow 
               \Box(int\rightarrow intstack\rightarrow intstack)} \\
-             {\sf \rightarrow \Box (intstack\rightarrow int) \rightarrow \Box int}
+             {\sf \rightarrow \Box (intstack\rightarrow int\times intstack) \rightarrow \Box int}
 \end{array}
 ~
 
@@ -588,16 +590,7 @@ dynamically.
 * Such a program behaves correctly consuming  implementations of the interface
 and calculating the program's different "futures" with respect to different implementations.
 
-* E.g. with an array implementation we get the type assignments:
-
-~ Math 
-  \begin{array}{l}
-  \llbracket {\sf intstack} \rrbracket:= {\sf intarray} \\  
-  \llbracket {\sf int \rightarrow intstack\rightarrow instack } \rrbracket:= {\sf int \rightarrow intarray\rightarrow intarray} \\
-  \llbracket {\sf intstack \rightarrow (int \times intstack)} \rrbracket:= {\sf int\rightarrow (int\times intarray)}\\
-  \end{array}
-~
-* Suppose implementations conforming with such assignment:
+* E.g. with an array implementation we get :
 ~ Math  
   \begin{array}{l}
   { \sf create\_array(): intarray} \ \  \text{for}\ \ {\sf empty}\\
@@ -606,11 +599,36 @@ and calculating the program's different "futures" with respect to different impl
   \end{array}
 ~
 
+
+
+
 ## Dynamic Linkers
-We obtain  $\Box$ values:
-\begin{array}
-${\sf }$
+Which are conforming with the signature under the interpretation:
+~ Math 
+  \begin{array}{l}
+  \llbracket {\sf intstack} \rrbracket:= {\sf intarray} \\  
+  \llbracket {\sf int \rightarrow intstack\rightarrow instack } \rrbracket:= {\sf int \rightarrow intarray\rightarrow intarray} \\
+  \llbracket {\sf intstack \rightarrow (int \times intstack)} \rrbracket:= {\sf int\rightarrow (int\times intarray)}\\
+  \end{array}
+~
+Hence we obtain values of $\Box$ types (assignments):
+~ Math  
+  \begin{array}{l}
+  { \sf create\_array() \& \  empty:\Box intstack} \\
+    {\sf add\_array \& push :\Box (int \rightarrow intstack\rightarrow intstack)}\\
+  {\sf remove\_last \& pop: \Box (intarray\rightarrow intarray\times int)}
+  \end{array}
+~
+## Dynamic Linkers
+* If we apply these values to the dynamic linker we obtain the assignment for the whole expression:
+after reducing all redexes ($\lambda$ and ${\sf let}$):
+\begin{array}{l l}
+{\sf (pop (push\ 2 \ empty)\ \& \ \\
+  remove\_last*(add\_array*\ 2 * create\_array()))}$
 \end{array}
+* As required in systems with separate compilation, the same process does the job with a different
+set of  cpimplementations, say when ${\sf intstack :=intlist}$. 
+
 ## Thanks for looking :-)
 
 [slide]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.html
