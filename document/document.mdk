@@ -622,12 +622,15 @@ Hence we obtain values of $\Box$ types (assignments):
 ## Dynamic Linkers
 * If we apply these values to the dynamic linker we obtain the assignment for the whole expression:
 after reducing all redexes ($\lambda$ and ${\sf let}$):
+~ Math
 \begin{array}{l l}
-{\sf (pop (push\ 2 \ empty)\ \& \ \\
-  remove\_last*(add\_array*\ 2 * create\_array()))}$
+{\sf (pop (push\ 2 \ empty)} \& \ \\
+  {\sf remove\_last*(add\_array*\ 2 * create\_array()))}$
 \end{array}
+~
 * As required in systems with separate compilation, the same process does the job with a different
-set of  cpimplementations, say when ${\sf intstack :=intlist}$. 
+set of  conforming implementations, yet without haveing to typecheck the residual expression again
+ say when ${\sf intstack :=intlist}$. 
 
 ## Thanks for looking :-)
 
