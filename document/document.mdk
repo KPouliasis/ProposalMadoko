@@ -615,7 +615,7 @@ Hence we obtain values of $\Box$ types (assignments):
   \begin{array}{l}
   { \sf empty \& \  create\_array():\Box intstack} \\
     {\sf  push \&\  add\_array  :\Box (int \rightarrow intstack\rightarrow intstack)}\\
-  {\sf  pop remove\_last: \Box (intarray\rightarrow intarray\times int)}
+  {\sf  pop   \&\  remove\_last: \Box (intarray\rightarrow intarray\times int)}
   \end{array}
 ~
 ## Dynamic Linkers
@@ -652,10 +652,10 @@ the linker will compute a different "future" for the program i.e.
 
 ## Future Work
 * Strengthening the relation between the two calculi (to  more than logical embedding)
-is expected to give stronger modality.
-* Specifically demanding an adjunction should give $T$
+is expected to give stronger modality
+* Specifically demanding an adjunction should give $T$ modality
 * It is not difficult to do in our system because of the clear seperation of the logics
-of the two systems and the logic of their "merging".
+of the two systems and the logic of their "merging"
 
 ## Thanks for looking :-)
 
