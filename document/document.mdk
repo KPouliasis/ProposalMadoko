@@ -484,7 +484,8 @@ With :
 	\end{array}
 ~
 
-* Ad$M:\Box A =_{\eta}\ \ {\sf let} \ \ (x \& s\  {\sf be} \ M)\ \ {\sf in}\ \  { (x \& s)}:\Box A$
+* And similarily for $\eta$ expansion:
+$M:\Box A =_{\eta}\ \ {\sf let} \ \ (x \& s\  {\sf be} \ M)\ \ {\sf in}\ \  { (x \& s)}:\Box A$
 
 * With these equalities we can move on and show  strong normalization  and confluence results.
 
@@ -614,7 +615,7 @@ Hence we obtain values of $\Box$ types (assignments):
   \begin{array}{l}
   { \sf empty \& \  create\_array():\Box intstack} \\
     {\sf  push \&\  add\_array  :\Box (int \rightarrow intstack\rightarrow intstack)}\\
-  {\sf remove\_last \&\  pop: \Box (intarray\rightarrow intarray\times int)}
+  {\sf  pop remove\_last: \Box (intarray\rightarrow intarray\times int)}
   \end{array}
 ~
 ## Dynamic Linkers
