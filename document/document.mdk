@@ -230,7 +230,7 @@ For $\mathcal{\overline{D},\overline{E}}$ closed for substitutions, the first pr
 
  ~ 
 
-## Local Completeness: Intro Rule  is not too weak
+## Local Completeness: Elim Rule  is not too weak
 Any deduction $\mathcal{D}: \Box A$ can be expanded as follows:
 
 ~ Math
@@ -417,9 +417,9 @@ to equalities using ${\sf let}$ bindings.
 ~ Math
 
 
-\begin{array}{l }
+\begin{array}{l l}
 \inferrule*{  {s:\llbracket  A\rrbracket \in \Delta}}{ {\Delta}\vdash {s:\llbracket  A\rrbracket}}\\
-\\
+\\ 
 \inferrule* { } {\Delta\vdash C_{\top}: \llbracket  \top\rrbracket}\\
 \\
 \inferrule*{{  A, B \in {\sf Prop_0} }}   {\Delta\vdash {K^{A,B}}: \llbracket   A \supset (B \supset   A)\rrbracket }
