@@ -627,8 +627,27 @@ after reducing all redexes ($\lambda$ and ${\sf let}$):
 \end{array}
 ~
 
-* As required in systems with separate compilation, the same process does the job with a different
-set of  conforming implementations ${\sf intstack :=intlist}$,
+* As required in systems with separate compilation, the same process will compute a different residual
+ with a different set of  conforming implementations 
+
+## Dynamic Linkers
+
+* E.g.  with ${\sf intstack :=intlist}$ 
+and the conforming implementation 
+~ Math  
+  \begin{array}{l}
+  { \sf [ \ ]: intlist} \ \  \text{for}\ \ {\sf empty}\\
+    {\sf Cons: int \rightarrow intlist\rightarrow intlist}\ \  \text{for} \ \ {\sf push}\\
+  {\sf pop\_list: intlist\rightarrow intlist\times int }\  \text{for}\  {\sf pop}
+  \end{array}
+~
+the linker will compute a different "future" for the program i.e.  
+~Math
+ \begin {array}{l}
+{\sf pop (push\ 2 \ empty)} \&  \\
+  {\sf pop\_list*(Cons*\ 2 * [\ ])}
+\end{array}
+~
 
 ## Future Work
 * Strengthening the relation between the two calculi (to  more than logical embedding)
