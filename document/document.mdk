@@ -632,7 +632,7 @@ after reducing all redexes ($\lambda$ and ${\sf let}$):
 
 ## Dynamic Linkers
 
-* E.g.  with ${\sf intstack :=intlist}$ 
+* E.g.  with ${\sf \llbracket intstack\rrbracket := intlist}$ 
 and the conforming implementation 
 ~ Math  
   \begin{array}{l}
