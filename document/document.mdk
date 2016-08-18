@@ -630,8 +630,7 @@ after reducing all redexes ($\lambda$ and ${\sf let}$):
 ~
 
 * As required in systems with separate compilation, the same process does the job with a different
-set of  conforming implementations ${\sf intstack :=intlist}$, yet without having to typecheck the whole residual expression again
- say when ${\sf intstack :=intlist}$. 
+set of  conforming implementations ${\sf intstack :=intlist}$,
 
 ## Thanks for looking :-)
 
