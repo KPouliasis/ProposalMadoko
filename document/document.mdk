@@ -474,10 +474,9 @@ With :
 
 
 ## Proof term Assignment( ${\sf  Prop_1 }$)
-With the reduction rule coming straight from the Gentzen reduction  principles principle:
+ * With the reduction rule coming straight from  Gentzen reduction  principle:
 
-
-* ~ Math
+~ Math
 \begin{array}{ll} 
 	{\sf let} \{(x_1 \& s_1) {\ \sf be\ } (M_1\& {\sf J_1}),\ldots,  (x_i \& s_i) {\ {\sf be}\ } (M_i\& {\sf J_i})\}\ {\sf in}\  (M \&  {\sf J})& \\
 	=_{\beta} & \\
@@ -485,7 +484,7 @@ With the reduction rule coming straight from the Gentzen reduction  principles p
 	\end{array}
 ~
 
-* $M:\Box A =_{\eta}\ \ {\sf let} \ \ (x \& s\  {\sf be} \ M)\ \ {\sf in}\ \  { (x \& s)}:\Box A$
+* Ad$M:\Box A =_{\eta}\ \ {\sf let} \ \ (x \& s\  {\sf be} \ M)\ \ {\sf in}\ \  { (x \& s)}:\Box A$
 
 * With these equalities we can move on and show  strong normalization  and confluence results.
 
