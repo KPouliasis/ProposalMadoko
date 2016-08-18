@@ -420,8 +420,6 @@ to equalities using ${\sf let}$ bindings.
 \begin{array}{l l}
 \inferrule*{  {s:\llbracket  A\rrbracket \in \Delta}}{ {\Delta}\vdash {s:\llbracket  A\rrbracket}}\\
 \\ 
-\inferrule* { } {\Delta\vdash C_{\top}: \llbracket  \top\rrbracket}\\
-\\
 \inferrule*{{  A, B \in {\sf Prop_0} }}   {\Delta\vdash {K^{A,B}}: \llbracket   A \supset (B \supset   A)\rrbracket }
 \\
 \\
@@ -631,6 +629,13 @@ after reducing all redexes ($\lambda$ and ${\sf let}$):
 
 * As required in systems with separate compilation, the same process does the job with a different
 set of  conforming implementations ${\sf intstack :=intlist}$,
+
+## Future Work
+* Strengthening the relation between the two calculi (to  more than logical embedding)
+is expected to give stronger modality.
+* Specifically demanding an adjunction should give $T$
+* It is not difficult to do in our system because of the clear seperation of the logics
+of the two systems and the logic of their "merging".
 
 ## Thanks for looking :-)
 
