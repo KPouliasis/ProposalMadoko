@@ -13,7 +13,7 @@ Beamer Theme  : madrid
 Package     : mathpartir.sty
 Package       : mathtools
 Package       : macros.tex
-Bib           : secondexam 
+Bib           : secondexam.bib 
 
 [TITLE]
 
