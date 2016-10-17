@@ -520,7 +520,7 @@ This program involves two kinds of computations: a redex $(1+1)$ that can be red
 of the language ($1+1\rightsquigarrow_{I} 2$) and the signature calls  ${\sf push, pop}$
 
 ## Dynamic linkers
-* A __dynamic linker__ is a metaprogramming construct  that consumes a type correct 
+* A __dynamic linker__ is a _metaprogramming_ construct  that consumes a type correct 
 implementation of the signature and produces a type correct residual program sensitive to
 the implementation. Our calculus, is a calculus of such constructions. 
 
