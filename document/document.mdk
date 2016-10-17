@@ -1,3 +1,4 @@
+Bibliography: secondexam.bib
 
 [INCLUDE=presentation]
 
@@ -11,14 +12,17 @@ Reveal Theme  : solarized
 Beamer Theme  : madrid
 Package     : mathpartir.sty
 Package       : mathtools
+Package       : macros.tex
+Bib           : secondexam 
 
 [TITLE]
 
 
 
 #Introduction
-The \ac{CHI}  ~\cite{curry1934functionality,howard1995formulae} was first established as a deep connection between explicit proofs in intuitionistic logic and programs of a simple programming 
-language that includes pairs, functions and union types ~\cite{Pierce:2002:TPL:509043,Srensen98lectureson}.
+
+The \ac{CHI}  [@curry1934functionality],[@howard1995formulae] was first established as a deep connection between explicit proofs in intuitionistic logic and programs of a simple programming 
+language that includes pairs, functions and union types [@Pierce:2002:TPL:509043], [@Srensen98lectureson].
 
 
 ## Our question
