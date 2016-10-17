@@ -1,7 +1,4 @@
-Bibliography: secondexam.bib
-
 [INCLUDE=presentation]
-
 Title         : Justification Logic
 Sub Title     : A Curry- Howard View
 Title Note    : Dissertation Proposal &nbsp; &date;
@@ -20,8 +17,8 @@ Bibliography           : secondexam.bib
 
 #Introduction
 
-The \ac{CHI}  [@curry1934functionality],[@howard1995formulae] was first established as a deep connection between explicit proofs in intuitionistic logic and programs of a simple programming 
-language that includes pairs, functions and union types [@Pierce:2002:TPL:509043], [@Srensen98lectureson].
+The  [@curry1934functionality], was first established as a deep connection between explicit proofs in intuitionistic logic and programs of a simple programming 
+language that includes pairs, functions and union types.
 
 
 ## Our question
