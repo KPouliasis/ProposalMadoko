@@ -1,22 +1,24 @@
 
 [INCLUDE=presentation]
 
-Title         : Basic Justification Logic
-Sub Title     : A Curry - Howard  view
+Title         : Justification Logic
+Sub Title     : A Curry- Howard View
+Title Note    : Dissertation Proposal &nbsp; &date;
 Author        : Konstantinos Pouliasis
 Affiliation   : The Graduate Center, CUNY
 Email         : konstantinos.pouliasis@gmail.com
-Reveal Theme  : sky
-Beamer Theme  : singapore
+Reveal Theme  : solarized
+Beamer Theme  : madrid
 Package     : mathpartir.sty
 Package       : mathtools
-
 
 [TITLE]
 
 
 
 #Introduction
+The \ac{CHI}  ~\cite{curry1934functionality,howard1995formulae} was first established as a deep connection between explicit proofs in intuitionistic logic and programs of a simple programming 
+language that includes pairs, functions and union types ~\cite{Pierce:2002:TPL:509043,Srensen98lectureson}.
 
 
 ## Our question
