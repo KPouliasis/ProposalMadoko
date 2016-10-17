@@ -1,0 +1,224 @@
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{etoolbox}
+\usepackage{fancyhdr}
+\usepackage{mathpartir}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{xspace}
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+\usepackage{centernot}
+\usepackage{listings}
+\usetikzlibrary{shapes.geometric}
+\usepackage[framemethod=TikZ]{mdframed}
+\mdfdefinestyle{MyFrame}{%
+    linecolor=blue,
+    outerlinewidth=2pt,
+    roundcorner=20pt,
+    innertopmargin=\baselineskip,
+    innerbottommargin=\baselineskip,
+    innerrightmargin=20pt,
+    innerleftmargin=20pt,
+    backgroundcolor=gray!50!white}
+
+\usepackage{url} % for url in bib entries
+% for theorems, lemmas, etc
+\newenvironment{theorem}[1][Theorem.]{\begin{trivlist}\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{lemma}[1][Lemma.]{\begin{trivlist}\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{corollary}[1][Corollary.]{\begin{trivlist}\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{definition}[1][Definition.]{\begin{trivlist}\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Acronyms
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[acronym, shortcuts]{glossaries}
+
+\newacronym{HoTT}{HoTT}{\emph{Homotopy Type Theory}}
+\newacronym{IPL}{\sf{IPL}}{\emph{Intuitionistic Propositional Logic}}
+\newacronym{LP}{\sf{LP}}{\emph{The Logic of Proofs}}
+\newacronym{JL}{\sf{JL}}{\emph{Justification Logic}}
+\newacronym{TT}{TT}{intuitionistic type theory}
+\newacronym{LEM}{\sf{LEM}}{law of the excluded middle}
+\newacronym{ITT}{ITT}{intensional type theory}
+\newacronym{ETT}{ETT}{extensional type theory}
+\newacronym{NNO}{NNO}{natural numbers object}
+\newacronym{BHK}{\sf{BHK}}{\emph{Brower-Heyting-Kolmogorov}}
+\newacronym{CHI}{\sf {CHI}}{\emph{Curry--Howard Isomorphism}}
+
+
+% Make \ac robust.
+\robustify{\ac}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fancy page style
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\newcommand{\metadata}[2]{
+  \lhead{}
+  \chead{}
+  \rhead{\bfseries Homotopy Type Theory}
+  \lfoot{#1}
+  \cfoot{#2}
+  \rfoot{\thepage}
+}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+\newrobustcmd*{\vocab}[1]{\emph{#1}}
+\newrobustcmd*{\latin}[1]{\textit{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Customize list enviroonments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% package to customize three basic list environments: enumerate, itemize and description.
+\usepackage{enumitem}
+\setitemize{noitemsep, topsep=0pt, leftmargin=*}
+\setenumerate{noitemsep, topsep=0pt, leftmargin=*}
+\setdescription{noitemsep, topsep=0pt, leftmargin=*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Some really basic macros.
+% (Lots of them were stolen from HoTT/Book.)
+% See macros.tex in HoTT/book.
+%
+% This is a mess.  Needs clean-ups.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Turnsi}[2]
+	{ {#1}\vdash  {#2}}
+
+\newcommand{\Turn}[2]
+	{ {#1}\vdash_{\textbf{\sf IPC}}  {#2}}
+\newcommand{\TurnTwo}[2]
+	{ {#1}\vdash_{\textbf{\sf J}}  {#2}}
+\newcommand{\TurnT}[2]
+	{ \Delta_0;{#1}\vdash  {#2}}
+\newcommand{\TurnTT}[2]
+	{ \Delta_0;{#1}\vdash_{\sf JC_1}  {#2}}
+\newcommand{\Turnj}[1]
+	{ \Delta_0\vdash_{\sf J_0}  {#1}}
+\newcommand{\Turnjc}[3]
+    { {#1};{#2}\vdash_{\textbf{\sf JC}}  {#3}}
+\newrobustcmd*{\ctx}{\Gamma}
+\newrobustcmd*{\entails}{\vdash}
+
+\newrobustcmd*{\judgmentfont}[1]{{\normalfont\sffamily #1}}
+\newrobustcmd*{\postfixjudgment}[1]{%
+  \relax\ifnum\lastnodetype>0\mskip\medmuskip\fi
+  \text{\judgmentfont{#1}}%
+}
+\newrobustcmd*{\valid}{\postfixjudgment{Valid}}
+\newrobustcmd*{\prop}{\postfixjudgment{Prop}}
+\newrobustcmd*{\true}{\postfixjudgment{true}}
+\newrobustcmd*{\type}{\postfixjudgment{type}}
+\newrobustcmd*{\context}{\postfixjudgment{ctx}}
+\newrobustcmd*{\nil}{\postfixjudgment{nil}}
+\newrobustcmd*{\truth}{\top}
+\newrobustcmd*{\conj}{\wedge}
+\newrobustcmd*{\disj}{\vee}
+\newrobustcmd*{\falsehood}{\bot}
+\newrobustcmd*{\imp}{\supset}
+\newrobustcmd*{\zero}{0}
+
+%%% Judgmental equality
+\newrobustcmd*{\jdeq}{\equiv}
+%%% Definition
+\newrobustcmd*{\defeq}{\vcentcolon\equiv}
+%%% Binary sums
+\newrobustcmd*{\inlsym}{{\mathsf{inl}}}
+\newrobustcmd*{\inrsym}{{\mathsf{inr}}}
+\newrobustcmd*{\inl}{\ensuremath\inlsym\xspace}
+\newrobustcmd*{\inr}{\ensuremath\inrsym\xspace}
+%%% Booleans
+\newrobustcmd*{\ttsym}{{\mathsf{tt}}}
+\newrobustcmd*{\ffsym}{{\mathsf{ff}}}
+%%% Pairs
+\newrobustcmd*{\pair}{\ensuremath{\mathsf{pair}}\xspace}
+\newrobustcmd*{\tuple}[2]{(#1,#2)}
+\newrobustcmd*{\proj}[1]{\ensuremath{\mathsf{pr}_{#1}}\xspace}
+%% Empty type
+\newrobustcmd*{\abort}[1]{\ensuremath{\mathsf{abort}_{#1}}}
+%%% Path concatenation
+\newrobustcmd*{\concat}{%
+  \mathchoice{\mathbin{\raisebox{0.5ex}{$\displaystyle\centerdot$}}}%
+  {\mathbin{\raisebox{0.5ex}{$\centerdot$}}}%
+  {\mathbin{\raisebox{0.25ex}{$\scriptstyle\,\centerdot\,$}}}%
+  {\mathbin{\raisebox{0.1ex}{$\scriptscriptstyle\,\centerdot\,$}}}
+}
+%%% Transport (covariant)
+\newrobustcmd*{\trans}[2]{\ensuremath{{#1}_{*}\mathopen{}\left({#2}\right)\mathclose{}}\xspace}
+% Natural numbers objects
+\newrobustcmd*{\Nat}{\mathsf{Nat}}
+\newrobustcmd*{\rec}{\ensuremath{\mathsf{rec}}\xspace}
+% Sequence
+\newrobustcmd*{\Seq}{\ensuremath{\mathsf{Seq}}\xspace}
+% Identity type
+\newrobustcmd*{\Id}[1]{\ensuremath{\mathsf{Id}_{#1}}\xspace}
+% Reflection
+\newrobustcmd*{\refl}[1]{\ensuremath{\mathsf{refl}_{#1}}\xspace}
+\newrobustcmd*{\J}{\ensuremath{\mathsf{J}}\xspace}
+
+% fst,snd,case,id
+\newrobustcmd*{\fst}{\textsf{fst}}
+\newrobustcmd*{\snd}{\textsf{snd}}
+\DeclareMathOperator{\case}{\textsf{case}}
+\DeclareMathOperator{\caseif}{\textsf{if}}
+\DeclareMathOperator{\casesplit}{\textsf{split}}
+\DeclareMathOperator{\ttrue}{\textsf{tt}\xspace}
+\DeclareMathOperator{\ffalse}{\textsf{ff}\xspace}
+\newrobustcmd*{\id}{\textsf{id}}
+
+\newrobustcmd*{\op}[1]{\operatorname{#1}}
+
+\newrobustcmd*{\universe}{\mathcal{U}}
+
+%inductive types
+\newrobustcmd*{\ind}{\ensuremath{\mathsf{ind}}\xspace}
+%higher inductive types
+%interval
+\newrobustcmd*{\interval}{\ensuremath{I}\xspace}
+\newrobustcmd*{\seg}{\ensuremath{\mathsf{seg}}\xspace}
+%circle
+\newrobustcmd*{\Sn}{\mathbb{S}}
+\newrobustcmd*{\base}{\ensuremath{\mathsf{base}}\xspace}
+\newrobustcmd*{\lloop}{\ensuremath{\mathsf{loop}}\xspace}
+\tikzset{
+	buffer/.style={
+		draw,
+		shape border rotate=180,
+		regular polygon,
+		regular polygon sides=3,
+		fill=gray,
+		node distance=2cm,
+		minimum height=4em
+	}
+}
+\tikzset{
+	buffer2/.style={
+		draw,
+		shape border rotate=180,
+		regular polygon,
+		regular polygon sides=3,
+		fill=gray,
+		node distance=1cm,
+		minimum height=4em
+	}
+}
+\newcommand*{\PrTri}[1]{\begin{tikzpicture}
+	\node[buffer]{#1};
+	\end{tikzpicture}}
+\tikzset{
+	buffer2/.style={
+		draw,
+		shape border rotate=180,
+		regular polygon,
+		regular polygon sides=3,
+		fill=gray,
+		node distance=0.6cm
+	}
+}
+\newcommand*{\PrTriSm}[1]{\begin{tikzpicture}
+	\node[buffer2]{#1};
+	\end{tikzpicture}}
