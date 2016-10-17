@@ -12,8 +12,7 @@ Reveal Theme  : solarized
 Beamer Theme  : madrid
 Package     : mathpartir.sty
 Package       : mathtools
-Package       : macros.tex
-Bib           : secondexam.bib 
+Bibliography           : secondexam.bib 
 
 [TITLE]
 
