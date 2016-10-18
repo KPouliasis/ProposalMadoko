@@ -47,9 +47,34 @@ language with simple types
  * Exploring a Curry-Howard reading of basic __JL__
   
 
-# IPL and STLC
-## Intuitionstic Propositional Logic
+# IPL and STLC 
 
+
+## Intuitionism and constructive mathematics
+
+* Notion of truth collides with the notion of proof 
+
+* Continuation of Brouwer's program 
+
+* Mathematical reasoning and logic  is a human faculty
+
+* The creative subjects use mathematical language to as a means to 
+express  their reasoning (proof) constructs   
+
+* "Logic as if people matter"
+
+## Intuitionism and constructive mathematics
+ * Proofs are stand alone objects
+ 
+ * NOT godelizations of some fixed formal system
+ 
+ * Mathematical objects such as __Nat__ together the primitive recursive function space
+ are  obtained as models of (proof objects) of equational proof theories 
+ * (e.g. a typed version of Godel's __T__ in the case of __Nat__ with primitive recursion). 
+
+## Intutionistic logic
+ * The object of logic is the study of "sane" proof constructs independently of formal systems
+ * The traditional gap between "syntax" and "semantics" is no longer that  
 
 
 
