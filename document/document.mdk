@@ -1,5 +1,3 @@
-Bibliography           : secondexam.bib 
-
 [INCLUDE=presentation]
 Title         : Justification Logic
 Sub Title     : A Curry- Howard View
@@ -11,6 +9,8 @@ Reveal Theme  : solarized
 Beamer Theme  : madrid
 Package     : mathpartir.sty
 Package       : mathtools
+Bib style     : plainnat
+Bibliography           : secondexam.bib
 
 [TITLE]
 
