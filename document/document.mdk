@@ -17,10 +17,18 @@ Bibliography           : secondexam.bib
 
 
 #Introduction
-
-The  [@curry1934functionality], was first established as a deep connection between explicit proofs in intuitionistic logic and programs of a simple programming 
-language that includes pairs, functions and union types.
-
+ ## The Curry -- Howard Isomorphism
+ 
+  * The _Curry--Howard Isomorphism_(__CHI__)[@curry1934functionality,@howard1995formulae], 
+  was first established as a deep connection between explicit proofs in intuitionistic logic 
+  and  simply typed programs (pairs, functions and union types) 
+  *  central topic of study in the field of type theory and has turned into the standard
+  foundational approach to studying and designing programming languages 
+  * Nowdays, it should be understood as a new paradigm in logic studies that emphasizes
+  proof relevance
+  *  The isomorphism has been extended to more complex logics and 
+  correspondingly to more complex programming language constructs.  
+  * We use  _proofs-as-programs_ and __CHI__ intercha.
 
 ## Our question
 
