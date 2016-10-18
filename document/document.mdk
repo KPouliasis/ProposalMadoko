@@ -66,16 +66,17 @@ express  their reasoning (proof) constructs
 
 ~ Slide
 ![1ckt58]
-~
-[1ckt58]: images/1ckt58.jpg "1ckt58" { width:auto; max-width:90% }
 
+[1ckt58]: images/1ckt58.jpg "1ckt58" { width:auto; max-width:90% }
+~
 
 
 ## Intuitionism and constructive mathematics
+
  * Proofs are stand alone objects
- 
+
  * NOT godelizations of some fixed formal system
- 
+
  * Mathematical objects such as __Nat__ together the primitive recursive function space
  are  obtained as models of (proof objects) of equational proof theories 
  * (e.g. a typed version of Godel's __T__ in the case of __Nat__ with primitive recursion). 
@@ -87,11 +88,12 @@ express  their reasoning (proof) constructs
   at least when "engineering" new logics.
 
  * "The meaning of a connective is the ways that one can prove it " (Martin Lof - Verificationist approach)
- 
- * "The meaining of a connective is the way one can use it to prove other facts" (Pragmatist approach)
+
+ * "The meaning of a connective is the way one can use it to prove other facts" (Pragmatist approach)
 
 ~ Slide
-_Good "engineering" means that the connective's design makes both the pragmatist and the verificationist happy_.  
+_* Good connective design  means that the connective's design makes both the pragmatist and the verificationist happy_.  
+
 ~    
 
 
