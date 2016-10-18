@@ -61,6 +61,7 @@ language with simple types
   * The creative subjects use mathematical language to as a means to 
 express  their reasoning (proof) constructs   
   * There  are open problems 
+  
   * Propositions do not come with a pre-existing truth value
 
 
@@ -92,16 +93,7 @@ Slim shady
 ~ Slide
 _Good "engineering" means that the connective's design makes both the pragmatist and the verificationist happy_.  
 ~    
-
-~ Slide
-  * This concept is definitely not new: it appears in the categorical setting in the work of Lawvere with
-  concepts such as "semantics as functors" or  "adjunctions between syntax and semantics".
-  * We build a logic closer to the former but the latter approach is open for future  work
-  * Other adjunction or monadic based logics have been developed based on such insights (e.g. Moggi's lax calculus)
-  * Our novel  contribution is the relation to justification logic which is an existing well studied
-  logic in itself.
-  
-~ 
+ 
 
 
 
