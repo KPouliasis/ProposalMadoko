@@ -52,16 +52,29 @@ language with simple types
 
 ## Intuitionism and constructive mathematics
 
-* Notion of truth collides with the notion of proof 
+  * Notion of truth collides with the notion of proof 
 
-* Continuation of Brouwer's program 
+  * Continuation of Brouwer's program 
 
-* Mathematical reasoning and logic  is a human faculty
+  * Mathematical reasoning and logic  is a human faculty
 
-* The creative subjects use mathematical language to as a means to 
+  * The creative subjects use mathematical language to as a means to 
 express  their reasoning (proof) constructs   
 
-* "Logic as if people matter"
+  * There  are open problems 
+ 
+  * Propositions do not come with a pre-existing truth value
+
+
+
+## A slide
+
+![1ckg5k]
+
+[1ckg5k]: images/1ckg5k.jpg "1ckg5k" { width:auto; max-width:90% }
+
+
+
 
 ## Intuitionism and constructive mathematics
  * Proofs are stand alone objects
@@ -72,18 +85,27 @@ express  their reasoning (proof) constructs
  are  obtained as models of (proof objects) of equational proof theories 
  * (e.g. a typed version of Godel's __T__ in the case of __Nat__ with primitive recursion). 
 
-## Intutionistic logic
+## Logic within constructive mathematics
  * The object of logic is the study of "sane" proof constructs independently of formal systems
- * The traditional gap between "syntax" and "semantics" is no longer that  
+
+ * The traditional chasm between "syntax" and "semantics" is no longer that very fruitful
+  at least when "engineering" new logics.
+
+ * "The meaning of a connective is the ways that one can prove it " (Martin Lof - Verificationist approach)
+ 
+ * "The meaining of a connective is the way one can use it to prove other facts" (Pragmatist approach)
+
+~ Slide
+_Good "engineering" means that the connective's design makes both the pragmatist and the verificationist happy_.  
+
+* Local Soundess
+
+* Local Completness 
+~
+.  
 
 
-
-  * Justification logic stemmed from Artemov's solution to providing an explicit classical provability semantics 
-  to intuionistic logic.
-  * We treat justifications as __validations__. I.e. second level proof constructs 
-  in a trusted system that are to be related with proof constructs of another weaker system in the first level 
-  (take  intuitionistic/ classical constructs as an exemplary case)
-  * We, effectively, treat __proof theoretically__ a pretty basic __semantical__ idea.    
+.    
 
 ~ Slide
   * This concept is definitely not new: it appears in the categorical setting in the work of Lawvere with
