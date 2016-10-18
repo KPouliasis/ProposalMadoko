@@ -89,9 +89,14 @@ express  their reasoning (proof) constructs
 
  * "The meaning of a connective is the ways that one can prove it " (Martin Lof - Verificationist approach)
 
- * "The meaning of a connective is the way one can use it to prove other facts" (Pragmatist approach)
+ * "The meaning of a connective is the way one can use its proofs" (Pragmatist approach)
 
-# 
+# Natural Deduction (Intuituionistic Propositional Logic)
+* Logic defines _judgments_
+* subjects of __judgments__ are of two kinds:
+    
+ 
+
 ~ Slide
 _* Good connective design  means that the connective's design makes both the pragmatist and the verificationist happy_
 
