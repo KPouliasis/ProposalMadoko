@@ -37,31 +37,16 @@ language with simple types
 
 * The relation of proofs, programs and categories (morphisms)  has renewed interest in foundations (HoTT)
 
-## CU
-## Our question
-
-Many logics have been studied under  Curry -- Howard interpretation
-
-* Intuitionistic : STLC
-* Linear : Various resource sensitive typed calculi -- e.g. session types, concurrent programming
-* Modal logics: Focus on $S4$ -- calculi for staged computation, calculi for monadic computation, etc
-
-What is a sensible Curry Howard reading/ calculus of justificaton logic based on first principles?
-
-
-
-## Which Justification Logic?
-
-  * Justification logic is a multifaceted system of necessity
-  * Can be configured to emulate $K$, $T$, $S4$, $S5$ modality
-  * Can appear in intuitionistic and classical versions with respect to the underlying logic 
-  * We focus on a minimal system based on $K$ modal logic and intuitionistic implication
-  * Strengthening of the modality can be done in a way  that is respecting the computational reading we propose 
-
-
-
-
+## Roadmap of this presentation
+ * Basic concepts and (scalable) proof techiques of __CHI__ 
+      *intuituinistic logic/ simple type theory and beyond
+ 
+ * Basic concepts and results of _Justification Logic_ (__JL__)
+ 
+ * Exploring a Curry-Howard reading of basic __JL__
   
+
+## Intuitionistic Logic
 ## Motivation
 
 
