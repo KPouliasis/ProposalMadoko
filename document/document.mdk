@@ -65,17 +65,6 @@ express  their reasoning (proof) constructs
  
   * Propositions do not come with a pre-existing truth value
 
-
-
-## A slide
-
-![1ckg5k]
-
-[1ckg5k]: images/1ckg5k.jpg "1ckg5k" { width:auto; max-width:90% }
-
-
-
-
 ## Intuitionism and constructive mathematics
  * Proofs are stand alone objects
  
@@ -97,15 +86,7 @@ express  their reasoning (proof) constructs
 
 ~ Slide
 _Good "engineering" means that the connective's design makes both the pragmatist and the verificationist happy_.  
-
-* Local Soundess
-
-* Local Completness 
-~
-.  
-
-
-.    
+~    
 
 ~ Slide
   * This concept is definitely not new: it appears in the categorical setting in the work of Lawvere with
