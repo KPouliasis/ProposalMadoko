@@ -18,7 +18,7 @@ Bibliography           : secondexam.bib
 
 #Introduction
  
-## CURRY--HOWARD ISO: Why do we care? [@curry1934functionality;@howard1995formulae]
+## CURRY--HOWARD ISO [@curry1934functionality;@howard1995formulae]
 
 * sparked from the investigation of the connection of explicit proofs in intuitionistic logic and programs of a simple programming 
 language with simple types 
@@ -27,12 +27,15 @@ language with simple types
 
 * standard theoretical tool for  studying and designing programming languages  
 
-## CHI IN LOGIC
+## CURRY--HOWARD IN LOGIC
 * a new paradigm in logic studies that emphasizes _proof relevance_
 
 * _ scales_ : the isomorphism has been extended to more complex logics and 
   correspondingly to more complex programming language constructs.  
-* We use  _proofs-as-programs_ and __CHI__ interchangeably.
+
+* We use  _proofs-as-programs_(-as-morphisms) and __CHI__ interchangeably.
+
+* The relation of proofs, programs and categories (morphisms)  has renewed interest in foundations (HoTT)
 
 ## Our question
 
