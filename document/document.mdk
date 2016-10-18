@@ -27,16 +27,17 @@ language with simple types
 
 * standard theoretical tool for  studying and designing programming languages  
 
-## CURRY--HOWARD IN LOGIC
+## Curry--Howard in logic
 * a new paradigm in logic studies that emphasizes _proof relevance_
 
-* _ scales_ : the isomorphism has been extended to more complex logics and 
-  correspondingly to more complex programming language constructs.  
+* _ scales_ : the isomorphism holds for more complex logics and 
+  correspondingly captures complex programming language constructs.  
 
 * We use  _proofs-as-programs_(-as-morphisms) and __CHI__ interchangeably.
 
 * The relation of proofs, programs and categories (morphisms)  has renewed interest in foundations (HoTT)
 
+## CU
 ## Our question
 
 Many logics have been studied under  Curry -- Howard interpretation
