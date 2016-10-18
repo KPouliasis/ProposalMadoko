@@ -39,14 +39,16 @@ language with simple types
 
 ## Roadmap of this presentation
  * Basic concepts and (scalable) proof techiques of __CHI__ 
-      *intuituinistic logic/ simple type theory and beyond
+ 
+      * intuitionistic propositional logic (__IPL__)/ simply typed lambda calculus
  
  * Basic concepts and results of _Justification Logic_ (__JL__)
  
  * Exploring a Curry-Howard reading of basic __JL__
   
 
-## Intuitionistic Logic
+# Intuitionistic Logic and Lambda Calculus
+
 ## Motivation
 
 
