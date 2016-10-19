@@ -101,8 +101,16 @@ is only when $x:A\vdash B(x):{\sf Prop}$
 ## Hypotheticals
 
 * Judgment construction can be presented in tree form 
- * the root is the deduced judgment
-and leafs are hypothesized judgments
+* the root is the deduced judgment
+* and leafs are hypothesized judgments
+
+$\begin{mathpar}
+\inferrule*[vdots=1.5em]{}{ J_1,\ldots,  J_i}
+\end{mathpar}$
+
+$\begin{mathpar}
+\inferrule*[]{}{J}
+\end{mathpar}$
 
 
  
