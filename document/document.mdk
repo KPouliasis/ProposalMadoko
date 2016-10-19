@@ -104,14 +104,22 @@ is only when $x:A\vdash B(x):{\sf Prop}$
 * the root is the deduced judgment
 * and leafs are hypothesized judgments
 
-$\begin{mathpar}
-\inferrule*[vdots=1.5em]{}{ J_1,\ldots,  J_i}
-\end{mathpar}$
+~ S
 
-$\begin{mathpar}
-\inferrule*[]{}{J}
-\end{mathpar}$
-
+  ~ Math
+  
+  \inferrule* {{\Box A} \\  {\inferrule* {}{{\begin{array}{c}
+  \overline{x:A}  \\
+  \vdots \\
+  {B} 
+  \end{array} } \\ {\begin{array}{c}
+  \overline{s:\llbracket A  \rrbracket} \\
+  \vdots \\
+  \llbracket B \rrbracket  
+    \end{array}}  }}}
+    {\Box B}
+ ~ 
+~
 
  
  
