@@ -100,26 +100,35 @@ is only when $x:A\vdash B(x):{\sf Prop}$
 
 ## Hypotheticals
 
-* Judgment construction can be presented in tree form 
+Judgment construction can be presented in tree form 
+
+~ Math
+  
+  {\begin{array}{c}
+  {J_1 \ldots J_i}  \\
+  \vdots \\
+  {J} 
+  \end{array} } 
+~ 
+
+
 * the root is the deduced judgment
+
 * and leafs are hypothesized judgments
 
-~ S
+* we will be concerned with $J$ of the form ${\sf A \ true}$
 
-  ~ Math
+#YET ANOTHER BUG
+
+~ Math
   
-  \inferrule* {{\Box A} \\  {\inferrule* {}{{\begin{array}{c}
-  \overline{x:A}  \\
+  {\begin{array}{c}
+  {J_1 \ldots J_i}  \\
   \vdots \\
-  {B} 
-  \end{array} } \\ {\begin{array}{c}
-  \overline{s:\llbracket A  \rrbracket} \\
-  \vdots \\
-  \llbracket B \rrbracket  
-    \end{array}}  }}}
-    {\Box B}
- ~ 
-~
+  {J} 
+  \end{array} } 
+~ 
+
 
  
  
