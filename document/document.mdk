@@ -98,6 +98,9 @@ But in general that's not the case. E.g. $\forall x. A(x)$ is not even a type wh
 is only when $x:A\vdash B(x):{\sf Prop}$
 * We will be ignoring type formation (${\sf Prop}$) judgments for now. 
 
+~ Begin Vertical
+
+
 ## Hypotheticals
 
 Judgment construction can be presented in tree form 
@@ -118,27 +121,23 @@ Judgment construction can be presented in tree form
 
 * we will be concerned with $J$ of the form ${\sf A \ true}$
 
-#YET ANOTHER BUG
 
-~ Math
-  
-  {\begin{array}{c}
+
+
+~ Slide
+  * we will be concerned with $J$ of the form ${\sf A \ true}$
+  * hypotheses will be labeled 
+
+  ~ Math
+    {\begin{array}{c}
   {J_1 \ldots J_i}  \\
   \vdots \\
   {J} 
   \end{array} } 
-~ 
-
-
- 
- 
- 
-
-~ Slide
-_* Good connective design  means that the connective's design makes both the pragmatist and the verificationist happy_
+  ~ 
 
 ~    
-
+~ End Vertical
 
 
 
