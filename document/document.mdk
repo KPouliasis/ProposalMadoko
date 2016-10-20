@@ -128,16 +128,15 @@ Judgment construction can be presented in tree form
   ~ Math
   
   {\begin{array}{c}
-  {x_1:A_!  \ldots x_i:{\sf A_i}}  \\
+  {x_1:A_1  \ldots x_i:{\sf A_i}}  \\
   \vdots \\
   {A } 
   \end{array} } 
 ~ 
-
-   
- 
 ~ End Vertical
 
+##Inference
+ * Hypothesis can be trivially reflected 
 
 
 ## Motivation (formally) 
