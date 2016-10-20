@@ -68,34 +68,30 @@ ${\sf Prop}$\end{mdInlineSnippet}%mdk
   \end{array} } 
 \]%mdk
 \end{mdDisplaySnippet}%mdk
+%mdk-data-line={118}
+\begin{mdInlineSnippet}[ff44570aca8241914870afbc310cdb85]%mdk
+$J$\end{mdInlineSnippet}%mdk
+%mdk-data-line={120}
+\begin{mdInlineSnippet}[6bd4272995f4b86000f31722ebc327bf]%mdk
+${J_1 \ldots J_i}$\end{mdInlineSnippet}%mdk
 %mdk-data-line={124}
 \begin{mdInlineSnippet}[ff44570aca8241914870afbc310cdb85]%mdk
 $J$\end{mdInlineSnippet}%mdk
 %mdk-data-line={124}
 \begin{mdInlineSnippet}[c1d089a0177f2abdd6b782a6cdadcd61]%mdk
 ${\sf A \ true}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={126}
+%mdk-data-line={128}
 \begin{mdInlineSnippet}[03cae11eddc5d35179e7da58a150fa7b]%mdk
 ${\sf true}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={126}
-\begin{mdDisplaySnippet}[47b16868f37cc9af6967b2473c925d75]%mdk
-\[%mdk-data-line={129}
-{\begin{array}{c}
-{x_1:A_1  \ldots x_i: A_i}  \\
-\vdots \\
-{A } 
-\end{array} } 
-\]%mdk
-\end{mdDisplaySnippet}%mdk
-%mdk-data-line={141}
-\begin{mdDisplaySnippet}[a2aaa2e40583040444c1b70a8001cb12]%mdk
-\[%mdk-data-line={144}
-    {\text For\  } k \in [1\ldots i] 
-\]%mdk
-\end{mdDisplaySnippet}%mdk
-\begin{mdDisplaySnippet}[e023f5971a3d636aae91daeffeff5887]%mdk
-\[%mdk-data-line={147}
+%mdk-data-line={136}
+\begin{mdInlineSnippet}[dc2f2eec480bcdbab8700c3bf6617459]%mdk
+${\text For\  } k \in [1\ldots i] $\end{mdInlineSnippet}%mdk
+%mdk-data-line={136}
+\begin{mdDisplaySnippet}[dcd28ad23b1729c6500a4c73548fec18]%mdk
+\[%mdk-data-line={139}
   {\begin{array}{c}
+    {\text For\  } k \in [1\ldots i]\\
+    \\
   {x_1:A_1  \ldots x_i: A_i}  \\
   \vdots \\
   {A_{k}} 
@@ -103,7 +99,7 @@ ${\sf true}$\end{mdInlineSnippet}%mdk
 \]%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdDisplaySnippet}[5534f16a2d13bab7e7092db7039b0f8f]%mdk
-\[%mdk-data-line={158}
+\[%mdk-data-line={152}
   \inferrule*[right=Intro] {
  {\begin{array}{c}
   \vdots \\
@@ -114,76 +110,22 @@ ${\sf true}$\end{mdInlineSnippet}%mdk
   \end{array} }} {A\wedge B}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={170}
 \begin{mdDisplaySnippet}[8f3e37022483ce95dbce35d30bfdce7b]%mdk
-\[%mdk-data-line={171}
+\[%mdk-data-line={162}
   \inferrule*[right=Elim2] {A\wedge B} {B}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={180}
-\begin{mdDisplaySnippet}[97210db0216d148c80d2a671ff4f1a84]%mdk
-\[%mdk-data-line={182}
-  \begin{array}{l}
-  \llbracket {\sf intstack} \rrbracket:= {\sf intarray} \\  
-  \llbracket {\sf int \rightarrow intstack\rightarrow instack } \rrbracket:= {\sf int \rightarrow intarray\rightarrow intarray} \\
-  \llbracket {\sf intstack \rightarrow (int \times intstack)} \rrbracket:= {\sf int\rightarrow (int\times intarray)}\\
-  \end{array}
+\begin{mdDisplaySnippet}[8f3e37022483ce95dbce35d30bfdce7b]%mdk
+\[%mdk-data-line={165}
+  \inferrule*[right=Elim2] {A\wedge B} {B}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={188}
-\begin{mdInlineSnippet}[c3880bc63c2b0fd10cdc024cf76a1924]%mdk
-$\Box$\end{mdInlineSnippet}%mdk
-%mdk-data-line={188}
-\begin{mdDisplaySnippet}[067eaab156d1e9d5fd7baf5a714b8378]%mdk
-\[%mdk-data-line={190}
-  \begin{array}{l}
-  { \sf empty \& \  create\_array():\Box intstack} \\
-    {\sf  push \&\  add\_array  :\Box (int \rightarrow intstack\rightarrow intstack)}\\
-  {\sf  pop   \&\  remove\_last: \Box (intarray\rightarrow intarray\times int)}
-  \end{array}
+\begin{mdDisplaySnippet}[8f3e37022483ce95dbce35d30bfdce7b]%mdk
+\[%mdk-data-line={170}
+  \inferrule*[right=Elim2] {A\wedge B} {B}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={198}
-\begin{mdInlineSnippet}[c6a6eb61fd9c6c913da73b3642ca147d]%mdk
-$\lambda$\end{mdInlineSnippet}%mdk
-%mdk-data-line={198}
-\begin{mdInlineSnippet}[0dd9ba8209181a52091dcd102fc1c48d]%mdk
-${\sf let}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={198}
-\begin{mdDisplaySnippet}[84b279b47e5dcb164ff5a309a7a32799]%mdk
-\[%mdk-data-line={200}
-\begin{array}{l l}
-{\sf pop (push\ 2 \ empty)} \&  \\
-{\sf remove\_last*(add\_array*\ 2 * create\_array())}
-\end{array}
-\]%mdk
-\end{mdDisplaySnippet}%mdk
-%mdk-data-line={211}
-\begin{mdInlineSnippet}[263f6cde9cf189e21199080a34d52250]%mdk
-${\sf \llbracket intstack\rrbracket := intlist}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={211}
-\begin{mdDisplaySnippet}[cc58b2c7d12911175f7fb796802cbc38]%mdk
-\[%mdk-data-line={214}
-\begin{array}{l}
-{ \sf [ \ ]: intlist} \ \  \text{for}\ \ {\sf empty}\\
-  {\sf Cons: int \rightarrow intlist\rightarrow intlist}\ \  \text{for} \ \ {\sf push}\\
-{\sf pop\_list: intlist\rightarrow intlist\times int }\  \text{for}\  {\sf pop}
-\end{array}
-\]%mdk
-\end{mdDisplaySnippet}%mdk
-%mdk-data-line={220}
-\begin{mdDisplaySnippet}[74574fa0f96861ef77af86c05361f99b]%mdk
-\[%mdk-data-line={222}
-\begin {array}{l}
-{\sf pop (push\ 2 \ empty)} \&  \\
-{\sf pop\_list*(Cons*\ 2 * [\ ])}
-\end{array}
-\]%mdk
-\end{mdDisplaySnippet}%mdk
-%mdk-data-line={231}
-\begin{mdInlineSnippet}[b9ece18c950afbfa6b0fdbfa4ff731d3]%mdk
-$T$\end{mdInlineSnippet}%mdk
-%mdk-data-line={252;out/document-bib.bbl.mdk:16}
+%mdk-data-line={179;out/document-bib.bbl.mdk:16}
 
 \end{mdSnippets}
 
