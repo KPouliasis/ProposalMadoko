@@ -158,23 +158,36 @@ and leafs (   ${J_1 \ldots J_i}$) are hypothesized judgments
   {B} 
   \end{array} }} {A\wedge B}
   ~
-  
+
+
   ~ Math
-  \inferrule*[right=EW] {
+    \begin{array}{c c}
+  \inferrule*[right=Elim1] {
  {\begin{array}{c}
+   \\
+  \vdots \\
+  {A\wedge B} 
+  \end{array} }} {A} & \inferrule*[right=Elim2] {
+ {\begin{array}{c}
+   \\
   \vdots \\
   {A\wedge B} 
   \end{array} }} {A}
+  \end{array}
   ~
-  
+
+## Harmony: Conjunction
+* Proof trees are objects of logic and   as mathematical objects and are equipped with _equality_
   ~ Math
   \inferrule*[right=Intro] {
  {\begin{array}{c}
-  \vdots \\
-  {A\wedge B} 
-  \end{array} }} {A}
+  \mathcal{D}\\
+  {A} 
+  \end{array} } \\{\begin{array}{c}
+  \mathcal{E} \\
+  {B} 
+  \end{array} }} {A\wedge B}
   ~
-## Inference: Conjunction
 
   ~ Math
   \inferrule*[right=Elim2] {A\wedge B} {B}
