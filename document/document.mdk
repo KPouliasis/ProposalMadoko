@@ -160,7 +160,19 @@ and leafs (   ${J_1 \ldots J_i}$) are hypothesized judgments
   ~
   
   ~ Math
-  \inferrule*[right=Elim2] {A\wedge B} {B}
+  \inferrule*[right=EW] {
+ {\begin{array}{c}
+  \vdots \\
+  {A\wedge B} 
+  \end{array} }} {A}
+  ~
+  
+  ~ Math
+  \inferrule*[right=Intro] {
+ {\begin{array}{c}
+  \vdots \\
+  {A\wedge B} 
+  \end{array} }} {A}
   ~
 ## Inference: Conjunction
 
