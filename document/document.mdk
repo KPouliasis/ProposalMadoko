@@ -152,6 +152,7 @@ Judgment construction can be presented in tree form
   ~
 
 ## Inference: Conjunction Intro
+
    ~ Math
   \inferrule*[right=Intro] {
  {\begin{array}{c}
@@ -163,6 +164,12 @@ Judgment construction can be presented in tree form
   \end{array} }} {A\wedge B}
   ~
 ~ End Vertical
+## Inference: Conjunction Elim
+
+   ~ Math
+  \inferrule*[right=Elim1] {A\wedge B} {A}
+  \inferrule*[right=Elim2] {A\wedge B} {}
+  ~
 
 ## Motivation (formally) 
 
