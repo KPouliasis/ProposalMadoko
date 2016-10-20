@@ -128,7 +128,7 @@ Judgment construction can be presented in tree form
   ~ Math
   
   {\begin{array}{c}
-  {x_1:A_1  \ldots x_i:{\sf A_i}}  \\
+  {x_1:A_1  \ldots x_i: A_i}  \\
   \vdots \\
   {A } 
   \end{array} } 
@@ -137,7 +137,16 @@ Judgment construction can be presented in tree form
 
 ##Inference
  * Hypothesis can be trivially reflected 
-
+ * 
+  ~ Math 
+    {\text For} k \in [1\ldots i] 
+  
+  {\begin{array}{c}
+  {x_1:A_1  \ldots x_i: A_i}  \\
+  \vdots \\
+  {A_{k}} 
+  \end{array} } 
+  ~
 
 ## Motivation (formally) 
 
