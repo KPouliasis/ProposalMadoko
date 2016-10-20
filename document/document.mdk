@@ -199,25 +199,78 @@ Introducing  a connective just to eliminate it won't give anything new.
 ~
  You should have "enough" elimination techniques to reintroduce a connective using introductions.
 
-## Harmony 
+~Begin Vertical
+## Harmony Conjunction
+
+~Center 
+Local Soundness 
+~
   ~ Math
     \begin{array}{l c r}
-  {\inferrule*[right=Elim]{\inferrule*[right=Intro] {
+  {\inferrule*[right=Elim1]{\inferrule*[right=Intro] {
  {\begin{array}{c}
   \mathcal{D}\\
   {A} 
   \end{array} } \\{\begin{array}{c}
   \mathcal{E} \\
   {B} 
-  \end{array} }} {A\wedge B}}{A}} &  & = \\ 
-  \end{array}
-  ~
-  ~ Math
+  \end{array} }} {A\wedge B}}{A}} & = &   
    {\begin{array}{c}
   \mathcal{D}\\
   {A} 
   \end{array} }
+  \end{array}
   ~ 
+
+
+## Harmony Conjunction
+~Center 
+Local Soundness 
+~
+  ~ Math
+    \begin{array}{l c r}
+  {\inferrule*[right=Elim2]{\inferrule*[right=Intro] {
+ {\begin{array}{c}
+  \mathcal{D}\\
+  {A} 
+  \end{array} } \\{\begin{array}{c}
+  \mathcal{E} \\
+  {B} 
+  \end{array} }} {A\wedge B}}{B}} & = &   
+   {\begin{array}{c}
+  \mathcal{E}\\
+  {A} 
+  \end{array} }
+  \end{array}
+  ~ 
+
+## Harmony Conjunction
+~ Center
+Local Completeness
+~
+
+ ~ Math
+    \begin{array}{l c r}
+  {\inferrule*[right=Elim2]{\inferrule*[right=Intro] {
+ {\begin{array}{c}
+  \mathcal{D}\\
+  {A} 
+  \end{array} } \\{\begin{array}{c}
+  \mathcal{E} \\
+  {B} 
+  \end{array} }} {A\wedge B}}{B}} & = &   
+   {\begin{array}{c}
+  \mathcal{E}\\
+  {A} 
+  \end{array} }
+  \end{array}
+  ~ 
+
+
+
+
+~ End Vertical
+## Harmony Conjunction
 
 ## Thank you!
 Thanks for looking
