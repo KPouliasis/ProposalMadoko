@@ -141,7 +141,7 @@ Judgment construction can be presented in tree form
  * Hypothesis can be trivially reflected 
  * 
   ~ Math 
-    {\text For } k \in [1\ldots i] 
+    {\text For\  } k \in [1\ldots i] 
   ~
   ~ Math
   {\begin{array}{c}
@@ -150,14 +150,20 @@ Judgment construction can be presented in tree form
   {A_{k}} 
   \end{array} } 
   ~
-## Inference: Conjunction
+
+## Inference: Conjunction Intro
    ~ Math
-  \inferrule*{{\begin{array}{c}
+  \inferrule*[right=Intro] {
+ {\begin{array}{c}
   \vdots \\
   {A} 
-  \end{array} } 
+  \end{array} } \\{\begin{array}{c}
+  \vdots \\
+  {B} 
+  \end{array} }} {A\wedge B}
   ~
 ~ End Vertical
+
 ## Motivation (formally) 
 
 Assume deductive systems $I$:
