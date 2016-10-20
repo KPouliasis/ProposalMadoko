@@ -177,11 +177,11 @@ and leafs (   ${J_1 \ldots J_i}$) are hypothesized judgments
   ~
 
 ## Harmony: Conjunction
-* Proof trees are objects of logic and   as mathematical objects and are equipped with _equality_
+* Proof trees are objects of logic and - as mathematical objects -  are equipped with _equality_
   ~ Math
   \inferrule*[right=Intro] {
  {\begin{array}{c}
-  \mathcal{D}\\
+  \vdots\\
   {A} 
   \end{array} } \\{\begin{array}{c}
   \mathcal{E} \\
