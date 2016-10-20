@@ -138,8 +138,8 @@ Judgment construction can be presented in tree form
 
 
 ##Inference: Hypotheses
- * Hypothesis can be trivially reflected 
- * 
+ Hypothesis can be trivially reflected 
+ 
   ~ Math 
     {\text For\  } k \in [1\ldots i] 
   ~
@@ -168,14 +168,18 @@ Judgment construction can be presented in tree form
 ## Inference: Conjunction Elim
 
    ~ Math
-  \inferrule*[right=Elim1] {A\wedge B} {A}
+  \inferrule* {{\begin{array}{c}
+  \vdots \\
+  {A\wedge B} 
+  \end{array}}} {A}
   ~
   
   ~ Math
   \inferrule*[right=Elim2] {A\wedge B} {B}
   ~
-## Harmony
 
+## Harmony
+~ End Vertical
 ## Motivation (formally) 
 
 Assume deductive systems $I$:
