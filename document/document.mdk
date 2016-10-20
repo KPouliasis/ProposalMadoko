@@ -135,19 +135,29 @@ Judgment construction can be presented in tree form
 ~ 
 ~ End Vertical
 
-##Inference
+~ Begin Vertical
+
+##Inference: Hypotheses
  * Hypothesis can be trivially reflected 
  * 
   ~ Math 
-    {\text For} k \in [1\ldots i] 
-  
+    {\text For } k \in [1\ldots i] 
+  ~
+  ~ Math
   {\begin{array}{c}
   {x_1:A_1  \ldots x_i: A_i}  \\
   \vdots \\
   {A_{k}} 
   \end{array} } 
   ~
-
+## Inference: Conjunction
+   ~ Math
+  \inferrule*{{\begin{array}{c}
+  \vdots \\
+  {A} 
+  \end{array} } 
+  ~
+~ End Vertical
 ## Motivation (formally) 
 
 Assume deductive systems $I$:
