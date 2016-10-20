@@ -135,7 +135,7 @@ Judgment construction can be presented in tree form
 ~ 
 ~ End Vertical
 
-~ Begin Vertical
+
 
 ##Inference: Hypotheses
  * Hypothesis can be trivially reflected 
@@ -151,6 +151,7 @@ Judgment construction can be presented in tree form
   \end{array} } 
   ~
 
+~ Begin Vertical
 ## Inference: Conjunction Intro
 
    ~ Math
@@ -168,8 +169,12 @@ Judgment construction can be presented in tree form
 
    ~ Math
   \inferrule*[right=Elim1] {A\wedge B} {A}
-  \inferrule*[right=Elim2] {A\wedge B} {}
   ~
+  
+  ~ Math
+  \inferrule*[right=Elim2] {A\wedge B} {B}
+  ~
+## Harmony
 
 ## Motivation (formally) 
 
