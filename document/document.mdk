@@ -146,7 +146,7 @@ and leafs (   ${J_1 \ldots J_i}$) are hypothesized judgments
   ~
 
 
-## Inference: Conjunction Intro
+## Inference: Conjunction
 
    ~ Math
   \inferrule*[right=Intro] {
@@ -158,13 +158,11 @@ and leafs (   ${J_1 \ldots J_i}$) are hypothesized judgments
   {B} 
   \end{array} }} {A\wedge B}
   ~
+  
   ~ Math
   \inferrule*[right=Elim2] {A\wedge B} {B}
   ~
-  ~ Math
-  \inferrule*[right=Elim2] {A\wedge B} {B}
-  ~
-## Inference: Conjunction Elim
+## Inference: Conjunction
 
   ~ Math
   \inferrule*[right=Elim2] {A\wedge B} {B}
