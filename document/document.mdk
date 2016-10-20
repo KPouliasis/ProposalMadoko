@@ -176,25 +176,52 @@ and leafs (   ${J_1 \ldots J_i}$) are hypothesized judgments
   \end{array}
   ~
 
-## Harmony: Conjunction
-* Proof trees are objects of logic and - as mathematical objects -  are equipped with _equality_
+## Equality and Harmony
+
+Proof trees are objects of logic and - as mathematical objects -  are equipped with _equality_
+
+~ Center
+__Logic is "algebrized"__
+~
+
+Equalities should provide for the "harmony" of the Introduction 
+-- Elimination constructions-- distructions
+
+## Slogans
+
+~ Center
+["Elimination Rules are not too strong"]{ color=red }
+~
+Introducing  a connective just to eliminate it won't give anything new. 
+
+~ Center
+["Elimination Rules are not too weak"]{ color=blue }
+~
+ You should have "enough" elimination techniques to reintroduce a connective using introductions.
+
+## Harmony 
   ~ Math
-  \inferrule*[right=Intro] {
+    \begin{array}{l c r}
+  {\inferrule*[right=Elim]{\inferrule*[right=Intro] {
  {\begin{array}{c}
-  \vdots\\
+  \mathcal{D}\\
   {A} 
   \end{array} } \\{\begin{array}{c}
   \mathcal{E} \\
   {B} 
-  \end{array} }} {A\wedge B}
+  \end{array} }} {A\wedge B}}{A}} &  & = \\ 
+  \end{array}
   ~
-
   ~ Math
-  \inferrule*[right=Elim2] {A\wedge B} {B}
-  ~
-  
-## Thanks you!
+   {\begin{array}{c}
+  \mathcal{D}\\
+  {A} 
+  \end{array} }
+  ~ 
+
+## Thank you!
 Thanks for looking
+
 
 
 
