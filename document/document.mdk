@@ -250,27 +250,26 @@ Local Completeness
 ~
 
  ~ Math
-    \begin{array}{l c r}
-  {\inferrule*[right=Elim2]{\inferrule*[right=Intro] {
+\begin{array}{l c r}
+   {\begin{array}{c}
+  \mathcal{D}\\
+  {A\wedge B} 
+  \end{array} } & =  &  {\inferrule*[right=Intro]{{\inferrule*[right=Elim1] {
  {\begin{array}{c}
   \mathcal{D}\\
-  {A} 
-  \end{array} } \\{\begin{array}{c}
-  \mathcal{E} \\
-  {B} 
-  \end{array} }} {A\wedge B}}{B}} & = &   
-   {\begin{array}{c}
-  \mathcal{E}\\
-  {A} 
-  \end{array} }
+  {A\wedge B} 
+  \end{array} } } {A}}\\
+  {\inferrule*[right=Elim2] {
+ {\begin{array}{c}
+  \mathcal{D}\\
+  {A\wedge B} 
+  \end{array} } } {B}}}{A\wedge B}}
   \end{array}
   ~ 
-
-
-
-
 ~ End Vertical
-## Harmony Conjunction
+
+
+
 
 ## Thank you!
 Thanks for looking
