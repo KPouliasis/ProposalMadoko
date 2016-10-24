@@ -268,11 +268,72 @@ Local Completeness
   ~ 
 ~ End Vertical
 
-##OTHER CONNECTIVES
-Similar rules and equations for other connectives
+## Implication
+
+As conjunctions internalize "pairing", implication internalizes hypothetical reasoning.
+
+~ Math
+  \begin{array}{c}
+ {\inferrule*[right=Intro] {
+ {\begin{array}{c}
+  x_1:A_i \ldots \overline{x:A}\\
+  \vdots \\
+  {B} 
+  \end{array} } } {A\supset B}} 
+ \\
+ \\
+ {\inferrule*[right=Elim] {
+ {\begin{array}{c}
+  \mathcal{D}\\
+  {A\supset B} 
+  \end{array} }\\ {\begin{array}{c}
+  \mathcal{E}\\
+  {A} 
+  \end{array} } } {B}}
+ \end{array}
+~
 
 
+## Harmony: Implication
 
+~ Center 
+  Local Soundness
+~
+
+~ Math
+\begin{array}{l c r}
+	\inferrule*[left=Elim]{
+	{\inferrule*[right=Intro]
+    {{\begin{array}{c}
+    \\
+    x:A\\
+    \mathcal{D}\\
+    {B}
+ \end{array}} }
+    {A \supset B }}\\
+{\begin{array}{c}
+  \mathcal{E}\\
+  {A}\\
+ \end{array}}
+}
+{B} & = & 	{\begin{array}{c} \mathcal{E} \\ A  \\ {\mathcal{D}} \\ B \true \end{array}} 
+\end{array}
+~
+
+## Harmony : Implication
+~ Math
+	\begin{array}{c c c}
+		{\inferrule{
+				{\inferrule[]{
+						{\begin{array}[b]{c}  {\mathcal{D}} \\ A\supset B  \end{array}}\\{\overline{x:A}}} { B }}}{A \supset B}
+			}
+			& = &
+		
+		{\begin{array}[b]{c}  {\mathcal{D}} \\ A\supset B  \end{array}}
+		
+		
+	\end{array}
+~
 
 
 

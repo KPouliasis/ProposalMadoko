@@ -185,7 +185,67 @@ ${\text For\  } k \in [1\ldots i] $\end{mdInlineSnippet}%mdk
   \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={281;out/document-bib.bbl.mdk:16}
+%mdk-data-line={273}
+\begin{mdDisplaySnippet}[0025807db9cf28a676b5de2547423634]%mdk
+\[%mdk-data-line={276}
+  \begin{array}{c}
+ {\inferrule*[right=Intro] {
+ {\begin{array}{c}
+  x_1:A_i \ldots \overline{x:A}\\
+  \vdots \\
+  {B} 
+  \end{array} } } {A\supset B}} 
+ \\
+ \\
+ {\inferrule*[right=Elim] {
+ {\begin{array}{c}
+  \mathcal{D}\\
+  {A\supset B} 
+  \end{array} }\\ {\begin{array}{c}
+  \mathcal{E}\\
+  {A} 
+  \end{array} } } {B}}
+ \end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={300}
+\begin{mdDisplaySnippet}[fef705ca907f89afd21fcba7d149d95c]%mdk
+\[%mdk-data-line={304}
+\begin{array}{l c c}
+    \inferrule*[left=Elim]{
+    {\inferrule*[right=Intro]
+    {{\begin{array}{c}
+    \\
+    x:A\\
+    \mathcal{D}\\
+    {B}
+ \end{array}} }
+    {A \supset B }}\\
+{\begin{array}{c}
+  \mathcal{E}\\
+  {A}\\
+ \end{array}}
+}
+{B} & = & 
+\end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+\begin{mdDisplaySnippet}[9a6ba23ae24076be0b4456f1d451f69d]%mdk
+\[%mdk-data-line={325}
+    \begin{array}{c c c}
+        {\inferrule{
+                {\inferrule[]{
+                        {\begin{array}[b]{c}  {\mathcal{D}} \\ A\supset B  \end{array}}\\{\overline{x:A}}} { B }}}{A \supset B}
+            }
+            & = &
+        
+        {\begin{array}[b]{c}  {\mathcal{D}} \\ A\supset B  \end{array}}
+        
+        
+    \end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={347;out/document-bib.bbl.mdk:16}
 
 \end{mdSnippets}
 
