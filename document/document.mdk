@@ -329,6 +329,11 @@ As conjunctions internalize "pairing", implication internalizes hypothetical rea
 
 
 ## Harmony : Implication
+
+~ Center 
+  Local Soundness
+~
+
 ~ Math
 	\begin{array}{c c c}
     {\begin{array}[b]{c}  {\mathcal{D}} \\ A\supset B  \end{array}} & = &
@@ -342,6 +347,7 @@ As conjunctions internalize "pairing", implication internalizes hypothetical rea
 	\end{array}
 ~
 
+## IPL as proof-irrelevant natural deduction
 
 
 ## Thank you!
