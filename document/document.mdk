@@ -305,8 +305,7 @@ As conjunctions internalize "pairing", implication internalizes hypothetical rea
 	\inferrule*[left=Elim]{
 	{\inferrule*[right=Intro]
     {{\begin{array}{c}
-    \\
-    x:A\\
+    \overline{x:A}\\
     \mathcal{D}\\
     {B}
  \end{array}} }
@@ -316,20 +315,28 @@ As conjunctions internalize "pairing", implication internalizes hypothetical rea
   {A}\\
  \end{array}}
 }
-{B} & = & 	{\begin{array}{c} \mathcal{E} \\ A  \\ {\mathcal{D}} \\ B  \end{array}} 
-\end{array}
+{B} & = & {\begin{array}{c} 
+    \mathcal{E} \\ 
+    A  
+    \\ 
+    {\mathcal{D}}\\ 
+    B  \\
+    \\
+    \\
+  \end{array}}   
+\end{array} 
 ~
+
 
 ## Harmony : Implication
 ~ Math
 	\begin{array}{c c c}
+    {\begin{array}[b]{c}  {\mathcal{D}} \\ A\supset B  \end{array}} & = &
 		{\inferrule{
 				{\inferrule[]{
 						{\begin{array}[b]{c}  {\mathcal{D}} \\ A\supset B  \end{array}}\\{\overline{x:A}}} { B }}}{A \supset B}
 			}
-			& = &
 		
-		{\begin{array}[b]{c}  {\mathcal{D}} \\ A\supset B  \end{array}}
 		
 		
 	\end{array}

@@ -209,14 +209,13 @@ ${\text For\  } k \in [1\ldots i] $\end{mdInlineSnippet}%mdk
 \]%mdk
 \end{mdDisplaySnippet}%mdk
 %mdk-data-line={300}
-\begin{mdDisplaySnippet}[a25824fe7dd1c592be9596e22df51b2c]%mdk
+\begin{mdDisplaySnippet}[64303df5308976fc87ee0d8e04369cb5]%mdk
 \[%mdk-data-line={304}
 \begin{array}{l c r}
     \inferrule*[left=Elim]{
     {\inferrule*[right=Intro]
     {{\begin{array}{c}
-    \\
-    x:A\\
+    \overline{x:A}\\
     \mathcal{D}\\
     {B}
  \end{array}} }
@@ -226,26 +225,33 @@ ${\text For\  } k \in [1\ldots i] $\end{mdInlineSnippet}%mdk
   {A}\\
  \end{array}}
 }
-{B} & = &     {\begin{array}{c} \mathcal{E} \\ A  \\ {\mathcal{D}} \\ B  \end{array}} 
-\end{array}
+{B} & = & {\begin{array}{c} 
+    \mathcal{E} \\ 
+    A  
+    \\ 
+    {\mathcal{D}}\\ 
+    B  \\
+    \\
+    \\
+  \end{array}}   
+\end{array} 
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-\begin{mdDisplaySnippet}[9a6ba23ae24076be0b4456f1d451f69d]%mdk
-\[%mdk-data-line={325}
+\begin{mdDisplaySnippet}[a2989fbb90776ae506a3f5a0eabde19f]%mdk
+\[%mdk-data-line={333}
     \begin{array}{c c c}
+    {\begin{array}[b]{c}  {\mathcal{D}} \\ A\supset B  \end{array}} & = &
         {\inferrule{
                 {\inferrule[]{
                         {\begin{array}[b]{c}  {\mathcal{D}} \\ A\supset B  \end{array}}\\{\overline{x:A}}} { B }}}{A \supset B}
             }
-            & = &
         
-        {\begin{array}[b]{c}  {\mathcal{D}} \\ A\supset B  \end{array}}
         
         
     \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={347;out/document-bib.bbl.mdk:16}
+%mdk-data-line={354;out/document-bib.bbl.mdk:16}
 
 \end{mdSnippets}
 
