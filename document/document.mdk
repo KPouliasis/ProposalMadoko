@@ -316,7 +316,7 @@ As conjunctions internalize "pairing", implication internalizes hypothetical rea
   {A}\\
  \end{array}}
 }
-{B} & = & 	{\begin{array}{c} \mathcal{E} \\ A  \\ {\mathcal{D}} \\ B \true \end{array}} 
+{B} & = & 	{\begin{array}{c} \mathcal{E} \\ A  \\ {\mathcal{D}} \\ B  \end{array}} 
 \end{array}
 ~
 
