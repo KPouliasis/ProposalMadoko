@@ -365,6 +365,14 @@ As conjunctions internalize "pairing", implication internalizes hypothetical rea
 		
 	\end{array}
 ~
+## Disjunction
+~ Math
+
+\begin{array}{c}
+  \inferrule[right=intro1]*{A}{A\vee B}
+\end{array}
+~
+##
 
 ## Proof Trees To Terms (STLC)
 
