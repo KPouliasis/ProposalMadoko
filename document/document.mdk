@@ -131,9 +131,8 @@ and leafs (   ${J_1 \ldots J_i}$) are hypothesized judgments
 
 
 ##Rules of Inference: Hypotheses
- Hypothesis can be trivially reflected. I.e.  
- 
-    ${\text For\  } k \in [1\ldots i] $
+ Hypotheses can be trivially reflected. I.e.  
+
  
   ~ Math
   {\begin{array}{c}
@@ -185,9 +184,9 @@ __Logic is "algebrized"__
 ~
 
 Equalities should provide for the "harmony" of the Introduction 
--- Elimination constructions-- distructions
+-- Elimination constructions-- destructions
 
-## Slogans
+## Harmony in Slogans
 
 ~ Center
 ["Elimination Rules are not too strong"]{ color=red }
@@ -268,6 +267,26 @@ Local Completeness
   ~ 
 ~ End Vertical
 
+## Top
+$0$-ary conjunction
+
+~ Math
+\inferrule*[right=Intro]{ }{\top}
+~
+
+No elimination rule: You cannot extract any data from no data!
+
+Local Soundess trivial (no elim)
+
+Local Completeness:
+~ Math
+\begin{array}{l c r}
+\inferrule*[right=Intro]{\mathcal{D} }{\top} & = & \inferrule*[right=Intro]{}{\top} 
+\end{array}
+~
+
+
+
 ## Implication
 
 As conjunctions internalize "pairing", implication internalizes hypothetical reasoning.
@@ -346,6 +365,7 @@ As conjunctions internalize "pairing", implication internalizes hypothetical rea
 		
 	\end{array}
 ~
+
 ## Proof Trees To Terms (STLC)
 
 
