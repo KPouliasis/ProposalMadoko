@@ -367,10 +367,12 @@ As conjunctions internalize "pairing", implication internalizes hypothetical rea
 ~
 ## Disjunction
 ~ Math
-
-\begin{array}{c}
-  \inferrule[right=intro1]*{A}{A\vee B}
+\begin{array}{c c}
+  \inferrule*[right=intro1]{A}{A\vee B} &   \inferrule*[right=intro2]{B}{A\vee B}
 \end{array}
+~
+~ Math
+\inferrule*[right=elim] {{A\vee B}\\ {\begin{array}{c} A \\ \vdots \\ C \end{array}}}{C}
 ~
 ##
 
