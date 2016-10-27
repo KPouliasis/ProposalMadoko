@@ -365,6 +365,7 @@ As conjunctions internalize "pairing", implication internalizes hypothetical rea
 		
 	\end{array}
 ~
+~ Begin Vertical
 ## Disjunction
 
 ~ Math
@@ -387,12 +388,32 @@ As conjunctions internalize "pairing", implication internalizes hypothetical rea
 Local Soundness
 ~
 ~ Math
-\inferrule*[right=elim$^{x,y}$] {{\begin{array}{c}  \\ \mathcal{D} \\ A\hline \\ A\vee B \end{array}}\\ 
+\begin{array}{l c r}
+
+\inferrule*[right=elim$^{x,y}$] {
+  {\begin{array}{c}  \\ \inferrule*{\inferrule*{\mathcal{D}}{A}}{ A\vee B} \end{array}}\\ 
   {\begin{array}{c} \overline{x:A} \\ \vdots \\ C \end{array}}\\
   {\begin{array}{c} \overline{ y:B} \\ \vdots \\ C \end{array}}
-   }{C}
+   }{C} & = & \begin{array}{c}{\inferrule*[vdots=1.5em]{\mathcal{D}}{A}}\\{ C}\end{array}
+\end{array}
 ~
 
+## Disjunction: Harmony
+~ Center
+Local Soundness
+~
+~ Math
+\begin{array}{l c r}
+
+\inferrule*[right=elim$^{x,y}$] {
+  {\begin{array}{c}  \\ \inferrule*{\inferrule*{\mathcal{E}}{B}}{ A\vee B} \end{array}}\\ 
+  {\begin{array}{c} \overline{x:A} \\ \vdots \\ C \end{array}}\\
+  {\begin{array}{c} \overline{ y:B} \\ \vdots \\ C \end{array}}
+   }{C} & = & \begin{array}{c}{\inferrule*[vdots=1.5em]{\mathcal{E}}{B}}\\{ C}\end{array}
+\end{array}
+~
+
+~End Vertical
 
 ## Proof Trees To Terms (STLC)
 

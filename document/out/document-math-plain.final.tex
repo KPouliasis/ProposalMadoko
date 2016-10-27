@@ -267,30 +267,60 @@ $0$\end{mdInlineSnippet}%mdk
 \]%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdDisplaySnippet}[8caf81540362f62e9fa037188a239ebf]%mdk
-\[%mdk-data-line={371}
+\[%mdk-data-line={372}
 \begin{array}{c c}
   \inferrule*[right=intro1]{A}{A\vee B} &   \inferrule*[right=intro2]{B}{A\vee B}
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdDisplaySnippet}[6f32dd56b959677bc6f632093d34bde2]%mdk
-\[%mdk-data-line={378}
+\[%mdk-data-line={379}
 \inferrule*[right=elim$^{x,y}$] {{\begin{array}{c}  \\ \vdots \\ A\vee B \end{array}}\\ 
   {\begin{array}{c} \overline{x:A} \\ \vdots \\ C \end{array}}\\
   {\begin{array}{c} \overline{ y:B} \\ \vdots \\ C \end{array}}
    }{C}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={387}
-\begin{mdDisplaySnippet}[aad04eda89889d717de61a978b3414a6]%mdk
-\[%mdk-data-line={390}
-\inferrule*[right=elim$^{x,y}$] {{\begin{array}{c}  \\ \mathcal{D} \\ A\vee B \end{array}}\\ 
+%mdk-data-line={388}
+\begin{mdDisplaySnippet}[fbdde86a51ff4f4621dde4a81f6fb198]%mdk
+\[%mdk-data-line={391}
+\begin{array}{l c r}
+
+\inferrule*[right=elim$^{x,y}$] {
+  {\begin{array}{c}  \\ \inferrule*{\inferrule*{\mathcal{D}}{A}}{ A\vee B} \end{array}}\\ 
   {\begin{array}{c} \overline{x:A} \\ \vdots \\ C \end{array}}\\
   {\begin{array}{c} \overline{ y:B} \\ \vdots \\ C \end{array}}
-   }{C}
+   }{C} & = & \begin{array}{c}{\inferrule*[vdots=1.5em]{\mathcal{D}}{A}}\\{ C}\end{array}
+\end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={410;out/document-bib.bbl.mdk:16}
+%mdk-data-line={403}
+\begin{mdDisplaySnippet}[9a26d3b58a24e25db55b265ba646a8e0]%mdk
+\[%mdk-data-line={406}
+\begin{array}{l c r}
+
+\inferrule*[right=elim$^{x,y}$] {
+  {\begin{array}{c}  \\ \inferrule*{\inferrule*{\mathcal{E}}{B}}{ A\vee B} \end{array}}\\ 
+  {\begin{array}{c} \overline{x:A} \\ \vdots \\ C \end{array}}\\
+  {\begin{array}{c} \overline{ y:B} \\ \vdots \\ C \end{array}}
+   }{C} & = & \begin{array}{c}{\inferrule*[vdots=1.5em]{\mathcal{E}}{B}}\\{ C}\end{array}
+\end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={418}
+\begin{mdDisplaySnippet}[50409ba49620faaa6dabb5c14bfbaf6f]%mdk
+\[%mdk-data-line={421}
+\begin{array}{l c r}
+
+\inferrule*[right=elim$^{x,y}$] {
+  {\begin{array}{c}  \\ \inferrule*{\inferrule*{\mathcal{E}}{B}}{\begin{array}{c}A\vee B\end{array}} \end{array}}\\ 
+  {\begin{array}{c} \overline{x:A} \\ \vdots \\ C \end{array}}\\
+  {\begin{array}{c} \overline{ y:B} \\ \vdots \\ C \end{array}}
+   }{C} & = & \begin{array}{c}{\inferrule*[vdots=1.5em]{\mathcal{E}}{B}}\\{ C}\end{array}
+\end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={445;out/document-bib.bbl.mdk:16}
 
 \end{mdSnippets}
 
