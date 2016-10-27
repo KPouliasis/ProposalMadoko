@@ -372,7 +372,10 @@ As conjunctions internalize "pairing", implication internalizes hypothetical rea
 \end{array}
 ~
 ~ Math
-\inferrule*[right=elim] {{\begin{array}{c}  \\ \vdots \\ A\vee B \end{array}}\\ {\begin{array}{c} A \\ \vdots \\ C \end{array}}}{C}
+\inferrule*[right=elim] {{\begin{array}{c}  \\ \vdots \\ A\vee B \end{array}}\\ 
+  {\begin{array}{c} \overline{x:A} \\ \vdots \\ C \end{array}}\\
+  {\begin{array}{c} \overline{ y:B \\ \vdots \\ C \end{array}}
+   }{C}
 ~
 ##
 
