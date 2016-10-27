@@ -366,18 +366,33 @@ As conjunctions internalize "pairing", implication internalizes hypothetical rea
 	\end{array}
 ~
 ## Disjunction
+
 ~ Math
 \begin{array}{c c}
   \inferrule*[right=intro1]{A}{A\vee B} &   \inferrule*[right=intro2]{B}{A\vee B}
 \end{array}
 ~
+
+
 ~ Math
-\inferrule*[right=elim] {{\begin{array}{c}  \\ \vdots \\ A\vee B \end{array}}\\ 
+\inferrule*[right=elim$^{x,y}$] {{\begin{array}{c}  \\ \vdots \\ A\vee B \end{array}}\\ 
   {\begin{array}{c} \overline{x:A} \\ \vdots \\ C \end{array}}\\
-  {\begin{array}{c} \overline{ y:B \\ \vdots \\ C \end{array}}
+  {\begin{array}{c} \overline{ y:B} \\ \vdots \\ C \end{array}}
    }{C}
 ~
-##
+
+## Disjunction: Harmony
+
+~ Center
+Local Soundness
+~
+~ Math
+\inferrule*[right=elim$^{x,y}$] {{\begin{array}{c}  \\ \mathcal{D} \\ A\hline \\ A\vee B \end{array}}\\ 
+  {\begin{array}{c} \overline{x:A} \\ \vdots \\ C \end{array}}\\
+  {\begin{array}{c} \overline{ y:B} \\ \vdots \\ C \end{array}}
+   }{C}
+~
+
 
 ## Proof Trees To Terms (STLC)
 
