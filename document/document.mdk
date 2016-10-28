@@ -320,8 +320,8 @@ As conjunctions internalize "pairing", implication internalizes hypothetical rea
 ~
 
 ~ Math
-\begin{array}{c c}
-{\inferrule*{
+  \begin{array}{c c c}
+  {\inferrule*{
 {\inferrule*[right=Intro]
 {
  {\begin{tabular}[b]{c}
@@ -333,10 +333,21 @@ As conjunctions internalize "pairing", implication internalizes hypothetical rea
  \end{tabular}} \\
  \\
 }
-{A\supset B}}\\{\begin{tabular}[b]{c}$\mathcal{E}$\\ $A$ \end{tabular}}}{B}} & = &
- 
-\end{array}
+{A\supset B}}\\{\begin{tabular}[b]{c}
+  $\mathcal{E}$
+  \\
+  $A$
+ \end{tabular}}} {B}} & = & {\begin{tabular}[b]{c}
+  $\mathcal{E}$
+  \\
+  $A$
+  \\
+  $\mathcal{D}$\\
+  $B$
+ \end{tabular}}
+ \end{array}
 ~
+
 
 
 
