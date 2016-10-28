@@ -223,15 +223,19 @@ $0$\end{mdInlineSnippet}%mdk
 \]%mdk
 \end{mdDisplaySnippet}%mdk
 %mdk-data-line={319}
-\begin{mdDisplaySnippet}[3d6de0b29a2d632bbfebb4dc41aac919]%mdk
+\begin{mdDisplaySnippet}[324274d76b06460d8eb8c2cabfb91429]%mdk
 \[%mdk-data-line={323}
+\inferrule*[vdots=1.5em]{x:A}{ }
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+\begin{mdDisplaySnippet}[fcc505f742d63a0f6e6e863bf38cae8c]%mdk
+\[%mdk-data-line={327}
 \begin{array}{l c r}
     \inferrule*[left=Elim]{
-    {\inferrule*[right=Intro]
+    {\inferrule*[right=Intro,vdots=1.5em]
     {{\begin{array}{c}
-     \\
-    \overline{x:A}\\
-    \mathcal{D}\\
+     \hline\\
+     {x:A}\\
     {B}
  \end{array}} }
     {A \supset B }}\\
@@ -253,9 +257,9 @@ $0$\end{mdInlineSnippet}%mdk
 \end{array} 
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={355}
+%mdk-data-line={358}
 \begin{mdDisplaySnippet}[a2989fbb90776ae506a3f5a0eabde19f]%mdk
-\[%mdk-data-line={359}
+\[%mdk-data-line={362}
     \begin{array}{c c c}
     {\begin{array}[b]{c}  {\mathcal{D}} \\ A\supset B  \end{array}} & = &
         {\inferrule{
@@ -269,23 +273,23 @@ $0$\end{mdInlineSnippet}%mdk
 \]%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdDisplaySnippet}[8caf81540362f62e9fa037188a239ebf]%mdk
-\[%mdk-data-line={374}
+\[%mdk-data-line={377}
 \begin{array}{c c}
   \inferrule*[right=intro1]{A}{A\vee B} &   \inferrule*[right=intro2]{B}{A\vee B}
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdDisplaySnippet}[6f32dd56b959677bc6f632093d34bde2]%mdk
-\[%mdk-data-line={381}
+\[%mdk-data-line={384}
 \inferrule*[right=elim$^{x,y}$] {{\begin{array}{c}  \\ \vdots \\ A\vee B \end{array}}\\ 
   {\begin{array}{c} \overline{x:A} \\ \vdots \\ C \end{array}}\\
   {\begin{array}{c} \overline{ y:B} \\ \vdots \\ C \end{array}}
    }{C}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={390}
+%mdk-data-line={393}
 \begin{mdDisplaySnippet}[fbdde86a51ff4f4621dde4a81f6fb198]%mdk
-\[%mdk-data-line={393}
+\[%mdk-data-line={396}
 \begin{array}{l c r}
 
 \inferrule*[right=elim$^{x,y}$] {
@@ -296,9 +300,9 @@ $0$\end{mdInlineSnippet}%mdk
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={405}
+%mdk-data-line={408}
 \begin{mdDisplaySnippet}[526ae70535e0b4f86c71b2b056d9e4a8]%mdk
-\[%mdk-data-line={408}
+\[%mdk-data-line={411}
 \begin{array}{l r}
 \inferrule*[right=elim$^{x,y}$] {
   {\begin{array}{c}  \\ \inferrule*{\inferrule*{\mathcal{E}}{B}}{ A\vee B} \end{array}}\\ 
@@ -309,20 +313,20 @@ $0$\end{mdInlineSnippet}%mdk
 \]%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdDisplaySnippet}[da2a771db979f77d564b80163090d9a0]%mdk
-\[%mdk-data-line={418}
+\[%mdk-data-line={421}
  \begin{array}{c}{\inferrule*[vdots=1.5em]{\mathcal{E}}{B}}\\{ C}\end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={424}
+%mdk-data-line={427}
 \begin{mdDisplaySnippet}[0b872260c6efb126554d029ec7442450]%mdk
-\[%mdk-data-line={428}
+\[%mdk-data-line={431}
 \begin{array}{c c}
   {\begin{array}{c}  \\ \inferrule*{\mathcal{D}}{A\vee B} \end{array}} & =
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdDisplaySnippet}[dea2ddd5aefb9a7955d29412b8c79ac7]%mdk
-\[%mdk-data-line={434}
+\[%mdk-data-line={437}
 \begin{array}{c r}
   \\
 \inferrule*[right=E$^{\overline{x},\overline{y}}$] {
@@ -334,17 +338,17 @@ $0$\end{mdInlineSnippet}%mdk
 \]%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdDisplaySnippet}[3fd3765e97e8dc6808ec3bec16809633]%mdk
-\[%mdk-data-line={449}
+\[%mdk-data-line={452}
 \inferrule*[right=Elim]{\bot}{A}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={458}
+%mdk-data-line={461}
 \begin{mdDisplaySnippet}[2f7ff23049957bce346922b145e25b20]%mdk
-\[%mdk-data-line={462}
+\[%mdk-data-line={465}
   {\begin{array}{l c r}  \\ \inferrule*{\mathcal{D}}{\bot} & = & \inferrule*{\inferrule*{\mathcal{D}}{\bot}}{\bot} \end{array}} 
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={481;out/document-bib.bbl.mdk:16}
+%mdk-data-line={484;out/document-bib.bbl.mdk:16}
 
 \end{mdSnippets}
 
