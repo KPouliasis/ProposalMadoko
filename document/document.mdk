@@ -320,7 +320,17 @@ As conjunctions internalize "pairing", implication internalizes hypothetical rea
 ~
 
 ~ Math
-\inferrule*[vdots=1.5em]{x:A}{ \mathcal{D}}
+\inferrule [Tabular-Rule]
+{
+ {\begin{tabular}[b]{c}
+ $\overline{x:A}$
+  \\
+  $\mathcal{D}$
+  \\
+ \end{tabular}} \\
+ \\
+}
+{some}
 ~
 
 ~ Math
