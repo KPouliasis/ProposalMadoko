@@ -311,24 +311,31 @@ $0$\end{mdInlineSnippet}%mdk
  \begin{array}{c}{\inferrule*[vdots=1.5em]{\mathcal{E}}{B}}\\{ C}\end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={421}
-\begin{mdDisplaySnippet}[eb012bc4a70acfe5be4fceb771baeb2d]%mdk
-\[%mdk-data-line={424}
+%mdk-data-line={422}
+\begin{mdDisplaySnippet}[66aab626adf4cba22391c007eaf9f7f2]%mdk
+\[%mdk-data-line={426}
+\begin{array}{c c}
+\inferrule*{\mathcal{D}}{A\vee B} & =
+\end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+\begin{mdDisplaySnippet}[b23f0166351aeda474e62fa0ebbb3675]%mdk
+\[%mdk-data-line={431}
 \begin{array}{c r}
-\inferrule*[right=elim$^{x,y}$] {
+\inferrule*[right=elim$^{\overline{x},\overline{y}}$] {
   {\begin{array}{c}  \\ \inferrule*{\mathcal{D}}{A\vee B} \end{array}}\\ 
-  {\begin{array}{c} \\ \inferrule*{\overline{x:A}}{A\vee B} \end{array}}\\
-  {\begin{array}{c} \\ \inferrule*{ \overline{y:Β}}{A\vee B} \end{array}}
+  {\begin{array}{c} \\ \inferrule*[right=Intro1]{\overline{x:A}}{A\vee B} \end{array}}\\
+  {\begin{array}{c} \\ \inferrule*[right=Intro2]{ \overline{y:B}}{A\vee B} \end{array}}
    }{A\vee B} & = 
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-\begin{mdDisplaySnippet}[da2a771db979f77d564b80163090d9a0]%mdk
-\[%mdk-data-line={434}
- \begin{array}{c}{\inferrule*[vdots=1.5em]{\mathcal{E}}{B}}\\{ C}\end{array}
+\begin{mdDisplaySnippet}[3fd3765e97e8dc6808ec3bec16809633]%mdk
+\[%mdk-data-line={442}
+\inferrule*[right=Elim]{\bot}{A}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={451;out/document-bib.bbl.mdk:16}
+%mdk-data-line={460;out/document-bib.bbl.mdk:16}
 
 \end{mdSnippets}
 

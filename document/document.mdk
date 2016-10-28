@@ -417,22 +417,31 @@ Local Soundness
 ~
 
 ## Disjunction: Harmony
+
 ~ Center
 Local Completeness
 ~
+
+~ Math
+\begin{array}{c c}
+  {\begin{array}{c}  \\ \inferrule*{\mathcal{D}}{A\vee B} \end{array}} & =
+\end{array}
+~
 ~ Math
 \begin{array}{c r}
-\inferrule*[right=elim$^{x,y}$] {
+\inferrule*[right=elim$^{\overline{x},\overline{y}}$] {
   {\begin{array}{c}  \\ \inferrule*{\mathcal{D}}{A\vee B} \end{array}}\\ 
-  {\begin{array}{c} \\ \inferrule*{\overline{x:A}}{A\vee B} \end{array}}\\
-  {\begin{array}{c} \\ \inferrule*{ \overline{y:Β}}{A\vee B} \end{array}}
+  {\begin{array}{c} \\ \inferrule*[right=Intro1]{\overline{x:A}}{A\vee B} \end{array}}\\
+  {\begin{array}{c} \\ \inferrule*[right=Intro2]{ \overline{y:B}}{A\vee B} \end{array}}
    }{A\vee B} & = 
 \end{array}
 ~
+## Bottom
 
-~ Math
- \begin{array}{c}{\inferrule*[vdots=1.5em]{\mathcal{E}}{B}}\\{ C}\end{array}
+~ Math 
+\inferrule*[right=Elim]{\bot}{A}
 ~
+
 ~End Vertical
 
 ## Proof Trees To Terms (STLC)
