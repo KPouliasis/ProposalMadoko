@@ -421,12 +421,12 @@ Local Soundness
 Local Completeness
 ~
 ~ Math
-\begin{array}{l r}
+\begin{array}{c r}
 \inferrule*[right=elim$^{x,y}$] {
-  {\begin{array}{c}  \\ \inferrule*{\inferrule*{\mathcal{E}}{B}}{ A\vee B} \end{array}}\\ 
-  {\begin{array}{c} \overline{x:A} \\ \vdots \\ C \end{array}}\\
-  {\begin{array}{c} \overline{ y:B} \\ \vdots \\ C \end{array}}
-   }{C} & = 
+  {\begin{array}{c}  \\ \inferrule*{\mathcal{D}}{A\vee B} \end{array}}\\ 
+  {\begin{array}{c} \\ \inferrule*{\overline{x:A}}{A\vee B} \end{array}}\\
+  {\begin{array}{c} \\ \inferrule*{ \overline{y:Β}}{A\vee B} \end{array}}
+   }{A\vee B} & = 
 \end{array}
 ~
 
