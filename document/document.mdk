@@ -320,46 +320,25 @@ As conjunctions internalize "pairing", implication internalizes hypothetical rea
 ~
 
 ~ Math
-\inferrule [Tabular-Rule]
+\begin{array}{c c}
+{\inferrule*{
+{\inferrule*[right=Intro]
 {
  {\begin{tabular}[b]{c}
  $\overline{x:A}$
   \\
   $\mathcal{D}$
   \\
+  $B$
  \end{tabular}} \\
  \\
 }
-{some}
+{A\supset B}}\\{\begin{tabular}[b]{c}$\mathcal{E}$\\ $A$ \end{tabular}}}{B}} & = &
+ 
+\end{array}
 ~
 
-~ Math
-\begin{array}{l c r}
-	\inferrule*[left=Elim]{
-	{\inferrule*[right=Intro,vdots=1.5em]
-    {{\begin{array}{c}
-     \hline\\
-     {x:A}\\
-    {B}
- \end{array}} }
-    {A \supset B }}\\
-{\begin{array}{c}
-  \\
-  \mathcal{E}\\
-  {A}\\
- \end{array}}
-}
-{B} & = & {\begin{array}{c} 
-    \mathcal{E} \\ 
-    A  
-    \\ 
-    {\mathcal{D}}\\ 
-    B  \\
-    \\
-    \\
-  \end{array}}   
-\end{array} 
-~
+
 
 
 ## Harmony : Implication
