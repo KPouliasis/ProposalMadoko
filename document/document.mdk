@@ -10,7 +10,7 @@ Beamer Theme  : madrid
 Package     : mathpartir.sty
 Package       : mathtools
 Bib style     : plainnat
-Bibliography           : secondexam.bib
+Bibliography  : secondexam.bib
 
 [TITLE]
 
@@ -324,6 +324,7 @@ As conjunctions internalize "pairing", implication internalizes hypothetical rea
 	\inferrule*[left=Elim]{
 	{\inferrule*[right=Intro]
     {{\begin{array}{c}
+      \\
     \overline{x:A}\\
     \mathcal{D}\\
     {B}
