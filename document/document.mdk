@@ -427,20 +427,39 @@ Local Completeness
   {\begin{array}{c}  \\ \inferrule*{\mathcal{D}}{A\vee B} \end{array}} & =
 \end{array}
 ~
+
 ~ Math
 \begin{array}{c r}
-\inferrule*[right=elim$^{\overline{x},\overline{y}}$] {
+  \\
+\inferrule*[right=E$^{\overline{x},\overline{y}}$] {
   {\begin{array}{c}  \\ \inferrule*{\mathcal{D}}{A\vee B} \end{array}}\\ 
-  {\begin{array}{c} \\ \inferrule*[right=Intro1]{\overline{x:A}}{A\vee B} \end{array}}\\
-  {\begin{array}{c} \\ \inferrule*[right=Intro2]{ \overline{y:B}}{A\vee B} \end{array}}
+  {\begin{array}{c} \\ \inferrule*[right=I1]{\overline{x:A}}{A\vee B} \end{array}}\\
+  {\begin{array}{c} \\ \inferrule*[right=I2]{ \overline{y:B}}{A\vee B} \end{array}}
    }{A\vee B} & = 
 \end{array}
 ~
+~End Vertical
+
+~ Begin Vertical
 ## Bottom
 
 ~ Math 
 \inferrule*[right=Elim]{\bot}{A}
 ~
+~ Center
+NO INTRO RULE
+~
+
+~ Center
+local soundness: Trivial (No intro)
+
+local completeness:
+~
+
+~ Math
+  {\begin{array}{l c r}  \\ \inferrule*{\mathcal{D}}{\bot} & = & \inferrule*{\inferrule*{\mathcal{D}}{\bot}}{\bot} \end{array}} 
+~
+
 
 ~End Vertical
 
