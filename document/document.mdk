@@ -324,7 +324,7 @@ As conjunctions internalize "pairing", implication internalizes hypothetical rea
 	\inferrule*[left=Elim]{
 	{\inferrule*[right=Intro]
     {{\begin{array}{c}
-      \\
+     \hline\\
     \overline{x:A}\\
     \mathcal{D}\\
     {B}
