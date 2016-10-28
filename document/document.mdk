@@ -344,7 +344,7 @@ As conjunctions internalize "pairing", implication internalizes hypothetical rea
   \\
   $\mathcal{D}$\\
   $B$
- \end{tabular}}
+\end{tabular}}
  \end{array}
 ~
 
@@ -355,7 +355,7 @@ As conjunctions internalize "pairing", implication internalizes hypothetical rea
 ## Harmony : Implication
 
 ~ Center 
-  Local Soundness
+  Local Completeness
 ~
 
 ~ Math
@@ -374,17 +374,29 @@ As conjunctions internalize "pairing", implication internalizes hypothetical rea
 ## Disjunction
 
 ~ Math
-\begin{array}{c c}
-  \inferrule*[right=intro1]{A}{A\vee B} &   \inferrule*[right=intro2]{B}{A\vee B}
-\end{array}
-~
-
-
-~ Math
-\inferrule*[right=elim$^{x,y}$] {{\begin{array}{c}  \\ \vdots \\ A\vee B \end{array}}\\ 
-  {\begin{array}{c} \overline{x:A} \\ \vdots \\ C \end{array}}\\
-  {\begin{array}{c} \overline{ y:B} \\ \vdots \\ C \end{array}}
-   }{C}
+\begin{array}{l c}
+  \inferrule*[right=intro1]{A}{A\vee B} &   \inferrule*[right=intro2]{B}{A\vee B}\\
+\\
+\inferrule*[right=elim$^{x,y}$] {{\begin{tabular}[b]{c}
+  $\mathcal{D}$
+  \\
+  $A\vee B$
+ \end{tabular}}\\ 
+  { {\begin{tabular}[b]{c}
+ $\overline{x:A}$
+  \\
+  $\mathcal{E}$
+  \\
+  $C$
+ \end{tabular}}}\\
+  { {\begin{tabular}[b]{c}
+ $\overline{y:B}$
+  \\
+  $\mathcal{F}$
+  \\
+  $C$
+ \end{tabular}}}}{C}
+ \end{array}
 ~
 
 ## Disjunction: Harmony
@@ -392,33 +404,73 @@ As conjunctions internalize "pairing", implication internalizes hypothetical rea
 ~ Center
 Local Soundness
 ~
-~ Math
-\begin{array}{l c r}
 
-\inferrule*[right=elim$^{x,y}$] {
-  {\begin{array}{c}  \\ \inferrule*{\inferrule*{\mathcal{D}}{A}}{ A\vee B} \end{array}}\\ 
-  {\begin{array}{c} \overline{x:A} \\ \vdots \\ C \end{array}}\\
-  {\begin{array}{c} \overline{ y:B} \\ \vdots \\ C \end{array}}
-   }{C} & = & \begin{array}{c}{\inferrule*[vdots=1.5em]{\mathcal{D}}{A}}\\{ C}\end{array}
+~ Math
+\begin{array}{l c r }
+\inferrule*[right=elim$^{x,y}$] {{\begin{tabular}[b]{c}
+  $\mathcal{D}$
+  \\
+  $A$\\
+  \hline 
+  $A\vee B$
+ \end{tabular}}\\ 
+  { {\begin{tabular}[b]{c}
+ $\overline{x:A}$
+  \\
+  $\mathcal{E}$
+  \\
+  $C$
+ \end{tabular}}}\\
+  { {\begin{tabular}[b]{c}
+ $\overline{y:B}$
+  \\
+  $\mathcal{F}$
+  \\
+  $C$
+ \end{tabular}}}}{C} &=& {\begin{tabular}[b]{c}
+ $\mathcal{D}$\\
+ $A$\\
+ $\mathcal{E}$\\
+  $C$
+ \end{tabular}}
 \end{array}
 ~
+
+
 
 ## Disjunction: Harmony
 ~ Center
 Local Soundness
 ~
 ~ Math
-\begin{array}{l r}
-\inferrule*[right=elim$^{x,y}$] {
-  {\begin{array}{c}  \\ \inferrule*{\inferrule*{\mathcal{E}}{B}}{ A\vee B} \end{array}}\\ 
-  {\begin{array}{c} \overline{x:A} \\ \vdots \\ C \end{array}}\\
-  {\begin{array}{c} \overline{ y:B} \\ \vdots \\ C \end{array}}
-   }{C} & = 
+\begin{array}{l c r }
+\inferrule*[right=elim$^{x,y}$] {{\begin{tabular}[b]{c}
+  $\mathcal{D}$
+  \\
+  $B$\\
+  \hline 
+  $A\vee B$
+ \end{tabular}}\\ 
+  { {\begin{tabular}[b]{c}
+ $\overline{x:A}$
+  \\
+  $\mathcal{E}$
+  \\
+  $C$
+ \end{tabular}}}\\
+  { {\begin{tabular}[b]{c}
+ $\overline{y:B}$
+  \\
+  $\mathcal{F}$
+  \\
+  $C$
+ \end{tabular}}}}{C} &=& {\begin{tabular}[b]{c}
+ $\mathcal{D}$\\
+ $B$\\
+ $\mathcal{F}$\\
+  $C$
+ \end{tabular}}
 \end{array}
-~
-
-~ Math
- \begin{array}{c}{\inferrule*[vdots=1.5em]{\mathcal{E}}{B}}\\{ C}\end{array}
 ~
 
 ## Disjunction: Harmony
