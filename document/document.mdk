@@ -549,9 +549,23 @@ For reasons similar to ${\sf Prop}$, context formation also becomes a judgment.
 appropriate type
 
 * Similarly to typed arguments in a functions declaration.
-* One should always prove this as a metatheorem :
+* One should always prove this substitution principle as a metatheorem :
 
 $\Gamma,x:A\vdash N:B \text{\ and }\Gamma\vdash M:A \Longrightarrow \Gamma\vdash M[N/x]:B $ 
+
+## CONJUNCTION AS PRODUCT
+Intro rules transliterate to data constructor declarations
+
+  ~ Math
+  \inferrule*[right=Intro] {
+ {\begin{array}{c}
+   \mathcal{D}\\
+  {A} 
+  \end{array} } \\{\begin{array}{c}
+  \mathcal{E} \\
+  {B} 
+  \end{array} }} {A\wedge B}
+  ~
 
 
 ## IPL as proof-irrelevant natural deduction
