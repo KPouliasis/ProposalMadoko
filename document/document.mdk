@@ -520,7 +520,38 @@ local completeness:
 
 ~End Vertical
 
-## Proof Trees To Terms (STLC)
+## Proof Trees To Terms (STLC): Contexts
+
+* Proof trees transliterate to (one dimensional) proof terms constructions
+of the simply typed lambda calculus as do equalities. 
+
+* Labeled hypotheses become _typed variable contexts_ (scopes) which can be reflected freely
+at any point in proof term constructions.
+* Similarly to well typed program formation  in programming languages. Sequent construction
+corresponds to type checking.
+
+~ Math
+\inferrule*{{\inferrule*{ }{x:int\vdash x:int}}\\{\inferrule*{ }{x:int\vdash 1:int}}}{x:int\vdash x+1:int}
+~ 
+
+##STLC : Contexts
+For reasons similar to ${\sf Prop}$, context formation also becomes a judgment.
+
+~ Math
+\inferrule*[right=Empty]{ }{\bullet \vdash {\sf ctx}}
+~
+~Math
+\inferrule*[right= Cons] {\Gamma\vdash {\sf ctx}\\ \Gamma\vdash A {\sf\  Prop}\\ x\not\in Dom(\Gamma)  }
+{\Gamma,x:A\vdash {\sf ctx}}
+~ 
+
+* As labels are "pluggable" tree slots, variables are substitutable for terms of 
+appropriate type
+
+* Similarly to typed arguments in a functions declaration.
+* One should always prove this as a metatheorem :
+
+$\Gamma,x:A\vdash N:B \text{\ and }\Gamma\vdash M:A \Longrightarrow \Gamma\vdash M[N/x]:B $ 
 
 
 ## IPL as proof-irrelevant natural deduction

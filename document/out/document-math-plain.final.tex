@@ -329,7 +329,7 @@ $0$\end{mdInlineSnippet}%mdk
 \]%mdk
 \end{mdDisplaySnippet}%mdk
 %mdk-data-line={443}
-\begin{mdDisplaySnippet}[d7872208800ae8403efdd2a4ce5195b4]%mdk
+\begin{mdDisplaySnippet}[3035d510bc59d1042fbd40bf016464d3]%mdk
 \[%mdk-data-line={446}
 \begin{array}{l c r }
 \inferrule*[right=elim$^{x,y}$] {{\begin{tabular}[b]{c}
@@ -355,7 +355,7 @@ $0$\end{mdInlineSnippet}%mdk
  \end{tabular}}}}{C} &=& {\begin{tabular}[b]{c}
  $\mathcal{D}$\\
  $B$\\
- $\mathcal{E}$\\
+ $\mathcal{F}$\\
   $C$
  \end{tabular}}
 \end{array}
@@ -392,7 +392,31 @@ $0$\end{mdInlineSnippet}%mdk
   {\begin{array}{l c r}  \\ \inferrule*{\mathcal{D}}{\bot} & = & \inferrule*{\inferrule*{\mathcal{D}}{\bot}}{\bot} \end{array}} 
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={536;out/document-bib.bbl.mdk:16}
+%mdk-data-line={530}
+\begin{mdDisplaySnippet}[f9d28bacdf993b7b768b44db1fad4161]%mdk
+\[%mdk-data-line={534}
+\inferrule*{{\inferrule*{ }{x:int\vdash x:int}}\\{\inferrule*{ }{x:int\vdash 1:int}}}{x:int\vdash x+1:int}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={538}
+\begin{mdInlineSnippet}[30520b288917568144a121508689c296]%mdk
+${\sf Prop}$\end{mdInlineSnippet}%mdk
+%mdk-data-line={538}
+\begin{mdDisplaySnippet}[ec6ee6ff254d193b5bd707a4b694e579]%mdk
+\[%mdk-data-line={541}
+\inferrule*[right=Empty]{ }{\bullet \vdash {\sf ctx}}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+\begin{mdDisplaySnippet}[bdbf47b4d64d83bb6911caf3114d58a9]%mdk
+\[%mdk-data-line={544}
+\inferrule*[right= Cons] {\Gamma\vdash {\sf ctx}\\ \Gamma\vdash A {\sf\  Prop}\\ x\not\in Dom(\Gamma)  }
+{\Gamma,x:A\vdash {\sf ctx}}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={554}
+\begin{mdInlineSnippet}[d7fe3de589ea617b2456422c58e2681c]%mdk
+$\Gamma,x:A\vdash N:B \text{and }\Gamma\vdash M:A \Longrightarrow \Gamma M[N/x]:B $\end{mdInlineSnippet}%mdk
+%mdk-data-line={567;out/document-bib.bbl.mdk:16}
 
 \end{mdSnippets}
 
