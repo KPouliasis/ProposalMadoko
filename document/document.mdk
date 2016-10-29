@@ -594,9 +594,12 @@ Similarly for elimination
    \end{array}
 ~
 
+~ Begin Vertical
+
 ## CONJUNCTION HARMONY
 
-The local soundness and completeness give the local reduction ($\beta$) and expansion ($\eta$) rules
+The local soundness and completeness give the local reduction ($\beta$) 
+and expansion ($\eta$) rules
 
  ~ Math
     \begin{array}{l c r}
@@ -615,8 +618,16 @@ The local soundness and completeness give the local reduction ($\beta$) and expa
   \end{array}
  ~ 
 
+  ~ Math
+   \Gamma\vdash fst (\langle M, N \rangle) =_{\beta} M: A
+   ~ 
+  And similarly 
+  
+~ Math
+\Gamma\vdash snd (\langle M, N \rangle) =_{\beta} N:A
+~
 
-
+~ End Vertical
 
 ## IPL as proof-irrelevant natural deduction
 
