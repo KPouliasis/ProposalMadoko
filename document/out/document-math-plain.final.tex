@@ -416,7 +416,48 @@ ${\sf Prop}$\end{mdInlineSnippet}%mdk
 %mdk-data-line={554}
 \begin{mdInlineSnippet}[61c756f1a09176af9b7a94034ed1ee32]%mdk
 $\Gamma,x:A\vdash N:B \text{\ and }\Gamma\vdash M:A \Longrightarrow \Gamma\vdash M[N/x]:B $\end{mdInlineSnippet}%mdk
-%mdk-data-line={597;out/document-bib.bbl.mdk:16}
+%mdk-data-line={557}
+\begin{mdDisplaySnippet}[e06d3823ff5223449181b75469fd4c71]%mdk
+\[%mdk-data-line={560}
+  \inferrule*[right=Intro] {
+ {\begin{array}{c}
+   \mathcal{D}\\
+  {A} 
+  \end{array} } \\{\begin{array}{c}
+  \mathcal{E} \\
+  {B} 
+  \end{array} }} {A\wedge B}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={569}
+\begin{mdDisplaySnippet}[b1e6e16b8273f275272d701e73ad1705]%mdk
+\[%mdk-data-line={572}
+  \inferrule*[right=Intro]
+  {{\Gamma\vdash M:A}\\{\Gamma\vdash N:B}} 
+  {\Gamma\vdash \langle M, N\rangle: A\times B}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={579}
+\begin{mdDisplaySnippet}[001629ae5e767f28071fa7d9be1a715e]%mdk
+\[%mdk-data-line={582}
+  \begin{array}{c }
+  {\inferrule*[right=Elim1]
+    {\Gamma\vdash  M : A\times B}
+    {\Gamma\vdash fst(M):A}} \\ 
+    \\
+    {\inferrule*[right=Elim2]
+    {\Gamma\vdash  M : A\times B}
+    {\Gamma\vdash snd(M):B}}
+   \end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={595}
+\begin{mdInlineSnippet}[b0603860fcffe94e5b8eec59ed813421]%mdk
+$\beta$\end{mdInlineSnippet}%mdk
+%mdk-data-line={595}
+\begin{mdInlineSnippet}[ffe9f913124f345732e9f00fa258552e]%mdk
+$\eta$\end{mdInlineSnippet}%mdk
+%mdk-data-line={610;out/document-bib.bbl.mdk:16}
 
 \end{mdSnippets}
 

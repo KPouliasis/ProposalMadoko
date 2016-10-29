@@ -556,7 +556,7 @@ $\Gamma,x:A\vdash N:B \text{\ and }\Gamma\vdash M:A \Longrightarrow \Gamma\vdash
 ## CONJUNCTION AS PRODUCT
 Intro rules transliterate to data constructor declarations
 
-  ~ Math
+~ Math
   \inferrule*[right=Intro] {
  {\begin{array}{c}
    \mathcal{D}\\
@@ -565,7 +565,51 @@ Intro rules transliterate to data constructor declarations
   \mathcal{E} \\
   {B} 
   \end{array} }} {A\wedge B}
-  ~
+~
+ Transcribes to: 
+ 
+~ Math
+  \inferrule*[right=Intro]
+  {{\Gamma\vdash M:A}\\{\Gamma\vdash N:B}} 
+  {\Gamma\vdash \langle M, N\rangle: A\times B}
+~
+
+## CONJUNCTION AS PRODUCT
+
+Similarly for elimination
+
+~ Math
+  \begin{array}{c }
+  {\inferrule*[right=Elim1]
+    {\Gamma\vdash  M : A\times B}
+    {\Gamma\vdash fst(M):A}} \\ 
+    \\
+    {\inferrule*[right=Elim2]
+    {\Gamma\vdash  M : A\times B}
+    {\Gamma\vdash snd(M):B}}
+   \end{array}
+~
+
+## CONJUNCTION HARMONY
+
+The local soundness and completeness give the local reduction ($\beta$) and expansion ($\eta$) rules
+ ~Math
+    \begin{array}{l c r}
+  {\inferrule*[right=Elim1]{\inferrule*[right=Intro] {
+ {\begin{array}{c}
+  \mathcal{D}\\
+  {A} 
+  \end{array} } \\{\begin{array}{c}
+  \mathcal{E} \\
+  {B} 
+  \end{array} }} {A\wedge B}}{A}} & = &   
+   {\begin{array}{c}
+  \mathcal{D}\\
+  {A} 
+  \end{array} }
+  \end{array}
+  ~ 
+
 
 
 ## IPL as proof-irrelevant natural deduction
