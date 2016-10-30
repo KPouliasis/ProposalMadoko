@@ -674,7 +674,7 @@ $(\lambda x: A. M) N =_{\beta} M[N/x]$
 
 $f:A \supset B = \lambda x:A. f x$
 
-## Disjunction as co-product
+## Disjunction as union 
 ~ Math
   \begin{array}{c }
   {\inferrule*[right=Intro1]
@@ -684,7 +684,47 @@ $f:A \supset B = \lambda x:A. f x$
     {\inferrule*[right=Intro2]
     {\Gamma\vdash  M : B}
     {\Gamma\vdash inr^{A}(M):A\vee B}}
+    \\
+    \\
+    {\inferrule*[right=Elim]{{\Gamma\vdash M:A\vee B}\\{\Gamma,x:A\vdash N:C}\\ {\Gamma,y:B\vdash O:C}} { {\Gamma}\vdash {\text{case }M \text{ of } inl( x)\longmapsto N  |\  inr (y)\longmapsto O : A\vee B}}}
    \end{array}
+~
+## Disjunction as union
+Again the "meaning"" of the terms is embedded in the equalities that witness harmony given by Gentzen's principles:
+
+~ Math
+\begin{array}{l c r }
+\inferrule*[right=elim$^{x,y}$] {{\begin{tabular}[b]{c}
+  $\mathcal{D}$
+  \\
+  $A$\\
+  \hline 
+  $A\vee B$
+ \end{tabular}}\\ 
+  { {\begin{tabular}[b]{c}
+ $\overline{x:A}$
+  \\
+  $\mathcal{E}$
+  \\
+  $C$
+ \end{tabular}}}\\
+  { {\begin{tabular}[b]{c}
+ $\overline{y:B}$
+  \\
+  $\mathcal{F}$
+  \\
+  $C$
+ \end{tabular}}}}{C} &=& {\begin{tabular}[b]{c}
+ $\mathcal{D}$\\
+ $A$\\
+ $\mathcal{E}$\\
+  $C$
+ \end{tabular}}
+\end{array}
+~
+
+~ Math
+
 ~
 
 

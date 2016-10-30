@@ -515,7 +515,7 @@ $(\lambda x: A. M) N =_{\beta} M[N/x]$\end{mdInlineSnippet}%mdk
 \begin{mdInlineSnippet}[2ee2528fa0438b434f62f936990b03f0]%mdk
 $f:A \supset B = \lambda x:A. f x$\end{mdInlineSnippet}%mdk
 %mdk-data-line={675}
-\begin{mdDisplaySnippet}[6ceb0e31b97140f85a4ba003e7f16ef8]%mdk
+\begin{mdDisplaySnippet}[f3be0a8bb51946b2fb40080ab2ae93dc]%mdk
 \[%mdk-data-line={679}
   \begin{array}{c }
   {\inferrule*[right=Intro1]
@@ -525,10 +525,51 @@ $f:A \supset B = \lambda x:A. f x$\end{mdInlineSnippet}%mdk
     {\inferrule*[right=Intro2]
     {\Gamma\vdash  M : B}
     {\Gamma\vdash inr^{A}(M):A\vee B}}
+    \\
+    \\
+    {\inferrule*[right=Elim]{{\Gamma\vdash M:A\vee B}\\{\Gamma,x:A\vdash N:C}\\ {\Gamma,y:B\vdash O:C}} { {\Gamma}\vdash {\text{case }M \text{ of } inl( x)\longmapsto N  |\  inr (y)\longmapsto O : A\vee B}}}
    \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={700;out/document-bib.bbl.mdk:16}
+%mdk-data-line={693}
+\begin{mdDisplaySnippet}[ba0295dc2f3be794fe920f7094619b4c]%mdk
+\[%mdk-data-line={696}
+\begin{array}{l c r }
+\inferrule*[right=elim$^{x,y}$] {{\begin{tabular}[b]{c}
+  $\mathcal{D}$
+  \\
+  $A$\\
+  \hline 
+  $A\vee B$
+ \end{tabular}}\\ 
+  { {\begin{tabular}[b]{c}
+ $\overline{x:A}$
+  \\
+  $\mathcal{E}$
+  \\
+  $C$
+ \end{tabular}}}\\
+  { {\begin{tabular}[b]{c}
+ $\overline{y:B}$
+  \\
+  $\mathcal{F}$
+  \\
+  $C$
+ \end{tabular}}}}{C} &=& {\begin{tabular}[b]{c}
+ $\mathcal{D}$\\
+ $A$\\
+ $\mathcal{F}$\\
+  $C$
+ \end{tabular}}
+\end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+\begin{mdDisplaySnippet}[9f14a462de259e9cf21267cdecd8d6a4]%mdk
+\[%mdk-data-line={727}
+        {\Gamma\vdash  ({\text{case } inl(P) \text{ of } inl(x) \longmapsto N  |\  inj_r (y)\longmapsto O) \equiv[P/x]N: \psi}}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={741;out/document-bib.bbl.mdk:16}
 
 \end{mdSnippets}
 
