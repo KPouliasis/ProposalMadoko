@@ -624,9 +624,28 @@ and expansion ($\eta$) rules
   And similarly 
   
 ~ Math
-\Gamma\vdash snd (\langle M, N \rangle) =_{\beta} N:A
+\Gamma\vdash snd (\langle M, N \rangle) =_{\beta} N:B
 ~
 
+## Conjunction: Harmony
+
+ ~ Math
+\begin{array}{l c r}
+   {\begin{array}{c}
+  \mathcal{D}\\
+  {A\wedge B} 
+  \end{array} } & =  &  {\inferrule*[right=Intro]{{\inferrule*[right=Elim1] {
+ {\begin{array}{c}
+  \mathcal{D}\\
+  {A\wedge B} 
+  \end{array} } } {A}}\\
+  {\inferrule*[right=Elim2] {
+ {\begin{array}{c}
+  \mathcal{D}\\
+  {A\wedge B} 
+  \end{array} } } {B}}}{A\wedge B}}
+  \end{array}
+  
 ~ End Vertical
 
 ## IPL as proof-irrelevant natural deduction

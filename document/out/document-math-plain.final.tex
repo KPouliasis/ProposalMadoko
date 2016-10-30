@@ -416,9 +416,30 @@ ${\sf Prop}$\end{mdInlineSnippet}%mdk
 %mdk-data-line={554}
 \begin{mdInlineSnippet}[61c756f1a09176af9b7a94034ed1ee32]%mdk
 $\Gamma,x:A\vdash N:B \text{\ and }\Gamma\vdash M:A \Longrightarrow \Gamma\vdash M[N/x]:B $\end{mdInlineSnippet}%mdk
-%mdk-data-line={583}
+%mdk-data-line={557}
+\begin{mdDisplaySnippet}[e06d3823ff5223449181b75469fd4c71]%mdk
+\[%mdk-data-line={560}
+  \inferrule*[right=Intro] {
+ {\begin{array}{c}
+   \mathcal{D}\\
+  {A} 
+  \end{array} } \\{\begin{array}{c}
+  \mathcal{E} \\
+  {B} 
+  \end{array} }} {A\wedge B}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={569}
+\begin{mdDisplaySnippet}[b1e6e16b8273f275272d701e73ad1705]%mdk
+\[%mdk-data-line={572}
+  \inferrule*[right=Intro]
+  {{\Gamma\vdash M:A}\\{\Gamma\vdash N:B}} 
+  {\Gamma\vdash \langle M, N\rangle: A\times B}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={579}
 \begin{mdDisplaySnippet}[001629ae5e767f28071fa7d9be1a715e]%mdk
-\[%mdk-data-line={586}
+\[%mdk-data-line={582}
   \begin{array}{c }
   {\inferrule*[right=Elim1]
     {\Gamma\vdash  M : A\times B}
@@ -430,44 +451,13 @@ $\Gamma,x:A\vdash N:B \text{\ and }\Gamma\vdash M:A \Longrightarrow \Gamma\vdash
    \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={601}
+%mdk-data-line={595}
 \begin{mdInlineSnippet}[b0603860fcffe94e5b8eec59ed813421]%mdk
 $\beta$\end{mdInlineSnippet}%mdk
-%mdk-data-line={602}
+%mdk-data-line={595}
 \begin{mdInlineSnippet}[ffe9f913124f345732e9f00fa258552e]%mdk
 $\eta$\end{mdInlineSnippet}%mdk
-%mdk-data-line={602}
-\begin{mdDisplaySnippet}[af7a0b5eeb23553a7e6d4e3004c37b43]%mdk
-\[%mdk-data-line={605}
-    \begin{array}{l c r}
-  {\inferrule*[right=Elim]{\inferrule*[right=Intro] {
- {\begin{array}{c}
-  \mathcal{D}\\
-  {A} 
-  \end{array} } \\{\begin{array}{c}
-  \mathcal{E} \\
-  {B} 
-  \end{array} }} {A\wedge B}}{A}} & = &   
-   {\begin{array}{c}
-  \mathcal{D}\\
-  {A} 
-  \end{array} }
-  \end{array}
-\]%mdk
-\end{mdDisplaySnippet}%mdk
-%mdk-data-line={621}
-\begin{mdDisplaySnippet}[85fde1361356cff19b788ce9ab19af48]%mdk
-\[%mdk-data-line={622}
-   \Gamma\vdash fst (\langle M, N \rangle) =_{\beta} M: A
-\]%mdk
-\end{mdDisplaySnippet}%mdk
-%mdk-data-line={625}
-\begin{mdDisplaySnippet}[496199af43bfd4d6e424f05f4d227087]%mdk
-\[%mdk-data-line={627}
-\Gamma\vdash snd (\langle M, N \rangle) =_{\beta} N:A
-\]%mdk
-\end{mdDisplaySnippet}%mdk
-%mdk-data-line={642;out/document-bib.bbl.mdk:16}
+%mdk-data-line={610;out/document-bib.bbl.mdk:16}
 
 \end{mdSnippets}
 
