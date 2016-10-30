@@ -690,7 +690,7 @@ $f:A \supset B = \lambda x:A. f x$
    \end{array}
 ~
 ## Disjunction as union
-Again the "meaning" of the terms is embedded in the equalities that witness harmony given by Gentzen's principles:
+Again the "meaning" of the terms is embedded in the equalities that witness harmony given by Gentzen's principles. E.g.
 
 ~ Math
 \begin{array}{l c r }
@@ -724,7 +724,7 @@ Again the "meaning" of the terms is embedded in the equalities that witness harm
 ~
 
 ~Math
-{\Gamma}\vdash {\text{case }inl(M) \text{ of } inl(x)\longmapsto N  |\  inr (y)\longmapsto O =_{\beta} N[M/x]: A\vee B}
+ \text{case }inl(M) \text{ of } inl(x)\longmapsto N  |\  inr (y)\longmapsto O =_{\beta} 
 ~
 
 ## IPL as proof-irrelevant natural deduction
