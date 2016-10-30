@@ -65,6 +65,12 @@ express  their reasoning (proof) constructs
   * Propositions do not come with a pre-existing truth value
 
 
+## Populism
+
+![1ckt58]
+
+[1ckt58]: images/1ckt58.jpg "1ckt58" { width:auto; max-width:90% }
+
 
 
 ## Intuitionism and constructive mathematics
@@ -686,7 +692,7 @@ $f:A \supset B = \lambda x:A. f x$
     {\Gamma\vdash inr^{A}(M):A\vee B}}
     \\
     \\
-    {\inferrule*[right=Elim]{{\Gamma\vdash M:A\vee B}\\{\Gamma,x:A\vdash N:C}\\ {\Gamma,y:B\vdash O:C}} { {\Gamma}\vdash {\text{case }M \text{ of } inl( x)\longmapsto N  |\  inr (y)\longmapsto O : A\vee B}}}
+    {\inferrule*[right=Elim]{{\Gamma\vdash M:A\vee B}\\{\Gamma,x:A\vdash N:C}\\ {\Gamma,y:B\vdash O:C}} { {\Gamma}\vdash {\text{case }M \text{ of } inl( x)\longmapsto N  |\  inr (y)\longmapsto O : C}}}
    \end{array}
 ~
 ## Disjunction as union
@@ -724,21 +730,25 @@ Again the "meaning" of the terms is embedded in the equalities that witness harm
 ~
 
 
-## Consistency Results
-Issue: How do you show that this calculus does not prove $\bot$
 
-Problem with straightforward induction on trees: Proofs are not canonical, no subformula property.
+## Consistency 
+Issue: How do you show that this calculus (in proof tree OR lambda form) does not prove $\bot$
 
-Foundational Problem: The meaning of a connective depends on others. Even on itself (for implication $\supset$).
-Circularity.
+Problem with straightforward induction: Proofs () are not canonical, no subformula property.
+
+Foundational Problem: The meaning of a connective depends on others. And on itself (for implication $\supset$).
+Circularity!
+
+
 
 Verificationism to the rescue: The "meaning" of a connective is the set of its "verifications". Informally:
 straightforward ways to prove it.
 
 Show that for every proof (modulo $\beta\eta$ equalities) there is a unique verification. 
+~End Vertical
 
 ## Calculus of verifications
-
+Create a calculus in which  all proofs are normal
 
 ## IPL as proof-irrelevant natural deduction
 
