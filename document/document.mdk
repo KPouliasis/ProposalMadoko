@@ -629,6 +629,8 @@ and expansion ($\eta$) rules
 
 ## Conjunction: Harmony
 
+$\eta$ expansion is given analogously
+Proof tree equality 
  ~ Math
 \begin{array}{l c r}
    {\begin{array}{c}
@@ -645,9 +647,21 @@ and expansion ($\eta$) rules
   {A\wedge B} 
   \end{array} } } {B}}}{A\wedge B}}
   \end{array}
-  
-~ End Vertical
+  ~
+translates to
+~ Central
+$\Gamma\vdash M = \langle fst(M), snd(M)\rangle :A \wedge B$
+~
 
+~ End Vertical
+## $\beta\eta-$ equalities 
+Similarly we obtain the whole equational system of the STLC
+$(\lambda x: A. M) N =_{\beta} M[N/x]$
+
+$f:A \supset B = \lambda x:A. f x$
+
+$ case inl(M) of (inl(x)\rightarrow  N | inr(y)\rightarrow O)=_\beta N[M/x]$
+$case inr(M) of (inl())$ 
 ## IPL as proof-irrelevant natural deduction
 
 
