@@ -492,21 +492,43 @@ $\eta$\end{mdInlineSnippet}%mdk
 %mdk-data-line={653}
 \begin{mdInlineSnippet}[ce43053f4eceb361df30fa07e7c9d382]%mdk
 $\Gamma\vdash M = \langle fst(M), snd(M)\rangle :A \wedge B$\end{mdInlineSnippet}%mdk
+\begin{mdDisplaySnippet}[f383114404afb00f6f2e9c78981524ab]%mdk
+\[%mdk-data-line={661}
+  \begin{array}{c }
+  {\inferrule*[right=Intro]
+    {\Gamma,x:A\vdash  M : A}
+    {\Gamma\vdash \lambda x:A. M:A\supset B}} \\ 
+    \\
+    {\inferrule*[right=Elim]
+    {{\Gamma\vdash  M : A \supset B}\\
+    {\Gamma\vdash N:A}}{\Gamma\vdash (MN):B}}
+   \end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={671}
 \begin{mdInlineSnippet}[f7c1d2d39d6897f6d45860a90d0ab7db]%mdk
 $\beta\eta-$\end{mdInlineSnippet}%mdk
-%mdk-data-line={659}
+%mdk-data-line={673}
 \begin{mdInlineSnippet}[c9b138f9d61cc63b37ee86a7031273db]%mdk
 $(\lambda x: A. M) N =_{\beta} M[N/x]$\end{mdInlineSnippet}%mdk
-%mdk-data-line={661}
+%mdk-data-line={675}
 \begin{mdInlineSnippet}[2ee2528fa0438b434f62f936990b03f0]%mdk
 $f:A \supset B = \lambda x:A. f x$\end{mdInlineSnippet}%mdk
-%mdk-data-line={663}
-\begin{mdInlineSnippet}[bf34799a6ed52844b98dc178e8eaf029]%mdk
-$ case inl(M) of (inl(x)\rightarrow  N | inr(y)\rightarrow O)=_\beta N[M/x]$\end{mdInlineSnippet}%mdk
-%mdk-data-line={664}
-\begin{mdInlineSnippet}[b56be19d531910d4a41a0f4a60e64631]%mdk
-$case inr(M) of (inl())$\end{mdInlineSnippet}%mdk
-%mdk-data-line={675;out/document-bib.bbl.mdk:16}
+%mdk-data-line={675}
+\begin{mdDisplaySnippet}[6ceb0e31b97140f85a4ba003e7f16ef8]%mdk
+\[%mdk-data-line={679}
+  \begin{array}{c }
+  {\inferrule*[right=Intro1]
+    {\Gamma\vdash  M : A}
+    {\Gamma\vdash  inl^{B}(M):A\vee B}} \\ 
+    \\
+    {\inferrule*[right=Intro2]
+    {\Gamma\vdash  M : B}
+    {\Gamma\vdash inr^{A}(M):A\vee B}}
+   \end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={700;out/document-bib.bbl.mdk:16}
 
 \end{mdSnippets}
 

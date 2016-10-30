@@ -655,13 +655,38 @@ $\Gamma\vdash M = \langle fst(M), snd(M)\rangle :A \wedge B$
 
 ~ End Vertical
 
-## $\beta\eta-$ equalities 
+## Implication as function space
+
+~ Math
+  \begin{array}{c }
+  {\inferrule*[right=Intro]
+    {\Gamma,x:A\vdash  M : A}
+    {\Gamma\vdash \lambda x:A. M:A\supset B}} \\ 
+    \\
+    {\inferrule*[right=Elim]
+    {{\Gamma\vdash  M : A \supset B}\\
+    {\Gamma\vdash N:A}}{\Gamma\vdash (MN):B}}
+   \end{array}
+~
+Harmony gives the  $\beta\eta-$ equalities 
 Similarly we obtain the whole equational system of the STLC
 $(\lambda x: A. M) N =_{\beta} M[N/x]$
 
 $f:A \supset B = \lambda x:A. f x$
 
-$ case inl(M) of (inl(x)\rightarrow  N | inr(y)\rightarrow O)=_\beta N[M/x]$
+## Disjunction as co-product
+~ Math
+  \begin{array}{c }
+  {\inferrule*[right=Intro1]
+    {\Gamma\vdash  M : A}
+    {\Gamma\vdash  inl^{B}(M):A\vee B}} \\ 
+    \\
+    {\inferrule*[right=Intro2]
+    {\Gamma\vdash  M : B}
+    {\Gamma\vdash inr^{A}(M):A\vee B}}
+   \end{array}
+~
+
 
 ## IPL as proof-irrelevant natural deduction
 
