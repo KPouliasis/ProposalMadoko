@@ -726,11 +726,19 @@ Again the "meaning" of the terms is embedded in the equalities that witness harm
 
 ## Consistency Results
 Issue: How do you show that this calculus does not prove $\bot$
-Problem with straightforward induction on trees: Proofs are not canonical, no subformula property.
-Foundational Problem: The meaning of a connective depends on others. Non - wellformed definition.
-Verificationism to the rescue: The "meaning" of a connective is the set of its "verifications". 
 
-WRONG!!!
+Problem with straightforward induction on trees: Proofs are not canonical, no subformula property.
+
+Foundational Problem: The meaning of a connective depends on others. Even on itself (for implication $\supset$).
+Circularity.
+
+Verificationism to the rescue: The "meaning" of a connective is the set of its "verifications". Informally:
+straightforward ways to prove it.
+
+Show that for every proof (modulo $\beta\eta$ equalities) there is a unique verification. 
+
+## Calculus of verifications
+
 
 ## IPL as proof-irrelevant natural deduction
 
