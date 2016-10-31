@@ -825,7 +825,7 @@ of $A$:
   \begin{array}{c}
  {\inferrule* {
  {\begin{array}{c}
-  x_1:A_1\downarrow \ldots \overline{x:A}\\\
+  x_1:A_1\downarrow \ldots \overline{x:A\downarrow}\\
   \vdots \\
   {B\uparrow} 
   \end{array} } } {A\supset B\uparrow}} 
