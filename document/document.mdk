@@ -779,7 +779,7 @@ and they are forced  have a have certain shape based on their types (expansion)
 
 
 
-## Conjunction
+## Canonical Conjunction
 
 ~ Math
   \inferrule*[]
@@ -819,8 +819,8 @@ of $A$:
   \end{array}
 ~
 
-## Implication 
-Whhhat
+## Canonical Implication 
+
 ~ Math
   \begin{array}{c}
  {\inferrule* {
@@ -840,10 +840,18 @@ Whhhat
  \end{array}
 ~
 
-## Properties (using sequent notation for economy)
-* __Soundness__
+## Properties 
 
-Any tree$\Gamma\vdash A\uparrow $ is trivially a natural deduction tree $\Gamma \vdash {\sf A true}$   
+~ Central
+ __Soundness__ (Sequent notation for economy)
+~
+
+
+* Any  judgment $\Gamma\vdash A\uparrow $ is trivially a natural deduction judgment 
+$\Gamma \vdash {\sf A true}$   
+* Any  judgment $\Gamma\vdash A\uparrow $ is trivially a natural deduction judgment 
+$\Gamma \vdash {\sf A true}$ 
+
 
 ## IPL as proof-irrelevant natural deduction
 
