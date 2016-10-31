@@ -131,7 +131,7 @@ and leafs (   ${J_1 \ldots J_i}$) are hypothesized judgments
   
   * hypotheses will be labeled 
   
-  * labels ${\sf true}$ are also inferrable
+  * labels ${\sf true}$ are also inferable
 ~ End Vertical
 
 
@@ -562,7 +562,7 @@ $\Gamma,x:A\vdash N:B \text{\ and }\Gamma\vdash M:A \Longrightarrow \Gamma\vdash
 ## CONJUNCTION AS PRODUCT
 Intro rules transliterate to data constructor declarations
 
-  ~ Math
+~ Math
   \inferrule*[right=Intro] {
  {\begin{array}{c}
    \mathcal{D}\\
@@ -571,12 +571,8 @@ Intro rules transliterate to data constructor declarations
   \mathcal{E} \\
   {B} 
   \end{array} }} {A\wedge B}
-<!-- begin merge (remove this line to resolve the conflict) -->
-~ Begin Remote
-  ~
-~ End Remote
 ~
- Transcribes to: 
+ 
  
 ~ Math
   \inferrule*[right=Intro]
@@ -732,23 +728,106 @@ Again the "meaning" of the terms is embedded in the equalities that witness harm
 
 
 ## Consistency 
-Issue: How do you show that this calculus (in proof tree OR lambda form) does not prove $\bot$
+Problem: __How do you show that this calculus (in proof tree OR lambda form) does not prove $\bot$__
 
-Problem with straightforward induction: Proofs () are not canonical, no subformula property.
+Straightforward induction fails: Proofs  are not canonical, no subformula property.
 
-Foundational Problem: The meaning of a connective depends on others. And on itself (for implication $\supset$).
-Circularity!
+The meaning of a connective depends on others and we get circularity
+E.g. proofs of $A$ might depend of proofs of $B\supset A$ and $B$ with $B$ any proposition (that might include $A$) 
 
 
 
-Verificationism to the rescue: The "meaning" of a connective is the set of its "verifications". Informally:
-straightforward ways to prove it.
 
-Show that for every proof (modulo $\beta\eta$ equalities) there is a unique verification. 
-~End Vertical
+
+
+
 
 ## Calculus of verifications
-Create a calculus in which  all proofs are normal
+Goal : Create a calculus in which  all proofs are "normal" 
+
+A verification should be a proof that only analyzes the constituents of a proposition
+
+Show that for every proof in natural deduction there is a unique verification and moreover $\beta\eta$ equal proofs
+have the same verification. 
+
+We create a "restricted" natural deduction for verifications and show that it is complete.
+
+## Calculus of verifications
+Two judgments 
+
+* $A\uparrow$ can be read as "$A$ has a verification" or "$A$ is canonically proven"
+* $A\downarrow$ can be read as "$A$ can be deduced canonically from assumptions", "A has a canonical extraction". 
+
+Judgments have the forms:
+
+
+~ Math
+\begin{array}{c c}
+  {\begin{array}{c}
+  {A_1\downarrow \ldots A_i\downarrow}  \\
+  \vdots \\
+  {A\uparrow} 
+  \end{array} } &   {\begin{array}{c}
+  {A_1\downarrow \ldots A_i\downarrow}  \\
+  \vdots \\
+  {A\downarrow} 
+  \end{array} } 
+\end{array}
+~
+
+One should think the arrows as directing (canonical)proof search. Intro rules guide search  bottom up, Elim rules guides search
+for top (assumptions) down. When arrows meet we have  a normal proof.
+
+Canonicity applies Gentzen's principles directly: canonical proofs should not go through "roundabouts" (reductions)
+and they are forced  have a have certain shape based on their types (expansion) 
+
+
+
+## Conjunction
+
+~ Math
+  \inferrule*[]
+  { {A \uparrow}\\{B\uparrow}} 
+  { A\wedge B\uparrow}
+~
+
+~ Math
+  \begin{array}{c}
+  \inferrule*[]
+  { {A \wedge B\downarrow}} 
+  { A \downarrow} \\
+
+  \inferrule*[]
+  { {A \wedge B\downarrow}} 
+  {  B\downarrow}
+  \end{}
+~
+## Hypotheses
+~ Math
+  \inferrule*[right=Atomic Hyp]
+  {x:P_i\downarrow } 
+  {P_i\uparrow }
+~
+The reflection can be restricted only to atomic formulas. This way the proof of consistency also "justifies" $\eta$
+equality (global completeness). 
+
+The general rule below is _admissible_ and the recipe of the proof essentially applies $\eta$-expansion principles based on the structure
+of $A$:
+
+~ Math
+  \begin{array}{c}
+  \inferrule*[vdots=1.5em]
+  {x:A\downarrow } 
+  {}
+  \\
+  \inferrule*{}{A\uparrow}
+  \end{array}
+~
+
+## Implication
+~ Math
+
+~
 
 ## IPL as proof-irrelevant natural deduction
 
