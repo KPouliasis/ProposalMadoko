@@ -825,7 +825,7 @@ of $A$:
   \begin{array}{c}
  {\inferrule* {
  {\begin{array}{c}
-  x_1:A_1 \ldots \overline{x:A}\\
+  x_1:A_1\downarrow \ldots \overline{x:A}\\\
   \vdots \\
   {B\uparrow} 
   \end{array} } } {A\supset B\uparrow}} 
@@ -839,6 +839,12 @@ of $A$:
   \end{array} } } {B\downarrow}}
  \end{array}
 ~
+##Bottom 
+
+## Example
+Here are the (two) canonical proofs of $P\supset(\P\supset P)$
+
+ 
 
 ## Properties 
 
@@ -847,12 +853,17 @@ of $A$:
 ~
 
 
-* Any  judgment $\Gamma\vdash A\uparrow $ is trivially a natural deduction judgment 
-$\Gamma \vdash {\sf A true}$   
-* Any  judgment $\Gamma\vdash A\uparrow $ is trivially a natural deduction judgment 
-$\Gamma \vdash {\sf A true}$ 
+* Any  (tree) judgment of shape $\Gamma\vdash A\uparrow $ is trivially a natural deduction judgment 
+$\Gamma \vdash {\sf A \ true}$    (via simple inclusion)
+* Any  judgment $\Gamma\vdash A\downarrow $ is trivially a natural deduction judgment 
+$\Gamma \vdash {\sf A\  true}$ (similarly)
 
-
+## Properties
+~ Central
+Completeness
+~
+* For any ${\sf \ true}$ (tree) judgment there exists a  $\Gamma\$
+Showing completeness implies  Consistency s
 ## IPL as proof-irrelevant natural deduction
 
 
