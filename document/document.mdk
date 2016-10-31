@@ -63,21 +63,17 @@ express  their reasoning (proof) constructs
   * There  are open problems 
   
   * Propositions do not come with a pre-existing truth value
+  
 
 
-## Populism
-
-![1ckt58]
-
-[1ckt58]: images/1ckt58.jpg "1ckt58" { width:auto; max-width:90% }
 
 
 
 ## Intuitionism and constructive mathematics
 
- * Proofs are stand alone objects
+ * Proofs are stand alone objects studied abstractly
 
- * NOT godelizations of some fixed formal system
+ * NOT string or godelizations of some fixed formal system
 
  * Mathematical objects such as __Nat__ together the primitive recursive function space
  are  obtained as models of (proof objects) of equational proof theories 
@@ -183,7 +179,7 @@ and leafs (   ${J_1 \ldots J_i}$) are hypothesized judgments
 
 ## Equality and Harmony
 
-Proof trees are objects of logic and - as mathematical objects -  are equipped with _equality_
+Proof trees are _the_ objects of logic(s) and -- as mathematical objects --  are equipped with _equality_
 
 ~ Center
 __Logic is "algebrized"__
@@ -792,15 +788,14 @@ and they are forced  have a have certain shape based on their types (expansion)
 ~
 
 ~ Math
-  \begin{array}{c}
-  \inferrule*[]
+  \begin{array}{c c}
+  {\inferrule*[]
   { {A \wedge B\downarrow}} 
-  { A \downarrow} \\
-
-  \inferrule*[]
+  { A \downarrow}} &
+  {\inferrule*[]
   { {A \wedge B\downarrow}} 
-  {  B\downarrow}
-  \end{}
+  {  B\downarrow}}
+  \end{array}
 ~
 ## Hypotheses
 ~ Math
@@ -824,10 +819,30 @@ of $A$:
   \end{array}
 ~
 
-## Implication
+## Implication 
 ~ Math
-
+  \begin{array}{c}
+ {\inferrule* {
+ {\begin{array}{c}
+  x_1:A_1 \ldots \overline{x:A}\\
+  \vdots \\
+  {B\uparrow} 
+  \end{array} } } {A\supset B\uparrow}} 
+ \\
+ \\
+ {\inferrule* {
+ {\begin{array}{c}
+  {A\supset B\downarrow} 
+  \end{array} }\\ {\begin{array}{c}
+  {A\uparrow} 
+  \end{array} } } {B\downarrow}}
+ \end{array}
 ~
+
+## Properties (using sequent notation for economy)
+* __Soundness__
+
+Any tree$\Gamma\vdash A\uparrow $ is trivially a natural deduction tree $\Gamma \vdash {\sf A true}$   
 
 ## IPL as proof-irrelevant natural deduction
 

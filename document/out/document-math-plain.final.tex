@@ -645,39 +645,37 @@ $A$\end{mdInlineSnippet}%mdk
   { A\wedge B\uparrow}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-\begin{mdDisplaySnippet}[9816981ea6df35ea2dc4e226ab3f337a]%mdk
+\begin{mdDisplaySnippet}[06ca7d6d8d146c70cf2b92250dbdef89]%mdk
 \[%mdk-data-line={795}
-  \inferrule*[]
+  \begin{array}{c c}
+  {\inferrule*[]
   { {A \wedge B\downarrow}} 
-  { A \downarrow}
-\]%mdk
-\end{mdDisplaySnippet}%mdk
-\begin{mdDisplaySnippet}[186528983ee3c04dc9db169944ee8295]%mdk
-\[%mdk-data-line={801}
-  \inferrule*[]
+  { A \downarrow}} &
+  {\inferrule*[]
   { {A \wedge B\downarrow}} 
-  {  B\downarrow}
+  {  B\downarrow}}
+  \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdDisplaySnippet}[e697d2cdab0f1dccb8c208f089f74d38]%mdk
-\[%mdk-data-line={807}
+\[%mdk-data-line={806}
   \inferrule*[right=Atomic Hyp]
   {x:P_i\downarrow } 
   {P_i\uparrow }
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={811}
+%mdk-data-line={810}
+\begin{mdInlineSnippet}[ffe9f913124f345732e9f00fa258552e]%mdk
+$\eta$\end{mdInlineSnippet}%mdk
+%mdk-data-line={813}
 \begin{mdInlineSnippet}[ffe9f913124f345732e9f00fa258552e]%mdk
 $\eta$\end{mdInlineSnippet}%mdk
 %mdk-data-line={814}
-\begin{mdInlineSnippet}[ffe9f913124f345732e9f00fa258552e]%mdk
-$\eta$\end{mdInlineSnippet}%mdk
-%mdk-data-line={815}
 \begin{mdInlineSnippet}[7fc56270e7a70fa81a5935b72eacbe29]%mdk
 $A$\end{mdInlineSnippet}%mdk
-%mdk-data-line={815}
+%mdk-data-line={814}
 \begin{mdDisplaySnippet}[0ecf5415ed055349295bb7c940281443]%mdk
-\[%mdk-data-line={818}
+\[%mdk-data-line={817}
   \begin{array}{c}
   \inferrule*[vdots=1.5em]
   {x:A\downarrow } 
@@ -687,7 +685,30 @@ $A$\end{mdInlineSnippet}%mdk
   \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={837;out/document-bib.bbl.mdk:16}
+\begin{mdDisplaySnippet}[4bc8bde14e6e91b31aa6bc21cb178e4e]%mdk
+\[%mdk-data-line={828}
+  \begin{array}{c}
+ {\inferrule* {
+ {\begin{array}{c}
+  x_1:A_1 \ldots \overline{x:A}\\
+  \vdots \\
+  {B\uparrow} 
+  \end{array} } } {A\supset B\uparrow}} 
+ \\
+ \\
+ {\inferrule* {
+ {\begin{array}{c}
+  {A\supset B\downarrow} 
+  \end{array} }\\ {\begin{array}{c}
+  {A\uparrow} 
+  \end{array} } } {B\downarrow}}
+ \end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={848}
+\begin{mdInlineSnippet}[3531b914bd3af450103a6331e677531e]%mdk
+$\Gamma\vdash A\v $\end{mdInlineSnippet}%mdk
+%mdk-data-line={860;out/document-bib.bbl.mdk:16}
 
 \end{mdSnippets}
 
