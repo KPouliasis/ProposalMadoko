@@ -854,7 +854,7 @@ Here are the (two) verifications  of $P\supset( P\supset P)$
 ~ Math
   \inferrule*[right=$\supset^{x}$]
 {\inferrule*[right=$\supset^{y}$]{{\inferrule*{\overline{x:P}\downarrow}
-  {P\uparrow}} \\{\overline{y:P\downarrow}}}{P\supset P}}
+  {P\uparrow}} \\{\inferrule*{\overline{y:P\downarrow}}{}}{P\supset P}}
 {P\supset(P\supset P)}
 ~
 
