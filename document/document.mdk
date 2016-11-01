@@ -555,18 +555,15 @@ $\Gamma,x:A\vdash N:B \text{\ and }\Gamma\vdash M:A \Longrightarrow \Gamma\vdash
 
 ## CONJUNCTION AS PRODUCT
 Intro rules transliterate to data constructor declarations
-ti SKATAR
+ti SKATA???
+
+
 
 
 ## Allo
  
  Transcribes to: 
  
-~ Math
-  \inferrule*[right=Intro]
-  {{\Gamma\vdash M:A}\\{\Gamma\vdash N:B}} 
-  {\Gamma\vdash \langle M, N\rangle: A\times B}
-~
 
 ## CONJUNCTION AS PRODUCT
 
@@ -681,7 +678,7 @@ $f:A \supset B = \lambda x:A. f x$
 ~
 ## Disjunction as union
 Again the "meaning" of the terms is embedded in the equalities that witness harmony given by Gentzen's principles:
-
+$\alpha$ re gav!!
 
 
 
