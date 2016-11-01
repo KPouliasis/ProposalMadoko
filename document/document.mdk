@@ -728,7 +728,7 @@ Judgments have the forms:
 
 
 ~ Math
-\begin{array}{c c}
+
   {\begin{array}{c}
   {A_1\downarrow \ldots A_i\downarrow}  \\
   \vdots \\
@@ -738,7 +738,7 @@ Judgments have the forms:
   \vdots \\
   {A\downarrow} 
   \end{array} } 
-\end{array}
+
 ~
 
 One should think the arrows as directing (canonical)proof search. Intro rules guide search  bottom up, Elim rules guides search
