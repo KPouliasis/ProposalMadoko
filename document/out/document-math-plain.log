@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/W32TeX) (preloaded format=xelatex 2015.10.13)  1 NOV 2016 14:54
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/W32TeX) (preloaded format=xelatex 2015.10.13)  1 NOV 2016 18:36
 entering extended mode
 **./out/document-math-plain.tex
 (./out/document-math-plain.tex
@@ -612,7 +612,7 @@ LaTeX Font Info:    Try loading font information for U+stmry on input line 36.
 File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
 ) [1
 
-] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74])
+] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72])
 Runaway argument?
 {\inferrule *[right=$\supset ^{y}$]{{\inferrule *{\overline {x:P}\downarrow } {P\uparrow }} \\{\inferrule *{\overline {y:P\downarrow }}{}}{P\supset P}} {P\supset (P\supset P)} \]\end {mdDisplaySnippet}\begin {mdInlineSnippet}[035ec530ec3910\ETC.
 ! File ended while scanning use of \\mpr@inferstar@.
@@ -639,4 +639,4 @@ Here is how much of TeX's memory you used:
  12491 words of font info for 49 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  48i,38n,52p,860b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
-Output written on out/document-math-plain.xdv (74 pages, 35808 bytes).
+Output written on out/document-math-plain.xdv (72 pages, 35044 bytes).
