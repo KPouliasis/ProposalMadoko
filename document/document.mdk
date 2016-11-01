@@ -497,7 +497,7 @@ Local Completeness
 ~
 ~End Vertical
 
-~ Begin Vertical
+
 ## Bottom
 
 ~ Math 
@@ -518,7 +518,7 @@ local completeness:
 ~
 
 
-~End Vertical
+
 
 ## Proof Trees To Terms (STLC): Contexts
 
