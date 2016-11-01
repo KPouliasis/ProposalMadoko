@@ -555,23 +555,17 @@ $\Gamma,x:A\vdash N:B \text{\ and }\Gamma\vdash M:A \Longrightarrow \Gamma\vdash
 
 ## CONJUNCTION AS PRODUCT
 Intro rules transliterate to data constructor declarations
+ti SKATAR
 
-~ Math
-  \inferrule*[right=Intro] {
- {\begin{array}{c}
-   \mathcal{D}\\
-  {A} 
-  \end{array} } \\{\begin{array}{c}
-  \mathcal{E} \\
-  {B} 
-  \end{array} }} {A\wedge B}
-~
+
+## Allo
+ 
  Transcribes to: 
  
 ~ Math
   \inferrule*[right=Intro]
   {{\Gamma\vdash M:A}\\{\Gamma\vdash N:B}} 
-  {\Gamma\vdash \langle M, N\rangle: A\wedge B}
+  {\Gamma\vdash \langle M, N\rangle: A\times B}
 ~
 
 ## CONJUNCTION AS PRODUCT
