@@ -709,8 +709,145 @@ straightforward ways to prove it.
 Show that for every proof (modulo $\beta\eta$ equalities) there is a unique verification. 
 
 ## Calculus of verifications
+Goal : Create a calculus in which  all proofs are "normal" 
+
+A verification should be a proof that only analyzes the constituents of a proposition
+
+Show that for every proof in natural deduction there is a unique verification and moreover $\beta\eta$ equal proofs
+have the same verification. 
+
+We create a "restricted" natural deduction for verifications and show that it is complete.
+
+## Calculus of verifications
+Two judgments 
+
+* $A\uparrow$ can be read as "$A$ has a verification" or "$A$ is canonically proven"
+* $A\downarrow$ can be read as "$A$ can be deduced canonically from assumptions", "A has a canonical extraction". 
+
+Judgments have the forms:
 
 
+~ Math
+\begin{array}{c c}
+  {\begin{array}{c}
+  {A_1\downarrow \ldots A_i\downarrow}  \\
+  \vdots \\
+  {A\uparrow} 
+  \end{array} } &   {\begin{array}{c}
+  {A_1\downarrow \ldots A_i\downarrow}  \\
+  \vdots \\
+  {A\downarrow} 
+  \end{array} } 
+\end{array}
+~
+
+One should think the arrows as directing (canonical)proof search. Intro rules guide search  bottom up, Elim rules guides search
+for top (assumptions) down. When arrows meet we have  a normal proof.
+
+Canonicity applies Gentzen's principles directly: canonical proofs should not go through "roundabouts" (reductions)
+and they are forced  have a have certain shape based on their types (expansion) 
+
+
+
+## Canonical Conjunction
+
+~ Math
+  \inferrule*[]
+  { {A \uparrow}\\{B\uparrow}} 
+  { A\wedge B\uparrow}
+~
+
+~ Math
+  \begin{array}{c c}
+  {\inferrule*[]
+  { {A \wedge B\downarrow}} 
+  { A \downarrow}} &
+  {\inferrule*[]
+  { {A \wedge B\downarrow}} 
+  {  B\downarrow}}
+  \end{array}
+~
+## Hypotheses
+~ Math
+  \inferrule*[right=Atomic Hyp]
+  {x:P_i\downarrow } 
+  {P_i\uparrow }
+~
+The reflection can be restricted only to atomic formulas. This way the proof of consistency also "justifies" $\eta$
+equality (global completeness). 
+
+The general rule below is _admissible_ and the recipe of the proof essentially applies $\eta$-expansion principles based on the structure
+of $A$:
+
+~ Math
+  \begin{array}{c}
+  \inferrule*[vdots=1.5em]
+  {x:A\downarrow } 
+  {}
+  \\
+  \inferrule*{}{A\uparrow}
+  \end{array}
+~
+
+## Canonical Implication 
+
+~ Math
+  \begin{array}{c}
+ {\inferrule* {
+ {\begin{array}{c}
+  x_1:A_1\downarrow \ldots \overline{x:A\downarrow}\\
+  \vdots \\
+  {B\uparrow} 
+  \end{array} } } {A\supset B\uparrow}} 
+ \\
+ \\
+ {\inferrule* {
+ {\begin{array}{c}
+  {A\supset B\downarrow} 
+  \end{array} }\\ {\begin{array}{c}
+  {A\uparrow} 
+  \end{array} } } {B\downarrow}}
+ \end{array}
+~
+
+
+## Examples
+Here are the (two) verifications  of $P\supset( P\supset P)$
+
+~ Math
+  \inferrule*[right=$\supset^{x}$]
+{\inferrule*[right=$\supset^{y}$]{
+  {\overline{x:P\downarrow}} \\{\inferrule*{\overline{y:P}\downarrow}
+  {P\uparrow}}}{P\supset P}}
+{P\supset(P\supset P)}
+~
+~ Math
+  \inferrule*[right=$\supset^{x}$]
+{\inferrule*[right=$\supset^{y}$]{{\inferrule*{\overline{x:P}\downarrow}
+  {P\uparrow}} \\{\inferrule*{\overline{y:P\downarrow}}{}}{P\supset P}}
+{P\supset(P\supset P)}
+~
+
+What we will show is that all proofs of $P\supset(P\supset)P$ are equal to one of the canonical ones (modulo $\beta\eta$ trasformations)
+
+## Properties 
+
+~ Central
+ __Soundness__ (Sequent notation for economy)
+~
+
+
+* Any  (tree) judgment of shape $\Gamma\vdash A\uparrow $ is trivially a natural deduction judgment 
+$\Gamma \vdash {\sf A \ true}$    (via simple inclusion)
+* Any  judgment $\Gamma\vdash A\downarrow $ is trivially a natural deduction judgment 
+$\Gamma \vdash {\sf A\  true}$ (similarly)
+
+## Properties
+~ Central
+Completeness
+~
+* For any ${\sf \ true}$ (tree) judgment there exists a  $\Gamma\$
+Showing completeness implies  Consistency s
 ## IPL as proof-irrelevant natural deduction
 
 
