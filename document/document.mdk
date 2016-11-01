@@ -676,6 +676,7 @@ $f:A \supset B = \lambda x:A. f x$
     {\inferrule*[right=Elim]{{\Gamma\vdash M:A\vee B}\\{\Gamma,x:A\vdash N:C}\\ {\Gamma,y:B\vdash O:C}} { {\Gamma}\vdash {\text{case }M \text{ of } inl( x)\longmapsto N  |\  inr (y)\longmapsto O : A\vee B}}}
    \end{array}
 ~
+
 ## Disjunction as union
 Again the "meaning" of the terms is embedded in the equalities that witness harmony given by Gentzen's principles:
 $\alpha$ re gav!!
