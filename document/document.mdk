@@ -808,12 +808,7 @@ Here are the (two) verifications  of $P\supset( P\supset P)$
   {P\uparrow}}}{P\supset P}}
 {P\supset(P\supset P)}
 ~
-~ Math
-  \inferrule*[right=$\supset^{x}$]
-{\inferrule*[right=$\supset^{y}$]{{\inferrule*{\overline{x:P}\downarrow}
-  {P\uparrow}} \\{\inferrule*{\overline{y:P\downarrow}}{}}{P\supset P}}
-{P\supset(P\supset P)}
-~
+
 
 What we will show is that all proofs of $P\supset(P\supset)P$ are equal to one of the canonical ones (modulo $\beta\eta$ trasformations)
 
@@ -824,7 +819,7 @@ What we will show is that all proofs of $P\supset(P\supset)P$ are equal to one o
 ~
 
 
-* Any  (tree) judgment of shape $\Gamma\vdash A\uparrow $ is trivially a natural deduction judgment 
+* Any  (tree) judgment of shape $\Gamma\uparrow\vdash A\uparrow $ is trivially a natural deduction judgment 
 $\Gamma \vdash {\sf A \ true}$    (via simple inclusion)
 * Any  judgment $\Gamma\vdash A\downarrow $ is trivially a natural deduction judgment 
 $\Gamma \vdash {\sf A\  true}$ (similarly)

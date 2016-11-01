@@ -416,9 +416,9 @@ ${\sf Prop}$\end{mdInlineSnippet}%mdk
 %mdk-data-line={554}
 \begin{mdInlineSnippet}[61c756f1a09176af9b7a94034ed1ee32]%mdk
 $\Gamma,x:A\vdash N:B \text{\ and }\Gamma\vdash M:A \Longrightarrow \Gamma\vdash M[N/x]:B $\end{mdInlineSnippet}%mdk
-%mdk-data-line={583}
+%mdk-data-line={570}
 \begin{mdDisplaySnippet}[001629ae5e767f28071fa7d9be1a715e]%mdk
-\[%mdk-data-line={586}
+\[%mdk-data-line={573}
   \begin{array}{c }
   {\inferrule*[right=Elim1]
     {\Gamma\vdash  M : A\times B}
@@ -430,15 +430,15 @@ $\Gamma,x:A\vdash N:B \text{\ and }\Gamma\vdash M:A \Longrightarrow \Gamma\vdash
    \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={601}
+%mdk-data-line={588}
 \begin{mdInlineSnippet}[b0603860fcffe94e5b8eec59ed813421]%mdk
 $\beta$\end{mdInlineSnippet}%mdk
-%mdk-data-line={602}
+%mdk-data-line={589}
 \begin{mdInlineSnippet}[ffe9f913124f345732e9f00fa258552e]%mdk
 $\eta$\end{mdInlineSnippet}%mdk
-%mdk-data-line={602}
+%mdk-data-line={589}
 \begin{mdDisplaySnippet}[af7a0b5eeb23553a7e6d4e3004c37b43]%mdk
-\[%mdk-data-line={605}
+\[%mdk-data-line={592}
     \begin{array}{l c r}
   {\inferrule*[right=Elim]{\inferrule*[right=Intro] {
  {\begin{array}{c}
@@ -456,22 +456,22 @@ $\eta$\end{mdInlineSnippet}%mdk
 \]%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdDisplaySnippet}[85fde1361356cff19b788ce9ab19af48]%mdk
-\[%mdk-data-line={622}
+\[%mdk-data-line={609}
    \Gamma\vdash fst (\langle M, N \rangle) =_{\beta} M: A
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={625}
+%mdk-data-line={612}
 \begin{mdDisplaySnippet}[486ad51889165092e8da3cdc6986f4e3]%mdk
-\[%mdk-data-line={627}
+\[%mdk-data-line={614}
 \Gamma\vdash snd (\langle M, N \rangle) =_{\beta} N:B
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={632}
+%mdk-data-line={619}
 \begin{mdInlineSnippet}[ffe9f913124f345732e9f00fa258552e]%mdk
 $\eta$\end{mdInlineSnippet}%mdk
-%mdk-data-line={632}
+%mdk-data-line={619}
 \begin{mdDisplaySnippet}[0951d6d73fc67e87c7ab60c5286676e5]%mdk
-\[%mdk-data-line={635}
+\[%mdk-data-line={622}
 \begin{array}{l c r}
    {\begin{array}{c}
   \mathcal{D}\\
@@ -489,11 +489,11 @@ $\eta$\end{mdInlineSnippet}%mdk
   \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={653}
+%mdk-data-line={640}
 \begin{mdInlineSnippet}[ce43053f4eceb361df30fa07e7c9d382]%mdk
 $\Gamma\vdash M = \langle fst(M), snd(M)\rangle :A \wedge B$\end{mdInlineSnippet}%mdk
 \begin{mdDisplaySnippet}[f383114404afb00f6f2e9c78981524ab]%mdk
-\[%mdk-data-line={661}
+\[%mdk-data-line={648}
   \begin{array}{c }
   {\inferrule*[right=Intro]
     {\Gamma,x:A\vdash  M : A}
@@ -505,18 +505,18 @@ $\Gamma\vdash M = \langle fst(M), snd(M)\rangle :A \wedge B$\end{mdInlineSnippet
    \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={671}
+%mdk-data-line={658}
 \begin{mdInlineSnippet}[f7c1d2d39d6897f6d45860a90d0ab7db]%mdk
 $\beta\eta-$\end{mdInlineSnippet}%mdk
-%mdk-data-line={673}
+%mdk-data-line={660}
 \begin{mdInlineSnippet}[c9b138f9d61cc63b37ee86a7031273db]%mdk
 $(\lambda x: A. M) N =_{\beta} M[N/x]$\end{mdInlineSnippet}%mdk
-%mdk-data-line={675}
+%mdk-data-line={662}
 \begin{mdInlineSnippet}[2ee2528fa0438b434f62f936990b03f0]%mdk
 $f:A \supset B = \lambda x:A. f x$\end{mdInlineSnippet}%mdk
-%mdk-data-line={675}
+%mdk-data-line={662}
 \begin{mdDisplaySnippet}[f3be0a8bb51946b2fb40080ab2ae93dc]%mdk
-\[%mdk-data-line={679}
+\[%mdk-data-line={666}
   \begin{array}{c }
   {\inferrule*[right=Intro1]
     {\Gamma\vdash  M : A}
@@ -531,16 +531,146 @@ $f:A \supset B = \lambda x:A. f x$\end{mdInlineSnippet}%mdk
    \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={699}
+%mdk-data-line={681}
+\begin{mdDisplaySnippet}[bccfc7022dfb945174d9bcebad2297bb]%mdk
+\[%mdk-data-line={684}
+\alpha 
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={692}
 \begin{mdInlineSnippet}[7814a0e7fffecda9cebb60d2bc160257]%mdk
 $\bot$\end{mdInlineSnippet}%mdk
-%mdk-data-line={703}
+%mdk-data-line={696}
 \begin{mdInlineSnippet}[15af582436a80bdb8c712f7a88315c05]%mdk
 $\supset$\end{mdInlineSnippet}%mdk
+%mdk-data-line={702}
+\begin{mdInlineSnippet}[9f9e4f97126600ea79294681832d3aef]%mdk
+$\beta\eta$\end{mdInlineSnippet}%mdk
 %mdk-data-line={709}
 \begin{mdInlineSnippet}[9f9e4f97126600ea79294681832d3aef]%mdk
 $\beta\eta$\end{mdInlineSnippet}%mdk
+%mdk-data-line={717}
+\begin{mdInlineSnippet}[7fc56270e7a70fa81a5935b72eacbe29]%mdk
+$A$\end{mdInlineSnippet}%mdk
+%mdk-data-line={717}
+\begin{mdInlineSnippet}[7fc56270e7a70fa81a5935b72eacbe29]%mdk
+$A$\end{mdInlineSnippet}%mdk
 %mdk-data-line={718}
+\begin{mdInlineSnippet}[7fc56270e7a70fa81a5935b72eacbe29]%mdk
+$A$\end{mdInlineSnippet}%mdk
+%mdk-data-line={720}
+\begin{mdDisplaySnippet}[d372ddd530f53402470081c3d15192f1]%mdk
+\[%mdk-data-line={724}
+\begin{array}{c}
+  {A_1\downarrow \ldots A_i\downarrow}  \\
+  \vdots \\
+  {A\uparrow} 
+  \end{array} 
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={734}
+\begin{mdDisplaySnippet}[79721eeba93ad4eef7e665ac6ad20c69]%mdk
+\[%mdk-data-line={742}
+  \inferrule*[]
+  { {A \uparrow}\\{B\uparrow}} 
+  { A\wedge B\uparrow}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+\begin{mdDisplaySnippet}[06ca7d6d8d146c70cf2b92250dbdef89]%mdk
+\[%mdk-data-line={748}
+  \begin{array}{c c}
+  {\inferrule*[]
+  { {A \wedge B\downarrow}} 
+  { A \downarrow}} &
+  {\inferrule*[]
+  { {A \wedge B\downarrow}} 
+  {  B\downarrow}}
+  \end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+\begin{mdDisplaySnippet}[e697d2cdab0f1dccb8c208f089f74d38]%mdk
+\[%mdk-data-line={759}
+  \inferrule*[right=Atomic Hyp]
+  {x:P_i\downarrow } 
+  {P_i\uparrow }
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={763}
+\begin{mdInlineSnippet}[ffe9f913124f345732e9f00fa258552e]%mdk
+$\eta$\end{mdInlineSnippet}%mdk
+%mdk-data-line={766}
+\begin{mdInlineSnippet}[ffe9f913124f345732e9f00fa258552e]%mdk
+$\eta$\end{mdInlineSnippet}%mdk
+%mdk-data-line={767}
+\begin{mdInlineSnippet}[7fc56270e7a70fa81a5935b72eacbe29]%mdk
+$A$\end{mdInlineSnippet}%mdk
+%mdk-data-line={767}
+\begin{mdDisplaySnippet}[0ecf5415ed055349295bb7c940281443]%mdk
+\[%mdk-data-line={770}
+  \begin{array}{c}
+  \inferrule*[vdots=1.5em]
+  {x:A\downarrow } 
+  {}
+  \\
+  \inferrule*{}{A\uparrow}
+  \end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+\begin{mdDisplaySnippet}[4dda0e9f0e8e1079b9bc150a2f3694ea]%mdk
+\[%mdk-data-line={782}
+  \begin{array}{c}
+ {\inferrule* {
+ {\begin{array}{c}
+  x_1:A_1\downarrow \ldots \overline{x:A\downarrow}\\
+  \vdots \\
+  {B\uparrow} 
+  \end{array} } } {A\supset B\uparrow}} 
+ \\
+ \\
+ {\inferrule* {
+ {\begin{array}{c}
+  {A\supset B\downarrow} 
+  \end{array} }\\ {\begin{array}{c}
+  {A\uparrow} 
+  \end{array} } } {B\downarrow}}
+ \end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={802}
+\begin{mdInlineSnippet}[be11ca5ebd436661ce4ebc391591c049]%mdk
+$P\supset( P\supset P)$\end{mdInlineSnippet}%mdk
+%mdk-data-line={802}
+\begin{mdDisplaySnippet}[248c9d4bd3c5047d458bbbbc33687813]%mdk
+\[%mdk-data-line={805}
+  \inferrule*[right=$\supset^{x}$]
+{\inferrule*[right=$\supset^{y}$]{
+  {\overline{x:P\downarrow}} \\{\inferrule*{\overline{y:P}\downarrow}
+  {P\uparrow}}}{P\supset P}}
+{P\supset(P\supset P)}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={813}
+\begin{mdInlineSnippet}[035ec530ec3910b3d1e3bcc26dbaf7b8]%mdk
+$P\supset(P\supset)P$\end{mdInlineSnippet}%mdk
+%mdk-data-line={813}
+\begin{mdInlineSnippet}[9f9e4f97126600ea79294681832d3aef]%mdk
+$\beta\eta$\end{mdInlineSnippet}%mdk
+%mdk-data-line={822}
+\begin{mdInlineSnippet}[8ab8a8edd0654dd7b1d76ca95b130a45]%mdk
+$\Gamma\vdash A\uparrow $\end{mdInlineSnippet}%mdk
+%mdk-data-line={823}
+\begin{mdInlineSnippet}[dbceffeb0c56c6bc70dc530c4c61cb14]%mdk
+$\Gamma \vdash {\sf A \ true}$\end{mdInlineSnippet}%mdk
+%mdk-data-line={824}
+\begin{mdInlineSnippet}[3bb34b587512c0a57f85c4f812c84fca]%mdk
+$\Gamma\vdash A\downarrow $\end{mdInlineSnippet}%mdk
+%mdk-data-line={825}
+\begin{mdInlineSnippet}[ab34257847a10c9369180cb40ab0e74d]%mdk
+$\Gamma \vdash {\sf A\  true}$\end{mdInlineSnippet}%mdk
+%mdk-data-line={831}
+\begin{mdInlineSnippet}[3fbc2702e7a2052c63d8db66ee4895a4]%mdk
+${\sf \ true}$\end{mdInlineSnippet}%mdk
+%mdk-data-line={837}
 
 \end{mdSnippets}
 
