@@ -679,7 +679,12 @@ $f:A \supset B = \lambda x:A. f x$
 
 ## Disjunction as union
 Again the "meaning" of the terms is embedded in the equalities that witness harmony given by Gentzen's principles:
-$\alpha$ re gav!!
+
+~Math
+\alpha 
+~
+
+re gav!!
 
 
 
@@ -709,8 +714,8 @@ We create a "restricted" natural deduction for verifications and show that it is
 ## Calculus of verifications
 Two judgments 
 
-* $A\uparrow$ can be read as "$A$ has a verification" or "$A$ is canonically proven"
-* $A\downarrow$ can be read as "$A$ can be deduced canonically from assumptions", "A has a canonical extraction". 
+*  can be read as "$A$ has a verification" or "$A$ is canonically proven"
+* can be read as "$A$ can be deduced canonically from assumptions", "A has a canonical extraction". 
 
 Judgments have the forms:
 
