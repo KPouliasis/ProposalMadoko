@@ -841,10 +841,20 @@ of $A$:
 ~
 ##Bottom 
 
-## Example
-Here are the (two) canonical proofs of $P\supset(\P\supset P)$
-
- 
+## Examples
+Here are the (two) verifications  of $P\supset( P\supset P)$
+~ Math
+  \inferrule[right=I$\supset$]{
+  \inferrule[right=I$\supset^{y}$]{\inferrule*{x:P\downarrow \\{\inferrule{y:P\downarrow}{P\uparrow}}}{P\supset P}}{
+    P\supset (P \supset P)
+  }
+~
+~ Math
+  \inferrule[right=I$\supset$]{
+  \inferrule[right=I$\supset^{y}$]{\inferrule*{x:P\downarrow \\{\inferrule{y:P\downarrow}{P\uparrow}}}{P\supset P}}{
+    P\supset (P \supset P)
+  }
+~
 
 ## Properties 
 
