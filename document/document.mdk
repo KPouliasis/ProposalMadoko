@@ -812,38 +812,19 @@ of $A$:
 ## Examples
 Here are the (two) verifications  of $P\supset( P\supset P)$
 
-~ Math
-	\inferrule*[right=$\supset^{x}$]
-	{\inferrule*[right=$\supset^{y}$]{
-			{} \\{\inferrule*[right=Refl$^{y}$]{\overline{x:P},\overline{y:P}\downarrow}
-				{y:P\uparrow}}}{P\supset P}}
-	{P\supset(P\supset P)}  \inferrule*[right=$\supset^{x}$]
-{\inferrule*[right=$\supset^{y}$]{
-  {\overline{x:P\downarrow}} \\{\inferrule*{\overline{y:P}\downarrow}
-  {P\uparrow}}}{P\supset P}}
-{P\supset(P\supset P)}
-~
 
-~ Math
-\inferrule*[right=$\supset^{x}$]
-	{\inferrule*[right=$\supset^{y}$]{
-			{} \\{\inferrule*[right=Refl$^{x}$]{\overline{x:P},\overline{y:P}\downarrow}
-				{x:P\uparrow}}}{P\supset P}}
-	{P\supset(P\supset P)}
-~
 
 Corresponding to $\lambda x:P.\lambda y:P. y$ and $\lambda x:P.\lambda y:P. x$
 
 ## Absurd
 If $\bot$ is extracted it proves anything.
-	~Math
-\inferrule*{\bot\downarrow}{A\uparrow} 
-
-## Properties 
-
-~ Central
- __Soundness__ (Sequent notation for economy)
+~ Math
+\inferrule*{\bot\downarrow}{A\uparrow}
 ~
+
+## Properties : Soundness w.r.t Nat Deduction
+
+
 
 
 * Any  (tree) judgment of shape $\Gamma\uparrow\vdash A\uparrow $ is trivially a natural deduction judgment 
