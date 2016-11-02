@@ -696,7 +696,7 @@ Problem with straightforward induction on trees: Proofs are not canonical, no su
 _Foundational Problem_: The meaning of a proposition depends on itself ($A$ depends on $B\supset A$ and $B$). 
 Circularity.
 
-Verificationism to the rescue: The meaning of a connective is the set of its ~~proofs~~  verifications. Informally:
+__Verificationism to the rescue__: The meaning of a connective is the set of its ~~proofs~~  verifications. Informally:
 straightforward ways to prove it.
 
 
