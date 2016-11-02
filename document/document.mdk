@@ -880,12 +880,13 @@ Induction in bi-directional trees is inconvenient.
 
 But we have another trick : Sequent Calculus! 
 
+
 Under Curry -- Howard analysis,  sequent calculus is not yet another  axiom system but an (one-dimensional) encoding of canonical annotated deductions!
-{ margin-right:3em; \
-  padding:1.5em; \
+{ margin-right:2em; \
+  padding:1.0em; \
   background-color:floralwhite; \
   background-clip: padding-box; \
-  border: 0.75ex solid black; \
+  border: 0.5ex solid black; \
   border-radius: 4ex; \
   width: 22.2em;\
 }
@@ -901,7 +902,9 @@ __Main Ideas__
 
 * Verifications (upwards for canonical proof search via intro) become right rules.
 
-* 
+*  Sequents of the form $\Gamma\Rightarrow A$ are declarations of trees of shape $\Gamma\downarrow\Rightarrow A\uparrow$
+
+## Sequent calculus from annota
 
 ## IPL as proof-irrelevant natural deduction
 
