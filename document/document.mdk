@@ -866,6 +866,12 @@ $\Gamma \vdash {\sf A\  true}$
 
 *	__Goal__ : Show admissibility of coercion as well
 
+## Properties: Completeness w.r.t Nat Deduction
+
+~ Math
+\Gamma\downarrow\ \vdash^{+}A\uparrow \Longrightarrow \Gamma\downarrow\ \vdash A\uparrow
+~
+
 
 
 ## IPL as proof-irrelevant natural deduction
