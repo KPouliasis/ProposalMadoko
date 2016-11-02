@@ -845,7 +845,8 @@ is trivially a natural deduction (tree) judgment $\Gamma \vdash {\sf A \ true}$
  (via forgetful inclusion)
 
 * Any judgment $\Gamma\ \downarrow\vdash A\downarrow$ is trivially a natural deduction judgment 
-		$$\Gamma \vdash {\sf A\  true}$ (similarly)
+		$\Gamma \vdash {\sf A\  true}$
+     (similarly)
 
 ## Properties
 ~ Central
