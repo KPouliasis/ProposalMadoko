@@ -836,9 +836,8 @@ Corresponding to $\lambda x:P.\lambda y:P. y$ and $\lambda x:P.\lambda y:P. x$
 
 ## Absurd
 If $\bot$ is extracted it proves anything.
-	
-	$$\inferrule*{\bot\downarrow}{A\uparrow} $$
-
+	~Math
+\inferrule*{\bot\downarrow}{A\uparrow} 
 
 ## Properties 
 
