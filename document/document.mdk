@@ -860,6 +860,7 @@ $\Gamma \vdash {\sf A\  true}$
 
 * For every tree $\mathcal{D}$ : $\Gamma\vdash A \ {\sf true}$ there exists
 	a $\mathcal{\overline{D}} : \Gamma\downarrow\vdash^{+} A\uparrow$
+(trivially)
 
 *	__Goal__ : Show admissibility of coercion
 
