@@ -696,7 +696,7 @@ Problem with straightforward induction on trees: Proofs are not canonical, no su
 _Foundational Problem_: The meaning of a proposition depends on itself ($A$ depends on $B\supset A$ and $B$). 
 Circularity.
 
-Verificationism to the rescue: The "meaning" of a connective is the set of its "verifications". Informally:
+Verificationism to the rescue: The meaning of a connective is the set of its ~~proofs~~  verifications. Informally:
 straightforward ways to prove it.
 
 
@@ -840,20 +840,33 @@ If $\bot$ is extracted it proves anything.
 
 
 
-*  Any (tree) judgment of shape $\Gamma\downarrow \vdash A\uparrow$ 
+*  Any (tree) judgment of shape $\Gamma\downarrow\  \vdash A\uparrow$ 
 is trivially a natural deduction (tree) judgment $\Gamma \vdash {\sf A \ true}$ 
  (via forgetful inclusion)
 
-* Any judgment $\Gamma\ \downarrow\vdash A\downarrow$ is trivially a natural deduction judgment 
-		$\Gamma \vdash {\sf A\  true}$
+* Any judgment $\Gamma\ \downarrow\ \vdash A\downarrow$ is trivially a natural deduction judgment 
+$\Gamma \vdash {\sf A\  true}$
      (similarly)
 
-## Properties
-~ Central
-Completeness
+## Properties: Completeness w.r.t Nat Deduction
+
+~ Math
+\inferrule*[right=Coercion]{A\uparrow}{A\downarrow}
 ~
-* For any ${\sf \ true}$ (tree) judgment there exists a  $\Gamma\$
-Showing completeness implies  Consistency 
+
+* Adding coercion and unrestricted reflection ( $\Gamma\vdash^{+}$ ) trivially gives completeness. 
+
+* Coercion permits for trees where a connective is introduced only to be eliminated which were 
+  initially banned for verifications! ( equivalently lambda terms with $\beta$-redexes)
+
+* For every tree $\mathcal{D}$: $\Gamma\vdash A \ {\sf true}$ there exists
+	a $\mathcal{\overline{D}} : \Gamma\downarrow\vdash^{+} A\uparrow$
+  
+ * Unrestricted reflection is admissible as we sketched.
+ 
+ * 	__Goal__ : Show admissibility of coercion
+
+
 ## IPL as proof-irrelevant natural deduction
 
 
