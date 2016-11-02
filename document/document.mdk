@@ -890,7 +890,6 @@ Under Curry -- Howard analysis,  sequent calculus is not yet another  axiom syst
   width: 22.2em;\
 }
 
-So sequent calculi can be derived for free by  such analysis of the connectives.
 
 ## Completeness Via Sequent Calculus
 
