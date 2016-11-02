@@ -990,15 +990,7 @@ is the main lesson of the field.
   (take  intuitionistic/ classical constructs as an exemplary case)
   * We, effectively, treat __proof theoretically__ a pretty basic __semantical__ idea.    
 
-~ Slide
-  * This concept is definitely not new: it appears in the categorical setting in the work of Lawvere with
-  concepts such as "semantics as functors" or  "adjunctions between syntax and semantics".
-  * We build a logic closer to the former but the latter approach is open for future  work
-  * Other adjunction or monadic based logics have been developed based on such insights (e.g. Moggi's lax calculus)
-  * Our novel  contribution is the relation to justification logic which is an existing well studied
-  logic in itself.
-  
-~ 
+
 
 
 
@@ -1116,7 +1108,7 @@ s_i:\llbracket A_i\rrbracket$:
  
  ## Left for the thesis
  
- * investigate semantics
+* investigate semantics
  
  * investigate extensions (slightly populist promise!)
  
