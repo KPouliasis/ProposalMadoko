@@ -950,7 +950,8 @@ Finally we show:
 
 ## Merrits of CHI
 
-* The ideas of separating judgments and propositions, defining connectives orthogonally, reading logic operationally and ``obtaining" it's Cut Elimination from first equational principles  is the main lesson of the field.
+* The ideas of separating judgments and propositions, defining connectives orthogonally, reading logic operationally 
+is the main lesson of the field.
 
 * It scales! (Linear logic, Modal logics, Substructural logics etc)
 
@@ -966,6 +967,152 @@ Finally we show:
 # My proposal
 
 
+
+## Which Justification Logic?
+
+  * Justification logic is a multifaceted system of necessity
+  * Can be configured to emulate $K$, $T$, $S4$, $S5$ modality
+  * Can appear in intuitionistic and classical versions with respect to the underlying logic 
+  * We focus on a minimal system based on $K$ modal logic and intuitionistic implication
+  * Strengthening of the modality can be done in a way  that is respecting the computational reading we propose 
+
+
+
+
+  
+## Motivation
+
+
+  * Justification logic stemmed from Artemov's solution to providing an explicit classical provability semantics 
+  to intuionistic logic.
+  * We treat justifications as __validations__. I.e. second level proof constructs 
+  in a trusted system that are to be related with proof constructs of another weaker system in the first level 
+  (take  intuitionistic/ classical constructs as an exemplary case)
+  * We, effectively, treat __proof theoretically__ a pretty basic __semantical__ idea.    
+
+~ Slide
+  * This concept is definitely not new: it appears in the categorical setting in the work of Lawvere with
+  concepts such as "semantics as functors" or  "adjunctions between syntax and semantics".
+  * We build a logic closer to the former but the latter approach is open for future  work
+  * Other adjunction or monadic based logics have been developed based on such insights (e.g. Moggi's lax calculus)
+  * Our novel  contribution is the relation to justification logic which is an existing well studied
+  logic in itself.
+  
+~ 
+
+
+
+## Motivation (formally) 
+
+Assume deductive systems $I$:
+
+  * with propositions in $U_I$
+  * a possibly non-empty signature of axioms $\Sigma_I$    
+  * an entailment relation   $\Sigma_I;\Gamma\vdash_{I}A$
+   
+
+and  $J$ with: $U_J$, $\Sigma_J$, and $\Sigma_J;\Delta\vdash_J \phi$ respectively.  
+
+## Deductive System Requirements
+
+* __Reflexivity__ :
+    
+    * $A \in \Gamma \Longrightarrow \Gamma\vdash_{I}A$
+    * $\phi \in \Delta \Longrightarrow \Delta\vdash_{J}\phi$
+* __Compositionality__:  
+
+     *  $\Gamma\vdash_I A$ __and__ $\Gamma^{\prime},A\vdash_{I} B \Longrightarrow \Gamma,\Gamma^{'}\vdash_I B $  
+        $\Delta\vdash_J\phi$ __and__ $\Delta^{\prime},\phi\vdash_{J} \psi \Longrightarrow \Delta,\Delta^{'}\vdash_J \psi$ 
+*  __Top elements __:
+
+ $\Gamma\vdash_{I}\top_I $ __ and__  $\Delta\vdash_{J}\top_J $
+ 
+ 
+
+
+## Interpetations and Validations
+An  _interpretation for $I$_, ($\llbracket\bullet \rrbracket_J$) is a pair
+$(J,\llbracket\bullet\rrbracket)$ of a deductive  system $J$ together
+with a (functional) mapping $\llbracket \bullet \rrbracket: U_I\rightarrow U_J$ on propositions of $I$ into propositions of $J$ extended to multisets of 
+formulae of $U_I$  s.t. 
+
+* $\llbracket\top_I \rrbracket = \top_J$ 
+*  For $\Gamma$ of  the form $A_1,\ldots, A_n$: $\llbracket\Gamma \rrbracket=\llbracket A_1  \rrbracket,\ldots,  \llbracket A_n\rrbracket$
+
+* Given a deductive system $I$  and an  interpretation  function $\llbracket\bullet\rrbracket_J:U_I\rightarrow U_J$
+ of $I$ into $J$ we define:
+
+A _validation_ of a deduction $\Sigma_I;\Gamma\vdash_I A$ to be a deduction $\Sigma_J;\Delta\vdash_{J} \phi$ in $J$ 
+such that $\llbracket A \rrbracket=\phi$ and $\Delta=\llbracket \Gamma \rrbracket $ . We will be writing
+$ \llbracket \Sigma_I;\Gamma\vdash_I A\rrbracket_J$ 
+
+## Logical Completeness
+Given a deductive system $I$, we say that  $J$ is __logically complete__ under 
+$\llbracket\bullet \rrbracket_J$  when  for
+all purely logical deductions $\mathcal{D}$ in $I$ 
+ there exists a (purely logical) validation $\mathcal{E}$ in $J$.
+ i.e:
+ 
+ 
+  
+ 
+ $\forall \mathcal{D}. \ \mathcal{D}:\Gamma\vdash_I A \Longrightarrow 
+ \exists\mathcal{E}: \llbracket \Gamma\vdash A\rrbracket_J$
+
+
+
+
+# Judgments
+
+## Roadmap
+
+* Create a system with two kinds of judgments $A \ {\sf true}$ and $A\  {\sf valid}:=\  \llbracket A \rrbracket {\sf true}$ and treat necessity
+as "double theoremhood"  
+* obtain a system of basic constructive modality investigating the minimal relation
+between these two systems 
+* Use justification logic to 
+axiomatize validity $\llbracket \sf {judgments}\rrbracket$. 
+
+
+## Modal Rule
+
+One modal rule for elimination and introduction to relate judgments $A\  {\sf valid}$, $ A\ {\sf true}$, $ \Box A {\sf true}$: 
+
+~ Math
+  
+  \inferrule* {{\Box A} \\  {\inferrule* {}{{\begin{array}{c}
+  \overline{x:A}  \\
+  \vdots \\
+  {B} 
+  \end{array} } \\ {\begin{array}{c}
+  \overline{s:\llbracket A  \rrbracket} \\
+  \vdots \\
+  \llbracket B \rrbracket  
+    \end{array}}  }}}
+    {\Box B}
+ ~ 
+## Modal Rule (Generically)
+
+Or, generalizing for assumptions 
+
+$\Gamma:=x_1:A_1, \ldots, x_i: A_i\  \text{and } \Delta:= s_1:\llbracket A_i \rrbracket, \ldots 
+s_i:\llbracket A_i\rrbracket$: 
+
+
+
+~ Math
+  
+  \inferrule* {{\Box A_1, \ldots,  \Box A_i} \\  {\inferrule* {}{{\begin{array}{c}
+  \overline{\Gamma}  \\
+  \vdots \\
+  {B} 
+  \end{array} } \\ {\begin{array}{c}
+  \overline{\Delta} \\
+  \vdots \\
+  \llbracket B \rrbracket  
+    \end{array}}  }}}
+    {\Box B}
+ ~ 
 
 ## Thank you!
 Thanks for looking
