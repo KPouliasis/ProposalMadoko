@@ -820,6 +820,13 @@ Here are the (two) verifications  of $P\supset( P\supset P)$
 	{P\supset(P\supset P)}
 ~
 
+~ Math
+	\inferrule*[right=$\supset^{x}$]
+	{\inferrule*[right=$\supset^{y}$]{
+			{} \\{\inferrule*[right=Refl$^{x}$]{\overline{x:P},\overline{y:P}\downarrow}
+				{x:P\uparrow}}}{P\supset P}}
+	{P\supset(P\supset P)}
+~
 Corresponding to $\lambda x:P.\lambda y:P. y$ and $\lambda x:P.\lambda y:P. x$
 
 ## Absurd
@@ -833,8 +840,10 @@ If $\bot$ is extracted it proves anything.
 
 
 
-* Any  (tree) judgment of shape $\Gamma\uparrow\vdash A\uparrow $ is trivially a natural deduction judgment 
-$\Gamma \vdash {\sf A \ true}$    (via simple inclusion)
+*  Any (tree) judgment of shape $\Gamma\downarrow \vdash A\uparrow $ 
+is trivially a natural deduction (tree) judgment $\Gamma \vdash {\sf A \ true}$ 
+ (via forgetful inclusion)
+
 * Any  judgment $\Gamma\vdash A\downarrow $ is trivially a natural deduction judgment 
 $\Gamma \vdash {\sf A\  true}$ (similarly)
 

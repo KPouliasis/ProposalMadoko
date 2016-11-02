@@ -676,37 +676,46 @@ $P\supset( P\supset P)$\end{mdInlineSnippet}%mdk
     {P\supset(P\supset P)}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={823}
+\begin{mdDisplaySnippet}[289d1fc4af831e3571a265ccaa406f5d]%mdk
+\[%mdk-data-line={824}
+    \inferrule*[right=$\supset^{x}$]
+    {\inferrule*[right=$\supset^{y}$]{
+            {} \\{\inferrule*[right=Refl$^{x}$]{\overline{x:P},\overline{y:P}\downarrow}
+                {x:P\uparrow}}}{P\supset P}}
+    {P\supset(P\supset P)}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={830}
 \begin{mdInlineSnippet}[bc1d4efcf0cb2e272c8d76be9e7eca3f]%mdk
 $\lambda x:P.\lambda y:P. y$\end{mdInlineSnippet}%mdk
-%mdk-data-line={823}
+%mdk-data-line={830}
 \begin{mdInlineSnippet}[ba9516cfd52d08d9b72f06142d6d3148]%mdk
 $\lambda x:P.\lambda y:P. x$\end{mdInlineSnippet}%mdk
-%mdk-data-line={826}
+%mdk-data-line={833}
 \begin{mdInlineSnippet}[7814a0e7fffecda9cebb60d2bc160257]%mdk
 $\bot$\end{mdInlineSnippet}%mdk
-%mdk-data-line={826}
+%mdk-data-line={833}
 \begin{mdDisplaySnippet}[37e1648cbb105871044569d977645183]%mdk
-\[%mdk-data-line={828}
+\[%mdk-data-line={835}
 \inferrule*{\bot\downarrow}{A\uparrow}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={836}
+%mdk-data-line={843}
 \begin{mdInlineSnippet}[76992f0075b4cd96d1fb792f48f50149]%mdk
 $\Gamma\uparrow\vdash A\uparrow $\end{mdInlineSnippet}%mdk
-%mdk-data-line={837}
+%mdk-data-line={844}
 \begin{mdInlineSnippet}[dbceffeb0c56c6bc70dc530c4c61cb14]%mdk
 $\Gamma \vdash {\sf A \ true}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={838}
+%mdk-data-line={845}
 \begin{mdInlineSnippet}[3bb34b587512c0a57f85c4f812c84fca]%mdk
 $\Gamma\vdash A\downarrow $\end{mdInlineSnippet}%mdk
-%mdk-data-line={839}
+%mdk-data-line={846}
 \begin{mdInlineSnippet}[ab34257847a10c9369180cb40ab0e74d]%mdk
 $\Gamma \vdash {\sf A\  true}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={845}
+%mdk-data-line={852}
 \begin{mdInlineSnippet}[3fbc2702e7a2052c63d8db66ee4895a4]%mdk
 ${\sf \ true}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={851}
+%mdk-data-line={858}
 
 \end{mdSnippets}
 
