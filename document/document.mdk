@@ -699,7 +699,7 @@ Circularity.
 Verificationism to the rescue: The "meaning" of a connective is the set of its "verifications". Informally:
 straightforward ways to prove it.
 
-Show that for every proof (modulo $\beta\eta$ equalities) there is a unique verification. 
+
 
 ## Calculus of verifications
 Goal : Create a calculus in which  all proofs are "normal" 
@@ -714,24 +714,28 @@ We create a "restricted" natural deduction for verifications and show that it is
 ## Calculus of verifications
 Two judgments 
 
-*  can be read as "$A$ has a verification" or "$A$ is canonically proven"
-* can be read as "$A$ can be deduced canonically from assumptions", "A has a canonical extraction". 
+* $A\uparrow$ can be read as "$A$ has a verification" or "$A$ is canonically proven"
+* $A\downarrow$ can be read as "$A$ can be extracted  canonically (via elims) from assumptions", "$A$ has a canonical extraction".
 
 Judgments have the forms:
 
 
 ~ Math
-\begin{array}{c}
-  {A_1\downarrow \ldots A_i\downarrow}  \\
-  \vdots \\
-  {A\uparrow} 
-  \end{array} 
+\begin{array}{c  c}
+	{\begin{array}{c}
+		{A_1\downarrow \ldots A_i\downarrow}  \\
+		\vdots \\
+		{A\uparrow}\end{array}} & {\begin{array}{c}
+		{A_1\downarrow \ldots A_i\downarrow}  \\
+		\vdots \\
+		{A\downarrow}\end{array}}  
+	\end{array} 
 ~
+## Verifications: Basic Idea
+One should think the arrows as directing (canonical) proof search. Intro rules guide search  bottom up, Elim rules guides search from top (assumptions) down. When arrows can meet we have  a normal proof.
 
-One should think the arrows as directing (canonical)proof search. Intro rules guide search  bottom up, Elim rules guides search
-for top (assumptions) down. When arrows meet we have  a normal proof.
-
-Canonicity applies Gentzen's principles directly: canonical proofs should not go through "roundabouts" (reductions)
+__Canonicity applies Gentzen's principles directly__ 
+* canonical proofs should not go through "roundabouts" (reductions)
 and they are forced  have a have certain shape based on their types (expansion) 
 
 
