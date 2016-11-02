@@ -851,7 +851,9 @@ $\Gamma \vdash {\sf A\  true}$
 ## Properties: Completeness w.r.t Nat Deduction
 
 ~ Math
-\inferrule*[right=Coercion]{A\uparrow}{A\downarrow}
+  \begin{array}{c c}
+\inferrule*[right=Coercion]{A\uparrow}{A\downarrow} & \inferrule*[right=Free Ref]{A\downarrow}{A\up}
+\end{array}
 ~
 
 * Adding coercion and unrestricted reflection ($\Gamma\downarrow\ \vdash^{+}$ ) trivially gives completeness. 
@@ -868,17 +870,34 @@ $\Gamma \vdash {\sf A\  true}$
 
 ## Properties: Completeness w.r.t Nat Deduction
 
+We want to show:
+
 ~ Math
 \Gamma\downarrow\ \vdash^{+}A\uparrow \ \equiv\  \Gamma\downarrow\ \vdash A\uparrow
 ~ 
 
 Induction in bi-directional trees is inconvenient.
 
-_Yet another gadget to rescue_ : Sequent Calculus! 
+But we have another trick : Sequent Calculus! 
 
 Under Curry -- Howard analysis,  sequent calculus is not yet another  axiom system but an (one-dimensional) encoding of canonical annotated deductions!
 
+So sequent calculi can be derived for free by  such analysis of the connectives.
+
+## Completeness Via Sequent Calculus
+
+~ Central
+__Main Ideas__
+~
+
+* Extraction rules (downwards from hypotheses via elim) are embedded to left rules
+
+* Verifications (upwards for canonical proof search via intro) become right rules.
+
+* 
+
 ## IPL as proof-irrelevant natural deduction
+
 
 
 ## Thank you!
