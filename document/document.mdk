@@ -854,8 +854,12 @@ $\Gamma \vdash {\sf A\  true}$
 \inferrule*[right=Coercion]{A\uparrow}{A\downarrow}
 ~
 
-* Adding coercion and unrestricted reflection ($\Gamma\downarrow\ \vdash^{+}$)trivially gives completeness. 
+* Adding coercion and unrestricted reflection ($\Gamma\downarrow\ \vdash^{+}$ ) trivially gives completeness. 
+
 * Coercion permits for trees where a connective is introduced only to be eliminated which were initially banned for verifications ( equivalently lambda terms with $\beta$-redexes)
+
+* For every tree $\mathcal{D}$ : $\Gamma\vdash A \ {\sf true}$ there exists
+	a $\mathcal{\overline{D}} : \Gamma\downarrow\vdash^{+} A\uparrow$
 
 *	__Goal__ : Show admissibility of coercion
 
