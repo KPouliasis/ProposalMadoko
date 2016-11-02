@@ -852,7 +852,7 @@ $\Gamma \vdash {\sf A\  true}$
 
 ~ Math
   \begin{array}{c c}
-{\inferrule*[right=Coercion]{A\uparrow}{A\downarrow}} & {\inferrule*{A\downarrow}{A\upparrow}}
+{\inferrule*[right=Coercion]{A\uparrow}{A\downarrow}} & {\inferrule*{A\downarrow}{A\uparrow}}
 \end{array}
 ~
 
@@ -881,6 +881,14 @@ Induction in bi-directional trees is inconvenient.
 But we have another trick : Sequent Calculus! 
 
 Under Curry -- Howard analysis,  sequent calculus is not yet another  axiom system but an (one-dimensional) encoding of canonical annotated deductions!
+{ margin-right:3em; \
+  padding:1.5em; \
+  background-color:floralwhite; \
+  background-clip: padding-box; \
+  border: 0.75ex solid black; \
+  border-radius: 4ex; \
+  width: 22.2em;\
+}
 
 So sequent calculi can be derived for free by  such analysis of the connectives.
 
