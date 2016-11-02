@@ -832,11 +832,13 @@ Here are the (two) verifications  of $P\supset( P\supset P)$
 	{P\supset(P\supset P)}
 ~
 
-What we will show is that all proofs of $P\supset(P\supset)P$ are equal to one of the canonical ones (modulo $\beta\eta$ trasformations)
-
 Corresponding to $\lambda x:P.\lambda y:P. y$ and $\lambda x:P.\lambda y:P. x$
 
-## ABS
+## Absurd
+If $\bot$ is extracted it proves anything.
+	
+	$$\inferrule*{\bot\downarrow}{A\uparrow} $$
+
 
 ## Properties 
 
