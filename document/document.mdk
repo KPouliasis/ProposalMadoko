@@ -862,7 +862,9 @@ $\Gamma \vdash {\sf A\  true}$
 	a $\mathcal{\overline{D}} : \Gamma\downarrow\vdash^{+} A\uparrow$
 (trivially)
 
-*	__Goal__ : Show admissibility of coercion
+* Unrestricted reflection is admissible as we sketched.
+
+*	__Goal__ : Show admissibility of coercion as well
 
 
 
