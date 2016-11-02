@@ -913,9 +913,15 @@ __Main Ideas__
 \inferrule*{{ \Gamma\Rightarrow A}\\{\Gamma\Rightarrow B}}{\Gamma\Rightarrow A\wedge B}
 ~
 ~ Math
-\begin{array}{c c}{\inferrule*{\Gamma,A \Rightarrow C}{\Gamma,A\wedge B\Rightarrow C}} &{\inferrule*{\Gamma,B \Rightarrow C}{\Gamma,A\wedge B\Rightarrow C}}\end{array
+\begin{array}{c c}{\inferrule*{\Gamma,A \Rightarrow C}{\Gamma,A\wedge B\Rightarrow C}} &{\inferrule*{\Gamma,B \Rightarrow C}{\Gamma,A\wedge B\Rightarrow C}}\end{array}
 ~
-    $\begin{array}{c c}{\inferrule*{\Gamma,A \Rightarrow C}{\Gamma,A\wedge B\Rightarrow C}} &{\inferrule*{\Gamma,B \Rightarrow C}{\Gamma,A\wedge B\Rightarrow C}}\end{array}$
+~ Math
+\begin{array}{c c}{\inferrule*{\Gamma,A \Rightarrow B}{\Gamma \Rightarrow A\supset B}} &{\inferrule*{{\Gamma,A\supset B,B \Rightarrow C}\\{\Gamma,A\supset B\Rightarrow  A}}{\Gamma,A\supset B\Rightarrow C}}\end{array}
+~
+~ Math
+
+~
+
 
 ## IPL as proof-irrelevant natural deduction
 
