@@ -944,7 +944,8 @@ Finally we show:
   
   * All natural deduction proof trees have a unique  normal form
      since $\mathcal{D}:\Gamma\vdash A$  $\Gamma$
-   * To show admissibility of Coercion we show admissibility of Cut instead.
+  
+  * To show admissibility of Coercion we show admissibility of Cut instead.
 ~
 
 ## IPL as proof-irrelevant natural deduction
