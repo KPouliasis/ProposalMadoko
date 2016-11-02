@@ -852,7 +852,7 @@ $\Gamma \vdash {\sf A\  true}$
 
 ~ Math
   \begin{array}{c c}
-\inferrule*[right=Coercion]{A\uparrow}{A\downarrow} & \inferrule*[right=Free Ref]{A\downarrow}{A\up}
+{\inferrule*[right=Coercion]{A\uparrow}{A\downarrow}} & {\inferrule*{A\downarrow}{A\upparrow}}
 \end{array}
 ~
 
