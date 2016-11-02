@@ -869,11 +869,14 @@ $\Gamma \vdash {\sf A\  true}$
 ## Properties: Completeness w.r.t Nat Deduction
 
 ~ Math
-\Gamma\downarrow\ \vdash^{+}A\uparrow \Longrightarrow \Gamma\downarrow\ \vdash A\uparrow
+\Gamma\downarrow\ \vdash^{+}A\uparrow \ \equiv\  \Gamma\downarrow\ \vdash A\uparrow
 ~
+{ width: 18em; border: solid 1px black; \
+  padding: 1ex; background-color: FloralWhite }
 
+* 	Induction in bi-directional trees is inconvenient.
 
-
+* Yet another gadget: 
 ## IPL as proof-irrelevant natural deduction
 
 
