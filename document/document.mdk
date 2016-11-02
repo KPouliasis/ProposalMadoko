@@ -735,6 +735,7 @@ Judgments have the forms:
 One should think the arrows as directing (canonical) proof search. Intro rules guide search  bottom up, Elim rules guides search from top (assumptions) down. When arrows can meet we have  a normal proof.
 
 __Canonicity applies Gentzen's principles directly__ 
+
 * canonical proofs should not go through "roundabouts" (elim-after intro) 
 i.e. the terms should not have $\beta$ redexes.
 
@@ -757,6 +758,10 @@ i.e. the terms should not have $\beta$ redexes.
   { {A \wedge B\downarrow}} 
   {  B\downarrow}}
   \end{array}
+~
+
+~ Math
+	\inferrule*{ }{\top\uparrow} $$
 ~
 ## Hypotheses
 ~ Math
