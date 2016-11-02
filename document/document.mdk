@@ -689,11 +689,11 @@ re gav!!
 
 
 ## Consistency Results
-Issue: How do you show that this calculus does not prove $\bot$
+_Issue_: How do you show that this calculus does not prove $\bot$
 
 Problem with straightforward induction on trees: Proofs are not canonical, no subformula property.
 
-Foundational Problem: The meaning of a connective depends on others. Even on itself (for implication $\supset$).
+_Foundational Problem_: The meaning of a proposition depends on itself ($A$ depends on $B\supset A$ and $B$). 
 Circularity.
 
 Verificationism to the rescue: The "meaning" of a connective is the set of its "verifications". Informally:
@@ -736,8 +736,7 @@ and they are forced  have a have certain shape based on their types (expansion)
 
 
 
-## Canonical Conjunction
-
+## Canonical Conjunction -- Truth
 ~ Math
   \inferrule*[]
   { {A \uparrow}\\{B\uparrow}} 
@@ -829,7 +828,7 @@ $\Gamma \vdash {\sf A\  true}$ (similarly)
 Completeness
 ~
 * For any ${\sf \ true}$ (tree) judgment there exists a  $\Gamma\$
-Showing completeness implies  Consistency s
+Showing completeness implies  Consistency 
 ## IPL as proof-irrelevant natural deduction
 
 
