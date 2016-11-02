@@ -953,8 +953,9 @@ Finally we show:
 * The ideas of separating judgments and propositions, defining connectives orthogonally, reading logic operationally and ``obtaining" it's Cut Elimination from first equational principles  is the main lesson of the field.
 * It scales! (Linear logic, Modal logics, Substructural logics etc)
 * Even for ``logics" that where not existing (System $F$)
- It gives foundations for different programmistic features - hopefully useful :)
-\item Fits the bill for  ``logic" as an operating system with many apps!  
+* It gives foundations for different programmistic features - hopefully useful :)
+* Fits the bill for  ``logic" as an operating system with many apps!  
+
 ## IPL as proof-irrelevant natural deduction
 
 # My proposal
