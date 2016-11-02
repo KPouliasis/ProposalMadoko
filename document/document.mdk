@@ -761,16 +761,18 @@ i.e. the terms should not have $\beta$ redexes.
 ~
 
 ~ Math
-	\inferrule*{ }{\top\uparrow} $$
+	\inferrule*{ }{\top\uparrow} 
 ~
+
 ## Hypotheses
 ~ Math
   \inferrule*[right=Atomic Hyp]
   {x:P_i\downarrow } 
   {P_i\uparrow }
 ~
-The reflection can be restricted only to atomic formulas. This way the proof of consistency also "justifies" $\eta$
-equality (global completeness). 
+The reflection can be restricted only to atomic formulas. 
+This way the proof of consistency also "justifies" $\eta$ equality (global completeness). 
+
 
 The general rule below is _admissible_ and the recipe of the proof essentially applies $\eta$-expansion principles based on the structure
 of $A$:
@@ -811,16 +813,28 @@ of $A$:
 Here are the (two) verifications  of $P\supset( P\supset P)$
 
 ~ Math
-  \inferrule*[right=$\supset^{x}$]
+	\inferrule*[right=$\supset^{x}$]
+	{\inferrule*[right=$\supset^{y}$]{
+			{} \\{\inferrule*[right=Refl$^{y}$]{\overline{x:P},\overline{y:P}\downarrow}
+				{y:P\uparrow}}}{P\supset P}}
+	{P\supset(P\supset P)}  \inferrule*[right=$\supset^{x}$]
 {\inferrule*[right=$\supset^{y}$]{
   {\overline{x:P\downarrow}} \\{\inferrule*{\overline{y:P}\downarrow}
   {P\uparrow}}}{P\supset P}}
 {P\supset(P\supset P)}
 ~
 
+~ Math
+\inferrule*[right=$\supset^{x}$]
+	{\inferrule*[right=$\supset^{y}$]{
+			{} \\{\inferrule*[right=Refl$^{x}$]{\overline{x:P},\overline{y:P}\downarrow}
+				{x:P\uparrow}}}{P\supset P}}
+	{P\supset(P\supset P)}
+~
 
 What we will show is that all proofs of $P\supset(P\supset)P$ are equal to one of the canonical ones (modulo $\beta\eta$ trasformations)
 
+Corresponding to $\lambda x:P.\lambda y:P. y$ and $\lambda x:P.\lambda y:P. x$
 ## Properties 
 
 ~ Central
