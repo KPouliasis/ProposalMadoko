@@ -870,13 +870,14 @@ $\Gamma \vdash {\sf A\  true}$
 
 ~ Math
 \Gamma\downarrow\ \vdash^{+}A\uparrow \ \equiv\  \Gamma\downarrow\ \vdash A\uparrow
-~
-{ width: 18em; border: solid 1px black; \
-  padding: 1ex; background-color: FloralWhite }
+~ 
 
-* 	Induction in bi-directional trees is inconvenient.
+Induction in bi-directional trees is inconvenient.
 
-* Yet another gadget: 
+_Yet another gadget to rescue_ : Sequent Calculus! 
+
+Under Curry -- Howard analysis,  sequent calculus is not yet another  axiom system but an (one-dimensional) encoding of canonical annotated deductions!
+
 ## IPL as proof-irrelevant natural deduction
 
 
