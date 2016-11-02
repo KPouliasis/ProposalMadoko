@@ -904,7 +904,18 @@ __Main Ideas__
 
 *  Sequents of the form $\Gamma\Rightarrow A$ are declarations of trees of shape $\Gamma\downarrow\Rightarrow A\uparrow$
 
-## Sequent calculus from annota
+## Sequent calculus from annotations
+
+~ Math
+	\inferrule*{ }{\Gamma,P\Rightarrow P}
+~
+~ Math
+\inferrule*{{ \Gamma\Rightarrow A}\\{\Gamma\Rightarrow B}}{\Gamma\Rightarrow A\wedge B}
+~
+~ Math
+\begin{array}{c c}{\inferrule*{\Gamma,A \Rightarrow C}{\Gamma,A\wedge B\Rightarrow C}} &{\inferrule*{\Gamma,B \Rightarrow C}{\Gamma,A\wedge B\Rightarrow C}}\end{array
+~
+    $\begin{array}{c c}{\inferrule*{\Gamma,A \Rightarrow C}{\Gamma,A\wedge B\Rightarrow C}} &{\inferrule*{\Gamma,B \Rightarrow C}{\Gamma,A\wedge B\Rightarrow C}}\end{array}$
 
 ## IPL as proof-irrelevant natural deduction
 
