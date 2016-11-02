@@ -915,13 +915,37 @@ __Main Ideas__
 ~ Math
 \begin{array}{c c}{\inferrule*{\Gamma,A \Rightarrow C}{\Gamma,A\wedge B\Rightarrow C}} &{\inferrule*{\Gamma,B \Rightarrow C}{\Gamma,A\wedge B\Rightarrow C}}\end{array}
 ~
+
 ~ Math
 \begin{array}{c c}{\inferrule*{\Gamma,A \Rightarrow B}{\Gamma \Rightarrow A\supset B}} &{\inferrule*{{\Gamma,A\supset B,B \Rightarrow C}\\{\Gamma,A\supset B\Rightarrow  A}}{\Gamma,A\supset B\Rightarrow C}}\end{array}
 ~
-~ Math
 
+~ Math
+\begin{array}{c c}{\inferrule*{ }{\Gamma\Rightarrow \top}} &{\inferrule*{ }{\Gamma,\bot\Rightarrow C}}\end{array}
 ~
 
+~ Slide
+
+Finally we show:
+	* $\Gamma\downarrow\ \vdash A\uparrow\  \equiv \  \Gamma\Rightarrow  A$ (induction)
+  
+	* $\Gamma\downarrow \vdash^{+} A\uparrow \ \equiv\ \Gamma \Rightarrow^{+} A$
+	
+  *  $\Rightarrow^{+}$ is $\Rightarrow$ adjoint with:
+	
+	
+  * $\inferrule*[right=Cut]{\Gamma\Rightarrow A}{\Gamma,A\Rightarrow C}$ 
+	
+  * Coercion corresponds to Cut Rule
+	
+  * Cut elimination shows $\Gamma\Rightarrow^{+} A \ \equiv \Gamma\Rightarrow A $ (proof by nested induction)
+	
+  * As a result coercion is admissible
+  
+  * All natural deduction proof trees have a unique  normal form
+     since $\mathcal{D}:\Gamma\vdash A$  $\Gamma$
+   * To show admissibility of Coercion we show admissibility of Cut instead.
+~
 
 ## IPL as proof-irrelevant natural deduction
 

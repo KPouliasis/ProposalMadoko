@@ -763,7 +763,17 @@ $\Gamma\downarrow\Rightarrow A\uparrow$\end{mdInlineSnippet}%mdk
 \begin{array}{c c}{\inferrule*{\Gamma,A \Rightarrow C}{\Gamma,A\wedge B\Rightarrow C}} &{\inferrule*{\Gamma,B \Rightarrow C}{\Gamma,A\wedge B\Rightarrow C}}\end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={924}
+\begin{mdDisplaySnippet}[2c0be3780c3634b9338d5e57b444ce68]%mdk
+\[%mdk-data-line={920}
+\begin{array}{c c}{\inferrule*{\Gamma,A \Rightarrow B}{\Gamma \Rightarrow A\supset B}} &{\inferrule*{{\Gamma,A\supset B,B \Rightarrow C}\\{\Gamma,A\supset B\Rightarrow  A}}{\Gamma,A\supset B\Rightarrow C}}\end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+\begin{mdDisplaySnippet}[027d96e7d80e011373c65baec0301cdd]%mdk
+\[%mdk-data-line={924}
+\begin{array}{c c}{\inferrule*{ }{\Gamma\Rightarrow \top}} &{\inferrule*{ }{\Gamma,\bot\Rightarrow C}}\end{array}
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={933}
 
 \end{mdSnippets}
 
