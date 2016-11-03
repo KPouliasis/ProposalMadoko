@@ -92,7 +92,7 @@ express  their reasoning (proof) constructs
 * Logic defines _judgments_ ("sane" deductions in a specific domain)
 
 * In intuitionistic propositional logic (__IPL__)   __judgments__ we have judgments of two  kinds:
-  * $A\  {\sf Prop}$: $A$ is in the universe of discourse
+  * $A\  {\sf Prop}$: $A$ is in the universe of propositions
   * $A\  {\sf true (mathematically)}$ : $A$ has a proof
   
 * $A\  {\sf Prop}$: can be replaced with a context free grammar in the propositional case.
