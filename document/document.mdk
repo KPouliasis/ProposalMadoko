@@ -64,7 +64,7 @@ express  their reasoning (proof) constructs
 
 
 
-## Intuitionism and constructive mathematics
+## Intuitionistic/ Ty Foundations 
 
  * Proofs are stand alone objects
 
@@ -72,6 +72,7 @@ express  their reasoning (proof) constructs
 
  * Mathematical objects such as __Nat__ together the primitive recursive function space
  are  obtained as models of (proof objects) of equational proof theories 
+ 
  * (e.g. a typed version of Godel's __T__ in the case of __Nat__ with primitive recursion). 
 
 ## Logic within constructive mathematics
