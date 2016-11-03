@@ -89,7 +89,7 @@ express  their reasoning (proof) constructs
 
 ## Judgments
 
-* Logic defines _judgments_
+* Logic defines _judgments_ ("sane" deductions in a specific domain)
 
 * In intuitionistic propositional logic (__IPL__)   __judgments__ we have judgments of two  kinds:
   * $A\  {\sf Prop}$: $A$ is in the universe of discourse
