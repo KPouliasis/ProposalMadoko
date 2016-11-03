@@ -64,14 +64,14 @@ express  their reasoning (proof) constructs
 
 
 
-## Intuitionistic/ Type theoretic Foundations 
+## Intuitionistic/ type theoretic Foundations 
 
  * Proofs are stand alone objects
 
  * NOT strings, sequences or godelizations of some _fixed_ formal system
 
  * Mathematical objects such as __Nat__ with the primitive recursive function space
- are  obtained as models of (proof objects) of equational proof theories 
+ are  obtained as models of (proof objects)  equational proof theories 
  
  * (e.g. a typed version of Godel's __T__ in the case of __Nat__ with primitive recursion). 
 
