@@ -99,7 +99,7 @@ express  their reasoning (proof) constructs
 But in general that's not the case. E.g. $\forall x. A(x)$ is not even a type whereas $\forall x:B. A(x)$
 is only when $x:A\vdash B(x):{\sf Prop}$
 
-* Other logics implement different judgments (e.g. $A\ {\sf possible}\text{,  or } A @ l$)
+* Other logics implement different judgments 
 
 
 
@@ -144,7 +144,7 @@ and leafs (   ${J_1 \ldots J_i}$) are hypothesized judgments
     \\
   {x_1:A_1  \ldots x_i: A_i}  \\
   \vdots \\
-  {x_k:A_{k}} 
+  {x_{k}:A_{k}} 
   \end{array} } 
   ~
 
@@ -154,7 +154,7 @@ and leafs (   ${J_1 \ldots J_i}$) are hypothesized judgments
    ~ Math
   \inferrule*[right=Intro] {
  {\begin{array}{c}
-  \vdots \\
+  \mathcal{D}
   {A} 
   \end{array} } \\{\begin{array}{c}
   \vdots \\
