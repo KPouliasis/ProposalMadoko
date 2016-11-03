@@ -38,7 +38,7 @@ language with simple types
 * The relation of proofs, programs and categories (morphisms)  has renewed interest in foundations (HoTT)
 
 ## Roadmap of this presentation
- * Basic concepts and (scalable) proof techiques of __CHI__ 
+ * Concepts  (scalable) proof techiques of __CHI__ 
  
       * intuitionistic propositional logic (__IPL__)/ simply typed lambda calculus (__STLC__)
  
@@ -1108,7 +1108,7 @@ s_i:\llbracket A_i\rrbracket$:
  
  ## Left for the thesis
  
-* investigate semantics
+ * investigate semantics
  
  * investigate extensions (slightly populist promise!)
  
