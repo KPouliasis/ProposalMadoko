@@ -71,24 +71,27 @@ express  their reasoning (proof) constructs
  * NOT strings, sequences or godelizations of some _fixed_ formal system
 
  * Mathematical objects such as __Nat__ with the primitive recursive function space
- are  obtained as models of (proof objects)  equational proof theories 
+ are  obtained as models of (proof objects) for equational proof theories 
  
  * (e.g. a typed version of Godel's __T__ in the case of __Nat__ with primitive recursion). 
 
-## Logic within constructive mathematics
+## Logic within intuitionism
+
  * The object of logic is the study of "sane" proof constructs independently of formal systems
 
- * The traditional chasm between "syntax" and "semantics" is no longer that very fruitful
+ * The traditional chasm between "syntax" and "semantics" is no longer  very fruitful idea
   at least when "engineering" new logics.
 
  * "The meaning of a connective is the ways that one can prove it " (Martin Lof - Verificationist approach)
 
- * "The meaning of a connective is the way one can use its proofs" (Pragmatist approach)
 
 # Natural Deduction ( JUDGMENTALY)
+
 ## Judgments
+
 * Logic defines _judgments_
-* In propositional logic   __judgments__ have subjects of  two kinds:
+
+* In intuitionistic propositional logic (__IPL__)   __judgments__ have subjects of  two kinds:
   * $A\  {\sf Prop}$: $A$ is in the universe of discourse
   * $A\  {\sf true}$ : $A$ has a proof
 * $A\  {\sf Prop}$: can be replaced with a context free grammar in the propositional case.
