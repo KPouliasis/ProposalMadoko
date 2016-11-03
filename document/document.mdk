@@ -99,7 +99,7 @@ express  their reasoning (proof) constructs
 But in general that's not the case. E.g. $\forall x. A(x)$ is not even a type whereas $\forall x:B. A(x)$
 is only when $x:A\vdash B(x):{\sf Prop}$
 
-* Other logics implement different judgments (e.g. $A\ {\sf possible}\text{,  or} $A @ l$)
+* Other logics implement different judgments (e.g. $A\ {\sf possible}\text{,  or } A @ l$)
 
 ~ Begin Vertical
 
@@ -126,9 +126,10 @@ and leafs (   ${J_1 \ldots J_i}$) are hypothesized judgments
 ## Hypotheticals
   * we will be concerned with $J$ of the form ${\sf A \ true}$
   
-  * hypotheses will be labeled 
+  * hypotheses are  labeled with unique tags (e.g. $x:A$) 
   
-  * labels ${\sf true}$ are also inferrable
+  * since we only focusing of judgments  ${ A \sf true}$ we will ommit the "kinding"
+  and write simply $A$.
 ~ End Vertical
 
 
@@ -143,7 +144,7 @@ and leafs (   ${J_1 \ldots J_i}$) are hypothesized judgments
     \\
   {x_1:A_1  \ldots x_i: A_i}  \\
   \vdots \\
-  {A_{k}} 
+  {x_k:A_{k}} 
   \end{array} } 
   ~
 
