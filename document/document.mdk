@@ -92,7 +92,8 @@ express  their reasoning (proof) constructs
 * Logic defines _judgments_ ("sane" deductions in a specific domain)
 
 * In intuitionistic propositional logic (__IPL__)   __judgments__ we have judgments of two  kinds:
- 
+  * $A\  {\sf Prop}$: $A$ is in the universe of propositions
+  * $A\  {\sf true}$ : $A$ has a proof
   
 * $A\  {\sf Prop}$: can be replaced with a context free grammar in the propositional case.
 But in general that's not the case. E.g. $\forall x. A(x)$ is not even a type whereas $\forall x:B. A(x)$
