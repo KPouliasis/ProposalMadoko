@@ -42,9 +42,7 @@ language with simple types
  
       * intuitionistic propositional logic (__IPL__)/ simply typed lambda calculus (__STLC__)
  
- * Basic concepts and results of _Justification Logic_ (__JL__)
- 
- * Exploring a Curry-Howard reading of basic __JL__
+ *  My proposal: Exploring a Curry-Howard reading of basic _Justification Logic_(__JL__)
   
 
 # IPL and STLC 
