@@ -144,7 +144,7 @@ and leafs (   ${J_1 \ldots J_i}$) are hypothesized judgments
     \\
   {x_1:A_1  \ldots x_i: A_i}  \\
   \vdots \\
-  {A_{k}} 
+  {x:A_{k}} 
   \end{array} } 
   ~
 
