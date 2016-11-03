@@ -93,15 +93,14 @@ express  their reasoning (proof) constructs
 
 * In intuitionistic propositional logic (__IPL__)   __judgments__ we have judgments of two  kinds:
   * $A\  {\sf Prop}$: $A$ is in the universe of discourse
-  * $A\  {\sf true}$ : $A$ has a proof
+  * $A\  {\sf true (mathematically)}$ : $A$ has a proof
   
 * $A\  {\sf Prop}$: can be replaced with a context free grammar in the propositional case.
 But in general that's not the case. E.g. $\forall x. A(x)$ is not even a type whereas $\forall x:B. A(x)$
 is only when $x:A\vdash B(x):{\sf Prop}$
-* We will be ignoring type formation (${\sf Prop}$) judgments for now. 
+* We will be ignoring type formation (${\sf Prop}$) judgments for now   since they are trivial.
 
-* Other logics implement different judgments (e.g. $A {\sf possible}$,  
-or $A @ l$)
+* Other logics implement different judgments (e.g. $A\ {\sf possible}$,  or $A @ l$)
 
 ~ Begin Vertical
 
