@@ -1,10 +1,10 @@
 [INCLUDE=presentation]
 Title         : Justification Logic
 Sub Title     : A Curry- Howard View
-Title Note    : Dissertation Proposal &nbsp; &date;
+Title Note    : Amazon JFK presentation
 Author        : Konstantinos Pouliasis
-Affiliation   : The Graduate Center, CUNY
-Email         : konstantinos.pouliasis@gmail.com
+Affiliation   : The Graduate Center, City Univesity of New York
+Email         : pouliasi@amazon.com, konstantinos.pouliasis@gmail.com, 
 Reveal Theme  : solarized
 Beamer Theme  : madrid
 Package     : mathpartir.sty
@@ -20,12 +20,11 @@ Bibliography  : secondexam.bib
  
 ## CURRY--HOWARD ISO 
 
-* sparked from the investigation of the connection of explicit proofs in intuitionistic logic and programs of a simple programming 
-language with simple types 
+* the connection of  proofs constructs in intuitionistic logic and programs of simple typed lambda calculus 
 
 * central topic of study in the field of type theory 
 
-* standard theoretical tool for  studying and designing programming languages  
+* standard theoretical tool for  study, design  and prototyping programming languages  
 
 ## Curry--Howard in logic
 * a new paradigm in logic studies that emphasizes _proof relevance_
@@ -42,7 +41,8 @@ language with simple types
  
       * intuitionistic propositional logic (__IPL__)/ simply typed lambda calculus (__STLC__)
  
- *  My proposal: Exploring a Curry-Howard reading of basic _Justification Logic_(__JL__)
+ *  My work on exploring a Curry-Howard reading of basic _Justification Logic_(__JL__) and its programmistic
+ interpretation
   
 
 # IPL and STLC 
@@ -66,7 +66,7 @@ express  their reasoning (proof) constructs
 
 ## Intuitionistic/ type theoretic Foundations 
 
- * Proofs are stand alone objects
+ * Proofs are stand alone objects and not metamathematical constructions
 
  * NOT strings, sequences or godelizations of some _fixed_ formal system
 
@@ -77,7 +77,7 @@ express  their reasoning (proof) constructs
 
 ## Logic within intuitionism
 
- * The object of logic is the study of "sane" proof constructs independently of formal systems
+ * The object of logic is the study of "sane" proof constructs
 
  * The traditional chasm between "syntax" and "semantics" is no longer  very fruitful idea
   at least when "engineering" new logics.
@@ -85,7 +85,7 @@ express  their reasoning (proof) constructs
  * "The meaning of a connective is the ways that one can prove it " (Martin Lof - Verificationist approach)
 
 
-# Natural Deduction ( JUDGMENTALY)
+# Natural Deduction and judgments
 
 ## Judgments
 
@@ -99,7 +99,7 @@ express  their reasoning (proof) constructs
 But in general that's not the case. E.g. $\forall x. A(x)$ is not even a type whereas $\forall x:B. A(x)$
 is only when $x:A\vdash B(x):{\sf Prop}$
 
-* Other logics implement different judgments 
+* Other logics implement different judgments/ modalities (e.g.  ${\sf A \ true \ at \ t}$ )
 
 
 
