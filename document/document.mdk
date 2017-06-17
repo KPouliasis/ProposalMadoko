@@ -539,7 +539,7 @@ corresponds to type checking.
 ~ 
 
 ##STLC : Contexts
-For reasons similar to ${\sf Prop}$, context formation also becomes a judgment.
+
 
 ~ Math
 \inferrule*[right=Empty]{ }{\bullet \vdash {\sf ctx}}
@@ -553,21 +553,15 @@ For reasons similar to ${\sf Prop}$, context formation also becomes a judgment.
 appropriate type
 
 * Similarly to typed arguments in a functions declaration.
-* One should always prove this substitution principle as a metatheorem :
+* The substitution principle corresponds to proof tree composition :
 
 $\Gamma,x:A\vdash N:B \text{\ and }\Gamma\vdash M:A \Longrightarrow \Gamma\vdash M[N/x]:B $ 
 
 ## CONJUNCTION AS PRODUCT
-Intro rules transliterate to data constructor declarations
-ti SKATA???
-
-
-
-
-## Allo
- 
- Transcribes to: 
- 
+Introduction rule transliterates to:
+~ Math
+\inferrule*[right=Intro]{{\Gamma \vdash M: A}\\{\Gamma\vdash N: B}}{\Gamma \vdash \langle M, N \rangle : A\times B }
+~
 
 ## CONJUNCTION AS PRODUCT
 

@@ -398,10 +398,6 @@ $0$\end{mdInlineSnippet}%mdk
 \inferrule*{{\inferrule*{ }{x:int\vdash x:int}}\\{\inferrule*{ }{x:int\vdash 1:int}}}{x:int\vdash x+1:int}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={542}
-\begin{mdInlineSnippet}[30520b288917568144a121508689c296]%mdk
-${\sf Prop}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={542}
 \begin{mdDisplaySnippet}[ec6ee6ff254d193b5bd707a4b694e579]%mdk
 \[%mdk-data-line={545}
 \inferrule*[right=Empty]{ }{\bullet \vdash {\sf ctx}}
@@ -416,9 +412,15 @@ ${\sf Prop}$\end{mdInlineSnippet}%mdk
 %mdk-data-line={558}
 \begin{mdInlineSnippet}[61c756f1a09176af9b7a94034ed1ee32]%mdk
 $\Gamma,x:A\vdash N:B \text{\ and }\Gamma\vdash M:A \Longrightarrow \Gamma\vdash M[N/x]:B $\end{mdInlineSnippet}%mdk
-%mdk-data-line={574}
+%mdk-data-line={558}
+\begin{mdDisplaySnippet}[5dd88997567447737fbfb0411e0951e9]%mdk
+\[%mdk-data-line={562}
+\inferrule*[right=Intro]{{\Gamma \vdash M: A}\\{\Gamma\vdash N: B}}{\Gamma \vdash \langle M, N \rangle : A\times B }
+\]%mdk
+\end{mdDisplaySnippet}%mdk
+%mdk-data-line={575}
 \begin{mdDisplaySnippet}[001629ae5e767f28071fa7d9be1a715e]%mdk
-\[%mdk-data-line={577}
+\[%mdk-data-line={578}
   \begin{array}{c }
   {\inferrule*[right=Elim1]
     {\Gamma\vdash  M : A\times B}
@@ -430,15 +432,15 @@ $\Gamma,x:A\vdash N:B \text{\ and }\Gamma\vdash M:A \Longrightarrow \Gamma\vdash
    \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={592}
+%mdk-data-line={593}
 \begin{mdInlineSnippet}[b0603860fcffe94e5b8eec59ed813421]%mdk
 $\beta$\end{mdInlineSnippet}%mdk
-%mdk-data-line={593}
+%mdk-data-line={594}
 \begin{mdInlineSnippet}[ffe9f913124f345732e9f00fa258552e]%mdk
 $\eta$\end{mdInlineSnippet}%mdk
-%mdk-data-line={593}
+%mdk-data-line={594}
 \begin{mdDisplaySnippet}[af7a0b5eeb23553a7e6d4e3004c37b43]%mdk
-\[%mdk-data-line={596}
+\[%mdk-data-line={597}
     \begin{array}{l c r}
   {\inferrule*[right=Elim]{\inferrule*[right=Intro] {
  {\begin{array}{c}
@@ -456,22 +458,22 @@ $\eta$\end{mdInlineSnippet}%mdk
 \]%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdDisplaySnippet}[85fde1361356cff19b788ce9ab19af48]%mdk
-\[%mdk-data-line={613}
+\[%mdk-data-line={614}
    \Gamma\vdash fst (\langle M, N \rangle) =_{\beta} M: A
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={616}
+%mdk-data-line={617}
 \begin{mdDisplaySnippet}[486ad51889165092e8da3cdc6986f4e3]%mdk
-\[%mdk-data-line={618}
+\[%mdk-data-line={619}
 \Gamma\vdash snd (\langle M, N \rangle) =_{\beta} N:B
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={623}
+%mdk-data-line={624}
 \begin{mdInlineSnippet}[ffe9f913124f345732e9f00fa258552e]%mdk
 $\eta$\end{mdInlineSnippet}%mdk
-%mdk-data-line={623}
+%mdk-data-line={624}
 \begin{mdDisplaySnippet}[0951d6d73fc67e87c7ab60c5286676e5]%mdk
-\[%mdk-data-line={626}
+\[%mdk-data-line={627}
 \begin{array}{l c r}
    {\begin{array}{c}
   \mathcal{D}\\
@@ -489,11 +491,11 @@ $\eta$\end{mdInlineSnippet}%mdk
   \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={644}
+%mdk-data-line={645}
 \begin{mdInlineSnippet}[ce43053f4eceb361df30fa07e7c9d382]%mdk
 $\Gamma\vdash M = \langle fst(M), snd(M)\rangle :A \wedge B$\end{mdInlineSnippet}%mdk
 \begin{mdDisplaySnippet}[f383114404afb00f6f2e9c78981524ab]%mdk
-\[%mdk-data-line={652}
+\[%mdk-data-line={653}
   \begin{array}{c }
   {\inferrule*[right=Intro]
     {\Gamma,x:A\vdash  M : A}
@@ -505,18 +507,18 @@ $\Gamma\vdash M = \langle fst(M), snd(M)\rangle :A \wedge B$\end{mdInlineSnippet
    \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={662}
+%mdk-data-line={663}
 \begin{mdInlineSnippet}[f7c1d2d39d6897f6d45860a90d0ab7db]%mdk
 $\beta\eta-$\end{mdInlineSnippet}%mdk
-%mdk-data-line={664}
+%mdk-data-line={665}
 \begin{mdInlineSnippet}[c9b138f9d61cc63b37ee86a7031273db]%mdk
 $(\lambda x: A. M) N =_{\beta} M[N/x]$\end{mdInlineSnippet}%mdk
-%mdk-data-line={666}
+%mdk-data-line={667}
 \begin{mdInlineSnippet}[2ee2528fa0438b434f62f936990b03f0]%mdk
 $f:A \supset B = \lambda x:A. f x$\end{mdInlineSnippet}%mdk
-%mdk-data-line={666}
+%mdk-data-line={667}
 \begin{mdDisplaySnippet}[f3be0a8bb51946b2fb40080ab2ae93dc]%mdk
-\[%mdk-data-line={670}
+\[%mdk-data-line={671}
   \begin{array}{c }
   {\inferrule*[right=Intro1]
     {\Gamma\vdash  M : A}
@@ -531,48 +533,48 @@ $f:A \supset B = \lambda x:A. f x$\end{mdInlineSnippet}%mdk
    \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={685}
+%mdk-data-line={686}
 \begin{mdDisplaySnippet}[bccfc7022dfb945174d9bcebad2297bb]%mdk
-\[%mdk-data-line={688}
+\[%mdk-data-line={689}
 \alpha 
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={696}
+%mdk-data-line={697}
 \begin{mdInlineSnippet}[7814a0e7fffecda9cebb60d2bc160257]%mdk
 $\bot$\end{mdInlineSnippet}%mdk
-%mdk-data-line={700}
+%mdk-data-line={701}
 \begin{mdInlineSnippet}[7fc56270e7a70fa81a5935b72eacbe29]%mdk
 $A$\end{mdInlineSnippet}%mdk
-%mdk-data-line={700}
+%mdk-data-line={701}
 \begin{mdInlineSnippet}[16b0a75bfaf7b9b278dd8756ff2ff0e7]%mdk
 $B\supset A$\end{mdInlineSnippet}%mdk
-%mdk-data-line={700}
+%mdk-data-line={701}
 \begin{mdInlineSnippet}[9d5ed678fe57bcca610140957afab571]%mdk
 $B$\end{mdInlineSnippet}%mdk
-%mdk-data-line={713}
+%mdk-data-line={714}
 \begin{mdInlineSnippet}[9f9e4f97126600ea79294681832d3aef]%mdk
 $\beta\eta$\end{mdInlineSnippet}%mdk
-%mdk-data-line={721}
+%mdk-data-line={722}
 \begin{mdInlineSnippet}[6da27d87682bb7cfb6c5add83b451be8]%mdk
 $A\uparrow$\end{mdInlineSnippet}%mdk
-%mdk-data-line={721}
-\begin{mdInlineSnippet}[7fc56270e7a70fa81a5935b72eacbe29]%mdk
-$A$\end{mdInlineSnippet}%mdk
-%mdk-data-line={721}
+%mdk-data-line={722}
 \begin{mdInlineSnippet}[7fc56270e7a70fa81a5935b72eacbe29]%mdk
 $A$\end{mdInlineSnippet}%mdk
 %mdk-data-line={722}
+\begin{mdInlineSnippet}[7fc56270e7a70fa81a5935b72eacbe29]%mdk
+$A$\end{mdInlineSnippet}%mdk
+%mdk-data-line={723}
 \begin{mdInlineSnippet}[37b8ccf86736522d7d34afe1c749acf4]%mdk
 $A\downarrow$\end{mdInlineSnippet}%mdk
-%mdk-data-line={722}
+%mdk-data-line={723}
 \begin{mdInlineSnippet}[7fc56270e7a70fa81a5935b72eacbe29]%mdk
 $A$\end{mdInlineSnippet}%mdk
-%mdk-data-line={722}
+%mdk-data-line={723}
 \begin{mdInlineSnippet}[7fc56270e7a70fa81a5935b72eacbe29]%mdk
 $A$\end{mdInlineSnippet}%mdk
-%mdk-data-line={724}
+%mdk-data-line={725}
 \begin{mdDisplaySnippet}[4ce1127957844054fdc4bf04ac77fc0c]%mdk
-\[%mdk-data-line={728}
+\[%mdk-data-line={729}
 \begin{array}{c  c}
     {\begin{array}{c}
         {A_1\downarrow \ldots A_i\downarrow}  \\
@@ -584,22 +586,22 @@ $A$\end{mdInlineSnippet}%mdk
     \end{array} 
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={744}
+%mdk-data-line={745}
 \begin{mdInlineSnippet}[b0603860fcffe94e5b8eec59ed813421]%mdk
 $\beta$\end{mdInlineSnippet}%mdk
-%mdk-data-line={746}
+%mdk-data-line={747}
 \begin{mdInlineSnippet}[ffe9f913124f345732e9f00fa258552e]%mdk
 $\eta$\end{mdInlineSnippet}%mdk
-%mdk-data-line={746}
+%mdk-data-line={747}
 \begin{mdDisplaySnippet}[79721eeba93ad4eef7e665ac6ad20c69]%mdk
-\[%mdk-data-line={751}
+\[%mdk-data-line={752}
   \inferrule*[]
   { {A \uparrow}\\{B\uparrow}} 
   { A\wedge B\uparrow}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdDisplaySnippet}[06ca7d6d8d146c70cf2b92250dbdef89]%mdk
-\[%mdk-data-line={757}
+\[%mdk-data-line={758}
   \begin{array}{c c}
   {\inferrule*[]
   { {A \wedge B\downarrow}} 
@@ -611,29 +613,29 @@ $\eta$\end{mdInlineSnippet}%mdk
 \]%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdDisplaySnippet}[c70a85f49a29df050786ebea8073d766]%mdk
-\[%mdk-data-line={768}
+\[%mdk-data-line={769}
     \inferrule*{ }{\top\uparrow} 
 \]%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdDisplaySnippet}[e697d2cdab0f1dccb8c208f089f74d38]%mdk
-\[%mdk-data-line={773}
+\[%mdk-data-line={774}
   \inferrule*[right=Atomic Hyp]
   {x:P_i\downarrow } 
   {P_i\uparrow }
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={778}
-\begin{mdInlineSnippet}[ffe9f913124f345732e9f00fa258552e]%mdk
-$\eta$\end{mdInlineSnippet}%mdk
-%mdk-data-line={781}
+%mdk-data-line={779}
 \begin{mdInlineSnippet}[ffe9f913124f345732e9f00fa258552e]%mdk
 $\eta$\end{mdInlineSnippet}%mdk
 %mdk-data-line={782}
+\begin{mdInlineSnippet}[ffe9f913124f345732e9f00fa258552e]%mdk
+$\eta$\end{mdInlineSnippet}%mdk
+%mdk-data-line={783}
 \begin{mdInlineSnippet}[7fc56270e7a70fa81a5935b72eacbe29]%mdk
 $A$\end{mdInlineSnippet}%mdk
-%mdk-data-line={782}
+%mdk-data-line={783}
 \begin{mdDisplaySnippet}[0ecf5415ed055349295bb7c940281443]%mdk
-\[%mdk-data-line={785}
+\[%mdk-data-line={786}
   \begin{array}{c}
   \inferrule*[vdots=1.5em]
   {x:A\downarrow } 
@@ -644,7 +646,7 @@ $A$\end{mdInlineSnippet}%mdk
 \]%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdDisplaySnippet}[4dda0e9f0e8e1079b9bc150a2f3694ea]%mdk
-\[%mdk-data-line={797}
+\[%mdk-data-line={798}
   \begin{array}{c}
  {\inferrule* {
  {\begin{array}{c}
@@ -663,12 +665,12 @@ $A$\end{mdInlineSnippet}%mdk
  \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={817}
+%mdk-data-line={818}
 \begin{mdInlineSnippet}[be11ca5ebd436661ce4ebc391591c049]%mdk
 $P\supset( P\supset P)$\end{mdInlineSnippet}%mdk
-%mdk-data-line={817}
+%mdk-data-line={818}
 \begin{mdDisplaySnippet}[4dcd4d4cafbd704eca9f0c54265a9996]%mdk
-\[%mdk-data-line={820}
+\[%mdk-data-line={821}
     \inferrule*[right=$\supset^{x}$]
     {\inferrule*[right=$\supset^{y}$]{
             {} \\{\inferrule*[right=Refl$^{y}$]{\overline{x:P},\overline{y:P}\downarrow}
@@ -677,7 +679,7 @@ $P\supset( P\supset P)$\end{mdInlineSnippet}%mdk
 \]%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdDisplaySnippet}[289d1fc4af831e3571a265ccaa406f5d]%mdk
-\[%mdk-data-line={828}
+\[%mdk-data-line={829}
     \inferrule*[right=$\supset^{x}$]
     {\inferrule*[right=$\supset^{y}$]{
             {} \\{\inferrule*[right=Refl$^{x}$]{\overline{x:P},\overline{y:P}\downarrow}
@@ -685,294 +687,294 @@ $P\supset( P\supset P)$\end{mdInlineSnippet}%mdk
     {P\supset(P\supset P)}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={834}
+%mdk-data-line={835}
 \begin{mdInlineSnippet}[bc1d4efcf0cb2e272c8d76be9e7eca3f]%mdk
 $\lambda x:P.\lambda y:P. y$\end{mdInlineSnippet}%mdk
-%mdk-data-line={834}
+%mdk-data-line={835}
 \begin{mdInlineSnippet}[ba9516cfd52d08d9b72f06142d6d3148]%mdk
 $\lambda x:P.\lambda y:P. x$\end{mdInlineSnippet}%mdk
-%mdk-data-line={837}
+%mdk-data-line={838}
 \begin{mdInlineSnippet}[7814a0e7fffecda9cebb60d2bc160257]%mdk
 $\bot$\end{mdInlineSnippet}%mdk
-%mdk-data-line={837}
+%mdk-data-line={838}
 \begin{mdDisplaySnippet}[37e1648cbb105871044569d977645183]%mdk
-\[%mdk-data-line={839}
+\[%mdk-data-line={840}
 \inferrule*{\bot\downarrow}{A\uparrow}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={847}
+%mdk-data-line={848}
 \begin{mdInlineSnippet}[a60621e112d395a284530eaa21ebb932]%mdk
 $\Gamma\downarrow\  \vdash A\uparrow$\end{mdInlineSnippet}%mdk
-%mdk-data-line={848}
+%mdk-data-line={849}
 \begin{mdInlineSnippet}[dbceffeb0c56c6bc70dc530c4c61cb14]%mdk
 $\Gamma \vdash {\sf A \ true}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={851}
+%mdk-data-line={852}
 \begin{mdInlineSnippet}[9b752e914b03804dcd9dd8cb8151400c]%mdk
 $\Gamma\ \downarrow\ \vdash A\downarrow$\end{mdInlineSnippet}%mdk
-%mdk-data-line={852}
+%mdk-data-line={853}
 \begin{mdInlineSnippet}[ab34257847a10c9369180cb40ab0e74d]%mdk
 $\Gamma \vdash {\sf A\  true}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={852}
+%mdk-data-line={853}
 \begin{mdDisplaySnippet}[6428916dbc7afc6510fdf2a1bbabe072]%mdk
-\[%mdk-data-line={858}
+\[%mdk-data-line={859}
   \begin{array}{c c}
 {\inferrule*[right=Coercion]{A\uparrow}{A\downarrow}} & {\inferrule*{A\downarrow}{A\uparrow}}
 \end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={863}
+%mdk-data-line={864}
 \begin{mdInlineSnippet}[cf2c6d740162ab1774153761d7efbcbf]%mdk
 $\Gamma\downarrow\ \vdash^{+}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={865}
+%mdk-data-line={866}
 \begin{mdInlineSnippet}[b0603860fcffe94e5b8eec59ed813421]%mdk
 $\beta$\end{mdInlineSnippet}%mdk
-%mdk-data-line={867}
+%mdk-data-line={868}
 \begin{mdInlineSnippet}[eefecd9cb0345697ddaac0281588a08d]%mdk
 $\mathcal{D}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={867}
+%mdk-data-line={868}
 \begin{mdInlineSnippet}[40234fafec5fdb7bf215eaa9b5852c0a]%mdk
 $\Gamma\vdash A \ {\sf true}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={868}
+%mdk-data-line={869}
 \begin{mdInlineSnippet}[e4dd3bfee11122b8e77a575c342a513f]%mdk
 $\mathcal{\overline{D}} : \Gamma\downarrow\vdash^{+} A\uparrow$\end{mdInlineSnippet}%mdk
-%mdk-data-line={877}
+%mdk-data-line={878}
 \begin{mdDisplaySnippet}[d2c553443e3a86f2e06e1461c31546b5]%mdk
-\[%mdk-data-line={880}
+\[%mdk-data-line={881}
 \Gamma\downarrow\ \vdash^{+}A\uparrow \ \equiv\  \Gamma\downarrow\ \vdash A\uparrow
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={909}
+%mdk-data-line={910}
 \begin{mdInlineSnippet}[1ae42d2f7f438fe35c641c54c9d32897]%mdk
 $\Gamma\Rightarrow A$\end{mdInlineSnippet}%mdk
-%mdk-data-line={909}
+%mdk-data-line={910}
 \begin{mdInlineSnippet}[eea96d2958342b5a93897e9b58ef828d]%mdk
 $\Gamma\downarrow\Rightarrow A\uparrow$\end{mdInlineSnippet}%mdk
-%mdk-data-line={909}
+%mdk-data-line={910}
 \begin{mdDisplaySnippet}[9abd16daf81105947298d0043658fc0f]%mdk
-\[%mdk-data-line={914}
+\[%mdk-data-line={915}
     \inferrule*{ }{\Gamma,P\Rightarrow P}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdDisplaySnippet}[92935c2f84c8eaeea54ce92e69336388]%mdk
-\[%mdk-data-line={917}
+\[%mdk-data-line={918}
 \inferrule*{{ \Gamma\Rightarrow A}\\{\Gamma\Rightarrow B}}{\Gamma\Rightarrow A\wedge B}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdDisplaySnippet}[819ff14d1a0eeaaba10dc507282956d8]%mdk
-\[%mdk-data-line={920}
+\[%mdk-data-line={921}
 \begin{array}{c c}{\inferrule*{\Gamma,A \Rightarrow C}{\Gamma,A\wedge B\Rightarrow C}} &{\inferrule*{\Gamma,B \Rightarrow C}{\Gamma,A\wedge B\Rightarrow C}}\end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdDisplaySnippet}[2c0be3780c3634b9338d5e57b444ce68]%mdk
-\[%mdk-data-line={924}
+\[%mdk-data-line={925}
 \begin{array}{c c}{\inferrule*{\Gamma,A \Rightarrow B}{\Gamma \Rightarrow A\supset B}} &{\inferrule*{{\Gamma,A\supset B,B \Rightarrow C}\\{\Gamma,A\supset B\Rightarrow  A}}{\Gamma,A\supset B\Rightarrow C}}\end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
 \begin{mdDisplaySnippet}[027d96e7d80e011373c65baec0301cdd]%mdk
-\[%mdk-data-line={928}
+\[%mdk-data-line={929}
 \begin{array}{c c}{\inferrule*{ }{\Gamma\Rightarrow \top}} &{\inferrule*{ }{\Gamma,\bot\Rightarrow C}}\end{array}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={934}
+%mdk-data-line={935}
 \begin{mdInlineSnippet}[40cd7c03ea049d0e8b052ec86e45a8e1]%mdk
 $\Gamma\downarrow\ \vdash A\uparrow\  \equiv \  \Gamma\Rightarrow  A$\end{mdInlineSnippet}%mdk
-%mdk-data-line={936}
+%mdk-data-line={937}
 \begin{mdInlineSnippet}[b80392217d5fc7946d7472707a29c074]%mdk
 $\Gamma\downarrow \vdash^{+} A\uparrow \ \equiv\ \Gamma \Rightarrow^{+} A$\end{mdInlineSnippet}%mdk
-%mdk-data-line={938}
+%mdk-data-line={939}
 \begin{mdInlineSnippet}[c8d2620fd3ea333a4433faa67d2b60ba]%mdk
 $\Rightarrow^{+}$\end{mdInlineSnippet}%mdk
 \begin{mdInlineSnippet}[055889aaee38b7c53f994c5e42a40994]%mdk
 $\Rightarrow$\end{mdInlineSnippet}%mdk
-%mdk-data-line={941}
+%mdk-data-line={942}
 \begin{mdInlineSnippet}[be8cf61dd79ec4850fecac568a82be5c]%mdk
 $\inferrule*[right=Cut]{\Gamma\Rightarrow A}{\Gamma,A\Rightarrow C}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={945}
+%mdk-data-line={946}
 \begin{mdInlineSnippet}[d2c44581de1f972fa5ac69309c445b0a]%mdk
 $\Gamma\Rightarrow^{+} A \ \equiv \Gamma\Rightarrow A $\end{mdInlineSnippet}%mdk
-%mdk-data-line={950}
+%mdk-data-line={951}
 \begin{mdInlineSnippet}[e82ef23255270729b80657647735cc9a]%mdk
 $\mathcal{D}:\Gamma\vdash A$\end{mdInlineSnippet}%mdk
-%mdk-data-line={950}
+%mdk-data-line={951}
 \begin{mdInlineSnippet}[07710b5c43702a8bb7b9104eacc6ba71]%mdk
 $\Gamma$\end{mdInlineSnippet}%mdk
-%mdk-data-line={963}
+%mdk-data-line={964}
 \begin{mdInlineSnippet}[800618943025315f869e4e1f09471012]%mdk
 $F$\end{mdInlineSnippet}%mdk
-%mdk-data-line={978}
+%mdk-data-line={979}
 \begin{mdInlineSnippet}[a5f3c6a11b03839d46af9fb43c97c188]%mdk
 $K$\end{mdInlineSnippet}%mdk
-%mdk-data-line={978}
+%mdk-data-line={979}
 \begin{mdInlineSnippet}[b9ece18c950afbfa6b0fdbfa4ff731d3]%mdk
 $T$\end{mdInlineSnippet}%mdk
-%mdk-data-line={978}
+%mdk-data-line={979}
 \begin{mdInlineSnippet}[d59a89abb4af5bc4dd85243d5f75bcac]%mdk
 $S4$\end{mdInlineSnippet}%mdk
-%mdk-data-line={978}
+%mdk-data-line={979}
 \begin{mdInlineSnippet}[79e6fb8fb2403b9688924408f7dc4857]%mdk
 $S5$\end{mdInlineSnippet}%mdk
-%mdk-data-line={980}
+%mdk-data-line={981}
 \begin{mdInlineSnippet}[a5f3c6a11b03839d46af9fb43c97c188]%mdk
 $K$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1003}
+%mdk-data-line={1004}
 \begin{mdInlineSnippet}[dd7536794b63bf90eccfd37f9b147d7f]%mdk
 $I$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1005}
+%mdk-data-line={1006}
 \begin{mdInlineSnippet}[49b0e954e304a740c242c3d4a3a95b27]%mdk
 $U_I$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1006}
+%mdk-data-line={1007}
 \begin{mdInlineSnippet}[ca9382308bb1896e0eca7d2150323a62]%mdk
 $\Sigma_I$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1007}
+%mdk-data-line={1008}
 \begin{mdInlineSnippet}[17178331f6de62bc557cae75f66dc045]%mdk
 $\Sigma_I;\Gamma\vdash_{I}A$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1010}
+%mdk-data-line={1011}
 \begin{mdInlineSnippet}[ff44570aca8241914870afbc310cdb85]%mdk
 $J$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1010}
+%mdk-data-line={1011}
 \begin{mdInlineSnippet}[44c5e8d2e104c960cf4fe6918a910c79]%mdk
 $U_J$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1010}
+%mdk-data-line={1011}
 \begin{mdInlineSnippet}[5514ea46dbfbbc10c143c8f6a0400ba8]%mdk
 $\Sigma_J$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1010}
+%mdk-data-line={1011}
 \begin{mdInlineSnippet}[dd64bc5896caf1a67ff7c16ace1a2d2b]%mdk
 $\Sigma_J;\Delta\vdash_J \phi$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1016}
+%mdk-data-line={1017}
 \begin{mdInlineSnippet}[87b461964fe04a92fcbbdf91212b6311]%mdk
 $A \in \Gamma \Longrightarrow \Gamma\vdash_{I}A$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1017}
+%mdk-data-line={1018}
 \begin{mdInlineSnippet}[8bfbf611716b995f354a3be0d45b969a]%mdk
 $\phi \in \Delta \Longrightarrow \Delta\vdash_{J}\phi$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1020}
+%mdk-data-line={1021}
 \begin{mdInlineSnippet}[01fce5d1a1783d3ffcb729e4ea05a02b]%mdk
 $\Gamma\vdash_I A$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1020}
+%mdk-data-line={1021}
 \begin{mdInlineSnippet}[135a01f167627ee684fbb11e56e3eeef]%mdk
 $\Gamma^{\prime},A\vdash_{I} B \Longrightarrow \Gamma,\Gamma^{'}\vdash_I B $\end{mdInlineSnippet}%mdk
-%mdk-data-line={1021}
+%mdk-data-line={1022}
 \begin{mdInlineSnippet}[3910688dc346ed5913364f6630147c61]%mdk
 $\Delta\vdash_J\phi$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1021}
+%mdk-data-line={1022}
 \begin{mdInlineSnippet}[080b15dec72bc979a026a9767b9200ca]%mdk
 $\Delta^{\prime},\phi\vdash_{J} \psi \Longrightarrow \Delta,\Delta^{'}\vdash_J \psi$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1024}
+%mdk-data-line={1025}
 \begin{mdInlineSnippet}[ca7c8e49f8534669381b3e8b2d31ea25]%mdk
 $\Gamma\vdash_{I}\top_I $\end{mdInlineSnippet}%mdk
-%mdk-data-line={1024}
+%mdk-data-line={1025}
 \begin{mdInlineSnippet}[2a872d294feff2a04c146330f2dd9760]%mdk
 $\Delta\vdash_{J}\top_J $\end{mdInlineSnippet}%mdk
-%mdk-data-line={1030}
+%mdk-data-line={1031}
 \begin{mdInlineSnippet}[dd7536794b63bf90eccfd37f9b147d7f]%mdk
 $I$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1030}
+%mdk-data-line={1031}
 \begin{mdInlineSnippet}[cccfd2c91e67975cf20ec6be0dfff4c0]%mdk
 $\llbracket\bullet \rrbracket_J$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1031}
+%mdk-data-line={1032}
 \begin{mdInlineSnippet}[6c493fd50e2b5bd275dba89cb90cf9c3]%mdk
 $(J,\llbracket\bullet\rrbracket)$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1031}
-\begin{mdInlineSnippet}[ff44570aca8241914870afbc310cdb85]%mdk
-$J$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1032}
-\begin{mdInlineSnippet}[aca0b851280cd764b487a0db8b2a542a]%mdk
-$\llbracket \bullet \rrbracket: U_I\rightarrow U_J$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1032}
-\begin{mdInlineSnippet}[dd7536794b63bf90eccfd37f9b147d7f]%mdk
-$I$\end{mdInlineSnippet}%mdk
 %mdk-data-line={1032}
 \begin{mdInlineSnippet}[ff44570aca8241914870afbc310cdb85]%mdk
 $J$\end{mdInlineSnippet}%mdk
 %mdk-data-line={1033}
+\begin{mdInlineSnippet}[aca0b851280cd764b487a0db8b2a542a]%mdk
+$\llbracket \bullet \rrbracket: U_I\rightarrow U_J$\end{mdInlineSnippet}%mdk
+%mdk-data-line={1033}
+\begin{mdInlineSnippet}[dd7536794b63bf90eccfd37f9b147d7f]%mdk
+$I$\end{mdInlineSnippet}%mdk
+%mdk-data-line={1033}
+\begin{mdInlineSnippet}[ff44570aca8241914870afbc310cdb85]%mdk
+$J$\end{mdInlineSnippet}%mdk
+%mdk-data-line={1034}
 \begin{mdInlineSnippet}[49b0e954e304a740c242c3d4a3a95b27]%mdk
 $U_I$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1035}
+%mdk-data-line={1036}
 \begin{mdInlineSnippet}[40d3f0ed2b41612b8d21fc7acb93dd80]%mdk
 $\llbracket\top_I \rrbracket = \top_J$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1036}
+%mdk-data-line={1037}
 \begin{mdInlineSnippet}[07710b5c43702a8bb7b9104eacc6ba71]%mdk
 $\Gamma$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1036}
+%mdk-data-line={1037}
 \begin{mdInlineSnippet}[f59ab35c5fb3f2a697327b7353b01a7d]%mdk
 $A_1,\ldots, A_n$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1036}
+%mdk-data-line={1037}
 \begin{mdInlineSnippet}[200b1ab1a4d3d8aa20a173f3a849398b]%mdk
 $\llbracket\Gamma \rrbracket=\llbracket A_1  \rrbracket,\ldots,  \llbracket A_n\rrbracket$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1038}
+%mdk-data-line={1039}
 \begin{mdInlineSnippet}[dd7536794b63bf90eccfd37f9b147d7f]%mdk
 $I$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1038}
+%mdk-data-line={1039}
 \begin{mdInlineSnippet}[4aa4355729c04e6a2924097a79512791]%mdk
 $\llbracket\bullet\rrbracket_J:U_I\rightarrow U_J$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1039}
+%mdk-data-line={1040}
 \begin{mdInlineSnippet}[dd7536794b63bf90eccfd37f9b147d7f]%mdk
 $I$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1039}
+%mdk-data-line={1040}
 \begin{mdInlineSnippet}[ff44570aca8241914870afbc310cdb85]%mdk
 $J$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1041}
+%mdk-data-line={1042}
 \begin{mdInlineSnippet}[942fdcc0d6e01dd587ca9fd1a9891bc2]%mdk
 $\Sigma_I;\Gamma\vdash_I A$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1041}
+%mdk-data-line={1042}
 \begin{mdInlineSnippet}[8d688100bace6a95d4751d20660e9886]%mdk
 $\Sigma_J;\Delta\vdash_{J} \phi$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1041}
+%mdk-data-line={1042}
 \begin{mdInlineSnippet}[ff44570aca8241914870afbc310cdb85]%mdk
 $J$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1042}
+%mdk-data-line={1043}
 \begin{mdInlineSnippet}[51652703e741cc7b65fd6f587acac38a]%mdk
 $\llbracket A \rrbracket=\phi$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1042}
+%mdk-data-line={1043}
 \begin{mdInlineSnippet}[b297937cbfcb107598632230d9bb4b03]%mdk
 $\Delta=\llbracket \Gamma \rrbracket $\end{mdInlineSnippet}%mdk
-%mdk-data-line={1043}
+%mdk-data-line={1044}
 \begin{mdInlineSnippet}[bed985a7a509b86b9d6a56b6e7485edb]%mdk
 $ \llbracket \Sigma_I;\Gamma\vdash_I A\rrbracket_J$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1046}
+%mdk-data-line={1047}
 \begin{mdInlineSnippet}[dd7536794b63bf90eccfd37f9b147d7f]%mdk
 $I$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1046}
+%mdk-data-line={1047}
 \begin{mdInlineSnippet}[ff44570aca8241914870afbc310cdb85]%mdk
 $J$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1047}
+%mdk-data-line={1048}
 \begin{mdInlineSnippet}[cccfd2c91e67975cf20ec6be0dfff4c0]%mdk
 $\llbracket\bullet \rrbracket_J$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1048}
+%mdk-data-line={1049}
 \begin{mdInlineSnippet}[eefecd9cb0345697ddaac0281588a08d]%mdk
 $\mathcal{D}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1048}
+%mdk-data-line={1049}
 \begin{mdInlineSnippet}[dd7536794b63bf90eccfd37f9b147d7f]%mdk
 $I$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1049}
+%mdk-data-line={1050}
 \begin{mdInlineSnippet}[abdd207c6254eb7b3f3505d3feb78c6e]%mdk
 $\mathcal{E}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1049}
+%mdk-data-line={1050}
 \begin{mdInlineSnippet}[ff44570aca8241914870afbc310cdb85]%mdk
 $J$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1055}
+%mdk-data-line={1056}
 \begin{mdInlineSnippet}[8ee221b554f334322dd70423103cfd8b]%mdk
 $\forall \mathcal{D}. \ \mathcal{D}:\Gamma\vdash_I A \Longrightarrow \exists\mathcal{E}: \llbracket \Gamma\vdash A\rrbracket_J$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1065}
+%mdk-data-line={1066}
 \begin{mdInlineSnippet}[ecc0507e1fec0352ecf812aba52cf7e4]%mdk
 $A \ {\sf true}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1065}
+%mdk-data-line={1066}
 \begin{mdInlineSnippet}[9f791c2d98cbbb2d22338197dd5d3ca4]%mdk
 $A\  {\sf valid}:=\  \llbracket A \rrbracket {\sf true}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1070}
+%mdk-data-line={1071}
 \begin{mdInlineSnippet}[00d64984ca4e4a5efe2b48cbf793a7fb]%mdk
 $\llbracket \sf {judgments}\rrbracket$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1075}
+%mdk-data-line={1076}
 \begin{mdInlineSnippet}[baff498e308264335f092f18afa7db81]%mdk
 $A\  {\sf valid}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1075}
+%mdk-data-line={1076}
 \begin{mdInlineSnippet}[74410d2102c7e4d1addb996fb9281284]%mdk
 $ A\ {\sf true}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1075}
+%mdk-data-line={1076}
 \begin{mdInlineSnippet}[2c8cf22ebf917cd1033d6c2a4e929d76]%mdk
 $ \Box A {\sf true}$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1075}
+%mdk-data-line={1076}
 \begin{mdDisplaySnippet}[febd5962eabcbf6bc3cb65033dec99c9]%mdk
-\[%mdk-data-line={1078}
+\[%mdk-data-line={1079}
   \inferrule* {{\Box A} \\  {\inferrule* {}{{\begin{array}{c}
   \overline{x:A}  \\
   \vdots \\
@@ -985,12 +987,12 @@ $ \Box A {\sf true}$\end{mdInlineSnippet}%mdk
     {\Box B}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={1094}
+%mdk-data-line={1095}
 \begin{mdInlineSnippet}[aadf22dd26dba14b09514fd8bf43167e]%mdk
 $\Gamma:=x_1:A_1, \ldots, x_i: A_i\  \text{and } \Delta:= s_1:\llbracket A_i \rrbracket, \ldots s_i:\llbracket A_i\rrbracket$\end{mdInlineSnippet}%mdk
-%mdk-data-line={1095}
+%mdk-data-line={1096}
 \begin{mdDisplaySnippet}[f6c94a83781ed81ed4213d8bfe6b2530]%mdk
-\[%mdk-data-line={1100}
+\[%mdk-data-line={1101}
   \inferrule* {{\Box A_1, \ldots,  \Box A_i} \\  {\inferrule* {}{{\begin{array}{c}
   \overline{\Gamma}  \\
   \vdots \\
@@ -1003,7 +1005,7 @@ $\Gamma:=x_1:A_1, \ldots, x_i: A_i\  \text{and } \Delta:= s_1:\llbracket A_i \rr
     {\Box B}
 \]%mdk
 \end{mdDisplaySnippet}%mdk
-%mdk-data-line={1122}
+%mdk-data-line={1123}
 
 \end{mdSnippets}
 
