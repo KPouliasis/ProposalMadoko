@@ -678,11 +678,11 @@ Similarly we obtain the whole equational system of the STLC
 
 ## Disjunction as union
 Again the "meaning" of the terms is embedded in the equalities that witness harmony given by Gentzen's principles:
-
-* $ {\text{case }inl(M) \text{ of } inl( x)\longmapsto N  |\  inr (y)\longmapsto O : A\vee B} = N[M/x]$
-* $ {\text{case }inr(M) \text{ of } inl( x)\longmapsto N  |\  inr (y)\longmapsto O : A\vee B} = O[M/x]r$
-* $f:A \supset B = \lambda x:A. f x$
-
+~ Math
+  \begin{array}{c } 
+      { {\text{case } inl(M) \text{ of } inl( x)\longmapsto N  |\  inr (y)\longmapsto O = N[M/X] A\vee B}}}
+   \end{array}
+~
 
 ## Consistency Results
 _Issue_: How do you show that this calculus does not prove $\bot$
@@ -690,22 +690,25 @@ _Issue_: How do you show that this calculus does not prove $\bot$
 Problem with straightforward induction on trees: Proofs are not canonical, no subformula property.
 
 _Foundational Problem_: The meaning of a proposition depends on itself ($A$ depends on $B\supset A$ and $B$). 
-Circularity.
+ Circularity!.
 
 __Verificationism to the rescue__: _The meaning of a connective is the set of its ~~proofs~~  verifications. Informally:
 straightforward ways to prove it_
 
 
 
-## Calculus of verifications
+## Calculus of verifications (a.k.a normal forms)
 Goal : Create a calculus in which  all proofs are "normal" 
 
 A verification should be a proof that only analyzes the constituents of a proposition
 
-Show that for every proof in natural deduction there is a unique verification and moreover $\beta\eta$ equal proofs
+Show that for every proof in natural deduction there is a unique verification -- $\beta\eta$ equal proofs
 have the same verification. 
 
 We create a "restricted" natural deduction for verifications and show that it is complete.
+
+Proof technique: Gentzen's Cut elimination theorem or in PL terms Strong Normalization 
+
 
 ## Calculus of verifications
 Two judgments 
@@ -923,24 +926,24 @@ __Main Ideas__
 ~ Slide
 
 Finally we show:
-	* $\Gamma\downarrow\ \vdash A\uparrow\  \equiv \  \Gamma\Rightarrow  A$ (induction)
-  
-	* $\Gamma\downarrow \vdash^{+} A\uparrow \ \equiv\ \Gamma \Rightarrow^{+} A$
 	
+  * $\Gamma\downarrow\ \vdash A\uparrow\  \equiv \  \Gamma\Rightarrow  A$ (induction)
+
+  * $\Gamma\downarrow \vdash^{+} A\uparrow \ \equiv\ \Gamma \Rightarrow^{+} A$
+
   *  $\Rightarrow^{+}$ is $\Rightarrow$ adjoint with:
-	
-	
+
   * $\inferrule*[right=Cut]{\Gamma\Rightarrow A}{\Gamma,A\Rightarrow C}$ 
-	
+
   * Coercion corresponds to Cut Rule
-	
+
   * Cut elimination shows $\Gamma\Rightarrow^{+} A \ \equiv \Gamma\Rightarrow A $ (proof by nested induction)
-	
+
   * As a result coercion is admissible
-  
+
   * All natural deduction proof trees have a unique  normal form
      since $\mathcal{D}:\Gamma\vdash A$  $\Gamma$
-  
+
   * To show admissibility of Coercion we show admissibility of Cut instead.
 ~
 
@@ -949,47 +952,73 @@ Finally we show:
 * The ideas of separating judgments and propositions, defining connectives orthogonally, reading logic operationally 
 is the main lesson of the field.
 
-* It scales! (Linear logic, Modal logics, Substructural logics etc)
+* It scales (together with its proof techniques)! (Linear logic, Modal logics, Substructural logics etc)
+
+* Fits the bill for ``logic" as an operating system with many running apps!
+
+* Gives programming languages principles for free!
 
 
-* Even for ``logics" that where not existing (System $F$)
+## My work
 
-* It gives foundations for different programmistic features - hopefully useful :)
-
-* Fits the bill for  ``logic" as an operating system with many apps!
-
-## IPL as proof-irrelevant natural deduction
-
-# My proposal
+  * What is the type system for logical necessity ?
+  * What is the (basic) logic of language interfacing ?
+  * Can we have a calculus that handles concepts as module declaration and module implementation
+  and captures the notion of ``separate compilation" i.e. a logic of modular binding ?
+  * Idea: a system relating two calculi
 
 
+# Judgments
 
-## Which Justification Logic?
+## Roadmap
 
-  * Justification logic is a multifaceted system of necessity
-  * Can be configured to emulate $K$, $T$, $S4$, $S5$ modality
-  * Can appear in intuitionistic and classical versions with respect to the underlying logic 
-  * We focus on a minimal system based on $K$ modal logic and intuitionistic implication
-  * Strengthening of the modality can be done in a way  that is respecting the computational reading we propose 
+* Create a system with two kinds of judgments $A \ {\sf true}$ and $A\  {\sf valid}:=\  \llbracket A \rrbracket {\sf true}$ and treat necessity
+as "double theoremhood"  
+* obtain a system of basic constructive modality (necessity) investigating the minimal relation
+between these two systems 
+* Use justification logic to 
+axiomatize validity $\llbracket \sf {judgments}\rrbracket$. 
 
 
+## Modal Rule
 
+One modal rule for elimination and introduction to relate judgments $A\  {\sf valid}$, $ A\ {\sf true}$, $ \Box A {\sf true}$: 
 
+~ Math
   
-## Motivation
+  \inferrule* {{\Box A} \\  {\inferrule* {}{{\begin{array}{c}
+  \overline{x:A}  \\
+  \vdots \\
+  {B} 
+  \end{array} } \\ {\begin{array}{c}
+  \overline{s:\llbracket A  \rrbracket} \\
+  \vdots \\
+  \llbracket B \rrbracket  
+    \end{array}}  }}}
+    {\Box B}
+ ~ 
+## Modal Rule (Generically)
+
+Or, generalizing for assumptions 
+
+$\Gamma:=x_1:A_1, \ldots, x_i: A_i\  \text{and } \Delta:= s_1:\llbracket A_i \rrbracket, \ldots 
+s_i:\llbracket A_i\rrbracket$: 
 
 
-  * Justification logic stemmed from Artemov's solution to providing an explicit classical provability semantics 
-  to intuionistic logic.
-  * We treat justifications as __validations__. I.e. second level proof constructs 
-  in a trusted system that are to be related with proof constructs of another weaker system in the first level 
-  (take  intuitionistic/ classical constructs as an exemplary case)
-  * We, effectively, treat __proof theoretically__ a pretty basic __semantical__ idea.    
 
-
-
-
-
+~ Math
+  
+  \inferrule* {{\Box A_1, \ldots,  \Box A_i} \\  {\inferrule* {}{{\begin{array}{c}
+  \overline{\Gamma}  \\
+  \vdots \\
+  {B} 
+  \end{array} } \\ {\begin{array}{c}
+  \overline{\Delta} \\
+  \vdots \\
+  \llbracket B \rrbracket  
+    \end{array}}  }}}
+    {\Box B}
+ ~ 
 ## Motivation (formally) 
 
 Assume deductive systems $I$:
@@ -1101,14 +1130,488 @@ s_i:\llbracket A_i\rrbracket$:
     \end{array}}  }}}
     {\Box B}
  ~ 
+
+## Modal Rule ($\Box$ Introduction)
+We defined the connective negatively but we obtain  $\Box$ constuctors by the very same rule for $\Gamma,\Delta$ empty
+and derivations $\mathcal{\overline{D},\overline{E}}$ closed for substitutions.
+~ Math
+  
+  \inferrule* {{\inferrule* {}{{\begin{array}{c}
+  \mathcal{\overline{D}}  \\
+  {B} 
+  \end{array} } \\ {\begin{array}{c}
+\mathcal{\overline{E}} \\
+  \llbracket B \rrbracket  
+    \end{array}}  }}}
+    {\Box B}
+ ~ 
+## Local Soundness: elim rule is not too strong
+
+For $\mathcal{\overline{D},\overline{E}}$ closed for substitutions, the first proof tree is reducible to the second:
+~ Math
+\begin{array}{l r}
+ \inferrule*{ 
+  \inferrule* {{\inferrule* {}{{\begin{array}{c}
+  \mathcal{\overline{D}}  \\
+  {A} 
+  \end{array} } \\ {\begin{array}{c}
+\mathcal{\overline{E}} \\
+  \llbracket A \rrbracket  
+    \end{array}}  }}}
+    {\Box A}\\{{\inferrule* {}{{\begin{array}{c}
+  \overline{x:A}  \\
+  \vdots \\
+  {B} 
+  \end{array} } \\ {\begin{array}{c}
+  \overline{s:\llbracket A  \rrbracket} \\
+  \vdots \\
+  \llbracket B \rrbracket  
+    \end{array}}  }}}}{\Box B} & \Longrightarrow 
+    \end{array}
+~
+~Math
+  \inferrule*  {{\inferrule* {}{{\begin{array}{c}
+  \mathcal{\overline{D}}\\
+  \overline{A}  \\
+  \vdots \\
+  {B} 
+  \end{array} } \\ {\begin{array}{c}
+  \mathcal{\overline{E}}\\
+  \overline{\llbracket A  \rrbracket} \\
+  \vdots \\
+  \llbracket B \rrbracket  
+    \end{array}}  }}}{\Box B}
+
+ ~ 
+
+## Local Completeness
+Any deduction $\mathcal{D}: \Box A$ can be expanded as follows:
+
+~ Math
+  
+\begin{array} {c r}
+\begin{array}{c}
+  \mathcal{D}\\ 
+   \Box A
+\end{array} & \Longrightarrow \\
+\\
+\inferrule* {{\begin{array}{c}
+  \mathcal{D}\\
+   \Box A 
+  \end{array} } \\ {\begin{array}{c}
+                      \\
+                      \overline{x:A}
+                      \end{array}} \\ {{\begin{array}{c}
+                      \\
+                      \overline{s:\llbracket A\rrbracket}
+                      \end{array}}}
+                      }{\Box A}
+\end{array}
+~
+
+
+ # The system
+
+## Type Universe 
+
+
+~ Math 
+\begin{array}{c c}
+ \\
+\inferrule* { } {P_k \in {\sf Prop_0}} & \inferrule* { } {\top \in {\sf Prop_0}}
+\\
+\\
+\inferrule* {{ A \in {\sf Prop_0 }}\\ { B \in {\sf Prop_0}}} { A\supset  B\in {\sf Prop_{0}}} & \inferrule* { A \in {\sf Prop_0 }} {\llbracket  A\rrbracket \in {\sf \llbracket Prop_{0}\rrbracket}}
+\\
+\\
+\inferrule* { A \in{\sf Prop_{0} }} {\Box  A\in{\sf Prop_{1}} } & \inferrule*  {{ A \in {\sf Prop_1 }}\\ { B \in {\sf Prop_1}}} { A\supset  B\in {\sf Prop_{1}}}
+\end{array}
+~
+
+
+##  Natural Deduction ( ${\sf Prop_0}$ )
+
+
+
+~ Math
+\begin{array}{l r}
+\inferrule* {x: A \in \Gamma}{ {\Gamma}\vdash { A}} & \inferrule* { }{{\Gamma}\vdash { \top}} \\
+\\
+\inferrule* {{{\Gamma, x: A} \vdash { B}}} {{\Gamma}\vdash {   A\supset  B}} & \inferrule* {{ {\Gamma}\vdash{ A\supset  B}}\\{{\Gamma}\vdash { A}}} { {\Gamma} \vdash {   B}}
+\end{array}
+~
+##  Natural Deduction ( $\llbracket{\sf Prop_0}\rrbracket$  )
+For the image  of the interpretation  $\llbracket{\sf Prop_0}\rrbracket$ we demand:
+
+ * context reflexivity, compositionality and logical completeness w.r.t   intuitionistic implication.
  
- ## Left for the thesis
- 
- * investigate semantics
- 
- * investigate extensions (slightly populist promise!)
- 
- * implement it
+ * the host theory (calculus of validations) is "black boxed". We axiomatize the basic properties of the image $\llbracket {\sf Prop_0}\rrbracket$
+ abstractly in terms of provability (and not in terms of proof trees of specific shape).
+
+ * different calculi could realize such specifications (e.g. extensions of lambda calculus with classical logic 
+ ($\llbracket A\supset B\rrbracket := \neg A \vee B$), 
+ calculi for linear logic  ($\llbracket A\supset B\rrbracket :=  ! A \multimap B$), or a lambda calculus itself) 
+
+ * Following justification logic, we use the axiomatic characterization from combinatory logic.
+
+##  Natural Deduction ( $\llbracket{\sf Prop_0}\rrbracket$ )
+With $\Delta$ of the form $\llbracket \Gamma \rrbracket$ __and__ $ A, B, C \in {\sf Prop_0} $
+
+~ Math
+\begin{array}{l c}
+\inferrule* {s:\llbracket  A\rrbracket \in \Delta}{{\Delta}\vdash {\llbracket  A\rrbracket}} &
+\inferrule* { } { {\Delta} \vdash{\llbracket  \top \rrbracket}}
+\end{array}
+~
+
+~ Math
+\begin{array}{l l}
+\inferrule*{ }  {\Delta\vdash \llbracket   A \supset (B \supset   A)\rrbracket } \\
+\\
+\inferrule* { }{\Delta\vdash\llbracket   A\supset (B \supset C) \supset ((  A\supset B) \supset (  A \supset C))\rrbracket}
+\\
+\\
+{\inferrule* {{ {\Delta}\vdash 
+  { \llbracket  A \supset  B \rrbracket}}\\ {{\Delta}\vdash {\llbracket  A \rrbracket}}}
+  { {\Delta}\vdash {\llbracket  B\rrbracket}}} 
+\\
+\\
+{\inferrule* {{ {\Delta}\vdash 
+  { \llbracket    A \rrbracket}}\\ {{\Delta},{\llbracket A \rrbracket}\vdash {\llbracket  B \rrbracket}}}
+  { {\Delta}\vdash {\llbracket  B\rrbracket}}}
+\end{array}
+~
+
+
+
+##  Natural Deduction ( ${\sf Prop_1}$ )
+~ Math
+\begin{array}{c}
+\inferrule*{x^{\prime}: \Box A \in \Gamma}{ {\Gamma}\vdash {\Box A}} 
+\\ 
+\\
+\inferrule*{{(\forall  A_i \in \Gamma^{\prime}. \  {\Gamma}\vdash{\Box  A_i})}\\{{\Gamma^{\prime}}\vdash { B}}\\
+  { {\llbracket \Gamma^{\prime} \rrbracket}\vdash {\llbracket  B\rrbracket} }} { {\Gamma}\vdash\Box  B}
+\\
+\\
+\inferrule* {{ {\Gamma, x^{\prime}: \Box A} \vdash { \Box B}}} { {\Gamma}\vdash {   \Box A\supset  \Box B}} 
+\\
+\\
+\inferrule* {{ {\Gamma} \vdash { \Box A\supset  \Box B}}\\{ {\Gamma} \vdash { 
+\Box A}}} { {\Gamma}\vdash {  \Box B}}
+\end{array}
+~ 
+
+
+## Logical Completeness and Admissibility of  Necessitation
+
+We can show that:
+
+* or every  $\Gamma,   A \in {\sf Prop_0}$:  $\Gamma\vdash A \Longrightarrow \llbracket \Gamma\rrbracket\vdash\llbracket A\rrbracket $ and, hence, $\Box\Gamma \vdash \Box   A$.
+* this is essentially the "functional completeness" proof of Curry for combinatory logic
+* In our setting translates to admissibility of Rule of Necessitation since:
+$\vdash A \Longrightarrow \vdash \Box A$.
+* we get a completeness result w.r.t to intuitionistic $K$ modality
+
+# Sequent Calculus
+## Sequent Calculus Formulation
+
+~ Math
+\begin{array}{l r}
+\inferrule*[right=$Id$] { }{\Gamma, A  \Rightarrow A }\\
+\\
+\inferrule*[right=$\supset_L$] {{\Gamma, A\supset B, B \Rightarrow  C }\\ {\Gamma, A\supset B \Rightarrow A}} {\Gamma, A\supset B \Rightarrow  C}
+& 
+\inferrule*[right=$\supset_R$] {\Gamma, A \Rightarrow  B} {\Gamma \Rightarrow A\supset B}
+\\
+\\
+\inferrule*[right=$\Box_{LR}$] {{\Box\Gamma,\Gamma\Rightarrow A}\\{\llbracket\Gamma\rrbracket\Rightarrow \llbracket A \rrbracket }}{\Box\Gamma\Rightarrow \Box A}
+\\
+\\
+\inferrule*[right=$\bot_L$] { } {\Gamma, \bot \Rightarrow A}
+\end{array}
+~ 
+## Cut elimination
+We show:
+
+  If   $\Gamma\vdash A$, then $\Gamma\Rightarrow^{+{\sf Cut}} A$ 
+
+ which together with admissibility of Cut gives a consistency result. 
+
+# The term Calculus
+
+## Proof Term Assignment
+* For the ${\sf Prop_0}$: the relevant fragment of the STLC with appropriate $\beta,\eta$ equalities 
+
+* For the ${\sf \llbracket Prop_0\rrbracket}$, the relevant fragment of justification logic (typed combinatory logic):
+
+* For the ${\sf Prop1}$ fragment we transliterate the natural deduction $\Box$ rule and its corresponding Gentzen principles 
+to equalities using ${\sf let}$ bindings.
+
+
+## Proof term Assignment( ${\sf Prop_0}$) 
+~ Math
+\begin{array}{l r}
+\inferrule* {x: A \in \Gamma}{ {\Gamma}\vdash { x:A}}
+&
+\\
+\inferrule* { }{ {\Gamma}\vdash { <>:\top}}
+& 
+\inferrule* {{{\Gamma, x: A}\vdash { M:B}}} { {\Gamma}\vdash { \lambda x:A.\  M:  A\supset  B}}
+\\
+\\
+\inferrule* {{{\Gamma}\vdash { M:A\supset  B}}\\{ {\Gamma}\vdash {M^{\prime}: A}}} { {\Gamma}\vdash { (MM^{'}):  B}}
+& 
+\inferrule* {}{+\  \beta\eta \text{\ equalities for \ } \top,\supset}
+%\and
+%\inferrule*[right=$\bot$E] {{\Turn {\Gamma} {\bot}}}{\Turn {\Gamma} {   A}}
+\end{array}
+~ 
+
+## Proof term Assignment( ${\sf \llbracket Prop_0 \rrbracket}$) 
+~ Math
+
+
+\begin{array}{l l}
+\inferrule*{  {s:\llbracket  A\rrbracket \in \Delta}}{ {\Delta}\vdash {s:\llbracket  A\rrbracket}}\\
+\\ 
+\inferrule*{{  A, B \in {\sf Prop_0} }}   {\Delta\vdash {K^{A,B}}: \llbracket   A \supset (B \supset   A)\rrbracket }
+\\
+\\
+ \inferrule*{ {  A,B, C \in {\sf Prop_0}}}{\Delta\vdash {S^{A,B,C}}:\llbracket   A\supset (B \supset C) \supset ((  A\supset B) \supset (  A \supset C))\rrbracket}
+\\
+\\
+\inferrule* {{{\Delta}\vdash { {\sf J}: \llbracket  A \supset  B \rrbracket}}\\ {{\Delta}\vdash {{\sf J'}:\llbracket  A \rrbracket}}}{{\Delta}\vdash { {\sf J*J^\prime}:\llbracket  B\rrbracket}}
+\end{array}
+~
+## Proof term Assignment( ${\sf  Prop_1 }$)
+${\sf let}$ bindings in functional programming compute by combining unification and substitution. 
+For example  given the function:
+
+``` Haskell
+def shift (p:Point) = 
+     let  <x,y> be p
+     in
+     <x+1,y+1>
+```
+calling this function with argument the point $\langle 3,5\rangle$  will return $\langle 4,6 \rangle$ by pattern matching 
+$\langle 3,5\rangle$ against $\langle x,y \rangle$.
+
+## Proof term Assignment( ${\sf  Prop_1 }$)
+Instances of the rule with empty (eliminating zero boxes), and singleton (eliminating one box) contexts.
+~ Math
+\begin{array}{c}
+\inferrule*[]{ {\Gamma\in{\sf Prop_1}}\\{\vdash { M:B}}\\{  \vdash {{\sf J}:\llbracket  B\rrbracket} }} { {\Gamma}\vdash {  M\& {\sf J}:\Box  B}}
+\\
+\inferrule*[]{{  {\Gamma}\vdash {N:\Box  A}}\\{ {x:A}\vdash { M:B}}\\{{s:\llbracket A \rrbracket}\vdash {{\sf J}:\llbracket  B\rrbracket} }} { {\Gamma}\vdash {{\sf let} \ (x\& s \ \ {\sf be\ } N) \ {\sf in}\  (M\& {\sf J}):\Box  B}}
+\end{array}
+~ 
+## Proof term Assignment( ${\sf  Prop_1 }$)
+Or, generically, for arbitrary number of boxes:
+~ Math
+\begin{array}{l}
+	\inferrule*
+	{{\forall A_k \in \Gamma^\prime . \   \Gamma \vdash N_k:\Box A_k}\\
+	{ {\Gamma^\prime}\vdash {M:B}}\\{ {\llbracket\Gamma^\prime\rrbracket}\vdash {{\sf J}:\llbracket B \rrbracket} }} 
+	{ {\Gamma} \vdash {{\sf let^{*}}\ (\Gamma^\prime, \llbracket\Gamma^\prime\rrbracket, Ns) \ {\sf in}  \ ( M\& {\sf J}):\Box B}}
+\end{array}
+~
+With : 
+~ Math
+\begin{array}{l}
+\nonumber {\sf let}^{*}\ (\circ;\ \circ;\  [\ ]) {\ \sf in\ }  M:= M \ \\
+\nonumber {\sf let}^{*}\ (x_1:A_1,\ldots, x_i:A_i\ ;\  s_1: \llbracket A_1\rrbracket, \ldots, s_i:\llbracket A_i\rrbracket;\  N_1,\ldots,  N_i)  \\
+{\ \sf in\ } M \\:= \\
+\ {\sf let} \ \{(x_1 \& s_1)\  {\sf be}\  N_1,\ldots,  (x_i \& s_i)\  {\sf be}\  N_i\}\ {\sf in}\  M \\
+\end{array}
+~
+
+
+## Proof term Assignment( ${\sf  Prop_1 }$)
+ * With the reduction rule coming straight from  Gentzen reduction  principle:
+
+~ Math
+\begin{array}{ll} 
+	{\sf let} \{(x_1 \& s_1) {\ \sf be\ } (M_1\& {\sf J_1}),\ldots,  (x_i \& s_i) {\ {\sf be}\ } (M_i\& {\sf J_i})\}\ {\sf in}\  (M \&  {\sf J})& \\
+	=_{\beta} & \\
+  {  M[M_1/x_1, \ldots,  M_i/x_i] \& {\sf J}[{\sf J_1}/s_1,\ldots, {\sf J_i}/s_i]}
+	\end{array}
+~
+
+* And similarily for $\eta$ expansion:
+$M:\Box A =_{\eta}\ \ {\sf let} \ \ (x \& s\  {\sf be} \ M)\ \ {\sf in}\ \  { (x \& s)}:\Box A$
+
+* With these equalities we can move on and show  strong normalization  and confluence results.
+
+# An Application
+
+## Dynamic linking with foreign function implementation
+* Consider a language $I$ (_source_) interfacing a lower level language $J$ (_target_) via  declared in a signature.
+
+*  We assume that the two languages share
+some basic types e.g. ${\sf int}$ (e.g $\llbracket int_I\rrbracket = int_J $) 
+and for simplicity, that $J$  is based on  lambda calculus so it is functionally complete 
+ under the obvious interpretation  $\llbracket A\rightarrow_I B\rrbracket =\llbracket A \rrbracket \rightarrow_J \llbracket B \rrbracket $ 
+
+
+## 
+A typical  interface for a __stack__  will be declared as follows:
+
+``` Haskell
+    using type intstack
+      empty: intstack
+      push: int -> intstack -> intstack
+      pop: intstack -> int x intstack
+```
+
+Source expressions in such a setting have a dynamic meaning depending on the target implementations. Take  the expression: 
+```Haskell
+pop (push (1+1) empty)
+```
+
+This program involves two kinds of computations: a redex $(1+1)$ that can be reduced using the internal semantics 
+<!-- begin merge (remove this line to resolve the conflict) -->
+of the language ($1+1\rightsquigarrow_{I} 2$) and the signature calls  ${\sf push, pop}$
+
+## Dynamic linkers
+* A __dynamic linker__ is a _metaprogramming_ construct  that consumes a type correct 
+implementation of the signature and produces a type correct residual program sensitive to
+the implementation. Our calculus, is a calculus of such constructions. 
+
+* In the following we consider ${\sf \Sigma}$ to be the signature of the interface. 
+Here are the steps towards the dynamic linker construction for the expression .
+
+## Dynamic linkers
+* Reduce the source code based on the operational semantics of $I$ until it doesn't have a redex:
+
+
+${\sf \Sigma}; {\sf \circ {\vdash pop (push \ (1+1) \ Empty)\rightsquigarrow pop (push \ 2 \ Empty) :int}}$
+
+* Contextualize the use of the signature at the final term in step $1$:
+~ Math 
+ \begin{array}{c c}
+{\sf \Sigma;}&  {\sf x_1:intstack,  x_2:int\rightarrow intstack\rightarrow int\times intstack,}\\
+&  {\sf x_3:intstack\rightarrow int \vdash   x_3 (x_2 \ 2\  x_1):int} 
+\end{array}
+~
+* Rewrite the previous judgment assuming abstract foreign implementations for the corresponding 
+missing elements.
+
+~ Math 
+\begin{array}{c}
+{\sf s_1:\llbracket intstack\rrbracket,  s_2:\llbracket int\rightarrow intstack\rightarrow intstack\rrbracket},\\
+{\sf s_3:\llbracket intstack\rightarrow int\times intstack \rrbracket \vdash   s_3 * (s_2 * \ \bar{2}\ * s_1):\llbracket int\rrbracket} 
+\end{array}
+~
+
+
+
+## Dynamic Linkers
+
+* Merge the two judgments to construct a dynamic linker that consumes
+assignments of the signature elements  and outputs the assignment of the whole expression
+dynamically.
+
+~ Math
+\begin{array}{l}
+{\sf \Sigma}; {\sf {x_1^{\prime}:\Box intstack ,x_2^{\prime}:\Box(int\rightarrow intstack\rightarrow intstack)}},\\
+   {\sf x_3^{\prime}: \Box  (intstack\rightarrow int\times instack)}\vdash \\
+		{\sf  let\{ x_1\& s_1 {\ \sf be \ } x_1^{\prime},
+         \ x_2\& s_2 {\ \sf be \ } x_2^{\prime}, \  x_3\& s_3 
+         {\ \sf be \ } x_3^{\prime} \}\  in}\ \\   
+         \mathtt{(x_3 (x_2\ 2 \ x_1)\ \& \ s_3*(s_2* \bar{2}*s_1)):\Box int} 
+\end{array}
+~
+
+## Dynamic Linkers
+* Which gives by $\lambda$ abstractions:
+~Math 
+\begin{array}{l l}
+\mathtt{\lambda x_1^{\prime}.\  \lambda x_2^{\prime}. \lambda x_3^{\prime}}. \\
+           		{\sf  let\{ x_1\& s_1 {\ \sf be \ } x_1^{\prime},
+         \ x_2\& s_2 {\ \sf be \ } x_2^{\prime}, \  x_3\& s_3 
+         {\ \sf be \ } x_3^{\prime} \}\  in}\ \\   
+         \mathtt{(x_3 (x_2\ 2 \ x_1)\ \& \ s_3*(s_2* \bar{2}*s_1)):}\\
+             {\sf \Box(intstack)\rightarrow 
+              \Box(int\rightarrow intstack\rightarrow intstack)} \\
+             {\sf \rightarrow \Box (intstack\rightarrow int\times intstack) \rightarrow \Box int}
+\end{array}
+~
+
+## Dynamic Linkers
+
+* Such a program behaves correctly consuming __only__ conforming  implementations of the interface
+and calculating the program's different "futures" with respect to different implementations.
+
+* E.g. with an array implementation we get :
+~ Math  
+  \begin{array}{l}
+  { \sf create\_array(): intarray} \ \  \text{for}\ \ {\sf empty}\\
+    {\sf add\_array: int \rightarrow intarray\rightarrow intarray}\ \  \text{for} \ \ {\sf push}\\
+  {\sf remove\_last: intarray\rightarrow intarray\times int }\  \text{for}\  {\sf pop}
+  \end{array}
+~
+
+
+
+
+## Dynamic Linkers
+Which are conforming with the signature under the interpretation:
+~ Math 
+  \begin{array}{l}
+  \llbracket {\sf intstack} \rrbracket:= {\sf intarray} \\  
+  \llbracket {\sf int \rightarrow intstack\rightarrow instack } \rrbracket:= {\sf int \rightarrow intarray\rightarrow intarray} \\
+  \llbracket {\sf intstack \rightarrow (int \times intstack)} \rrbracket:= {\sf int\rightarrow (int\times intarray)}\\
+  \end{array}
+~
+Hence we obtain values of $\Box$ types (assignments):
+~ Math  
+  \begin{array}{l}
+  { \sf empty \& \  create\_array():\Box intstack} \\
+    {\sf  push \&\  add\_array  :\Box (int \rightarrow intstack\rightarrow intstack)}\\
+  {\sf  pop   \&\  remove\_last: \Box (intarray\rightarrow intarray\times int)}
+  \end{array}
+~
+## Dynamic Linkers
+* If we apply these values to the dynamic linker we obtain the assignment for the whole expression:
+after reducing all redexes ($\lambda$ and ${\sf let}$):
+~ Math
+\begin{array}{l l}
+{\sf pop (push\ 2 \ empty)} \&  \\
+  {\sf remove\_last*(add\_array*\ 2 * create\_array())}
+\end{array}
+~
+
+* As required in systems with separate compilation, the same process will compute a different residual
+ with a different set of  conforming implementations 
+
+## Dynamic Linkers
+
+* E.g.  with ${\sf \llbracket intstack\rrbracket := intlist}$ 
+and the conforming implementation 
+~ Math  
+  \begin{array}{l}
+  { \sf [ \ ]: intlist} \ \  \text{for}\ \ {\sf empty}\\
+    {\sf Cons: int \rightarrow intlist\rightarrow intlist}\ \  \text{for} \ \ {\sf push}\\
+  {\sf pop\_list: intlist\rightarrow intlist\times int }\  \text{for}\  {\sf pop}
+  \end{array}
+~
+the linker will compute a different "future" for the program i.e.  
+~Math
+ \begin {array}{l}
+{\sf pop (push\ 2 \ empty)} \&  \\
+  {\sf pop\_list*(Cons*\ 2 * [\ ])}
+\end{array}
+~
+
+## Future Work
+* Strengthening the relation between the two calculi (to  more than logical embedding)
+is expected to give stronger modality
+* Specifically demanding an adjunction should give $T$ modality
+* It is not difficult to do in our system because of the clear seperation of the logics
+of the two systems and the logic of their "merging"
+
+## Thanks for looking :-)
 
 ## Thank you!
 Thanks for looking
