@@ -655,9 +655,10 @@ $\Gamma\vdash M = \langle fst(M), snd(M)\rangle :A \wedge B$
 ~
 Harmony gives the  $\beta\eta-$ equalities 
 Similarly we obtain the whole equational system of the STLC
-$(\lambda x: A. M) N =_{\beta} M[N/x]$
 
-$f:A \supset B = \lambda x:A. f x$
+* $(\lambda x: A. M) N =_{\beta} M[N/x]$
+
+* $f:A \supset B = \lambda x:A. f x$
 
 ## Disjunction as union 
 ~ Math
@@ -678,12 +679,9 @@ $f:A \supset B = \lambda x:A. f x$
 ## Disjunction as union
 Again the "meaning" of the terms is embedded in the equalities that witness harmony given by Gentzen's principles:
 
-~Math
-\alpha 
-~
-
-re gav!!
-
+* $ {\text{case }inl(M) \text{ of } inl( x)\longmapsto N  |\  inr (y)\longmapsto O : A\vee B} = N[M/x]$
+* $ {\text{case }inr(M) \text{ of } inl( x)\longmapsto N  |\  inr (y)\longmapsto O : A\vee B} = O[M/x]r$
+* $f:A \supset B = \lambda x:A. f x$
 
 
 ## Consistency Results
