@@ -678,11 +678,9 @@ Similarly we obtain the whole equational system of the STLC
 
 ## Disjunction as union
 Again the "meaning" of the terms is embedded in the equalities that witness harmony given by Gentzen's principles:
-~ Math
-  \begin{array}{c } 
-      { {\text{case } inl(M) \text{ of } inl( x)\longmapsto N  |\  inr (y)\longmapsto O = N[M/X] A\vee B}}}
-   \end{array}
-~
+
+ ${ {\text{case } inl(M) \text{ of } inl( x)\longmapsto N  |\  inr (y)\longmapsto O = N[M/x]}}$
+    
 
 ## Consistency Results
 _Issue_: How do you show that this calculus does not prove $\bot$
@@ -1033,7 +1031,7 @@ and derivations $\mathcal{\overline{D},\overline{E}}$ closed for substitutions.
   \llbracket B \rrbracket  
     \end{array}}  }}}
     {\Box B}
- ~ 
+~
 
 
 
