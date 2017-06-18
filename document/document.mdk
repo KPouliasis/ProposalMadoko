@@ -947,14 +947,14 @@ Finally we show:
   * To show admissibility of Coercion we show admissibility of Cut instead.
 ~
 
-## Merrits of CHI
+## Merits of CHI
 
-* The ideas of separating judgments and propositions, defining connectives orthogonally, reading logic operationally 
-is the main lesson of the field.
+*  Separating judgments and propositions, defining connectives orthogonally, reading logic operationally 
+are  key concepts.
 
-* It scales (together with its proof techniques)! (Linear logic, Modal logics, Substructural logics etc)
+* It scales (together with its proof techniques)! (e.g. calculi for linear logic, Modal logics, Substructural logics etc)
 
-* Fits the bill for ``logic" as an operating system with many running apps!
+* Fits the bill for "logic as an operating system running many different application"
 
 * Gives programming languages principles for free!
 
@@ -968,7 +968,7 @@ is the main lesson of the field.
   * Idea: a system relating two calculi
 
 
-# Judgments
+# Modal Judgments
 
 ## Roadmap
 
@@ -976,7 +976,7 @@ is the main lesson of the field.
 as "double theoremhood"  
 * obtain a system of basic constructive modality (necessity) investigating the minimal relation
 between these two systems 
-* Use justification logic to 
+* Read $\llbracket \cdot\rrbracket$ as an anonymous function (or, better, functor) and 
 axiomatize validity $\llbracket \sf {judgments}\rrbracket$. 
 
 
@@ -1019,123 +1019,12 @@ s_i:\llbracket A_i\rrbracket$:
     \end{array}}  }}}
     {\Box B}
  ~ 
-## Motivation (formally) 
 
-Assume deductive systems $I$:
-
-  * with propositions in $U_I$
-  * a possibly non-empty signature of axioms $\Sigma_I$    
-  * an entailment relation   $\Sigma_I;\Gamma\vdash_{I}A$
-   
-
-and  $J$ with: $U_J$, $\Sigma_J$, and $\Sigma_J;\Delta\vdash_J \phi$ respectively.  
-
-## Deductive System Requirements
-
-* __Reflexivity__ :
-    
-    * $A \in \Gamma \Longrightarrow \Gamma\vdash_{I}A$
-    * $\phi \in \Delta \Longrightarrow \Delta\vdash_{J}\phi$
-* __Compositionality__:  
-
-     *  $\Gamma\vdash_I A$ __and__ $\Gamma^{\prime},A\vdash_{I} B \Longrightarrow \Gamma,\Gamma^{'}\vdash_I B $  
-        $\Delta\vdash_J\phi$ __and__ $\Delta^{\prime},\phi\vdash_{J} \psi \Longrightarrow \Delta,\Delta^{'}\vdash_J \psi$ 
-*  __Top elements __:
-
- $\Gamma\vdash_{I}\top_I $ __ and__  $\Delta\vdash_{J}\top_J $
- 
- 
-
-
-## Interpetations and Validations
-An  _interpretation for $I$_, ($\llbracket\bullet \rrbracket_J$) is a pair
-$(J,\llbracket\bullet\rrbracket)$ of a deductive  system $J$ together
-with a (functional) mapping $\llbracket \bullet \rrbracket: U_I\rightarrow U_J$ on propositions of $I$ into propositions of $J$ extended to multisets of 
-formulae of $U_I$  s.t. 
-
-* $\llbracket\top_I \rrbracket = \top_J$ 
-*  For $\Gamma$ of  the form $A_1,\ldots, A_n$: $\llbracket\Gamma \rrbracket=\llbracket A_1  \rrbracket,\ldots,  \llbracket A_n\rrbracket$
-
-* Given a deductive system $I$  and an  interpretation  function $\llbracket\bullet\rrbracket_J:U_I\rightarrow U_J$
- of $I$ into $J$ we define:
-
-A _validation_ of a deduction $\Sigma_I;\Gamma\vdash_I A$ to be a deduction $\Sigma_J;\Delta\vdash_{J} \phi$ in $J$ 
-such that $\llbracket A \rrbracket=\phi$ and $\Delta=\llbracket \Gamma \rrbracket $ . We will be writing
-$ \llbracket \Sigma_I;\Gamma\vdash_I A\rrbracket_J$ 
-
-## Logical Completeness
-Given a deductive system $I$, we say that  $J$ is __logically complete__ under 
-$\llbracket\bullet \rrbracket_J$  when  for
-all purely logical deductions $\mathcal{D}$ in $I$ 
- there exists a (purely logical) validation $\mathcal{E}$ in $J$.
- i.e:
- 
- 
-  
- 
- $\forall \mathcal{D}. \ \mathcal{D}:\Gamma\vdash_I A \Longrightarrow 
- \exists\mathcal{E}: \llbracket \Gamma\vdash A\rrbracket_J$
-
-
-
-
-# Modal Judgments
-
-## Roadmap
-
-* Create a system with two kinds of judgments $A \ {\sf true}$ and $A\  {\sf valid}:=\  \llbracket A \rrbracket {\sf true}$ and treat necessity
-as "double theoremhood"  
-* obtain a system of basic constructive modality investigating the minimal relation
-between these two systems 
-* Use justification logic to 
-axiomatize validity $\llbracket \sf {judgments}\rrbracket$. 
-
-
-## Modal Rule
-
-One modal rule for elimination and introduction to relate judgments $A\  {\sf valid}$, $ A\ {\sf true}$, $ \Box A {\sf true}$: 
-
-~ Math
-  
-  \inferrule* {{\Box A} \\  {\inferrule* {}{{\begin{array}{c}
-  \overline{x:A}  \\
-  \vdots \\
-  {B} 
-  \end{array} } \\ {\begin{array}{c}
-  \overline{s:\llbracket A  \rrbracket} \\
-  \vdots \\
-  \llbracket B \rrbracket  
-    \end{array}}  }}}
-    {\Box B}
- ~ 
-## Modal Rule (Generically)
-
-Or, generalizing for assumptions 
-
-$\Gamma:=x_1:A_1, \ldots, x_i: A_i\  \text{and } \Delta:= s_1:\llbracket A_i \rrbracket, \ldots 
-s_i:\llbracket A_i\rrbracket$: 
-
-
-
-~ Math
-  
-  \inferrule* {{\Box A_1, \ldots,  \Box A_i} \\  {\inferrule* {}{{\begin{array}{c}
-  \overline{\Gamma}  \\
-  \vdots \\
-  {B} 
-  \end{array} } \\ {\begin{array}{c}
-  \overline{\Delta} \\
-  \vdots \\
-  \llbracket B \rrbracket  
-    \end{array}}  }}}
-    {\Box B}
- ~ 
 
 ## Modal Rule ($\Box$ Introduction)
 We defined the connective negatively but we obtain  $\Box$ constuctors by the very same rule for $\Gamma,\Delta$ empty
 and derivations $\mathcal{\overline{D},\overline{E}}$ closed for substitutions.
 ~ Math
-  
   \inferrule* {{\inferrule* {}{{\begin{array}{c}
   \mathcal{\overline{D}}  \\
   {B} 
@@ -1145,6 +1034,7 @@ and derivations $\mathcal{\overline{D},\overline{E}}$ closed for substitutions.
     \end{array}}  }}}
     {\Box B}
  ~ 
+ 
 ## Local Soundness: elim rule is not too strong
 
 For $\mathcal{\overline{D},\overline{E}}$ closed for substitutions, the first proof tree is reducible to the second:
