@@ -1315,11 +1315,16 @@ the linker will compute a different "future" for the program i.e.
 * correspondence with basic $K$ intutionistic modal logic
 
 ## Categorical semantics  and future work
-* Necessity read as "double truth under an interpretation" ($\llbracket \rrbracket$)
+![closed] Necessity read as "double truth under an interpretation" ($\llbracket \rrbracket$)
 corresponds to the logic of __applicative functors__ (simply put: functors that preserve products and 
 map function application in a "sensible" way)
+
 * The passing to category theory is useful to find possible extensions of the logic with practical 
 applications (e.g. passing control to an external language and returning back to the source )
-* Modal logic for adjunctions and monads
+* KT modal logic with morphisms $\Box A \rightarrow A $
+* Modal logic for adjunctions and monads?
+
+
+[closed]: images/closed.png "closed" { width:auto; max-width:90% }
 
 ## Thanks for looking
