@@ -10,7 +10,6 @@ Beamer Theme  : madrid
 Package     : mathpartir.sty
 Package       : mathtools
 Bib style     : plainnat
-Bibliography  : secondexam.bib
 Bibliography: presentation.bib
 
 [TITLE]
@@ -1316,10 +1315,13 @@ the linker will compute a different "future" for the program i.e.
 * correspondence with basic $K$ intutionistic modal logic
 
 ## Categorical semantics  and future work
-![closed] Necessity read as "double truth under an interpretation" ($\llbracket \rrbracket$)
+![closed] 
+
+Necessity read as "double truth under an interpretation" ($\llbracket \rrbracket$)
 corresponds to the logic of __applicative functors__ (simply put: functors that preserve products and 
 map function application in a "sensible" way)
 
+## More logics?
 * The passing to category theory is useful to find possible extensions of the logic with practical 
 applications (e.g. passing control to an external language and returning back to the source )
 * KT modal logic with morphisms $\Box A \rightarrow A $
