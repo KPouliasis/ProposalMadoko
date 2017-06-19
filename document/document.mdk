@@ -960,7 +960,7 @@ are  key concepts.
 
   * What is the type system for logical necessity ?
   * What is the (basic) logic of language interfacing ?
-  * Can we have a calculus that handles concepts as module declaration and module implementation
+  * Can we have a calculus that handles concepts module interfaces
   and captures the notion of ``separate compilation" i.e. a logic of modular binding ?
   * Idea: a system relating two calculi
 
@@ -1158,13 +1158,13 @@ $M:\Box A =_{\eta}\ \ {\sf let} \ \ (x \& s\  {\sf be} \ M)\ \ {\sf in}\ \  { (x
 # An Application
 
 ## Dynamic linking with foreign function implementation
-* Consider a language $I$ (_source_) interfacing a lower level language $J$ (_target_) via  declared in a signature.
+* Consider a language $I$ (_source_) interfacing a language $J$ (_target_) via  declared in a signature.
 
 *  We assume that the two languages share
 some basic types e.g. ${\sf int}$ (e.g $\llbracket int_I\rrbracket = int_J $) 
 and for simplicity, that $J$  is based on  lambda calculus so it is functionally complete 
  under the obvious interpretation  $\llbracket A\rightarrow_I B\rrbracket =\llbracket A \rrbracket \rightarrow_J \llbracket B \rrbracket $ 
-
+* For simplicity we can also assume that $I, J$ are the same (e.g. module definitions within a language)
 
 ## 
 A typical  interface for a __stack__  will be declared as follows:
