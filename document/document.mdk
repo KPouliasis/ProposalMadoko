@@ -94,10 +94,6 @@ express  their reasoning (proof) constructs
 * In intuitionistic propositional logic (__IPL__)   __judgments__ we have judgments of two  kinds:
   * $A\  {\sf Prop}$: $A$ is in the universe of propositions
   * $A\  {\sf true}$ : $A$ has a proof
-  
-* $A\  {\sf Prop}$: can be replaced with a context free grammar in the propositional case.
-But in general that's not the case. E.g. $\forall x. A(x)$ is not even a type whereas $\forall x:B. A(x)$
-is only when $x:A\vdash B(x):{\sf Prop}$
 
 * Other logics implement different judgments/ modalities (e.g.  ${\sf A \ true \ at \ t}$ )
 
@@ -144,7 +140,7 @@ and leafs (   ${J_1 \ldots J_i}$) are hypothesized judgments
     \\
   {x_1:A_1  \ldots x_i: A_i}  \\
   \vdots \\
-  {x:A_{k}} 
+  {A_{k}} 
   \end{array} } 
   ~
 
@@ -672,7 +668,7 @@ Similarly we obtain the whole equational system of the STLC
     {\Gamma\vdash inr^{A}(M):A\vee B}}
     \\
     \\
-    {\inferrule*[right=Elim]{{\Gamma\vdash M:A\vee B}\\{\Gamma,x:A\vdash N:C}\\ {\Gamma,y:B\vdash O:C}} { {\Gamma}\vdash {\text{case }M \text{ of } inl( x)\longmapsto N  |\  inr (y)\longmapsto O : A\vee B}}}
+    {\inferrule*[right=Elim]{{\Gamma\vdash M:A\vee B}\\{\Gamma,x:A\vdash N:C}\\ {\Gamma,y:B\vdash O:C}} { {\Gamma}\vdash {\text{case }M \text{ of } inl( x)\longmapsto N  |\  inr (y)\longmapsto O : C}}}
    \end{array}
 ~
 
@@ -930,7 +926,7 @@ Finally we show:
 
   *  $\Rightarrow^{+}$ is $\Rightarrow$ adjoint with:
 
-  * $\inferrule*[right=Cut]{\Gamma\Rightarrow A}{\Gamma,A\Rightarrow C}$ 
+  * $\inferrule*[right=Cut]{{\Gamma\Rightarrow A}\\{\Gamma,A\Rightarrow C}}{\Gamma \Rightarrow C}$ 
 
   * Coercion corresponds to Cut Rule
 
@@ -938,8 +934,7 @@ Finally we show:
 
   * As a result coercion is admissible
 
-  * All natural deduction proof trees have a unique  normal form
-     since $\mathcal{D}:\Gamma\vdash A$  $\Gamma$
+  * And, all natural deduction proof trees have a  unique normal form
 
   * To show admissibility of Coercion we show admissibility of Cut instead.
 ~
@@ -1157,7 +1152,7 @@ $M:\Box A =_{\eta}\ \ {\sf let} \ \ (x \& s\  {\sf be} \ M)\ \ {\sf in}\ \  { (x
 
 # An Application
 
-## Dynamic linking with foreign function implementation
+## Dynamic linking and module mechaninsms
 * Consider a language $I$ (_source_) interfacing a language $J$ (_target_) via  declared in a signature.
 
 *  We assume that the two languages share
@@ -1316,10 +1311,15 @@ the linker will compute a different "future" for the program i.e.
 ~
 
 ## Full system
-* ($\llbracket\cdot\rrbracket$) axiomatization via justification logic,
-* admissibility of logical necessity
+* ($\llbracket\cdot\rrbracket$) axiomatization via justification logic
 * correspondence with basic $K$ intutionistic modal logic
- 
-## Categorical semantics sketch and future work
+
+## Categorical semantics  and future work
+* Necessity read as "double truth under an interpretation" ($\llbracket \rrbracket$)
+corresponds to the logic of __applicative functors__ (simply put: functors that preserve products and 
+map function application in a "sensible" way)
+* The passing to category theory is useful to find possible extensions of the logic with practical 
+applications (e.g. passing control to an external language and returning back to the source )
+* Modal logic for adjunctions and monads
 
 ## Thanks for looking
